@@ -4783,3 +4783,11 @@ ciBackgroundStep_spec.connectorRef:
 ciBackgroundStep_spec.command:
     content: If this step includes commands in both **Entry Point** and **Command**, the step will run the commands in **Entry Point** and ignore those in **Command**.
     width: "400"
+stepAwsAuthForm_region:
+    content: |-
+        By default, Harness uses the **us-east-1** region to test the credentials for this Connector.
+
+        If you want to use an AWS GovCloud account for this Connector, select it in **Test Region**.
+
+        GovCloud is used by organizations such as government agencies at the federal, state, and local level, as well as contractors, educational institutions. It is also used for regulatory compliance with these organizations. [Learn More](https://docs.harness.io/article/98ezfwox9u)
+    width: "400"
