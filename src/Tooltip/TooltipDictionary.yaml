@@ -4791,3 +4791,164 @@ stepAwsAuthForm_region:
 
         GovCloud is used by organizations such as government agencies at the federal, state, and local level, as well as contractors, educational institutions. It is also used for regulatory compliance with these organizations. [Learn More](https://docs.harness.io/article/98ezfwox9u)
     width: "400"
+AzureWebAppStartupScript:
+    content: |-
+        You can use Startup Command to add a startup script for your app. [Learn More](https://docs.harness.io/article/muegjde97q)
+
+        Click **Add Startup Command** and select the file containing your script.
+
+        You can use remote Git repos that contain your start command file, or you can use the [Harness File Store](https://docs.harness.io/article/oaihv6nry9) to add them to your Harness Project.
+
+        Here's an example of the startup command to start your JAR app for a Java SE stack:
+
+        ```
+        java -jar /home/site/wwwroot/app.jar --server.port=80
+        ```
+
+        Note: For details on Web App startup commands, go to [What are the expected values for the Startup File section when I configure the runtime stack?](https://docs.microsoft.com/en-us/azure/app-service/faq-app-service-linux#what-are-the-expected-values-for-the-startup-file-section-when-i-configure-the-runtime-stack-) and [Azure App Service on Linux FAQ](https://docs.microsoft.com/en-us/troubleshoot/azure/app-service/faqs-app-service-linux#built-in-images) from Azure.
+    width: "450"
+AzureWebAppApplicationConfig:
+    content: |-
+        In Azure App Service, App settings are passed as environment variables to the application code.
+
+        In Harness, you have the option of setting Application settings and Connection strings in **App Services Configuration**.
+
+        Click **Add Application Settings** and **Add Connection Strings** to add your settings.
+
+        You can use remote Git repos that contain your settings files, or you can use the [Harness File Store](https://docs.harness.io/article/oaihv6nry9) to add them to your Harness Project.
+
+        **Note:** For details on App settings, go to [Configure an App Service app in the Azure portal](https://docs.microsoft.com/en-us/azure/app-service/configure-common) from Azure.
+    width: "400"
+AzureWebAppDeploymentTypeArtifacts:
+    content: |-
+        Add the same Docker image or non-containerized artifact you use in your Azure Web App. [Learn More](https://docs.harness.io/article/muegjde97q)
+
+        Click **Add Primary Artifact**.
+
+        You will use a Harness Connector to connect to your artifact registry and then specify the artifact to use in **Artifact Details**.
+
+        [See an example](https://files.helpdocs.io/kw8ldg1itf/articles/muegjde97q/1661812877449/image.png)
+    width: "400"
+AzureWebAppInfraDefinitionDetails:
+    content: |-
+        The target Azure environment for your Harness Web App deployment is defined here. [Learn More](https://docs.harness.io/article/muegjde97q)
+
+        You will select or create an Azure Cloud Provider Connector and then select the Web App's Subscription Id and Resource Group.
+
+        You will provide the Web App name later in your stage's **Execution**.
+    width: "400"
+azureWebAppInfra_connectorRef:
+    content: |-
+        Select or create an Azure Cloud Provider Connector to connect Harness with your Azure subscription. [Learn More](https://docs.harness.io/article/muegjde97q)
+
+        Harness requires certain Web App Roles and Permissions to perform the deployment. They are described in [Azure Cloud Provider Connector](https://docs.harness.io/article/9epdx5m9ae).
+    width: "400"
+azureWebAppInfra_subscriptionId:
+    content: |-
+        Select the Azure subscription used by your Web App. [Learn More](https://docs.harness.io/article/muegjde97q)
+
+        The subscription is located in the Web App **Overview** section of the Azure portal.
+    width: "400"
+azureWebAppInfra_resourceGroup:
+    content: |-
+        Select the resource group used by your Web App. [Learn More](https://docs.harness.io/article/muegjde97q)
+
+        The resource group is located in the Web App **Overview** section of the Azure portal.
+    width: "400"
+azureAllowSimultaneousDeployments:
+    content: |-
+        By default, Harness queues deployments to the same infrastructure to avoid conflicts.
+
+        Enable this setting to allow multiple Pipelines to deploy to the same Infrastructure simultaneously. [Learn More](https://docs.harness.io/article/7ogetmgq7y)
+    width: "400"
+AzureSlotDeployment_stepName_StepConfig:
+    content: The Slot Deployment step is where you select the Web App and source deployment slot for the deployment. [Learn More](https://docs.harness.io/article/muegjde97q)
+    width: "400"
+AzureSlotDeployment-EXECUTION_name:
+    content: Enter a name for this step.
+    width: "400"
+AzureSlotDeployment-EXECUTION_timeout:
+    content: |-
+        Enter a minimum of 10m. The slot deployment relies on Azure and can take time.
+
+        If the step does not complete before the Timeout expires, the step or stage [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph) executes.
+    width: "400"
+AzureSlotDeployment-EXECUTION_spec.webApp:
+    content: Enter the name of the Azure Web App for deployment. [Learn More](https://docs.harness.io/article/muegjde97q)
+    width: "400"
+AzureSlotDeployment-EXECUTION_spec.deploymentSlot:
+    content: |-
+        Enter the name of the Source slot for the deployment. This slot is where Harness deploys the new Web App version. [Learn More](https://docs.harness.io/article/muegjde97q)
+
+        Make sure the slot you enter is running.
+
+        [See an example](https://files.helpdocs.io/kw8ldg1itf/articles/muegjde97q/1661557362872/image.png)
+    width: "400"
+AzureWebAppRollback-EXECUTION_name:
+    content: Enter a name for this step.
+    width: "400"
+AzureWebAppRollback_stepName_StepConfig:
+    content: |-
+        For Azure Web App deployments, Harness saves the previous Docker or non-containerized app details that were running on the slot.
+
+        In case of an Azure Web App deployment failure, Harness rollback redeploys the previous instance. [Learn More](https://docs.harness.io/article/muegjde97q)
+    width: "400"
+AzureWebAppRollback-EXECUTION_timeout:
+    content: |-
+        Enter a minimum of 10m. The rollback relies on Azure and can take time.
+
+        If the step does not complete before the Timeout expires, the step or stage [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph) executes.
+    width: "400"
+AzureTrafficShift_stepName_StepConfig:
+    content: |-
+        A Harness Azure Web App Canary deployment shifts traffic from one deployment slot to another incrementally. [Learn More](https://docs.harness.io/article/muegjde97q)
+
+        First, you select the deployment (live) and target (stage) slots to use in the Slot Deployment step. 
+
+        Next, you add Traffic Shift steps to incrementally increase traffic to the target slot.
+
+        Finally, you swap entirely to the target slot, making it the deployment slot for this release. Azure swaps the Virtual IP addresses and URLs of the deployment and target slots.
+    width: "400"
+AzureTrafficShift-EXECUTION_name:
+    content: Enter a name for this step.
+    width: "400"
+AzureTrafficShift-EXECUTION_timeout:
+    content: |-
+        Enter a minimum of 10m. The traffic shift relies on Azure and can take time.
+
+        If the step does not complete before the Timeout expires, the step or stage [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph) executes.
+    width: "400"
+AzureTrafficShift-EXECUTION_spec.traffic:
+    content: |+
+        The **Traffic Shift** step shifts network traffic from the production slot to the deployment slot specified in the preceding **Slot Deployment** step. [Learn More](https://docs.harness.io/article/muegjde97q)
+
+        In **Traffic %**, Enter a number (without the % character).
+
+        You can use multiple Traffic Shift steps to incrementally increase traffic.
+
+        In-between each Traffic Shift step, you can add a health check and/or Approval step.
+
+        **Traffic Shift steps are not cumulative.** If you set 25% in one and 25% in the next one, only 25% of traffic is routed.
+
+    width: "400"
+AzureSwapSlot_stepName_StepConfig:
+    content: |-
+        In Canary and Blue Green Azure Web App deployments, the final step in the phase is Swap Slot. [Learn More](https://docs.harness.io/article/muegjde97q)
+
+        This step swaps the deployment slot you entered in the **Slot Deployment** step with the **Target Slot** mentioned in this **Swap Slots** step.
+    width: "400"
+AzureWebAppSwapSlot-EXECUTION_name:
+    content: Enter a name for this step.
+    width: "400"
+AzureWebAppSwapSlot-EXECUTION_timeout:
+    content: |-
+        Enter a minimum of 10m. The slot swap relies on Azure and can take time.
+
+        If the step does not complete before the Timeout expires, the step or stage [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph) executes.
+    width: "400"
+AzureWebAppSwapSlot-EXECUTION_spec.targetSlot:
+    content: |-
+        Enter the name of the target (production) slot. [Learn More](https://docs.harness.io/article/muegjde97q)
+
+        **Note:** If you are new to Azure Web App deployment slot swapping, see [What happens during a swap](https://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots#what-happens-during-a-swap) from Azure.
+    width: "550"
