@@ -4952,3 +4952,25 @@ AzureWebAppSwapSlot-EXECUTION_spec.targetSlot:
 
         **Note:** If you are new to Azure Web App deployment slot swapping, see [What happens during a swap](https://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots#what-happens-during-a-swap) from Azure.
     width: "550"
+
+createSecretManagerTemplate_name:
+    content: |-
+        Enter a name for the Secret Manager Template. You can also edit the automatically generated Id. 
+
+        The Template name can be edited later, but Ids cannot be edited once a Template has been saved.
+    width: "400"
+createSecretManagerTemplate_description:
+    content: Enter a description for your Secret Manager Template.
+    width: "400"
+createSecretManagerTemplate_tags:
+    content: Tag this Template so you can filter and search for it in Harness. [Learn more](https://docs.harness.io/article/i8t053o0sq)
+    width: "400"
+createSecretManagerTemplate_versionLabel:
+    content: Enter the version of the Secret Manager Template. [Learn more](https://harness.helpdocs.io/article/6tl8zyxeol-template#versioning)
+    width: "400"
+scriptOptionalForm_spec.environmentVariables:
+    content: All the parameters can be defined as Input Variables while creating or editing the Secret Manager Template. [Learn more](https://docs.harness.io/article/n41cqkjrla-create-a-secret-manager-template#configure_input_variables_for_the_shell_script)
+    width: "400"
+scriptOptionalForm_spec.onDelegate:
+    content: Select where you want to execute the script. If you want to run the Shell Script on a target host and not on the Harness Delegate, you must first create the required connection attributes. [Learn more](https://docs.harness.io/article/n41cqkjrla-create-a-secret-manager-template#configure_input_variables_for_the_shell_script)
+    width: "400"
