@@ -4902,12 +4902,12 @@ AzureWebAppRollback-EXECUTION_timeout:
 AzureTrafficShift_stepName_StepConfig:
     content: |-
         A Harness Azure Web App Canary deployment shifts traffic from one deployment slot to another incrementally. [Learn More](https://docs.harness.io/article/muegjde97q)
-
-        First, you select the deployment (live) and target (stage) slots to use in the Slot Deployment step. 
-
-        Next, you add Traffic Shift steps to incrementally increase traffic to the target slot.
-
-        Finally, you swap entirely to the target slot, making it the deployment slot for this release. Azure swaps the Virtual IP addresses and URLs of the deployment and target slots.
+        
+        First, you select the deployment slot where the deployment will be done.
+        
+        Next, you add Traffic Shift steps to incrementally shift traffic from the production slot to the deployment slot.
+        
+        Finally, you swap the deployment slot with the target slot. Azure swaps the Virtual IP addresses and URLs of the deployment and target slots.
     width: "400"
 AzureTrafficShift-EXECUTION_name:
     content: Enter a name for this step.
