@@ -4952,7 +4952,6 @@ AzureWebAppSwapSlot-EXECUTION_spec.targetSlot:
 
         **Note:** If you are new to Azure Web App deployment slot swapping, see [What happens during a swap](https://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots#what-happens-during-a-swap) from Azure.
     width: "550"
-
 createSecretManagerTemplate_name:
     content: |-
         Enter a name for the Secret Manager Template. You can also edit the automatically generated Id. 
@@ -4973,4 +4972,16 @@ scriptOptionalForm_spec.environmentVariables:
     width: "400"
 scriptOptionalForm_spec.onDelegate:
     content: Select where you want to execute the script. If you want to run the Shell Script on a target host and not on the Harness Delegate, you must first create the required connection attributes. [Learn more](https://docs.harness.io/article/n41cqkjrla-create-a-secret-manager-template#configure_input_variables_for_the_shell_script)
+    width: "400"
+customRemoteManifest_identifier:
+    content: Enter the name for the manifest.
+    width: "400"
+customRemoteManifest_extractionScript:
+    content: Enter the script that pulls the package containing your manifest and extracts the manifest from the package.
+    width: "400"
+customRemoteManifest_filePath:
+    content: Enter the folder path for the manifests folder.
+    width: "400"
+customRemoteManifest_delegateSelectors:
+    content: Select the Selector for the Delegate(s) you want to use or leave this field empty to allow Harness to select a Delegate.
     width: "400"
