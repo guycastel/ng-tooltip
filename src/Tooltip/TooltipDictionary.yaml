@@ -4985,3 +4985,23 @@ customRemoteManifest_filePath:
 customRemoteManifest_delegateSelectors:
     content: Select the Selector for the Delegate(s) you want to use or leave this field empty to allow Harness to select a Delegate.
     width: "400"
+
+connectorDetailsStepFormCustomSecretManager_name:
+    content: Enter a name for your Custom Secret Manager. You can also edit the automatically generated Id.
+    width: "400"
+customSMForm_template:
+    content: Select a Secret Manager Template from the Template Library. [Learn more](https://docs.harness.io/article/mg09uspsx1-custom-secret-manager#step_2_add_a_custom_secret_manager)
+    width: "400"
+customSMForm_onDelegate:
+    content: Select to execute the script on Harness Delegate. To run the shell script on a target host, uncheck this option. To run the script on a target host, make sure you have created the required connection attributes.
+    width: "400"
+customSMForm_executionTarget.host:
+    content: Enter the host address.
+    width: "400"
+customSMForm_executionTarget.workingDirectory:
+    content: Enter the directory name.
+    width: "400"
+customSMForm_templateInputs.environmentVariables:
+    content: Enter value(s) for the Input Variable(s) in your script.
+    width: "400"
+
