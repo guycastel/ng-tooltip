@@ -5005,3 +5005,59 @@ customSMForm_templateInputs.environmentVariables:
     content: Enter value(s) for the Input Variable(s) in your script.
     width: "400"
 
+stepOverviewForm_displayName:
+    content: Enter a name for the LDAP SSO provider in Harness.
+    width: "400"
+ldapConnectionSettingsForm_host:
+    content: Enter the hostname for the LDAP server. Harness uses DNS to resolve the hostname. You can also use the public IP address of the host.
+    width: "400"
+ldapConnectionSettingsForm_port:
+    content: Enter 389 for standard LDAP. If you want to connect over Secure LDAP (LDAPS), use port 636, and enable the Use SSL setting.
+    width: "400"
+ldapConnectionSettingsForm_referralsEnabled:
+    content: If you have referrals configured for your LDAP authentication, select Enable Referrals and enter the number of referrals.
+    width: "400"
+ldapConnectionSettingsForm_connectTimeout:
+    content: Enter the number of milliseconds to wait for an LDAP connection before timing out. For example, 5000 is equal to 5 seconds.
+    width: "400"
+ldapConnectionSettingsForm_useRecursiveGroupMembershipSearch:
+    content: Enable/disable nested LDAP queries to optimize LDAP Group Sync performance. If you uncheck the Recursive Membership Search setting Harness will not run nested LDAP query and only do a flat group search.
+    width: "400"
+ldapConnectionSettingsForm_responseTimeout:
+    content: Enter the number of milliseconds to wait for an LDAP response before timing out. For example, 5000 is equal to 5 seconds.
+    width: "400"
+ldapConnectionSettingsForm_bindDN:
+    content: Enter the distinguished name of the directory object used for the Bind operation. For example, `cn=Administrator,CN=Users,DC=example,DC=com`.
+    width: "400"
+ldapConnectionSettingsForm_bindPassword:
+    content: Enter the password to log into the LDAP host.
+    width: "400"
+addEditUserSetting-0_baseDN:
+    content: Enter the relative distinguished name (BaseDN) for the Users object in the directory. Typically, the BaseDN is something like `CN=Users,DC=mycompany,DC=com`.
+    width: "400"
+addEditUserSetting-0_searchFilter:
+    content: Enter the search filter for the attribute to use when looking for users belonging to the Base DN. Typically, either (objectClass=user) or (objectClass=person).
+    width: "400"
+addEditUserSetting-0_displayNameAttr:
+    content: Enter the common name attribute for the users in your LDAP directory. Typically, this is cn.
+    width: "400"
+addEditUserSetting-0_emailAttr:
+    content: Enter the LDAP user attribute that contains the users' email address. Harness uses email addresses to identify users. Typically, the attribute name is userPrincipalName (most common), email or mail.
+    width: "400"
+addEditUserSetting-0_groupMembershipAttr:
+    content: Enter memberOf to return a list of all of the groups of which each user is a member.
+    width: "400"
+addEditGroupSetting-0_baseDN:
+    content: Enter the distinguished name of the LDAP group you want to add. This should be the LDAP group containing the users you searched for in User Queries.
+    width: "400"
+addEditGroupSetting-0_searchFilter:
+    content: Enter the search filter for the attribute to use when looking for groups belonging to the Base DN. Typically, `(objectClass=group)`.
+    width: "400"
+addEditGroupSetting-0_nameAttr:
+    content: Enter cn for the name attribute.
+    width: "400"
+addEditGroupSetting-0_descriptionAttr:
+    content: Enter the description to sync the LDAP group description.
+    width: "400"
+
+
