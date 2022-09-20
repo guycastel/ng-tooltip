@@ -2527,7 +2527,7 @@ pipelineStep.infrastructureDefinition:
 
         For example, the target Infrastructure Definition for a Kubernetes deployment. [Learn More](https://docs.harness.io/article/0ud2ut4vt2)
     width: "400"
-pipelineStep.infrastructureDefinitionMethod:
+KubernetesInfrastructureDefinitionMethod:
     content: |-
         There are different ways to connect to your target infrastructure: 
 
