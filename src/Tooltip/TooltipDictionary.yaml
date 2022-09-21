@@ -5136,3 +5136,58 @@ azureAuthForm_clientId:
 
         You can also use a [Pod Assigned Managed Identity](https://docs.microsoft.com/en-us/azure/aks/use-azure-ad-pod-identity).
     width: "400"
+    
+createStepTemplate_name:
+    content: Enter a name for the Template.
+    width: "400"
+createStepTemplate_versionLabel:
+    content: Enter a version for the Template.
+    width: "400"
+createStepTemplate_connectorRef:
+    content: Select or create a Git Connector to connect to the repo for your Project. [Learn More](https://docs.harness.io/article/u1ozbrk1rh-create-a-remote-step-template#step_1_create_a_remote_step_template)
+    width: "400"
+createStepTemplate_repo:
+    content: Select your repository. Limited repositories are populated here, so if your repo is not included, enter its name. [Learn more](https://docs.harness.io/article/u1ozbrk1rh-create-a-remote-step-template#step_1_create_a_remote_step_template)
+    width: "400"
+createStepTemplate_branch:
+    content: Select your branch. Limited branches are populated here, so if your branch is not included, enter its name. [Learn more](https://docs.harness.io/article/u1ozbrk1rh-create-a-remote-step-template#step_1_create_a_remote_step_template)
+    width: "400"
+createStepTemplate_filePath:
+    content: Enter the file path. [Learn more](https://docs.harness.io/article/u1ozbrk1rh-create-a-remote-step-template#step_1_create_a_remote_step_template)
+    width: "400"
+createStageTemplate_name:
+    content: Enter a name for the Template.
+    width: "400"
+createStageTemplate_versionLabel:
+    content: Enter a version for the Template.
+    width: "400"
+createStageTemplate_connectorRef:
+    content: Select or create a Git Connector to the repo for your Project. [Learn more](https://docs.harness.io/category/xyexvcc206-ref-source-repo-provider)
+    width: "400"
+createStageTemplate_repo:
+    content: Select your repository. If your repository isn't listed, enter its name since only a select few repositories are filled here. [Learn more](https://docs.harness.io/article/e4xthq6sx0-create-a-remote-stage-template#step_1_create_a_remote_stage_template)
+    width: "400"
+createStageTemplate_branch:
+    content: Select your branch. If your branch isn't listed, enter its name since only a select few branches are filled here. [Learn more](https://docs.harness.io/article/e4xthq6sx0-create-a-remote-stage-template#step_1_create_a_remote_stage_template)
+    width: "400"
+createStageTemplate_filePath:
+    content: Enter the file path. [Learn more](https://docs.harness.io/article/e4xthq6sx0-create-a-remote-stage-template#step_1_create_a_remote_stage_template)
+    width: "400"
+createPipelineTemplate_name:
+    content: Enter a name for the Template.
+    width: "400"
+createPipelineTemplate_versionLabel:
+    content: Enter a version for the Template.
+    width: "400"
+createPipelineTemplate_connectorRef:
+    content: Select or create a Git Connector to the repo for your Project. [Learn more](https://docs.harness.io/category/xyexvcc206-ref-source-repo-provider)
+    width: "400"
+createPipelineTemplate_repo:
+    content: Select your repository. If your repository isn't listed, enter its name since only a select few repositories are filled here. [Learn more](https://docs.harness.io/article/0qu91h5rwu-create-a-remote-pipeline-template#create_a_remote_pipeline_template)
+    width: "400"
+createPipelineTemplate_branch:
+    content: Select your branch. If your branch isn't listed, enter its name since only a select few branches are filled here. [Learn more](https://docs.harness.io/article/0qu91h5rwu-create-a-remote-pipeline-template#create_a_remote_pipeline_template)
+    width: "400"
+createPipelineTemplate_filePath:
+    content: Enter the file path. [Learn more](https://docs.harness.io/article/0qu91h5rwu-create-a-remote-pipeline-template#create_a_remote_pipeline_template)
+    width: "400"
