@@ -5191,3 +5191,12 @@ createPipelineTemplate_branch:
 createPipelineTemplate_filePath:
     content: Enter the file path. [Learn more](https://docs.harness.io/article/0qu91h5rwu-create-a-remote-pipeline-template#create_a_remote_pipeline_template)
     width: "400"
+variable-form_name:
+    content: Enter a name for the variable.
+    width: "400"
+variable-form_type:
+    content: Select the variable type.
+    width: "400"
+variable-form_fixedValue:
+    content: Only fixed value type variables are supported.
+    width: "400"
