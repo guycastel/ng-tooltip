@@ -5204,3 +5204,33 @@ ciRunStep_spec.reportPaths:
         The path to the file(s) that store results in the JUnit XML format.
         You can enter multiple paths. Glob is supported.
     width: "400"
+helmDeploy_spec.ignoreReleaseHistFailStatus:
+    content: |-
+        By default, if the latest Helm release failed, Harness does not proceed with the install/upgrade and throws an error.
+
+        Enable this option to have Harness ignore these errors and proceed with install/upgrade.
+    width: "400"
+helmDeploy_timeout:
+    content: |-
+        Enter a timeout for this step.
+
+        You can use:
+
+        - `w`  for weeks
+        - `d`  for days
+        - `h`  for hours
+        - `m`  for minutes
+        - `s`  for seconds
+        - `ms`  for milliseconds
+
+        The maximum is `53w`.
+    width: "400"
+helmDeploy_name:
+    content: Enter a name for this step. [Learn More](https://docs.harness.io/article/lbhf2h71at-native-helm-quickstart)
+    width: "400"
+HelmDeploy_stepName_StepConfig:
+    content: |-
+        This Helm Deploy step performs a Rolling deployment strategy. 
+
+        This step deploys your application using the Helm chart or Values YAML file you added to the Service in this stage. [Learn More](https://docs.harness.io/article/lbhf2h71at-native-helm-quickstart)
+    width: "400"
