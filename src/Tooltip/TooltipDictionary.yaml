@@ -5234,3 +5234,9 @@ HelmDeploy_stepName_StepConfig:
 
         This step deploys your application using the Helm chart or Values YAML file you added to the Service in this stage. [Learn More](https://docs.harness.io/article/lbhf2h71at-native-helm-quickstart)
     width: "400"
+kustomizeBasePath:
+    content: Enter the path where your Kustomize manifests and dependencies are available.
+    width: "400"
+kustomizeGit_optimizedKustomizeManifestCollection:
+    content: Select this checkbox to optimize the retrieval of your Kustomize manifests by Harness, and specify the relative folder path for your kustomize yaml file.
+    width: "400"
