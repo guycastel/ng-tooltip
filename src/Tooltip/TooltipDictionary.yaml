@@ -3456,7 +3456,7 @@ pluginStep_spec.settings:
     content: Plugin specific settings. Please refer to the plugin's documentation page.
     width: "400"
 pluginStep_spec.reportPaths:
-    content: Enter paths to file(s) that store results in the JUnit XML format. Regex is supported.
+    content: Enter paths to file(s) that store results in JUnit XML format. Glob is supported.
     width: "400"
 pluginStep_timeout:
     content: Timeout for the step. Once the timeout is reached, the step fails.
@@ -4761,7 +4761,7 @@ includeOthers:
 
     width: "400"
 Background_stepName_StepConfig:
-    content: ""
+    content: Background steps are useful for running services that need to run for the entire lifetime of a build. For example, you can set up your pipeline to run multiple background services that implement a local, multi-service app. [Learn More](https://docs.harness.io/article/kddyd0f33o)
     width: "400"
 ciBackgroundStep_name:
     content: The name of the service that this step will run, such as **Redis** or **MongoDB**.
@@ -5239,4 +5239,13 @@ kustomizeBasePath:
     width: "400"
 kustomizeGit_optimizedKustomizeManifestCollection:
     content: Select this checkbox to optimize the retrieval of your Kustomize manifests by Harness, and specify the relative folder path for your kustomize yaml file.
+    width: "400"
+ciBackgroundStep_spec.reportPaths:
+    content: |-
+        The path to the file(s) that store test results in JUnit XML format.
+
+        You can enter multiple paths. Glob is supported.
+    width: "400"
+ciBackgroundStep_spec.envVariables:
+    content: Environment variables injected into the container to be used in commands.
     width: "400"
