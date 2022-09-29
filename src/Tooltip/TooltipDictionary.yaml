@@ -5249,3 +5249,75 @@ ciBackgroundStep_spec.reportPaths:
 ciBackgroundStep_spec.envVariables:
     content: Environment variables injected into the container to be used in commands.
     width: "400"
+service-entity_name:
+    content: Enter a name for the service.
+    width: "400"
+SshDeploymentTypeArtifacts:
+    content: For Secure Shell (SSH), Harness supports artifact sources in Artifactory, Jenkins, Nexus3, and Amazon S3. Custom artifact sources are also supported.
+    width: "400"
+SshDeploymentTypeConfigFiles:
+    content: You can add Config files from the Harness File Store.
+    width: "400"
+connectorId_Artifactory:
+    content: Select an existing Artifactory Connector or create a new Artifactory Connector.
+    width: "400"
+artifactoryArtifact_repositoryFormat:
+    content: Select Generic or Docker for the repository format.
+    width: "400"
+connectorId_Jenkins:
+    content: Create a new Jenkins Connector or select an existing Jenkins Connector.
+    width: "400"
+connectorDetailsStepFormJenkins_name:
+    content: Enter a name for this Connector.
+    width: "400"
+jenkinsAuthForm_jenkinsUrl:
+    content: Enter the URL of the Jenkins server.
+    width: "400"
+jenkinsAuthForm_username:
+    content: Enter the user account username.
+    width: "400"
+jenkinsAuthForm_password:
+    content: Create or select a Harness Encrypted Text secret using the Jenkins API token or password.
+    width: "400"
+imagePath_spec.scripts.fetchAllArtifacts.spec.shell:
+    content: Select Bash or PowerShell as the script type.
+    width: "400"
+imagePath_spec.timeout:
+    content: Specify a timeout in weeks, days, hours, minutes, seconds, or milliseconds. This timeout is used for the script to execute before failing the artifact JSON retrieval.
+    width: "400"
+imagePath_spec.scripts.fetchAllArtifacts.spec.source.spec.script:
+    content: Enter a script to fetch a JSON payload. [Learn More] (https://docs.harness.io/article/hnqkhh7gut)
+    width: "400"
+imagePath_spec.scripts.fetchAllArtifacts.artifactsArrayPath:
+    content: Enter the root object of the array. [Learn More] (https://docs.harness.io/article/hnqkhh7gut)
+    width: "400"
+imagePath_spec.scripts.fetchAllArtifacts.versionPath:
+    content: Enter the path in the payload array to the version. [Learn More] (https://docs.harness.io/article/hnqkhh7gut)
+    width: "400"
+imagePath_spec.version:
+    content: Enter the version number for this deployment. [Learn More] (https://docs.harness.io/article/hnqkhh7gut)
+    width: "400"
+optionalConfiguration_spec.inputs:
+    content: Using Script Input Variables enables you to easily identify and manage the Harness expressions used in your script. You can also template your script. [Learn More] (https://docs.harness.io/article/hnqkhh7gut)
+    width: "400"
+optionalConfiguration_spec.scripts.fetchAllArtifacts.attributes:
+    content: You can map any additional values from your JSON array. [Learn More] (https://docs.harness.io/article/hnqkhh7gut)
+    width: "400"
+optionalConfiguration_spec.delegateSelectors:
+    content: Define a Delegate Selector or leave this field empty to allow Harness to select a Delegate. [Learn More] (https://docs.harness.io/article/nnuf8yv13o)
+    width: "400"
+connectorId_Nexus:
+    content: Select or create a new Connector.
+    width: "400"
+connectorId_Aws:
+    content: Create a new AWS Connector or select an existing AWS Connector.
+    width: "400"
+artifactoryArtifact_region:
+    content: Select the region.
+    width: "400"
+artifactoryArtifact_bucketName:
+    content: Select or add a bucket name.
+    width: "400"
+artifactoryArtifact_filePath:
+    content: Enter the file path.
+    width: "400"
