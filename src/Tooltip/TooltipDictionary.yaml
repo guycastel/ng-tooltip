@@ -5383,3 +5383,19 @@ sshWinRmAzureInfra_credentialsRef:
 sshWinrmAzureHostConnectionType:
     content: "Select the host connection type: Hostname, PublicIP, or PrivateIP."
     width: "400"
+wizardForm_webhook_repoName:
+    content: Enter the name of the Git repo for Harness to use for this Trigger. [Learn More](https://docs.harness.io/article/hndnde8usz)
+    width: "400"
+pollInterval:
+    content: |-
+        By default, Harness Git-based triggers listen to Git events using webhooks. 
+
+        Sometimes webhook events can be missed due to a firewall or a network issue and cannot reach Harness.
+
+        To prevent webhook issues from happening, enter an polling interval in **Polling Frequency**. [Learn More](https://docs.harness.io/article/hndnde8usz)
+
+        Permitted values:
+
+        - minimum value: `2m`
+        - maxium value: `1h`
+    width: "400"
