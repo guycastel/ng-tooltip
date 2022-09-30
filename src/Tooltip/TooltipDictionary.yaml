@@ -5321,3 +5321,65 @@ artifactoryArtifact_bucketName:
 artifactoryArtifact_filePath:
     content: Enter the file path.
     width: "400"
+pdcInfra_connectorRef:
+    content: Create or select an existing Connector.
+    width: "400"
+connectorDetailsStepFormPdc_name:
+    content: Enter a name for the Connector.
+    width: "400"
+pdcDetailsForm_hosts:
+    content: "Enter the host name(s) for one or more target hosts. "
+    width: "400"
+pdcInfra_credentialsRef:
+    content: Create a new secret or select an existing secret.
+    width: "400"
+stepAuthenticationForm_principal:
+    content: Enter the account name associated with the Kerberos account, such as johndoe.
+    width: "400"
+stepAuthenticationForm_realm:
+    content: "Enter the Realm. Realm is the logical network served by a single Kerberos database and a set of Key Distribution Centers (KDCs). Typically, this is the domain where the service (that the user is trying to authenticate with) is located. For example: US-EAST-2.COMPUTE.INTERNAL.Typically, the target host(s) that your SSH connection is intending to authenticate with via Kerberos are located in a domain name with the same name you enter in Realm. For example, ip-172-31-44-168.us-east-2.compute.internal. The realm naming convention is all uppercase letters to differentiate the realm from the internet domain, but the Realm field does not enforce the convention."
+    width: "400"
+stepAuthenticationForm_tgtGenerationMethod:
+    content: Select any one option. Key Tab File Path generates a new TGT from the KDC every time you authentication with the service. If you select Password, make sure you use a Harness Encrypted Text secret to save the password and refer to it using this option. Select None to skip TGT Generation.
+    width: "400"
+pdcInfraAllowSimultaneousDeployments:
+    content: By default, Harness queues deployments to the same infrastructure to avoid conflicts. If you want to allow simultaneous deployments to this infrastructure, enable this option.
+    width: "400"
+stepAuthenticationForm_password:
+    content: Create or select an existing secret.
+    width: "400"
+phasesForm_packageType:
+    content: Select the package type.
+    width: "400"
+"phasesForm_phases[0]":
+    content: Specify the number of instances or the percentage of instances.
+    width: "400"
+configFileDetails_identifier:
+    content: Enter the Config File Identifier.
+    width: "400"
+configFileDetails_fileType:
+    content: Select the file type. Select File Store to upload files from the Harness File Store. Select Encrypted to configure a secret.
+    width: "400"
+SshWinRmAzureInfraDefinitionDetails:
+    content: Enter the cluster details for this Azure infrastructure definition.
+    width: "400"
+sshWinRmAzureInfra_connectorRef:
+    content: Select or create an Azure Cloud Provider Connector to connect Harness with your Azure subscription. [Learn More (https://docs.harness.io/article/9epdx5m9ae).
+    width: "400"
+sshWinRmAzureInfra_subscriptionId:
+    content: |-
+        Enter the Azure Subscription ID used by your VM.
+        The Subscription ID is listed in the Overview section of your Azure Virtual Machine.
+    width: "400"
+sshWinRmAzureInfra_resourceGroup:
+    content: Enter the resource group where your VM is located. The resource group is listed in the Overview section of your Azure Virtual Machine.
+    width: "400"
+sshWinRmAzureInfra_tags:
+    content: Click Tags and add one o more of your VM(s) tags. This enables Harness quickly select the VM you want to use.
+    width: "400"
+sshWinRmAzureInfra_credentialsRef:
+    content: Create or select an existing secret.
+    width: "400"
+sshWinrmAzureHostConnectionType:
+    content: "Select the host connection type: Hostname, PublicIP, or PrivateIP."
+    width: "400"
