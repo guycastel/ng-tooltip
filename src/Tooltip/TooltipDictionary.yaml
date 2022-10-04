@@ -5399,3 +5399,49 @@ pollInterval:
         - minimum value: `2m`
         - maxium value: `1h`
     width: "400"
+WinRmDeploymentTypeArtifacts:
+    content: Add a Connector to the artifact repository. Harness connects to the artifact repository by using the Connector. For Secure Shell and WinRM, you can create a Connector for Artifactory, Jenkins, Custom, Nexus, or AWS.
+    width: "400"
+WinRmDeploymentTypeConfigFiles:
+    content: Add Config files from the Harness File Store.
+    width: "400"
+WinRmInfrastructureDefinitionMethod:
+    content: Select the infrastructure type.
+    width: "400"
+SshWinRmAwsInfraDefinitionDetails:
+    content: Infrastructure Definitions are the actual clusters, hosts, etc., where Harness deploys a Service. Provide details about your AWS cluster.
+    width: "400"
+sshWinRmAWSInfra_connectorRef:
+    content: Select a Connector or create the AWS Connector. [Learn More] (https://docs.harness.io/article/98ezfwox9u)
+    width: "400"
+sshWinRmAWSInfra_region:
+    content: Select the AWS Region.
+    width: "400"
+sshWinRmAWSInfra_awsInstanceFilter.tags:
+    content: Provide the Key and Value for the Tag.
+    width: "400"
+sshWinRmAWSInfra_credentialsRef:
+    content: Select a Secret or create a WinRM Credential for the Secret.
+    width: "400"
+winRmStepDetailsForm_name:
+    content: Enter a name for this WinRM credential.
+    width: "400"
+stepAuthenticationForm_domain:
+    content: Enter the domain name. This is the Active Directory domain name where the user account in the credentials is registered.
+    width: "400"
+stepAuthenticationForm_username:
+    content: Enter the user name for this connection. The user must belong to the same Active Directory domain as the Windows instances that this connection uses. These are the same user account credentials you would use to log into the VM using a remote connection such as Microsoft Remote Desktop.
+    width: "400"
+stepAuthenticationForm_useSSL:
+    content: Select this checkbox to enable an HTTPS connection instead of an HTTP connection. SSL is recommended.
+    width: "400"
+stepAuthenticationForm_skipCertChecks:
+    content: When connected over HTTPS, the client does not validate server certificate.
+    width: "400"
+PdcInfraDefinitionDetails:
+    content: |
+        Specify the target infrastructure for your deployment. Select *Specify hosts* if you want to enter the host names and deploy to those target hosts. If you have a list of target hosts in a file (for example, a JSON file), choose *Select preconfigured hosts from Physical Data Center*. 
+    width: "400"
+pdcInfra_hosts:
+    content: Enter the host names of your target hosts.
+    width: "400"
