@@ -5445,3 +5445,15 @@ PdcInfraDefinitionDetails:
 pdcInfra_hosts:
     content: Enter the host names of your target hosts.
     width: "400"
+servicenowApprovalrejectionCriteria:
+    content: Define the rejected criteria using the ServiceNow status items. If you add rejection criteria, it is used in addition to the settings in *Approval Criteria.” [Learn More] (https://docs.harness.io/article/h1so82u9ub)
+    width: "400"
+serviceNowApproval_spec.rejectionCriteria.spec.expression:
+    content: Enter the JEXL expression. [Learn More] (https://docs.harness.io/article/h1so82u9ub)
+    width: "400"
+serviceNowApproval_spec.changeWindow.startField:
+    content: Specify the window in which Harness will proceed with the deployment. Once this step is approved, Harness will not proceed with deployment unless the current time is within this window. The values that appear depend on the type selected in *Ticket Type*. The start time uses the time zone set in the ServiceNow account selected in the Connector.
+    width: "400"
+serviceNowApproval_spec.changeWindow.endField:
+    content: Specify the window in which Harness will proceed with the deployment. Once this step is approved, Harness will not proceed with deployment unless the current time is within this window. The values that appear depend on the type selected in *Ticket Type*. The end time uses the time zone set in the ServiceNow account selected in the Connector.
+    width: "400"
