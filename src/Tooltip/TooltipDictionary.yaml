@@ -5457,3 +5457,6 @@ serviceNowApproval_spec.changeWindow.startField:
 serviceNowApproval_spec.changeWindow.endField:
     content: Specify the window in which Harness will proceed with the deployment. Once this step is approved, Harness will not proceed with deployment unless the current time is within this window. The values that appear depend on the type selected in *Ticket Type*. The end time uses the time zone set in the ServiceNow account selected in the Connector.
     width: "400"
+delegateSetupStepForm_runAsRoot:
+    content: To install the delegate with non-root user privileges, clear the check box. By default, the delegate is installed with root user privileges. Root user privileges are required to add binaries to the delegate image. [Learn more](https://docs.harness.io/article/lbndemc7qi)
+    width: "400"
