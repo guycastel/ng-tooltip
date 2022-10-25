@@ -5591,3 +5591,6 @@ specifyYourInfrastructure:
 
         You can add multiple Infrastructure Definitions to a single Environment.
     width: "400"
+dynatraceHealthSourceForm_dynatraceService:
+   content: Dynatrace analytics are performed at Dynatrace's service level. Select the Dynatrace service to monitor.
+   width: "400"
