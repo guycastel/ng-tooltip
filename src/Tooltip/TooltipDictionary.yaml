@@ -3625,7 +3625,7 @@ changeSourceaForm_name:
     content: "Enter a name for the Change Source. "
     width: "400"
 selectHealthSourceType:
-    content: "Select the Health Source type. "
+    content: "Maps Harness Monitored Service to the health source. Select the health source that monitors changes in the health trends of the service."
     width: "400"
 defineHealthsource_healthSourceIdentifier:
     content: A Health Source monitors the health trends of the Monitored Service using logs or metrics collected from an APM or logging tool. [Learn More](https://docs.harness.io/article/lwi37ku94x-change-impact-analysis-quickstart#step_3_define_a_health_source)
