@@ -3625,7 +3625,7 @@ changeSourceaForm_name:
     content: "Enter a name for the Change Source. "
     width: "400"
 selectHealthSourceType:
-    content: "Maps Harness Monitored Service to the health source. Select the health source that monitors changes in the health trends of the service."
+    content: Maps Harness Monitored Service to the health source. Select the health source that monitors changes in the health trends of the service.
     width: "400"
 defineHealthsource_healthSourceIdentifier:
     content: A Health Source monitors the health trends of the Monitored Service using logs or metrics collected from an APM or logging tool. [Learn More](https://docs.harness.io/article/lwi37ku94x-change-impact-analysis-quickstart#step_3_define_a_health_source)
@@ -5592,5 +5592,99 @@ specifyYourInfrastructure:
         You can add multiple Infrastructure Definitions to a single Environment.
     width: "400"
 dynatraceHealthSourceForm_dynatraceService:
-   content: Dynatrace analytics are performed at Dynatrace's service level. Select the Dynatrace service to monitor.
-   width: "400"
+    content: Dynatrace analytics are performed at Dynatrace's service level. Select the Dynatrace service to monitor.
+    width: "400"
+GitOpsAgentStepFormundefined_name:
+    content: Enter a name for this Harness GitOps Agent. [Learn More](https://docs.harness.io/article/52r3l5q67u)
+    width: "400"
+Namespace:
+    content: Enter the namespace where you want to install the Harness GitOps Agent. Typically, this is the target namespace for your deployment. [Learn More](https://docs.harness.io/article/52r3l5q67u)
+    width: "400"
+gitops-repo-overview_name:
+    content: Enter a name for this setting. [Learn More](https://docs.harness.io/article/pptv7t53i9)
+    width: "400"
+repo:
+    content: enter the URL to your repo. For example, `https://github.com/argoproj/argocd-example-apps.git`. [Learn More](https://docs.harness.io/article/58i67mkxap)
+    width: "400"
+gitops-repo-overview_connectionType:
+    content: |-
+        Select HTTPS, or SSH, or GitHub App. [Learn More](https://docs.harness.io/article/58i67mkxap)
+
+        If you use Two-Factor Authentication for your Git repo, you connect over HTTPS or SSH.
+    width: "400"
+name.gitops.repo:
+    content: |-
+        Ensure that the key is not OpenSSH, but rather PEM format. 
+
+        To generate an SSHv2 key, use: `ssh-keygen -t rsa -m PEM`.
+
+        The `rsa` and `-m PEM` ensure the algorithm and that the key is PEM. Next, follow the prompts to create the PEM key. For more information, see the [ssh-keygen man page](https://linux.die.net/man/1/ssh-keygen).
+    width: "400"
+repository-skip-server-verification:
+    content: |-
+        Select this option to have the GitOps Agent skip verification of the URL and credentials. [Learn More](https://docs.harness.io/article/58i67mkxap)
+
+        Verification is only skipped when you create the GitOps Repository. Subsequent uses of the GitOps Repository are verified. 
+    width: "400"
+enableLfs:
+    content: Select the option to use [Git Large File Storage](https://github.com/git-lfs/git-lfs/).
+    width: "400"
+proxy:
+    content: |-
+        A proxy for your repository can be specified in the **Proxy** setting. [Learn More](https://docs.harness.io/article/58i67mkxap)
+
+        Harness uses this proxy to access the repository. Harness looks for the standard proxy environment variables in the repository server if the custom proxy is absent.
+    width: "400"
+credential-template:
+    content: |-
+        You can use a Repository Credentials Template for GitOps Repository authentication. [Learn More](https://docs.harness.io/article/tg4og0bboo)
+
+        The repo path in the GitOps Repository must be a subfolder of the repo path in the Repository Credentials Template.
+
+        For example, if you created a Repository Credentials Template for the URL https://something.com, GitOps Repositories that have their URL as https://something.com/* are able to use that Repository Credentials Template.
+
+        Harness will auto-detect the Repository Credentials Template (if any) based on the GitOps Repository URL and auto-populate it. If Harness auto-populated the GitOps Repository, then you cannot edit the Repository Credentials Template setting.
+    width: "400"
+clusterMasterURL:
+    content: |-
+        Enter the master URL for your cluster. [Learn More](https://docs.harness.io/article/pptv7t53i9)
+
+        You can just log into your cluster and run `kubectl cluster-info`. Use the URL listed in the output **Kubernetes master is running at**.
+    width: "400"
+clusterAuthentication:
+    content: Select the authentication method for connecting to the cluster. [Learn More](https://docs.harness.io/article/pptv7t53i9)
+    width: "400"
+clusterBearerToken:
+    content: |-
+        For **Service Account Token**, paste in the Service Account Token for the  namespace you will use. [Learn More](https://docs.harness.io/article/pptv7t53i9)
+
+        Ensure the token is base64 encoded.
+
+        You will need to either use an existing SA that has `cluster-admin` or admin permissions in the namespace, or create a new SA and grant it the permissions.
+    width: "400"
+gitops-repo-overview_namespaces:
+    content: Enter an existing target namespace.
+    width: "400"
+applicationName:
+    content: Enter a name for this Harness GitOps Application. [Learn More](https://docs.harness.io/article/pptv7t53i9)
+    width: "400"
+serviceVal:
+    content: Select or create a Harness Service for this Application. A Harness Service represents the microservice/app you are deploying.
+    width: "400"
+environmentVal:
+    content: Select or create a Harness Environment for this Application. A Harness Environment represents the target deployment environment (cluster).
+    width: "400"
+spec.source.kustomize.namePrefix:
+    content: The prefix appended to resources for Kustomize apps.
+    width: "400"
+create-app-source-step:
+    content: The suffix appended to resources for Kustomize apps.
+    width: "400"
+ApplciationOverviewStep_spec.destination.namespace:
+    content: |-
+        This setting corresponds to the Auto-Create Namespace setting in **Sync Policy**.
+
+        If there is a namespace in the source manifest, then the namespace entered in Namespace must match that namespace or the namespace entered in Namespace will override the namespace in the source manifest.
+
+        If there is no namespace in the source manifest, and the Auto-Create Namespace setting in **Sync Policy** is selected, Harness will created the namespace you enter in Namespace.
+    width: "400"
