@@ -5608,7 +5608,7 @@ repo:
     width: "400"
 gitops-repository-credentials-overview_connectionType:
     content: |-
-        Select HTTPS, or SSH, or GitHub App. [Learn More](https://docs.harness.io/article/58i67mkxap)
+        Select HTTPS, SSH, or GitHub App. [Learn More](https://docs.harness.io/article/58i67mkxap)
 
         If you use Two-Factor Authentication for your Git repo, you connect over HTTPS or SSH.
     width: "400"
@@ -5686,7 +5686,7 @@ ApplciationOverviewStep_spec.destination.namespace:
 
         If there is a namespace in the source manifest, then the namespace entered in Namespace must match that namespace or the namespace entered in Namespace will override the namespace in the source manifest.
 
-        If there is no namespace in the source manifest, and the Auto-Create Namespace setting in **Sync Policy** is selected, Harness will created the namespace you enter in Namespace.
+        If there is no namespace in the source manifest, and the Auto-Create Namespace setting in **Sync Policy** is selected, Harness will create the namespace you enter in Namespace.
     width: "400"
 gitops-cluster-credentials-overview_namespaces:
     content: Enter an existing target namespace.
