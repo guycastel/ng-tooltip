@@ -5688,3 +5688,6 @@ ApplciationOverviewStep_spec.destination.namespace:
 
         If there is no namespace in the source manifest, and the Auto-Create Namespace setting in **Sync Policy** is selected, Harness will created the namespace you enter in Namespace.
     width: "400"
+gitops-cluster-credentials-overview_namespaces:
+    content: Enter an existing target namespace.
+    width: "400"
