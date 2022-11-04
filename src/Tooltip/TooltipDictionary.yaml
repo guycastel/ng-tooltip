@@ -5606,7 +5606,7 @@ gitops-repo-overview_name:
 repo:
     content: enter the URL to your repo. For example, `https://github.com/argoproj/argocd-example-apps.git`. [Learn More](https://docs.harness.io/article/58i67mkxap)
     width: "400"
-gitops-repo-overview_connectionType:
+gitops-repository-credentials-overview_connectionType:
     content: |-
         Select HTTPS, or SSH, or GitHub App. [Learn More](https://docs.harness.io/article/58i67mkxap)
 
