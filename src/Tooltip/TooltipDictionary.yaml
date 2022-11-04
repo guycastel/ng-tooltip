@@ -4059,10 +4059,9 @@ ServerlessAwsLambdaDeploymentTypeArtifacts:
     width: "400"
 awsInfraConnector:
     content: |-
-        Add or select an AWS Connector to connect Harness with the AWS account running your Lambda service. 
+        Add or select an AWS Connector to connect Harness with the AWS account and service you are using (ECS, Lambda, etc). 
 
-          
-        Essentially, this AWS account is the deployment target. [Learn More](https://docs.harness.io/article/5fnx4hgwsa)
+        For details on the requirements of each AWS service, go to [AWS Connector Settings Reference](https://docs.harness.io/article/m5vkql35ca)
     width: "450"
 awsRegion:
     content: Enter the [AWS region name](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html) where the target Lambda service is located, such as `us-east-1`.
@@ -5472,7 +5471,21 @@ EcsRollingDeploy_stepName_StepConfig:
     content: This ECS Rolling Deploy step rolls out the new service version to the desired count in the Service Definition of the new deployment. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
     width: "400"
 ecsRollingDeployStepEdit_timeout:
-    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph).
+    content: |-
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+
+        You can use:
+
+        - `w`  for weeks
+        - `d`  for days
+        - `h`  for hours
+        - `m`  for minutes
+        - `s`  for seconds
+        - `ms`  for milliseconds
+
+        The maximum is `53w`.
+
+        Timeouts can be set at the Pipeline level also.
     width: "400"
 ecsRollingDeployStepEdit_spec.sameAsAlreadyRunningInstances:
     content: |-
@@ -5504,7 +5517,21 @@ ecsBlueGreenCreateServiceStepEdit_name:
     content: Enter a name for this ECS Blue Green Create Service step.
     width: "400"
 ecsBlueGreenCreateServiceStepEdit_timeout:
-    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph).
+    content: |-
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+
+        You can use:
+
+        - `w`  for weeks
+        - `d`  for days
+        - `h`  for hours
+        - `m`  for minutes
+        - `s`  for seconds
+        - `ms`  for milliseconds
+
+        The maximum is `53w`.
+
+        Timeouts can be set at the Pipeline level also.
     width: "400"
 ecsBlueGreenCreateServiceStepEdit_spec.loadBalancer:
     content: |-
@@ -5551,10 +5578,24 @@ EcsBlueGreenSwapTargetGroups_stepName_StepConfig:
         Typically, you will want to add one or more steps for verification between the ECS Blue Green Create Service step and ECS Blue Green Swap Target step.
     width: "400"
 ecsBlueGreenSwapTargetGroupsStepEdit_name:
-    content: Enter a name for this ECS step.
+    content: Enter a name for this step. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
     width: "400"
 ecsBlueGreenSwapTargetGroupsStepEdit_timeout:
-    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph).
+    content: |-
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+
+        You can use:
+
+        - `w`  for weeks
+        - `d`  for days
+        - `h`  for hours
+        - `m`  for minutes
+        - `s`  for seconds
+        - `ms`  for milliseconds
+
+        The maximum is `53w`.
+
+        Timeouts can be set at the Pipeline level also.
     width: "400"
 ecsBlueGreenSwapTargetGroupsStepEdit_spec.doNotDownsizeOldService:
     content: |-
@@ -5690,4 +5731,192 @@ ApplciationOverviewStep_spec.destination.namespace:
     width: "400"
 gitops-cluster-credentials-overview_namespaces:
     content: Enter an existing target namespace.
+    width: "400"
+cdEditStage_gitOpsEnabled:
+    content: |-
+        Enable this option if you want to integrate Harness GitOps Applications with your CD pipelines. For example, [running a PR Pipeline for an ApplicatioSet](https://docs.harness.io/article/lf6a27usso).
+
+        - [Harness GitOps Basics](https://docs.harness.io/article/w1vg9l1j7q)
+        - [Harness GitOps Tutorial](https://docs.harness.io/article/pptv7t53i9)
+    width: "400"
+updateReleaseRepo_name:
+    content: Enter a name for this step. [Learn More](https://docs.harness.io/article/lf6a27usso)
+    width: "400"
+GitOpsUpdateReleaseRepo_stepName_StepConfig:
+    content: |-
+        This step is used in a Harness GitOps PR Pipeline.
+
+        This step will fetch your JSON files, update them with your changes, Commit and Push, and then create the PR. [Learn More](https://docs.harness.io/article/lf6a27usso)
+
+        The **Merge PR** step is added after this step.
+    width: "400"
+updateReleaseRepo_timeout:
+    content: |-
+        Enter a timeout for this step. 
+
+        You can use:
+
+        - `w`  for weeks
+        - `d`  for days
+        - `h`  for hours
+        - `m`  for minutes
+        - `s`  for seconds
+        - `ms`  for milliseconds
+
+        The maximum is `53w`.
+
+        Timeouts can be set at the Pipeline level also.
+    width: "400"
+updateReleaseRepo_spec.variables:
+    content: |-
+        You can use these variables to update key:value pairs in the config file you are deploying. [Learn More](https://docs.harness.io/article/lf6a27usso)
+
+        If there is a matching variable name in the variables of the Service or Environment used in this Pipeline, the variable entered in this step will override it.
+    width: "400"
+MergePR_stepName_StepConfig:
+    content: This step merges the new PR created by the preceding Update Release Repo step. [Learn More](https://docs.harness.io/article/lf6a27usso)
+    width: "400"
+mergepr_name:
+    content: Enter a name for this step. [Learn More](https://docs.harness.io/article/lf6a27usso)
+    width: "400"
+mergepr_timeout:
+    content: |-
+        Enter a timeout for this step. 
+
+        You can use:
+
+        - `w`  for weeks
+        - `d`  for days
+        - `h`  for hours
+        - `m`  for minutes
+        - `s`  for seconds
+        - `ms`  for milliseconds
+
+        The maximum is `53w`.
+
+        Timeouts can be set at the Pipeline level also.
+    width: "400"
+mergepr_spec.deleteSourceBranch:
+    content: Enable this setting to delete the source branch created by the PR in the preceding Update Release Repo step. [Learn More](https://docs.harness.io/article/lf6a27usso)
+    width: "400"
+ECSDeploymentTypeManifests_taskDefinition:
+    content: Harness has full support for ECS task definitions. You simply provide Harness with a task definition and it will implement it. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
+    width: "400"
+ECSDeploymentTypeManifests_serviceDefinition:
+    content: Harness has full support for ECS Service definitions. You simply provide Harness with a service definition and it will implement it. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
+    width: "400"
+ECSDeploymentTypeManifests_scalableTarget:
+    content: |-
+        The Scalable Target setting in the Harness Service specifies a resource that AWS Application Auto Scaling can scale. 
+
+        For more information, see [ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) from AWS.
+    width: "400"
+ECSDeploymentTypeManifests_scalingPolicy:
+    content: |-
+        The Scaling Policy setting in the Harness Service defines a scaling policy that Application Auto Scaling uses to adjust your application resources. 
+
+        For more information, see [ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html) from AWS.
+    width: "400"
+ECSDeploymentTypeArtifacts:
+    content: |-
+        Add the artifact(s) you want to deploy. When you select this Service in your pipeline stage, Harness will fetch and deploy this artifact.
+
+        In your Task Definition, you will use the following expression to refer to the artifact you added here and want deployed:
+
+        ```
+        image: <+artifact.image>
+        ```
+
+        You do not have to add an artifact here in the Service if your Task Definition has a hardcoded `image`.
+
+        [Learn More](https://docs.harness.io/article/vytf6s0kwc)
+    width: "400"
+ECSDeploymentTypeConfigFiles:
+    content: Add any configuration files you want included in your deployment.
+    width: "400"
+deployEnvironmentEntityWidgetForm_infrastructureInputs.ECS.ECS.spec.region:
+    content: Select the AWS region where your ECS cluster is located. [Learn More](https://docs.harness.io/article/vytf6s0kwc).
+    width: "400"
+deployEnvironmentEntityWidgetForm_infrastructureInputs.ECS.ECS.spec.cluster:
+    content: Select the target cluster. The list is populated using the AWS Connector you created. [Learn More](https://docs.harness.io/article/vytf6s0kwc).
+    width: "400"
+ecsCanaryDeleteStepForm_name:
+    content: Enter a name for this step. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
+    width: "400"
+ecsCanaryDeleteStepForm_timeout:
+    content: |-
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+
+        You can use:
+
+        - `w`  for weeks
+        - `d`  for days
+        - `h`  for hours
+        - `m`  for minutes
+        - `s`  for seconds
+        - `ms`  for milliseconds
+
+        The maximum is `53w`.
+
+        Timeouts can be set at the Pipeline level also.
+    width: "400"
+ecsBlueGreenRollbackStepForm_timeout:
+    content: |-
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+
+        You can use:
+
+        - `w`  for weeks
+        - `d`  for days
+        - `h`  for hours
+        - `m`  for minutes
+        - `s`  for seconds
+        - `ms`  for milliseconds
+
+        The maximum is `53w`.
+
+        Timeouts can be set at the Pipeline level also.
+    width: "400"
+ecsBlueGreenRollbackStepForm_name:
+    content: Enter a name for this step. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
+    width: "400"
+ecsRollingRollbackStepForm_timeout:
+    content: |-
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+
+        You can use:
+
+        - `w`  for weeks
+        - `d`  for days
+        - `h`  for hours
+        - `m`  for minutes
+        - `s`  for seconds
+        - `ms`  for milliseconds
+
+        The maximum is `53w`.
+
+        Timeouts can be set at the Pipeline level also.
+    width: "400"
+ecsCanaryDeployStepForm_timeout:
+    content: |-
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+
+        You can use:
+
+        - `w`  for weeks
+        - `d`  for days
+        - `h`  for hours
+        - `m`  for minutes
+        - `s`  for seconds
+        - `ms`  for milliseconds
+
+        The maximum is `53w`.
+
+        Timeouts can be set at the Pipeline level also.
+    width: "400"
+ecsRollingRollbackStepForm_name:
+    content: Enter a name for this step. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
+    width: "400"
+ecsCanaryDeployStepForm_name:
+    content: Enter a name for this step. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
     width: "400"
