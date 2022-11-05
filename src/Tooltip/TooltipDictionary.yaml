@@ -5661,7 +5661,7 @@ name.gitops.repo:
 
         The `rsa` and `-m PEM` ensure the algorithm and that the key is PEM. Next, follow the prompts to create the PEM key. For more information, see the [ssh-keygen man page](https://linux.die.net/man/1/ssh-keygen).
     width: "400"
-repository-skip-server-verification:
+insecure:
     content: |-
         Select this option to have the GitOps Agent skip verification of the URL and credentials. [Learn More](https://docs.harness.io/article/58i67mkxap)
 
