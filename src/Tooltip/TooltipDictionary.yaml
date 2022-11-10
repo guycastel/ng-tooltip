@@ -5920,3 +5920,12 @@ ecsRollingRollbackStepForm_name:
 ecsCanaryDeployStepForm_name:
     content: Enter a name for this step. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
     width: "400"
+gcpSecretManagerForm_credentialsRef:
+    content: |-
+        Export your Google Cloud service account key from GCP, and then upload it here. [Learn More](https://docs.harness.io/article/nzqofaebno-add-a-google-cloud-secret-manager#step_3_attach_a_google_secret_manager_credentials_file)
+
+        The GCP Service Account you use in the Google Secrets Manager Credentials File should have the `roles/secretmanager.admin` IAM role or both `roles/secretmanager.secretAccessor` and `roles/secretmanager.secretVersionManager`.
+    width: "400"
+gcpSecretManagerForm_default:
+    content: Set this secrets manager as the default.
+    width: "400"
