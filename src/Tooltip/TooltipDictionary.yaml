@@ -4272,84 +4272,6 @@ smtpStepCredentialsForm_password:
 CreateStack_stepName_ProvisionerStepConfig:
     content: Use the Create Stack step to run a CloudFormation template and supporting files inline or from your repos. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
     width: "400"
-cloudFormationCreateStack_name:
-    content: |-
-        Enter a name for the step, for example, **Create EC2 Instance**.
-
-        Harness will create an [Entity Id](https://docs.harness.io/article/li0my8tcz3) using the name. The Id is very important. You can use a Harness expression and Id to refer to settings in this step from another step.
-    width: "400"
-cloudFormationCreateStack_timeout:
-    content: Enter how long Harness should wait to complete the step before failing the step and initiating the [Step and Stage Failure Strategy](https://docs.harness.io/article/htrur23poj).
-    width: "400"
-cloudFormationCreateStack_spec.provisionerIdentifier:
-    content: |-
-        Enter a unique value in **Provisioner Identifier**. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
-
-        The **Provisioner Identifier** identifies the stack provisioned by this step. 
-
-        You reference the **Provisioner Identifier** in other steps to refer to the provisioning done by this step.
-
-        The most common use of **Provisioner Identifier** is between the Create Stack, Delete Stack, and Rollback Stack steps.
-
-        For example, in the case of a Create Stack failure, the Rollback Stack step rolls back the provisioning from the Create Stack step using its **Provisioner Identifier**.
-
-        **Note:** Only one **Create Stack** step with a specific **Provisioner Identifier** can be added in the same stage. If you add multiple Create Stack steps with the same **Provisioner Identifier**, only the first Create Stack step will be successful.
-
-        ### Provisioner Identifier Scope
-        The Provisioner Identifier is a Project-wide setting. You can reference it across Pipelines in the same Project.
-
-        For this reason, it's important that all your Project members know the Provisioner Identifiers. This will prevent one member building a Pipeline from accidentally impacting the provisioning of another member's Pipeline.
-    width: "500"
-cloudFormationCreateStack_spec.configuration.connectorRef:
-    content: |-
-        Add or select the Harness [AWS Connector](https://docs.harness.io/article/m5vkql35ca) that will be used for this step. 
-
-        The AWS Connector will include the credentials needed to perform the provisioning.
-
-        The credentials required for provisioning depend on what you are provisioning.
-    width: "400"
-cloudFormationCreateStack_spec.configuration.region:
-    content: Select the region for the resources you are provisioning.
-    width: "400"
-cloudFormationCreateStack_spec.configuration.stackName:
-    content: |-
-        Enter a name for the CloudFormation stack Harness will create. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
-
-        This is the same as the `--stack-name` option in the `aws cloudformation create-stack` command.
-    width: "500"
-cloudFormationCreateStack_spec.configuration.roleArn:
-    content: |+
-        Enter the AWS Role ARN to use when creating the stack. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
-
-        Use an existing AWS Identity and Access Management (IAM) service role that CloudFormation can assume.
-
-        This is the same as the role you would use when creating a stack using the AWS console [Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) setting or CLI.
-
-        See [AWS CloudFormation service role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-servicerole.html) from AWS.
-
-    width: "400"
-cloudFormationCreateStack_spec.configuration.capabilities:
-    content: |
-        To acknowledge the capabilities in the CloudFormation template, click in **Specify Capabilities** and select capabilities. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
-
-        This acknowledges that the template contains certain capabilities (for example, `CAPABILITY_AUTO_EXPAND`), giving AWS CloudFormation the specified capabilities before it creates the stack. This is the same as using the `--capabilities` option in the `aws cloudformation create-stack` CLI command. See [create-stack](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html).
-    width: "400"
-cloudFormationCreateStack_spec.configuration.tags.spec.content:
-    content: |-
-        Tags are arbitrary key-value pairs that can be used to identify your stack for purposes such as cost allocation. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
-
-        - A Key consists of any alphanumeric characters or spaces. Tag keys can be up to 127 characters long.
-
-        - A Value consists of any alphanumeric characters or spaces. Tag values can be up to 255 characters long.
-
-        Enter the tags in JSON or YAML (lowercase is required)
-    width: "400"
-cloudFormationCreateStack_spec.configuration.skipOnStackStatuses:
-    content: |-
-        Add the stack states that allow provisioning. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
-
-        **Note:** Harness checks if the stack is in `ROLLBACK_COMPLETE` state before the deployment. If present, Harness deletes the stack and then triggers the deployment.
-    width: "400"
 awsConnector_spec.configuration.parameters.store.spec.connectorRef:
     content: |-
         Select your Git platform, and then select or add a Git Connector. 
@@ -4375,45 +4297,6 @@ UserGroupRoleAssignmentForm_userGroups:
     width: "400"
 DeleteStack_stepName_ProvisionerStepConfig:
     content: You can use the Delete Stack step to remove resources provisioned by the Create Stack step or any resources created by CloudFormation. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
-    width: "400"
-cloudFormationDeleteStack_name:
-    content: Enter a name for the step. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
-    width: "400"
-cloudFormationDeleteStack_timeout:
-    content: Enter how long Harness should wait to complete the step before failing the step and initiating the [Step and Stage Failure Strategy](https://docs.harness.io/article/htrur23poj).
-    width: "400"
-cloudFormationDeleteStack_spec.configuration.type:
-    content: |-
-        Choose how you want to delete a stack:
-
-        - **Inline:** removes the stack you identify using AWS settings like stack name.
-        - **Inherit from Create:** removes the stack created by a Harness **Create Stack** step that you identify using its **Provisioner Identifier**.
-
-        [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
-    width: "400"
-cloudFormationDeleteStack_spec.configuration.spec.connectorRef:
-    content: |-
-        Add or select the Harness AWS Connector for connecting to AWS. 
-
-        Ensure its credentials have the permissions needed to remove the resources. See [AWS Connector](https://docs.harness.io/article/m5vkql35ca).
-    width: "400"
-cloudFormationDeleteStack_spec.configuration.spec.region:
-    content: Select the region for the resources you are removing.
-    width: "400"
-cloudFormationDeleteStack_spec.configuration.spec.roleArn:
-    content: Enter the AWS Role ARN to use when deleting the stack. This is the same as the role you would use when deleting a stack using the AWS console or CLI.
-    width: "400"
-cloudFormationDeleteStack_spec.configuration.spec.stackName:
-    content: Enter the name of the stack to delete.
-    width: "400"
-RollbackStack_stepName_ProvisionerStepConfig:
-    content: Use this step in the **Rollback** to roll back to the last successfully provisioned version of the stack. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
-    width: "400"
-cloudFormationDeleteStack_spec.configuration.provisionerIdentifier:
-    content: Enter the Provisioner Identifier of the Create Stack step that created the stack you want to roll back. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
-    width: "400"
-cloudFormationDeleteStack_spec.configuration.spec.provisionerIdentifier:
-    content: Enter the Provisioner Identifier of the Create Stack step that created the stack you want to delete. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
     width: "400"
 StepGroup_stepName_StepConfig:
     content: |-
@@ -5919,6 +5802,113 @@ ecsRollingRollbackStepForm_name:
     width: "400"
 ecsCanaryDeployStepForm_name:
     content: Enter a name for this step. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
+    width: "400"
+cloudFormationCreateStack-EXECUTION_name:
+    content: |-
+        Enter a name for the step, for example, **Create EC2 Instance**.
+        Harness will create an [Entity Id](https://docs.harness.io/article/li0my8tcz3) using the name. The Id is very important. You can use a Harness expression and Id to refer to settings in this step from another step.
+    width: "400"
+cloudFormationCreateStack-EXECUTION_timeout:
+    content: Enter how long Harness should wait to complete the step before failing the step and initiating the [Step and Stage Failure Strategy](https://docs.harness.io/article/htrur23poj).
+    width: "400"
+cloudFormationCreateStack-EXECUTION_spec.provisionerIdentifier:
+    content: |-
+        Enter a unique value in **Provisioner Identifier**. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
+                The **Provisioner Identifier** identifies the stack provisioned by this step. 
+                You reference the **Provisioner Identifier** in other steps to refer to the provisioning done by this step.
+                The most common use of **Provisioner Identifier** is between the Create Stack, Delete Stack, and Rollback Stack steps.
+                For example, in the case of a Create Stack failure, the Rollback Stack step rolls back the provisioning from the Create Stack step using its **Provisioner Identifier**.
+                **Note:** Only one **Create Stack** step with a specific **Provisioner Identifier** can be added in the same stage. If you add multiple Create Stack steps with the same **Provisioner Identifier**, only the first Create Stack step will be successful.
+                ### Provisioner Identifier Scope
+                The Provisioner Identifier is a Project-wide setting. You can reference it across Pipelines in the same Project.
+                For this reason, it's important that all your Project members know the Provisioner Identifiers. This will prevent one member building a Pipeline from accidentally impacting the provisioning of another member's Pipeline.
+    width: "500"
+cloudFormationCreateStack-EXECUTION_spec.configuration.connectorRef:
+    content: |-
+        Add or select the Harness [AWS Connector](https://docs.harness.io/article/m5vkql35ca) that will be used for this step. 
+                The AWS Connector will include the credentials needed to perform the provisioning.
+                The credentials required for provisioning depend on what you are provisioning.
+    width: "400"
+cloudFormationCreateStack-EXECUTION_spec.configuration.region:
+    content: Select the region for the resources you are provisioning.
+    width: "400"
+cloudFormationCreateStack-EXECUTION_spec.configuration.stackName:
+    content: |-
+        Enter a name for the CloudFormation stack Harness will create. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
+                This is the same as the `--stack-name` option in the `aws cloudformation create-stack` command.
+    width: "400"
+cloudFormationCreateStack-EXECUTION_spec.configuration.roleArn:
+    content: |-
+        Enter the AWS Role ARN to use when creating the stack. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
+                Use an existing AWS Identity and Access Management (IAM) service role that CloudFormation can assume.
+                This is the same as the role you would use when creating a stack using the AWS console [Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) setting or CLI.
+                See [AWS CloudFormation service role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-servicerole.html) from AWS.
+    width: "400"
+cloudFormationCreateStack-EXECUTION_spec.configuration.capabilities:
+    content: |-
+        To acknowledge the capabilities in the CloudFormation template, click in **Specify Capabilities** and select capabilities. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
+                This acknowledges that the template contains certain capabilities (for example, `CAPABILITY_AUTO_EXPAND`), giving AWS CloudFormation the specified capabilities before it creates the stack. This is the same as using the `--capabilities` option in the `aws cloudformation create-stack` CLI command. See [create-stack](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html).
+    width: "400"
+cloudFormationCreateStack-EXECUTION_spec.configuration.tags.spec.content:
+    content: |
+        Tags are arbitrary key-value pairs that can be used to identify your stack for purposes such as cost allocation. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
+                - A Key consists of any alphanumeric characters or spaces. Tag keys can be up to 127 characters long.
+                - A Value consists of any alphanumeric characters or spaces. Tag values can be up to 255 characters long.
+    width: "400"
+cloudFormationCreateStack-EXECUTION_spec.configuration.skipOnStackStatuses:
+    content: |-
+        Add the stack states that allow provisioning. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
+                **Note:** Harness checks if the stack is in `ROLLBACK_COMPLETE` state before the deployment. If present, Harness deletes the stack and then triggers the deployment.
+    width: "400"
+cloudFormationRollbackStack-EXECUTION_name:
+    content: |-
+        Enter a name for the step, for example, **Create EC2 Instance**.
+                Harness will create an [Entity Id](https://docs.harness.io/article/li0my8tcz3) using the name. The Id is very important. You can use a Harness expression and Id to refer to settings in this step from another step.
+    width: "400"
+cloudFormationRollbackStack-EXECUTION_timeout:
+    content: Enter how long Harness should wait to complete the step before failing the step and initiating the [Step and Stage Failure Strategy](https://docs.harness.io/article/htrur23poj).
+    width: "400"
+cloudFormationRollbackStack-EXECUTION_spec.configuration.provisionerIdentifier:
+    content: |-
+        Enter a unique value in **Provisioner Identifier**. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
+                The **Provisioner Identifier** identifies the stack provisioned by this step. 
+                You reference the **Provisioner Identifier** in other steps to refer to the provisioning done by this step.
+                The most common use of **Provisioner Identifier** is between the Create Stack, Delete Stack, and Rollback Stack steps.
+                For example, in the case of a Create Stack failure, the Rollback Stack step rolls back the provisioning from the Create Stack step using its **Provisioner Identifier**.
+                **Note:** Only one **Create Stack** step with a specific **Provisioner Identifier** can be added in the same stage. If you add multiple Create Stack steps with the same **Provisioner Identifier**, only the first Create Stack step will be successful.
+                ### Provisioner Identifier Scope
+                The Provisioner Identifier is a Project-wide setting. You can reference it across Pipelines in the same Project.
+                For this reason, it's important that all your Project members know the Provisioner Identifiers. This will prevent one member building a Pipeline from accidentally impacting the provisioning of another member's Pipeline.
+    width: "500"
+cloudFormationDeleteStack-EXECUTION_name:
+    content: Enter a name for the step. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
+    width: "400"
+cloudFormationDeleteStack-EXECUTION_timeout:
+    content: Enter how long Harness should wait to complete the step before failing the step and initiating the [Step and Stage Failure Strategy](https://docs.harness.io/article/htrur23poj).
+    width: "400"
+cloudFormationDeleteStack-EXECUTION_spec.configuration.type:
+    content: |-
+        Choose how you want to delete a stack:
+                - **Inline:** removes the stack you identify using AWS settings like stack name.
+                - **Inherit from Create:** removes the stack created by a Harness **Create Stack** step that you identify using its **Provisioner Identifier**.
+                [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
+    width: "400"
+cloudFormationDeleteStack-EXECUTION_spec.configuration.spec.provisionerIdentifier:
+    content: Enter the Provisioner Identifier of the Create Stack step that created the stack you want to roll back. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
+    width: "400"
+cloudFormationDeleteStack-EXECUTION_spec.configuration.spec.connectorRef:
+    content: |-
+        Add or select the Harness AWS Connector for connecting to AWS. 
+                Ensure its credentials have the permissions needed to remove the resources. See [AWS Connector](https://docs.harness.io/article/m5vkql35ca).
+    width: "400"
+cloudFormationDeleteStack-EXECUTION_spec.configuration.spec.region:
+    content: Select the region for the resources you are removing.
+    width: "400"
+cloudFormationDeleteStack-EXECUTION_spec.configuration.spec.roleArn:
+    content: Enter the AWS Role ARN to use when deleting the stack. This is the same as the role you would use when deleting a stack using the AWS console or CLI.
+    width: "400"
+cloudFormationDeleteStack-EXECUTION_spec.configuration.spec.stackName:
+    content: Enter the name of the stack to delete.
     width: "400"
 gcpSecretManagerForm_credentialsRef:
     content: |-
