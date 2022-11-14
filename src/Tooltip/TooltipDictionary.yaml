@@ -5919,3 +5919,170 @@ gcpSecretManagerForm_credentialsRef:
 gcpSecretManagerForm_default:
     content: Set this secrets manager as the default.
     width: "400"
+EcsRunTask_stepName_StepConfig:
+    content: In addition to deploying tasks as part of your standard ECS deployment, you can use the ECS Run Task step to run individual tasks separately. [Learn More](https://docs.harness.io/article/vytf6s0kwc-ecs-deployment-tutorial#ecs_run_task_step)
+    width: "400"
+ecsRunTaskStepForm_name:
+    content: Enter a name for this step.
+    width: "400"
+ecsRunTaskStepForm_timeout:
+    content: |-
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+
+        You can use:
+
+          - `w`  for weeks
+          - `d`  for days
+          - `h`  for hours
+          - `m`  for minutes
+          - `s`  for seconds
+          - `ms`  for milliseconds
+
+        The maximum is `53w`.
+
+        Timeouts can be set at the Pipeline level also.
+    width: "400"
+ecsRunTaskDefinition:
+    content: Add a Task Definition to run. [Learn More](https://docs.harness.io/article/vytf6s0kwc-ecs-deployment-tutorial#ecs_run_task_step)
+    width: "400"
+ecsRunTaskRequestDefinition:
+    content: |-
+        Use an ECS Run Task Request Definition to customize how Amazon ECS places tasks using placement constraints and placement strategies.
+        [Learn More](https://docs.harness.io/article/vytf6s0kwc-ecs-deployment-tutorial#ecs_run_task_step)
+    width: "400"
+harnessFileStore_files:
+    content: Select the file you want to add from the Harness File Store. [Learn More](https://docs.harness.io/article/oaihv6nry9)
+    width: "400"
+ecsRunTaskStepForm_spec.skipSteadyStateCheck:
+    content: |-
+        If you do not select this option, Harness will not check to see if the task was triggered.
+
+        If you do select this option, Harness will poll the ECS task to see if it triggered successfully.
+    width: "400"
+awsConnector:
+    content: |-
+        Add or select an AWS Connector to connect Harness with the AWS account and service you are using (ECS, Lambda, etc). 
+
+        For details on the requirements of each AWS service, go to [AWS Connector Settings Reference](https://docs.harness.io/article/m5vkql35ca)
+    width: "400"
+ECSInfraSpecEditable_region:
+    content: Select the AWS region where your ECS cluster is located. [Learn More](https://docs.harness.io/article/vytf6s0kwc).
+    width: "400"
+ECSInfraSpecEditable_cluster:
+    content: Select the target cluster. The list is populated using the AWS Connector you created. [Learn More](https://docs.harness.io/article/vytf6s0kwc).
+    width: "400"
+CustomDeploymentDeploymentTypeArtifacts:
+    content: Add the artifact you want to deploy in this custom deployment. [Learn More](https://docs.harness.io/article/6k9t49p6mn)
+    width: "400"
+CustomDeploymentDeploymentTypeVariables:
+    content: Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
+    width: "400"
+AzureWebAppDeploymentTypeConfigFiles:
+    content: Add any config files you want to use in your deployment.
+    width: "400"
+AzureWebAppDeploymentTypeVariables:
+    content: Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
+    width: "400"
+nullDeploymentTypeVariables:
+    content: Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
+    width: "400"
+NativeHelmDeploymentTypeManifests:
+    content: Add the Helm Values YAML file or a Helm chart you want to deploy. [Learn More](https://docs.harness.io/article/lbhf2h71at)
+    width: "400"
+NativeHelmDeploymentTypeArtifacts:
+    content: |-
+        Add the artifact you want to deploy. [Learn More](https://docs.harness.io/article/2nx0de3w99)
+
+        If your Helm Values YAML or Helm chart has the artifact hardcoded, then you don't need to add an artifact here.
+
+        If you do add an artifact in Harness, you need to reference it in your Helm Values YAML or Helm charts using the expression `<+artifact.image>`, like this:
+
+        ```
+        image: <+artifact.image>
+        ```
+    width: "400"
+ServerlessAwsLambdaDeploymentTypeConfigFiles:
+    content: Add the config files you want to use in your deployment.
+    width: "400"
+KubernetesDeploymentTypeVariables:
+    content: Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
+    width: "400"
+KubernetesDeploymentTypeConfigFiles:
+    content: Add any config files you want to use in your deployment.
+    width: "400"
+NativeHelmDeploymentTypeVariables:
+    content: Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
+    width: "400"
+NativeHelmDeploymentTypeConfigFiles:
+    content: Add any config files you want to use in your deployment.
+    width: "400"
+ServerlessAwsLambdaDeploymentTypeVariables:
+    content: Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
+    width: "400"
+SshDeploymentTypeVariables:
+    content: Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
+    width: "400"
+WinRmDeploymentTypeVariables:
+    content: Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
+    width: "400"
+ECSDeploymentTypeVariables:
+    content: Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
+    width: "400"
+environmentGlobalOverride:
+    content: |-
+        You can override settings in all Harness Service deployed to this Environment. 
+
+        Environment Overrides apply to every Service that is used with this Environment. [Learn More](https://docs.harness.io/article/9ryi1ay01f)
+    width: "400"
+manifestsOverride:
+    content: Add the manifest or spec to override the manifest or spec of all Services deployed to this Environment. [Learn More](https://docs.harness.io/article/9ryi1ay01f)
+    width: "400"
+filesOverride:
+    content: Add the config files to override the config files of all Services deployed to this Environment. [Learn More](https://docs.harness.io/article/9ryi1ay01f)
+    width: "400"
+applicationSettingsOverride:
+    content: Add the Azure application settings to override the application settings of all Services deployed to this Environment. [Learn More](https://docs.harness.io/article/9ryi1ay01f)
+    width: "400"
+connectionStringsOverride:
+    content: Add the Azure connection settings to override the connection settings of all Services deployed to this Environment. [Learn More](https://docs.harness.io/article/9ryi1ay01f)
+    width: "400"
+variableOverride:
+    content: |-
+        Add any variables you want to use for any deployment to this Environment. [Learn More](https://docs.harness.io/article/9ryi1ay01f)
+
+        If a Service deployed to this Environment has a variable with the same name as a variable added here, the variable added here will override the Service variable.
+    width: "400"
+serviceOverrides:
+    content: You can override the settings of a specific Service when it is deployed to this Environment. [Learn More](https://docs.harness.io/article/9ryi1ay01f)
+    width: "400"
+addEditServiceOverrideForm_serviceRef:
+    content: Select the Service you want to override when it is deployed to this Environment. [Learn More](https://docs.harness.io/article/9ryi1ay01f)
+    width: "400"
+serviceVariableOverride_name:
+    content: Select the Service variable you want to override.
+    width: "400"
+serviceVariableOverride_type:
+    content: Select the variable type to use.
+    width: "400"
+serviceVariableOverride_value:
+    content: Enter the new value for the variable.
+    width: "400"
+NativeHelmInfrastructureDefinitionMethod:
+    content: |-
+        There are different ways to connect to your target infrastructure: 
+
+        #### Direct Connection 
+        A vendor-agnostic connection to the cluster that uses a Harness [Kubernetes Cluster Connector](https://docs.harness.io/article/1gaud2efd4). The Connector uses the cluster master URL and an auth method such as a Kubernetes service account or it inherits credentials from a Harness Delegate running in your infrastructure.
+
+        #### Cloud Provider
+        A connection to the cloud platform where your cluster is hosted, such as GKE on GCP. It uses a platform [Cloud Connector](https://docs.harness.io/category/1ehb4tcksy) to connect to the cluster. The Connector uses platform-specific auth such as a GCP service account (with Kubernetes Engine Admin and Storage Object Viewer roles) or it inherits credentials from a Harness Delegate running in your infrastructure.
+    width: "400"
+SshInfrastructureDefinitionMethod:
+    content: Select the target platform for the SSH deployment. [Learn More](https://docs.harness.io/article/mpx2y48ovx-ssh-ng)
+    width: "400"
+updateInfraVariablesDT:
+    content: The properties displayed here are from the Deployment Template you selected. You can override the default settings of these properties. [Learn More](https://docs.harness.io/article/6k9t49p6mn-custom-deployment-tutorial#deployment_template_infrastructure_variables)
+    width: "400"
+customDeploymentAllowSimultaneousDeployments:
+    content: Enable this setting to allow multiple Pipelines to deploy to the same Infrastructure simultaneously. [Learn More](https://docs.harness.io/article/jrzwrdpvm2)
+    width: "400"
