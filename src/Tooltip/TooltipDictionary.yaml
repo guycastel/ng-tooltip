@@ -6086,3 +6086,107 @@ updateInfraVariablesDT:
 customDeploymentAllowSimultaneousDeployments:
     content: Enable this setting to allow multiple Pipelines to deploy to the same Infrastructure simultaneously. [Learn More](https://docs.harness.io/article/jrzwrdpvm2)
     width: "400"
+infraVariablesTitleDT:
+    content: |-
+        You can create variables here to use in the script in **Fetch Instances Script** or in the infrastructure settings and steps in the stage where you use this template. [Learn More](https://docs.harness.io/article/6k9t49p6mn)
+
+        You reference variables using a Harness expression with the syntax **<+infra.variables.[variable Id]>**. You can reference any setting in the variable entity, such as a Connector's URL.
+
+        When you use this template in a stage, you can overwrite the variable values.
+    width: "400"
+fetchInstancesScriptTitleDT:
+    content: |-
+        Enter the script to pull the JSON collection of target instances from a server or service. [Learn More](https://docs.harness.io/article/6k9t49p6mn)
+
+        The script is expected to query the server and receive a JSON array containing the target hosts, saved in the file `$INSTANCE_OUTPUT_PATH`.
+
+        **Important:** The `$INSTANCE_OUTPUT_PATH` expression must come last in your script.
+
+        This shell script will be executed at runtime by the Harness Delegate on its host. This should be a shell script you have run on the Delegate host to ensure that the host can connect to your server(s).
+
+        The script should return a JSON array containing the target host information Harness needs to deploy.
+
+        The script you use depends on the platform you're using.
+
+        You can enter the script inline, or use the Harness File Store to store it in a file.
+    width: "400"
+instanceObjectArrayPathDT:
+    content: |-
+        Provide the JSON path to the JSON array object for the target hosts. [Learn More](https://docs.harness.io/article/6k9t49p6mn)
+
+        For example, you would enter `items` if your script returned the following JSON payload:
+
+        ```
+        {
+            "apiVersion": "v1",
+            "items": [
+                {
+                    "apiVersion": "v1",
+                    "kind": "Pod",
+                    "metadata": {
+                        "creationTimestamp": "2022-09-28T20:13:50Z",
+                        "generateName": "example-deployment-69877c747f-",
+                        "labels": {
+                            "pod-template-hash": "69877c747f"
+                        },
+                        "name": "example-deployment-69877c747f-gllvt",
+                        "namespace": "harness-delegate-ng",
+        ...
+        ```
+    width: "600"
+instanceAttributesDT:
+    content: |-
+        Once you have provided a path to the instances array in **Instance Object Array Path**, you can map any useful JSON keys in **Instance Attributes**. [Learn More](https://docs.harness.io/article/6k9t49p6mn)
+
+        **Important:** The `instancename` value in the **Field Name** setting is mandatory. You must use `instancename` to identify the target host(s) in the JSON array.
+
+        You can map any additional attributes containing information you want to reference in your stage steps. [Learn More](https://docs.harness.io/article/6k9t49p6mn)
+    width: "400"
+deploymentStepsDT:
+    content: |-
+        Create or select step templates. [Learn More](https://docs.harness.io/article/6k9t49p6mn)
+
+        You don't have to use any of these steps in your stage. Execution is simply a way of associating steps with Deployment Templates.
+    width: "400"
+editInfraVariables_name:
+    content: |-
+        Enter a name for the variable. Harness will automatically create a unique variable Id.
+
+        You reference variables using a Harness expression with the syntax `<+infra.variables.[variable Id]>`. You can reference any setting in the variable entity, such as a Connector's URL. [Learn More](https://docs.harness.io/article/6k9t49p6mn)
+    width: "400"
+editInfraVariables_type:
+    content: There are several variable types you can use. [Learn More](https://docs.harness.io/article/6k9t49p6mn)
+    width: "400"
+FetchInstanceScript_stepName_StepConfig:
+    content: |-
+        When you selected the Deployment Template to use for this stage, the **Fetch Instances** step was added automatically. [Learn More](https://docs.harness.io/article/6k9t49p6mn)
+
+        When the pipeline runs, that step will run your Deployment Template's script and traverse the JSON instances array returned to identify the target instances for deployment.
+
+        Ensure that any subsequent steps you want to run on the target hosts use the Repeat Looping Strategy and the `<+stage.output.hosts>` expression, like this:
+
+        ```
+        repeat:
+          items: <+stage.output.hosts>
+        ```
+    width: "400"
+fetchInstanceScriptForm_name:
+    content: Enter a name for this step.
+    width: "400"
+fetchInstanceScriptForm_timeout:
+    content: |-
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+
+        You can use:
+
+          - `w`  for weeks
+          - `d`  for days
+          - `h`  for hours
+          - `m`  for minutes
+          - `s`  for seconds
+          - `ms`  for milliseconds
+
+        The maximum is `53w`.
+
+        Timeouts can be set at the Pipeline level also.
+    width: "400"
