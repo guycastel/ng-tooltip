@@ -6190,3 +6190,80 @@ fetchInstanceScriptForm_timeout:
 
         Timeouts can be set at the Pipeline level also.
     width: "400"
+multiServiceToggle:
+    content: Enable this setting to deploy multiple Services in this stage. [Learn More](https://docs.harness.io/article/tabk4u2e9n)
+    width: "400"
+deployServiceStepForm_parallel:
+    content: |
+        Enable this setting to deploy multiple Services in parallel. [Learn More](https://docs.harness.io/article/tabk4u2e9n)
+
+        With a multi Service stage, every combination of Service and Infrastructure is treated as a separate deployment. 
+
+        If you deploy multiple Services in parallel, then the failure of one Service's deployment does **not** impact other Services' deployments.
+
+        If you deploy multiple Services serially, then the failure of the one Service's deployment can impact subsequent Services' deployments.
+    width: "425"
+multiEnvInfraToggle:
+    content: |-
+        Enable this setting to deploy the service(s) in **Service** to mutiple Environment Infrastructures. [Learn More](https://docs.harness.io/article/tabk4u2e9n)
+
+        You can deploy to one or more Infrastructures in one or more Environments.
+    width: "400"
+deployEnvironmentEntityWidgetForm_parallel:
+    content: |-
+        Enable this option to deploy to multiple Infrastructures in parallel. [Learn More](https://docs.harness.io/article/tabk4u2e9n)
+
+        With a multi Infrastructure stage, every combination of Service and Infrastructure is treated as a separate deployment. 
+
+        If you deploy to Infrastructures in parallel, then the failure of one Service's deployment does **not** impact other Services' deployments.
+
+        If you deploy to Infrastructures serially, then the failure of the one Service's deployment can impact subsequent Services' deployments.
+    width: "400"
+specifyYourEnvironments:
+    content: Select the target Environment(s) for this stage. To select multiple Environment Infrastructures, enable the **Deploy to multiple Environments or Infrastructures** option. [Learn More](https://docs.harness.io/article/tabk4u2e9n)
+    width: "400"
+specifyYourInfrastructures:
+    content: Select one of more target Infrastructures. [Learn More](https://docs.harness.io/article/tabk4u2e9n)
+    width: "400"
+pipelineAdvancedOptions_timeout:
+    content: |-
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph).
+
+        You can use:
+
+          - `w`  for weeks
+          - `d`  for days
+          - `h`  for hours
+          - `m`  for minutes
+          - `s`  for seconds
+          - `ms`  for milliseconds
+
+        The maximum is `53w`.
+
+        Timeouts can be set at the step level also.
+    width: "400"
+stageExecution_settings:
+    content: If this Pipeline has multiple stages, select **Yes** and you can select which stage(s) you want to deploy at Pipeline runtime.
+    width: "400"
+delegateSelector:
+    content: |-
+        Select a Harness Delegate to use for the entire Pipeline. 
+
+        You can also select Delegates at the stage and step level.
+
+        If you select Delegates at the stage or step level, those Delegates will be used to run those stages or steps.
+    width: "400"
+pipelineAdvancedOptions_delegateSelectors:
+    content: |-
+        Select a Harness Delegate to use for the entire Pipeline. 
+
+        You can also select Delegates at the stage and step level.
+
+        If you select Delegates at the stage or step level, those Delegates will be used to run those stages or steps.
+    width: "450"
+runPipelineFormTitle:
+    content: |-
+        Enter any required settings to run this Pipeline. For example, if you have any [Runtime Inputs](https://docs.harness.io/article/f6yobn7iq0) or [Input Sets](https://docs.harness.io/article/gfk52g74xt) in your Pipeline, you can select them here.
+
+        If this Pipeline's **Advanced Options** has **Allow selective stage(s) executions?** set to **Yes**, you can select which stage(s) you want to deploy.
+    width: "400"
