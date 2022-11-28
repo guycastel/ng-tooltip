@@ -176,7 +176,7 @@ manifestDetails_gitFetchType: Select a branch or commit ID for the manifest. [Le
 manifestDetails_commitId: Enter the commit ID in the repo where the manifest is located. You can also use a [Git commit tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
 manifestDetails_branch: Enter the branch in the repo where the manifest is located, such as `main`.
 imagePath_imagePath: |+
-    Enter the name of the artifact you want to deploy, such as `library/nginx`. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
+    Enter the name of the artifact you want to deploy, such as `library/nginx` or `jsmtih/privateimage`. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
 
     Official images in public repos often need the label `library`, e.g. `library/tomcat`.
 
@@ -352,8 +352,8 @@ dockerAuthForm_dockerRegistryUrl:
     content: |-
         The URL of the Docker Registry. This is usually the URL used for your [docker login](https://docs.docker.com/engine/reference/commandline/login/) credentials.
 
-        - To connect to Docker Hub, you can use the URLs https://registry.hub.docker.com/v2/ or https://index.docker.io/v2/. 
-        - The URL will be different if you are using a private registry.
+        - To connect to Docker Hub, use the URL you typically use when pulling images (`https://registry.hub.docker.com/v2/` or `https://index.docker.io/v2/`).
+        - The URL will be different if you are using a private, internal registry.
 
         [Learn More](https://docs.harness.io/article/u9bsd77g5a)
     width: "400"
