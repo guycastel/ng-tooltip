@@ -6268,14 +6268,12 @@ runPipelineFormTitle:
 
         If this Pipeline's **Advanced Options** has **Allow selective stage(s) executions?** set to **Yes**, you can select which stage(s) you want to deploy.
     width: "400"
-
 defaultSettingsForm_enable_force_delete:
-
-    content: |- 
-        Select this to be able to force delete your entities if they are referenced in other Harness resources. [Learn more](https://docs.harness.io/article/amj1oz4x4k-entity-deletion-reference#force_delete)
+    content: Select this to be able to force delete your entities if they are referenced in other Harness resources. [Learn more](https://docs.harness.io/article/amj1oz4x4k-entity-deletion-reference#force_delete)
     width: "400"
-
 defaultSettingsForm_enable_git_commands:
-    content: |-
-        When you enable this setting, Harness checks out the code on the delegate and uses the Git client to commit changes to your Git repository.
+    content: When you enable this setting, Harness checks out the code on the delegate and uses the Git client to commit changes to your Git repository.
+    width: "400"
+sourceModule:
+    content: When you enable this option, the credentials in the Git-based Connector you selected are used when downloading the module source listed inside the Terraform config file.
     width: "400"
