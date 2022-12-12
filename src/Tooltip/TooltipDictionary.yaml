@@ -1687,6 +1687,7 @@ stepGithubAuthForm_applicationId: |-
 createUpdateSecretForm_secretManagerIdentifier: Harness includes a built-in Secrets Management feature that enables you to store encrypted secrets, such as access keys, and use them in your Harness Connectors and Pipelines. [Learn More](https://docs.harness.io/article/bo4qbrcggv)
 createUpdateSecretForm_name: Enter a name for the encrypted text. This is the name you will use to reference the text elsewhere in your resources. [Learn More](https://docs.harness.io/article/osfw70e59c)
 createUpdateSecretForm_value: Enter a value for the encrypted text. [Learn More](https://docs.harness.io/article/osfw70e59c)
+createUpdateSecretForm_reference: Enter a value for the reference secret.
 createUpdateSecretForm_description: Enter a description for the secret. A description can be very helpful when your team uses a lot of secrets for the same resource.
 createUpdateSecretForm_tags: Use tags to help you sort secrets.
 cfFlagBool_kind: Harness Feature Flags support Boolean and Multivariate flag type. A boolean flag can have false set as its default off variation and true set as its default on variation.
