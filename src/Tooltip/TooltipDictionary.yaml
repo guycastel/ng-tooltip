@@ -6277,3 +6277,13 @@ defaultSettingsForm_enable_git_commands:
 sourceModule:
     content: When you enable this option, the credentials in the Git-based Connector you selected are used when downloading the module source listed inside the Terraform config file.
     width: "400"
+pluginUsesInfo:
+    content: |-
+        Name of the plugin or source code repository
+    width: "400"
+GHApluginStep_name: |-
+    Name of the plugin in the pipeline
+pluginStep_env: |-
+    Add environment variables used by the plugin
+bitrisePluginStep_name: |-
+    Name of the plugin in the pipeline
