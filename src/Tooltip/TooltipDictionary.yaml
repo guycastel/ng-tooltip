@@ -6273,6 +6273,8 @@ defaultSettingsForm_enable_force_delete:
     width: "400"
 defaultSettingsForm_enable_git_commands:
     content: When you enable this setting, Harness checks out the code on the delegate and uses the Git client to commit changes to your Git repository.
+             
+             This setting applies when you use Bitbucket on-prem.
     width: "400"
 sourceModule:
     content: When you enable this option, the credentials in the Git-based Connector you selected are used when downloading the module source listed inside the Terraform config file.
@@ -6287,3 +6289,4 @@ pluginStep_env: |-
     Add environment variables used by the plugin
 bitrisePluginStep_name: |-
     Name of the plugin in the pipeline
+    
