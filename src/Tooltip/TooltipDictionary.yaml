@@ -6289,4 +6289,16 @@ pluginStep_env: |-
     Add environment variables used by the plugin
 bitrisePluginStep_name: |-
     Name of the plugin in the pipeline
+ecsWithS3_identifier:
+    content: Enter a name to identify this Task or Service Definition.
+    width: "400"
+ecsWithS3_region:
+    content: Select the region where the bucket is located.
+    width: "400"
+ecsWithS3_bucketName:
+    content: Select the bucket containing the Task or Service Definition.
+    width: "400"
+ecsWithS3_paths:
+    content: Enter the path from the root of the bucket to the folder containing the Task or Service Definition or to the Task or Service Definition JSON or YAML file.
+    width: "400"
     
