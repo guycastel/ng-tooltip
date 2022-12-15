@@ -6301,4 +6301,9 @@ ecsWithS3_bucketName:
 ecsWithS3_paths:
     content: Enter the path from the root of the bucket to the folder containing the Task or Service Definition or to the Task or Service Definition JSON or YAML file.
     width: "400"
-    
+Action_stepName_StepConfig:
+    content: Run Github Action plugin as a step in the pipeline. Supported only for Hosted Builds.
+    width: "400"
+Bitrise_stepName_StepConfig:
+    content: Run Bitrise plugin as a step in the pipeline. Supported only for Hosted Builds.
+    width: "400"
