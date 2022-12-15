@@ -2146,7 +2146,7 @@ gcpInfraNamespace: |-
 gcpInfraAllowSimultaneousDeployments: By default, Harness queues deployments to the same infrastructure to avoid conflicts. If you want to allow simultaneous deployments to this infrastructure, enable this option.
 cfFlagElem_name: "Enter a name for your boolean flag. When you name a feature flag, Harness automatically generates its identifier. "
 cfFlagElem_permanent:
-    content: Select for flags you intend to stay in your systems indefinitely. Permanent flags are never marked as stale. [Learn More] (https://docs.harness.io/article/2s5qt02s74)
+    content: Select for flags you intend to stay in your systems indefinitely. Permanent flags are never marked as stale. [Learn More](https://docs.harness.io/article/2s5qt02s74)
     width: "400"
 cfEnvDialog_name: Enter the name of your Environment.
 userGroupRleAssignmentForm_name: Assign role bindings for the user group. [Learn more](https://docs.harness.io/article/vz5cq0nfg2-rbac-in-harness#role_assignment)
@@ -2154,7 +2154,7 @@ userRoleAssignementForm_users: Enter the name or email address of the user you w
 userRoleAssignementForm_userGroups: Select user group(s) to add this user as a member. [Learn more](https://docs.harness.io/article/dfwuvmy33m-add-user-groups)
 ServiceAccountRoleAssignementForm_name: Assign role bindings for this Service Account. [Learn more](https://docs.harness.io/article/vz5cq0nfg2-rbac-in-harness#role_assignment)
 resourceGroupModalForm_color: Select a color for the resource group.
-roleForm_name: Enter a name for the role. [Learn more] (https://docs.harness.io/article/tsons9mu0v-add-manage-roles#step_add_a_new_role)
+roleForm_name: Enter a name for the role. [Learn more](https://docs.harness.io/article/tsons9mu0v-add-manage-roles#step_add_a_new_role)
 ciRunStep_spec.connectorRef:
     content: The Harness Connector for the container registry hosting the container image Harness will use run build commands on, such as DockerHub. [Learn More](https://docs.harness.io/article/1i1ttvftm4)
     width: "400"
@@ -3010,7 +3010,10 @@ helmWithGit_gitFetchType:
         For **Specific Commit ID**, you can also use a [Git commit tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
     width: "400"
 helmWithGit_folderPath:
-    content: Enter the path to the chart folder from the root of the repo. If the chart is available at the root of the repo, enter a forward slash /.
+    content: |-
+        Enter the path to the chart folder from the root of the repo. 
+
+        The default forward slash `/` specifies the root of the directory.
     width: "400"
 helmWithGit_helmVersion:
     content: |-
@@ -3070,7 +3073,10 @@ helmWithS3_bucketName:
     content: Select the S3 bucket where the chart is located.
     width: "400"
 helmWithS3_folderPath:
-    content: Enter the path to the chart in the bucket you selected.
+    content: |-
+        Enter the path to the chart in the bucket you selected.
+
+        The default forward slash `/` specifies the root of the directory. 
     width: "400"
 helmWithS3_chartName:
     content: |-
@@ -3128,7 +3134,10 @@ helmWithGcs_bucketName:
     content: Select the GCS bucket where the chart is located.
     width: "400"
 helmWithGcs_folderPath:
-    content: Enter the folder path to the chart in the GCS bucket you selected.
+    content: |-
+        Enter the folder path to the chart in the GCS bucket you selected.
+
+        The default forward slash `/` specifies the root of the directory.
     width: "400"
 helmWithGcs_chartName:
     content: |-
@@ -5171,25 +5180,25 @@ imagePath_spec.timeout:
     content: Specify a timeout in weeks, days, hours, minutes, seconds, or milliseconds. This timeout is used for the script to execute before failing the artifact JSON retrieval.
     width: "400"
 imagePath_spec.scripts.fetchAllArtifacts.spec.source.spec.script:
-    content: Enter a script to fetch a JSON payload. [Learn More] (https://docs.harness.io/article/hnqkhh7gut)
+    content: Enter a script to fetch a JSON payload. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
     width: "400"
 imagePath_spec.scripts.fetchAllArtifacts.artifactsArrayPath:
-    content: Enter the root object of the array. [Learn More] (https://docs.harness.io/article/hnqkhh7gut)
+    content: Enter the root object of the array. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
     width: "400"
 imagePath_spec.scripts.fetchAllArtifacts.versionPath:
-    content: Enter the path in the payload array to the version. [Learn More] (https://docs.harness.io/article/hnqkhh7gut)
+    content: Enter the path in the payload array to the version. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
     width: "400"
 imagePath_spec.version:
-    content: Enter the version number for this deployment. [Learn More] (https://docs.harness.io/article/hnqkhh7gut)
+    content: Enter the version number for this deployment.
     width: "400"
 optionalConfiguration_spec.inputs:
-    content: Using Script Input Variables enables you to easily identify and manage the Harness expressions used in your script. You can also template your script. [Learn More] (https://docs.harness.io/article/hnqkhh7gut)
+    content: Using Script Input Variables enables you to easily identify and manage the Harness expressions used in your script. You can also template your script. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
     width: "400"
 optionalConfiguration_spec.scripts.fetchAllArtifacts.attributes:
-    content: You can map any additional values from your JSON array. [Learn More] (https://docs.harness.io/article/hnqkhh7gut)
+    content: You can map any additional values from your JSON array. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
     width: "400"
 optionalConfiguration_spec.delegateSelectors:
-    content: Define a Delegate Selector or leave this field empty to allow Harness to select a Delegate. [Learn More] (https://docs.harness.io/article/nnuf8yv13o)
+    content: Define a Delegate Selector or leave this field empty to allow Harness to select a Delegate. [Learn More](https://docs.harness.io/article/nnuf8yv13o)
     width: "400"
 connectorId_Nexus:
     content: Select or create a new Connector.
@@ -5297,7 +5306,7 @@ SshWinRmAwsInfraDefinitionDetails:
     content: Infrastructure Definitions are the actual clusters, hosts, etc., where Harness deploys a Service. Provide details about your AWS cluster.
     width: "400"
 sshWinRmAWSInfra_connectorRef:
-    content: Select a Connector or create the AWS Connector. [Learn More] (https://docs.harness.io/article/98ezfwox9u)
+    content: Select a Connector or create the AWS Connector. [Learn More](https://docs.harness.io/article/98ezfwox9u)
     width: "400"
 sshWinRmAWSInfra_region:
     content: Select the AWS Region.
@@ -5331,10 +5340,10 @@ pdcInfra_hosts:
     content: Enter the host names of your target hosts.
     width: "400"
 servicenowApprovalrejectionCriteria:
-    content: Define the rejected criteria using the ServiceNow status items. If you add rejection criteria, it is used in addition to the settings in *Approval Criteria.” [Learn More] (https://docs.harness.io/article/h1so82u9ub)
+    content: Define the rejected criteria using the ServiceNow status items. If you add rejection criteria, it is used in addition to the settings in *Approval Criteria.” [Learn More](https://docs.harness.io/article/h1so82u9ub)
     width: "400"
 serviceNowApproval_spec.rejectionCriteria.spec.expression:
-    content: Enter the JEXL expression. [Learn More] (https://docs.harness.io/article/h1so82u9ub)
+    content: Enter the JEXL expression. [Learn More](https://docs.harness.io/article/h1so82u9ub)
     width: "400"
 serviceNowApproval_spec.changeWindow.startField:
     content: Specify the window in which Harness will proceed with the deployment. Once this step is approved, Harness will not proceed with deployment unless the current time is within this window. The values that appear depend on the type selected in *Ticket Type*. The start time uses the time zone set in the ServiceNow account selected in the Connector.
@@ -6006,8 +6015,23 @@ ServerlessAwsLambdaDeploymentTypeConfigFiles:
     content: Add the config files you want to use in your deployment.
     width: "400"
 KubernetesDeploymentTypeVariables:
-    content: Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
-    width: "400"
+    content: |-
+        Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
+
+        You can reference these variables as expressions in the manifests and other configuration files in this Service. 
+
+        When you deploy this Service, the expressions are resolved to the variable values.
+
+        To reference a Service variable, use this expression:
+
+        ```
+        <+serviceVariables.[variable name]>
+        ```
+
+        For example, `<+serviceVariables.myvar>`.
+
+        You can also click the copy button in the variable **Name** to copy the expression that references the variable.
+    width: "500"
 KubernetesDeploymentTypeConfigFiles:
     content: Add any config files you want to use in your deployment.
     width: "400"
@@ -6272,23 +6296,19 @@ defaultSettingsForm_enable_force_delete:
     content: Select this to be able to force delete your entities if they are referenced in other Harness resources. [Learn more](https://docs.harness.io/article/amj1oz4x4k-entity-deletion-reference#force_delete)
     width: "400"
 defaultSettingsForm_enable_git_commands:
-    content: When you enable this setting, Harness checks out the code on the delegate and uses the Git client to commit changes to your Git repository.
-             
-             This setting applies when you use Bitbucket on-prem.
+    content: |-
+        When you enable this setting, Harness checks out the code on the delegate and uses the Git client to commit changes to your Git repository.
+        This setting applies when you use Bitbucket on-prem.
     width: "400"
 sourceModule:
     content: When you enable this option, the credentials in the Git-based Connector you selected are used when downloading the module source listed inside the Terraform config file.
     width: "400"
 pluginUsesInfo:
-    content: |-
-        Name of the plugin or source code repository
+    content: Name of the plugin or source code repository
     width: "400"
-GHApluginStep_name: |-
-    Name of the plugin in the pipeline
-pluginStep_env: |-
-    Add environment variables used by the plugin
-bitrisePluginStep_name: |-
-    Name of the plugin in the pipeline
+GHApluginStep_name: Name of the plugin in the pipeline
+pluginStep_env: Add environment variables used by the plugin
+bitrisePluginStep_name: Name of the plugin in the pipeline
 ecsWithS3_identifier:
     content: Enter a name to identify this Task or Service Definition.
     width: "400"
@@ -6300,6 +6320,102 @@ ecsWithS3_bucketName:
     width: "400"
 ecsWithS3_paths:
     content: Enter the path from the root of the bucket to the folder containing the Task or Service Definition or to the Task or Service Definition JSON or YAML file.
+    width: "400"
+connectorId_Gcp:
+    content: Select or create a GCP Connector to connect Harness to your GCP account. [Learn More](https://developer.harness.io/docs/platform/connectors/ref-cloud-providers/gcs-connector-settings-reference/)
+    width: "400"
+imagePath_identifier:
+    content: Enter a name for this artifact.
+    width: "400"
+imagePath_spec.repositoryType:
+    content: Select the format of the artifact.
+    width: "400"
+imagePath_spec.project:
+    content: Enter the name of the GCP project where the repo is located.
+    width: "400"
+imagePath_spec.region:
+    content: Select the region where the repo is located.
+    width: "400"
+imagePath_spec.repositoryName:
+    content: Enter the name of the repo.
+    width: "400"
+imagePath_spec.package:
+    content: Enter the artifact name.
+    width: "400"
+imagePath_versionType:
+    content: |-
+        Select **Value** to enter in the artifact name or **Regex** to use an expression.
+
+        For example, if the build is `todolist-v2.0`:
+
+        - With **Value** selected, both `todolist*` or `*olist*` will match.
+        - With **Regex** selected, the regex `todolist-v\d.\d` will match.
+        - If the regex expression does not result in a match, Harness ignores the value.
+
+        Harness supports standard Java regex. 
+
+        For example, if **Regex** is enabled and the intent is to match a filename, the wildcard should be `.*` instead of simply a wildcard. If you wanted to match all of the files that end in `-DEV.tgz` you would enter `.*-DEV\.tgz`.
+    width: "500"
+imagePath_spec.versionRegex:
+    content: |-
+        Regex example if the build is `todolist-v2.0`:
+
+        - With **Regex** selected, the regex `todolist-v\d.\d` will match.
+        - If the regex expression does not result in a match, Harness ignores the value.
+
+        Harness supports standard Java regex. 
+
+        For example, if **Regex** is enabled and the intent is to match a filename, the wildcard should be `.*` instead of simply a wildcard. If you wanted to match all of the files that end in `-DEV.tgz` you would enter `.*-DEV\.tgz`.
+    width: "500"
+k8RolloutDeploy_spec.pruningEnabled:
+    content: Remove any resources that were present in an old manifest, but no longer present in the manifest used for the current deployment. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-advanced/cd-kubernetes-category/prune-kubernetes-resources/)
+    width: "400"
+HelmWithOCI_basePath:
+    content: |-
+        Enter the path to the chart folder from the root of the repo. 
+
+        The default forward slash `/` specifies the root of the directory.
+    width: "400"
+HelmWithOCI_identifier:
+    content: Enter a name to identify this chart.
+    width: "400"
+HelmWithOCI_chartName:
+    content: Enter the name of the chart without the version.
+    width: "400"
+HelmWithOCI_chartVersion:
+    content: |-
+        Enter the version of the chart you want to deploy. This is found in the Chart.yaml `version` label in your chart. 
+
+        You can list all available versions of a chart using the `search repo` command with the `--versions` option. See [helm search repo](https://helm.sh/docs/helm/helm_search_repo) from Helm.
+
+        If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://docs.harness.io/article/7owpxsaqar)
+    width: "400"
+HelmWithOCI_valuesPaths:
+    content: |-
+        Enter the path to the Values YAML file(s) you want to use in the same chart. Enter the path from the chart root to the file or folder. [Learn More](https://docs.harness.io/article/q002wjjl4d)
+
+        If you add multiple Values YAML files and they have any identical name labels, the Values YAML files override in a reverse order. For example, the third Values YAML file listed overrides the second and first Values YAML files.
+
+        If the Values YAML file you want to use is in a separate repo, add it separately as a Values YAML manifest type.
+    width: "400"
+HelmWithOCI_skipResourceVersioning:
+    content: |-
+        By default, Harness versions ConfigMaps and Secrets deployed into Kubernetes clusters. 
+
+        In some cases, such as when using public manifests or Helm charts, you cannot add the annotation.
+
+        When you enable Skip Resource Versioning, Harness will not perform versioning of ConfigMaps and Secrets for the resource.
+
+        If you have enabled Skip Resource Versioning for a few deployments and then disable it, Harness will start versioning ConfigMaps and Secrets.
+    width: "400"
+"HelmWithOCI_commandFlags[0].commandType":
+    content: |-
+        Select the Helm command type you want to use. For example:
+
+        - Template: `helm template` to render the helm template files.
+    width: "400"
+"HelmWithOCI_commandFlags[0].flag":
+    content: Add any options for the command.
     width: "400"
 Action_stepName_StepConfig:
     content: Run Github Action plugin as a step in the pipeline. Supported only for Hosted Builds.
