@@ -6423,3 +6423,7 @@ Action_stepName_StepConfig:
 Bitrise_stepName_StepConfig:
     content: Run Bitrise plugin as a step in the pipeline. Supported only for Hosted Builds.
     width: "400"
+gitops-agent-disaster-recovery-create:
+    content: The Agent Name has been overwritten to the Primary Agent Selected & the Import operation for the Secondary Agent is disabled. Please see additional information [here](https://docs.harness.io/article/52r3l5q67u).
+    width: "400"
+
