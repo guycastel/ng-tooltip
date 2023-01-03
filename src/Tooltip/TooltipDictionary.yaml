@@ -6301,7 +6301,7 @@ defaultSettingsForm_enable_git_commands:
         This setting applies when you use Bitbucket on-prem.
     width: "400"
 sourceModule:
-    content: When you enable this option, the credentials in the Git-based Connector you selected are used when downloading the module source listed inside the Terraform config file.
+    content: When you enable this option, the SSH credentials in the Git-based Connector you selected are used when downloading the module source listed inside the Terraform config file. This only applies when using SSH-based authentication.
     width: "400"
 pluginUsesInfo:
     content: Name of the plugin or source code repository
