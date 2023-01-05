@@ -3898,6 +3898,9 @@ ciBuildInfra_addCapabilities:
 ciBuildInfra_dropCapabilities:
     content: Set the `RequiredDropCapabilities` option in Kubernetes, which defines the list of capabilities to drop from each Step. [Learn more](https://kubernetes.io/docs/concepts/security/pod-security-policy/#capabilities)
     width: "400"
+ciBuildInfra_hostNames:
+    content: A list of [HostAliases](https://kubernetes.io/docs/tasks/network/customize-hosts-file-for-pods/) to set Pod-level override of hostname resolution.
+    width: "400"
 runAsNonRoot:
     content: |
         Run all Steps as a non-root User. To specify a default User Id for all containers, set the Run as User field.
