@@ -4468,7 +4468,7 @@ CustomApproval_stepName_StepConfig:
     content: A Custom Approval step can approve or reject a stage at any point in its execution. You add a script to this step and use its results as approval and rejection criteria. [Learn More](https://docs.harness.io/article/9ulc3vrpf2)
     width: "400"
 universalInputNameWithId:
-    content: When you create an entity or resource, Harness gives it a unique identifier (Id). You can change the name but the Id is immutable and does not change for the life of the entity or resource. [Learn More](https://docs.harness.io/article/7rsydu6iq2)
+    content: When you create an entity or resource, Harness provides a unique identifier (ID) to it. You can alter the name but not the ID. [Learn More](https://docs.harness.io/article/7rsydu6iq2)
     width: "400"
 CustomApprovalForm_name:
     content: Enter a name for this step.
