@@ -6429,4 +6429,27 @@ Bitrise_stepName_StepConfig:
 gitops-agent-disaster-recovery-create:
     content: The Agent Name has been overwritten to the Primary Agent Selected & the Import operation for the Secondary Agent is disabled. Please see additional information [here](https://docs.harness.io/article/52r3l5q67u).
     width: "400"
+ServiceNowCreate_stepName_StepConfig:
+    content: ""
+    width: "400"
+connectorDetailsStepFormServiceNow_name:
+    content: Enter a name for this ServiceNow connector. [Learn More](https://developer.harness.io/docs/platform/Connectors/connect-to-service-now)
+    width: "400"
+serviceNowDetailsForm_serviceNowUrl:
+    content: |-
+        Enter the base URL you use to access ServiceNow. 
 
+        For example: `https://example.service-now.com`. [Learn More](https://developer.harness.io/docs/platform/Connectors/connect-to-service-now)
+    width: "425"
+serviceNowDetailsForm_username:
+    content: |-
+        Enter the username you use to access ServiceNow. [Learn More](https://developer.harness.io/docs/platform/Connectors/connect-to-service-now)
+
+        You can encrypt the username with a [Harness Text Secret](https://developer.harness.io/docs/platform/Security/add-use-text-secrets).
+    width: "400"
+serviceNowDetailsForm_passwordRef:
+    content: |-
+        Enter your password or API key credentials. [Learn More](https://developer.harness.io/docs/platform/Connectors/connect-to-service-now)
+
+        For an API key, use a [Harness Text Secret](https://developer.harness.io/docs/platform/Security/add-use-text-secrets). 
+    width: "400"
