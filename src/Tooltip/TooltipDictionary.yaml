@@ -373,7 +373,7 @@ nexusAuth_nexusVersion: |-
 
     - For Nexus 2.x, Harness supports repository formats Maven, npm, and NuGet. See Sonatype's website at [Supported Formats](https://help.sonatype.com/repomanager3/supported-formats).
     - For Nexus 3.x, Harness supports repository formats Docker 3.0 and greater, Maven, npm, NuGet.
-connectorDetailsStepFormCodecommit_name: Enter a name for this Connector. You will use this name to select the Connector in Pipeline steps and settings. [Learn More](https://docs.harness.io/article/jed9he2i45)
+connectorDetailsStepFormCodecommit_name: Enter a name for this Connector. You will use this name to select the Connector in Pipeline steps and settings. [Learn More](https://developer.harness.io/docs/platform/Connectors/connect-to-code-repo)
 awsCCDetailsForm_urlType: |-
     You can select **Region** or **Repository**.
 
@@ -381,7 +381,7 @@ awsCCDetailsForm_urlType: |-
 
     You must enter a repo URL even if you select region. Harness will use the repo URL Later to test this connection.
 
-    [Learn More](https://docs.harness.io/article/jed9he2i45)
+    [Learn More](https://developer.harness.io/docs/platform/Connectors/connect-to-code-repo)
 awsCCDetailsForm_url: |-
     Enter the path of the AWS CodeCommit repository to use.
 
@@ -1599,7 +1599,7 @@ NexusConnectorAuthentication: |-
     See [Nexus Managing Security](https://help.sonatype.com/display/NXRM2/Managing+Security).
 nexusAuth_username: The username for the Nexus account.
 nexusAuth_password: The password uses a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c).
-awsCCDetailsTooltip: Connect Harness to AWS CodeCommit to fetch code or sync Projects. [Learn More](https://docs.harness.io/article/jed9he2i45)
+awsCCDetailsTooltip: Connect Harness to AWS CodeCommit to fetch code or sync Projects. [Learn More](https://developer.harness.io/docs/platform/Connectors/connect-to-code-repo)
 awsCcAuthForm_accessKey: Enter the AWS Access for the account you want to use.
 awsCcAuthForm_secretKey: Enter the AWS Secret Key using a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c).
 githubURLType: |-
@@ -1968,46 +1968,46 @@ vaultConfigForm_namespace: Enter the Vault [namespace](https://www.vaultproject.
 gitSyncRepoForm_name: |-
     Enter a name for the repo. 
 
-    It doesn't have to be the same as the Git repo name. The name you enter here will appear in Harness only. It'll identify the Project repo. [Learn More](https://docs.harness.io/article/hzajxmb3oj)
+    It doesn't have to be the same as the Git repo name. The name you enter here will appear in Harness only. It'll identify the Project repo. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
 
     New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
 gitSyncRepoForm_repo: |-
     Once you add a Connector above you should see the repo URL in **Repository Name**.
 
-    Click **Test Connection**. Once Harness verifies the connection, you will see `Connection Successful`. [Learn More](https://docs.harness.io/article/hzajxmb3oj) 
+    Click **Test Connection**. Once Harness verifies the connection, you will see `Connection Successful`. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience) 
 
     New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
 gitSyncRepoForm_rootfolder: |-
     The Harness Folder is the default folder in the repo where you are syncing your Project.
 
-    Enter the name of the folder in your repo where you want to sync. [Learn More](https://docs.harness.io/article/hzajxmb3oj)
+    Enter the name of the folder in your repo where you want to sync. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
     New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
 gitSyncRepoForm_branch: |-
-    Select the branch that you want to use, such as **main**. [Learn More](https://docs.harness.io/article/hzajxmb3oj) 
+    Select the branch that you want to use, such as **main**. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience) 
 
     New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
 gitSyncRepoTab_repo: |-
     This is the URL of the repo where Harness syncs this Project.
 
-    Click **Test Connection**. Harness verifies the connection. [Learn More](https://docs.harness.io/article/hzajxmb3oj)
+    Click **Test Connection**. Harness verifies the connection. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
     New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
 gitSyncRepoTab_rootFolder: |-
     The Harness Folder is the default folder in the repo where you are syncing your Project.
 
-    Enter the name of the folder in your repo where you want to sync. [Learn More](https://docs.harness.io/article/hzajxmb3oj)
+    Enter the name of the folder in your repo where you want to sync. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
     New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
 gitSyncRepoTab_isDefault: |-
-    **What is the default folder?** When a Pipeline in one repo needs to access a Connector/Secret/etc in another repo at runtime, the Pipeline will always use the Connector/Secret/etc in their **default folder**. Learn More](https://docs.harness.io/article/hzajxmb3oj)
+    **What is the default folder?** When a Pipeline in one repo needs to access a Connector/Secret/etc in another repo at runtime, the Pipeline will always use the Connector/Secret/etc in their **default folder**. Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
     New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
 connectorDetailsStepFormGithub_repo: |-
     Enter a name for the repo.
 
-    It doesn't have to be the same as the Git repo name. The name you enter here will appear in Harness only. It'll identify the Project repo for other users. [Learn More](https://docs.harness.io/article/hzajxmb3oj)
+    It doesn't have to be the same as the Git repo name. The name you enter here will appear in Harness only. It'll identify the Project repo for other users. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
     New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
 saveToGitForm_name: |-
@@ -2021,23 +2021,23 @@ saveToGitForm_repoIdentifier: |-
 saveToGitForm_rootFolder: |-
     The Harness Folder is the default folder in the repo where you are syncing your Project.
 
-    Enter the name of the folder in your repo where you want to sync. [Learn More](https://docs.harness.io/article/auqv67yr6x)
+    Enter the name of the folder in your repo where you want to sync. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities)
 
     New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
 saveToGitForm_filePath: |-
-    Enter a name for the YAML file, such as `Example.yaml`. Harness will generate one automatically from the Pipeline name, but you can add your own. [Learn More](https://docs.harness.io/article/auqv67yr6x) 
+    Enter a name for the YAML file, such as `Example.yaml`. Harness will generate one automatically from the Pipeline name, but you can add your own. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities) 
 
     New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
 saveToGitForm_commitMsg: |-
-    Enter a message for the commit that adds this Connector. [Learn More](https://docs.harness.io/article/auqv67yr6x) 
+    Enter a message for the commit that adds this Connector. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities) 
 
     New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
 saveToGitForm_createPr: |-
-    You can start a pull request for adding this Connector. [Learn More](https://docs.harness.io/article/auqv67yr6x) 
+    You can start a pull request for adding this Connector. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities) 
 
     New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
 saveToGitForm_branch: |-
-    Enter a branch name to add this Connector to a branch. [Learn More](https://docs.harness.io/article/auqv67yr6x)
+    Enter a branch name to add this Connector to a branch. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities)
 
     New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
 conditionalExecutionDeployStage: Conditional Execution applies to all steps that do not have their own Conditional Execution. A step's Conditional Execution overrides its stage's Conditional Execution. [Learn More](https://docs.harness.io/article/i36ibenkq2)
@@ -2206,7 +2206,7 @@ gitOps: |
     Argo CD GitOps, as a tool, keeps all configurations in sync and applies the desired state directly (and only from Git). 
     Harness provides GitOps by integrating Argo CD into the Harness Manager. Once integrated, you can perform your Harness deployments and create and manage your Argo CD Application from within the same interface.
 
-    [Learn more](https://docs.harness.io/article/ptlvh7c6z2)
+    [Learn more](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
 GitOpsProviderStepFormundefined_name: |
     Enter the name for your Adapter.
     This is a mandatory field. The name you enter must be unique and should not contain any special characters.
@@ -2226,7 +2226,7 @@ GitOpsProviderStepFormundefined_spec.adapterUrl: |-
     Enter the Harness Argo CD Adapter URL. Do not enter any trailing slash in the URL.
     This URL allows customers to interact with the ArgoCD server directly from Harness UI with minimal configuration.
 
-    [Learn more to Create Argo CD Adapter](https://docs.harness.io/article/ptlvh7c6z2)
+    [Learn more to Create Argo CD Adapter](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
 ciBuildInfra_initTimeout: Enter the Timeout for the initialization phase. During this phase, Harness downloads the build step images and spins up the containers to execute the build steps.
 ciBuildInfra_annotations: Kubernetes Annotation to the pod YAML that will be used to create the pod in which the stage's steps will be executed. [Learn More](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
 ciBuildInfra_labels: Key/Value pair that will be added to the Kubernetes pod YAML, which is used to create the pod in which the stage's steps will be executed. [Learn More](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
@@ -3982,7 +3982,7 @@ ciBuildInfra_tolerations:
     content: A list of [tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) that allow (but do not require) the pods to schedule onto nodes with matching taints.
     width: "400"
 Security_stepName_StepConfig:
-    content: This step uses Harness Security Testing Orchestration (STO) to perform code and container security scanning. [Learn More](https://docs.harness.io/article/b5jv0vlrvf)
+    content: This step uses Harness Security Testing Orchestration (STO) to perform code and container security scanning. [Learn More](https://developer.harness.io/docs/security-testing-orchestration/onboard-sto/tutorial-1-standalone-workflows)
     width: "400"
 zeroNorthStep_name:
     content: Enter a name for this step.
@@ -4000,7 +4000,7 @@ zeroNorthStep_spec.settings:
         - `scan_type: repository`
         - `policy_type: orchestratedScan`
 
-        For an example, see the [Security Testing Orchestration Quickstart](https://docs.harness.io/article/b5jv0vlrvf).
+        For an example, see the [Security Testing Orchestration Quickstart](https://developer.harness.io/docs/security-testing-orchestration/onboard-sto/tutorial-1-standalone-workflows).
 
         For a list of the supported scanners and their settings, see [Security Step Settings Reference](https://docs.harness.io/article/0k0iubnzql).
     width: "400"
@@ -4465,7 +4465,7 @@ runTestsNamespaces:
     content: A comma-separated list of the Namespace prefixes that you want to test. This field is required.
     width: "400"
 CustomApproval_stepName_StepConfig:
-    content: A Custom Approval step can approve or reject a stage at any point in its execution. You add a script to this step and use its results as approval and rejection criteria. [Learn More](https://docs.harness.io/article/9ulc3vrpf2)
+    content: A Custom Approval step can approve or reject a stage at any point in its execution. You add a script to this step and use its results as approval and rejection criteria.
     width: "400"
 universalInputNameWithId:
     content: When you create an entity or resource, Harness provides a unique identifier (Id) to it. You can alter the name but not the Id. [Learn More](https://docs.harness.io/article/7rsydu6iq2)
@@ -4481,7 +4481,7 @@ CustomApprovalForm_spec.shell:
     width: "400"
 CustomApprovalForm_spec.source.spec.script:
     content: |-
-        Enter your script. [Learn More](https://docs.harness.io/article/9ulc3vrpf2)
+        Enter your script.
 
         The script is executed on the host of the Harness Delegate that runs the step. The script is not executed on the deployment target host(s).
 
@@ -4489,15 +4489,15 @@ CustomApprovalForm_spec.source.spec.script:
     width: "400"
 CustomApprovalForm_spec.retryInterval:
     content: |-
-        Set how long the step should wait to run the script again if the Approval or Rejection criteria evaluate to `false`. [Learn More](https://docs.harness.io/article/9ulc3vrpf2)
+        Set how long the step should wait to run the script again if the Approval or Rejection criteria evaluate to `false`.
 
         The number of times a script executes depends on the **Retry Interval**,  **Script Timeout**, and how fast the script executes.
     width: "400"
 CustomApprovalForm_spec.scriptTimeout:
-    content: Set how long the step should wait for the script to complete before timing out. [Learn More](https://docs.harness.io/article/9ulc3vrpf2)
+    content: Set how long the step should wait for the script to complete before timing out.
     width: "400"
 CustomApprovalForm_spec.outputVariables:
-    content: You can output variables from the script to be used in subsequent Pipeline steps or in this step's acceptance and rejection criteria. [Learn More](https://docs.harness.io/article/9ulc3vrpf2)
+    content: You can output variables from the script to be used in subsequent Pipeline steps or in this step's acceptance and rejection criteria.
     width: "400"
 approvalapprovalCriteria:
     content: |-
@@ -4510,7 +4510,7 @@ approvalapprovalCriteria:
 
 
 
-        **Approval Criteria** is mandatory, but you can also set **Rejection Criteria**. [Learn More](https://docs.harness.io/article/9ulc3vrpf2)
+        **Approval Criteria** is mandatory, but you can also set **Rejection Criteria**.
     width: "400"
 CustomApprovalForm_spec.environmentVariables:
     content: |-
@@ -4519,7 +4519,7 @@ CustomApprovalForm_spec.environmentVariables:
         - You can easily identify and manage the Harness expressions used in your script.
         - You can template your script.
 
-        You can declare the variable using **Name** and **Value** in **Script Input Variables** and then reference the variable in the script just as you would any other variable: `$var_name`. [Learn More](https://docs.harness.io/article/9ulc3vrpf2)
+        You can declare the variable using **Name** and **Value** in **Script Input Variables** and then reference the variable in the script just as you would any other variable: `$var_name`.
     width: "400"
 approvalrejectionCriteria:
     content: |-
@@ -4527,7 +4527,7 @@ approvalrejectionCriteria:
 
         If you add rejection criteria it is used in addition to the settings in **Approval Criteria**. 
 
-        Both **Rejection Criteria** and **Approval Criteria** must evaluate to a Boolean `true` for the step to be successful. [Learn More](https://docs.harness.io/article/9ulc3vrpf2)
+        Both **Rejection Criteria** and **Approval Criteria** must evaluate to a Boolean `true` for the step to be successful.
     width: "400"
 pipelineAdvancedSteps_delegateSelectors:
     content: |-
