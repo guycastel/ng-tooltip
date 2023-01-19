@@ -5192,7 +5192,10 @@ imagePath_spec.scripts.fetchAllArtifacts.versionPath:
     content: Enter the path in the payload array to the version. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
     width: "400"
 imagePath_spec.version:
-    content: Enter the version number for this deployment.
+    content: |
+        Enter the version number of the package to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-services/k8s-services/kubernetes-services)
+
+        You can use [fixed values, runtime inputs, and expressions](https://developer.harness.io/docs/platform/references/runtime-inputs/). 
     width: "400"
 optionalConfiguration_spec.inputs:
     content: Using Script Input Variables enables you to easily identify and manage the Harness expressions used in your script. You can also template your script. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
@@ -6564,3 +6567,12 @@ serverlessLambdaWithS3_configOverridePath:
 
         This option is the same as the `--config` option in `serverless deploy`. See [AWS - deploy](https://www.serverless.com/framework/docs/providers/aws/cli-reference/deploy) from Serverless.
     width: "450"
+imagePath_spec.packageName:
+    content: Enter the name of the package. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-services/k8s-services/kubernetes-services)
+    width: "400"
+imagePath_spec.org:
+    content: Enter the Github org name, if needed.
+    width: "400"
+imagePath_spec.packageType:
+    content: Select the type of package you are using. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-services/k8s-services/kubernetes-services)
+    width: "400"
