@@ -5606,13 +5606,20 @@ gitops-repo-overview_namespaces:
     content: Enter an existing target namespace.
     width: "400"
 applicationName:
-    content: Enter a name for this Harness GitOps Application. [Learn More](https://docs.harness.io/article/pptv7t53i9)
+    content: Enter a name for this Harness GitOps Application. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
     width: "400"
 serviceVal:
-    content: Select or create a Harness Service for this Application. A Harness Service represents the microservice/app you are deploying.
+    content: |+
+        Select or create a Harness Service for this Application. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
+
+        A Harness Service represents the microservice/app you are deploying.
+
     width: "400"
 environmentVal:
-    content: Select or create a Harness Environment for this Application. A Harness Environment represents the target deployment environment (cluster).
+    content: |-
+        Select or create a Harness Environment for this Application. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
+
+        A Harness Environment represents the target deployment environment (cluster).
     width: "400"
 spec.source.kustomize.namePrefix:
     content: The prefix appended to resources for Kustomize apps.
@@ -6575,4 +6582,101 @@ imagePath_spec.org:
     width: "400"
 imagePath_spec.packageType:
     content: Select the type of package you are using. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-services/k8s-services/kubernetes-services)
+    width: "400"
+gitops-application-home-page-overview_agent:
+    content: |
+        Select or create the GitOps Agent to use when connecting to the GitOps Repository and GitOps Cluster. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
+    width: "400"
+project:
+    content: |-
+        This setting appears when the GitOps Agent you selected has multiple mapped Argo CD projects. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-gitops/multiple-argo-to-single-harness)
+
+        Select the Argo CD project with the application you want to import.
+    width: "400"
+gitops-application-home-page-sync_Sync Policy:
+    content: |-
+        Applications react to variations in state between the source manifest and the target cluster using a Sync Policy. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
+
+        - **Manual:** Select this option to manually sync the differences between the desired state in the Application's Repository and the live state in the target Cluster.
+
+        - **Automatic:** Select this option to automatically sync an Application when it detects differences between the desired state in the Application's Repository and the live state in the target environment.
+
+        With Automatic sync, you do not need to use Harness to perform the deployment manually. A commit and push to the Repository initiates deployment.
+    width: "500"
+app-details-sync-options:
+    content: |+
+        Sync Options to define how the Application syncs state. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
+
+    width: "400"
+sync-modal-sync-policy-validate:
+    content: |-
+        By default, Harness will not sync a source manifest that is not valid.
+
+        Enable **Skip Schema Validations** to skip this validation.
+    width: "400"
+sync-modal-sync-policy-create-namespace:
+    content: |-
+        This setting corresponds to the **Namespace** setting later in **Destination**.
+
+        If your source manifest contains an existing namespace, you do not need to select this setting to have Harness sync the namespace in the target cluster.
+
+        If your source manifest contains a non-existent namespace, you must select **Auto-Create Namespace**. Harness will create the namespace at runtime.
+    width: "400"
+sync-modal-sync-policy-prune-last:
+    content: |-
+        Enable **Prune Last** to perform resource pruning as the final stage of a sync operation.
+
+        Once enabled, pruning is performed after resources are deployed and healthy.
+    width: "400"
+sync-modal-sync-policy-apply-out-of-sync-only:
+    content: If your source manifests have many resources, Harness will only attempt to sync the resources that are out of sync.
+    width: "400"
+app-details-prune-propagation-policy:
+    content: |-
+        This setting determines how Kubernetes will check for and delete objects that no longer have owner reference as part of garbage collection.
+
+        - **Foreground:** Kubernetes [Foreground](https://kubernetes.io/docs/concepts/architecture/garbage-collection/#foreground-deletion) cascading deletion.
+        - **Background:** Kubernetes [Background](https://kubernetes.io/docs/concepts/architecture/garbage-collection/#background-deletion) cascading deletion. By default, Kubernetes uses background cascading deletion unless you manually use foreground deletion or choose to orphan the dependent objects.
+        - **Orphan:** Kubernetes [Orphaned dependents](https://kubernetes.io/docs/concepts/architecture/garbage-collection/#orphaned-dependents).
+    width: "400"
+sync-modal-replace:
+    content: Harness uses `kubectl create/replace` when `kubectl apply` is not suitable.
+    width: "400"
+sync-modal-retry:
+    content: |-
+        Harness will retry sync according to the settings you provide.
+
+        #### Limit
+
+        Max number of allowed sync retries.
+
+        #### Duration
+
+        Retry backoff base duration. Enter a duration like 2m, 1h, etc. The default is 5s.
+
+        #### Max Duration
+
+        Maximum retry backoff duration. Enter a duration like 2m, 1h, etc. The default 3m0s.
+
+        #### Factor
+
+        Multiply the base duration after each failed retry. The default is 2.
+    width: "500"
+gitops-application-home-page-source_Source:
+    content: |-
+        Source settings are where you select the Repository you added to Harness and define additional settings and parameters.
+
+        The settings in Source change depending on the Repository you select.
+    width: "400"
+source-step_repoUrl:
+    content: Select the Repository you added to Harness.
+    width: "400"
+source-step_targetPath:
+    content: Select the path to the folder with the manifests, and/or chart and Values YAML files.
+    width: "400"
+source-step_targetRevision:
+    content: Select the Git branch or Git tag in the repo.
+    width: "400"
+destination-step_cluster:
+    content: Select the GitOps Cluster you want to use.
     width: "400"
