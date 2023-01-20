@@ -6563,10 +6563,11 @@ serverlessLambdaWithS3_paths:
     content: |
         Enter the path from the root of the bucket to the `serverless.yml` file. [Learn More](https://developer.harness.io/docs/continuous-delivery/onboard-cd/cd-quickstarts/serverless-lambda-cd-quickstart/)
 
-        You can use `serverless.yml|.yaml|.js|.json`.
-        Notes:
-        - You can also use the .Zip format to grab the serverless.yaml and the packaged code that has been bundled in .zip and published in S3.
-        - Harness will extrapolate the serverless.yaml file and use that for deployment.
+        #### Notes
+        - You can use `serverless.yml|.yaml|.js|.json`.
+        - You do not need to enter the filename. You can just enter the path to the folder.
+        - The folder path cannot start with a dot (`.`). To specify the root directory, use `/`.  
+        - You can also use the .Zip format to grab the serverless.yaml and the packaged code that has been bundled in .zip. Harness will extrapolate the serverless.yaml file and use that for deployment.
     width: "400"
 serverlessLambdaWithS3_configOverridePath:
     content: |-
