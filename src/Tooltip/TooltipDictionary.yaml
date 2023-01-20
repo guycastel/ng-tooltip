@@ -6680,3 +6680,54 @@ source-step_targetRevision:
 destination-step_cluster:
     content: Select the GitOps Cluster you want to use.
     width: "400"
+ServiceNowImportSet_stepName_StepConfig:
+    content: Use this step to import data to your instance using an import set table as a staging area. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-advanced/ticketing-systems-category/servicenow-import-set/)
+    width: "400"
+serviceNowImportSet_name:
+    content: Enter a name for this ServiceNow import step. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-advanced/ticketing-systems-category/servicenow-import-set/)
+    width: "400"
+serviceNowImportSet_timeout:
+    content: |
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+serviceNowImportSet_spec.connectorRef:
+    content: |
+        Select or create the Harness ServiceNow Connector to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-advanced/ticketing-systems-category/servicenow-import-set/)
+
+        Here are the minimal permissions that the ServiceNow user account (set in the Harness ServiceNow Connector) must have for executing a ServiceNow import set step:
+
+        - `import_transformer`.
+        - Role mapping to CRUD permissions on staging table.
+        - Role mapping to READ permissions for each of the target tables that have an existing transform map from the specified staging table to the target table.
+        - (If required) permissions for fetching specific staging tables.
+        - Permission to access table `sys_db_object`. This is optional because you can enter your own staging table instead of selecting prefetched values.
+    width: "500"
+serviceNowImportSet_spec.stagingTableName:
+    content: |+
+        This setting specifies the staging table used to import data into ServiceNow. 
+
+        These intermediate table names extend the Import Set Row table in ServiceNow. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-advanced/ticketing-systems-category/servicenow-import-set/)
+
+        Select or enter the staging table to use.
+
+        The list is populated using the ServiceNow connector you added in ServiceNow Connector.
+
+    width: "400"
+serviceNowImportSet_spec.importData.spec.jsonBody:
+    content: |-
+        This setting contains the JSON that this step will pass when it makes a call to ServiceNow's Import Set API. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-advanced/ticketing-systems-category/servicenow-import-set/)
+
+        For example, to initiate a transformation using the `sys_import_state_comment` field of the selected staging table based on its transformation map, you would use something like this:
+
+        ```
+        {"sys_import_state_comment":"my comment"}
+        ```
+
+        You can also use Harness [runtime inputs, variable expressions](https://developer.harness.io/docs/platform/references/runtime-inputs/), and Harness secrets in the JSON of JSON Body.
+
+        For example, you could create a stage variable named `importset` and then reference it in JSON Body as `{"u_example":"<+stage.variables.importset>"}`.
+
+        For details on the table requirements and naming, go to [Import sets](https://docs.servicenow.com/en-US/bundle/tokyo-platform-administration/page/administer/import-sets/reference/import-sets-landing-page.html) from ServiceNow.
+
+        For details on creating a transform map, go to [Create a transform map](https://docs.servicenow.com/bundle/tokyo-platform-administration/page/script/server-scripting/task/t_CreateATransformMap.html) from ServiceNow.
+    width: "450"
