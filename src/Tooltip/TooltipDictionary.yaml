@@ -6439,6 +6439,320 @@ Bitrise_stepName_StepConfig:
 gitops-agent-disaster-recovery-create:
     content: The Agent Name has been overwritten to the Primary Agent Selected & the Import operation for the Secondary Agent is disabled. Please see additional information [here](https://docs.harness.io/article/52r3l5q67u).
     width: "400"
+chaos_tune_fault_total_chaos_duration:
+    content: Duration that you specify, through which chaos is injected into the target resource (in seconds).
+    width: "400"
+chaos_tune_fault_ramp_time:
+    content: Period to wait before and after injecting chaos (in seconds).
+    width: "400"
+chaos_tune_fault_force:
+    content: Choose to kill the pod gracefully (default) or forcefully.
+    width: "400"
+chaos_tune_fault_chaos_interval:
+    content: Time interval between two successive container kills (in seconds).
+    width: "400"
+chaos_tune_fault_randomness:
+    content: Introduces randomness in pod deletions with a minimum period defined by the CHAOS_INTERVAL environment variable.
+    width: "400"
+chaos_tune_fault_target_hostnames:
+    content: List of comma-separated target host names.
+    width: "400"
+chaos_tune_fault_match_scheme:
+    content: Determines whether the DNS query should exactly match the targets or can be a substring.
+    width: "400"
+chaos_tune_fault_pods_affected_perc:
+    content: Percentage of the total pods that the chaos fault targets.
+    width: "400"
+chaos_tune_fault_lib_image:
+    content: Image used by the helper pod to inject chaos.
+    width: "400"
+chaos_tune_fault_stress_image:
+    content: Container that is run on the node to inject stressors at runtime by the Pumba library (used only with the Pumba library).
+    width: "400"
+chaos_tune_fault_signal:
+    content: Termination signal for the container kill operation.
+    width: "400"
+chaos_tune_fault_fill_percentage:
+    content: Percentage of the ephemeral storage limit to fill.
+    width: "400"
+chaos_tune_fault_container_path:
+    content: Storage location of the containers.
+    width: "400"
+chaos_tune_fault_ephemeral_storage_mebibytes:
+    content: Ephemeral storage to be filled (in MiB).
+    width: "400"
+chaos_tune_fault_target_pods:
+    content: Comma-separated list of application pod names subject to pod chaos.
+    width: "400"
+chaos_tune_fault_data_block_size:
+    content: Data block size to use for filling the disk (in KB).
+    width: "400"
+chaos_tune_fault_target_container:
+    content: Name of the container subject to chaos.
+    width: "400"
+chaos_tune_fault_node_label:
+    content: Filter the target nodes if the TARGET_NODES environment variable is not set.
+    width: "400"
+chaos_tune_fault_target_nodes:
+    content: Comma-separated list of nodes subject to chaos.
+    width: "400"
+chaos_tune_fault_target_node:
+    content: Name of the node subject to chaos.
+    width: "400"
+chaos_tune_fault_vm_workers:
+    content: Number of VM workers involved in disk IO stress.
+    width: "400"
+chaos_tune_fault_sequence:
+    content: Sequence of chaos execution for multiple target pods.
+    width: "400"
+chaos_tune_fault_container_runtime:
+    content: Container runtime interface for the cluster.
+    width: "400"
+chaos_tune_fault_socket_path:
+    content: Path to the socket file of the container runtime (for example, containerd, crio, or docker).
+    width: "400"
+chaos_tune_fault_spoof_map:
+    content: Map of the target host names (for example, {"abc.com":"spoofabc.com"}) where the key is the host name to be spoofed and the value is the host name to redirect to.
+    width: "400"
+chaos_tune_fault_target_service_port:
+    content: Port of the target service.
+    width: "400"
+chaos_tune_fault_proxy_port:
+    content: Port on which the proxy listens for requests.
+    width: "400"
+chaos_tune_fault_network_interface:
+    content: Name of the network interface whose traffic you wish to shape.
+    width: "400"
+chaos_tune_fault_latency:
+    content: Latency (or delay) added to the network requests (in milliseconds).
+    width: "400"
+chaos_tune_fault_replica_count:
+    content: Number of replicas to scale to.
+    width: "400"
+chaos_tune_fault_cpu_cores:
+    content: Number of CPU cores that are subject to CPU stress.
+    width: "400"
+chaos_tune_fault_chaos_inject_command:
+    content: Command to inject CPU chaos.
+    width: "400"
+chaos_tune_fault_toxicity:
+    content: Percentage of HTTP requests affected by the HTTP fault.
+    width: "400"
+chaos_tune_fault_response_body:
+    content: HTTP response body that overwrites the original HTTP response body.
+    width: "400"
+chaos_tune_fault_content_encoding:
+    content: Value that you specify for the Content-Encoding representation header that compresses (or encodes) the response body.
+    width: "400"
+chaos_tune_fault_content_type:
+    content: Content-Type representation header for the response body.
+    width: "400"
+chaos_tune_fault_headers_map:
+    content: A map of the header key-value pairs to modify (or add) new header values.
+    width: "400"
+chaos_tune_fault_header_mode:
+    content: Specify whether you want to modify the response headers or request headers.
+    width: "400"
+chaos_tune_fault_modify_response_body:
+    content: Specify whether you want to modify the body as per the provided status code.
+    width: "400"
+chaos_tune_fault_reset_timeout:
+    content: Duration after which the connection is reset.
+    width: "400"
+chaos_tune_fault_status_code:
+    content: Modified status code for the HTTP response.
+    width: "400"
+chaos_tune_fault_chaos_kill_command:
+    content: Command to kill the chaos process.
+    width: "400"
+chaos_tune_fault_number_of_workers:
+    content: Number of I/O workers involved in I/O disk stress.
+    width: "400"
+chaos_tune_fault_filesystem_utilization_percentage:
+    content: Specify the size as a percentage of free space on the file system.
+    width: "400"
+chaos_tune_fault_filesystem_utilization_bytes:
+    content: Specify the size of the files used per worker (in GB).
+    width: "400"
+chaos_tune_fault_volume_mount_path:
+    content: Location that points to the volume mount path used in I/O stress.
+    width: "400"
+chaos_tune_fault_memory_consumption:
+    content: Memory consumed when you execute chaos faults on various platforms (in MB).
+    width: "400"
+chaos_tune_fault_network_latency:
+    content: Latency (or delay) that you wish to introduce in the network during chaos (in milliseconds).
+    width: "400"
+chaos_tune_fault_network_packet_corruption_percentage:
+    content: Packets corrupted during transmission (in percent).
+    width: "400"
+chaos_tune_fault_network_packet_loss_percentage:
+    content: Packets lost during transmission (in percent).
+    width: "400"
+chaos_tune_fault_destination_ips:
+    content: IP addresses of the services or pods whose accessibility you want to affect. You can also specify a CIDR block.
+    width: "400"
+chaos_tune_fault_destination_hosts:
+    content: DNS names (or FQDN names) of the services whose accessibility you want to affect.
+    width: "400"
+chaos_tune_fault_tc_image:
+    content: Image to control the traffic associated with a Linux machine.
+    width: "400"
+chaos_tune_fault_network_packet_duplication_percentage:
+    content: Packet duplication (in percent).
+    width: "400"
+chaos_tune_fault_jitter:
+    content: Network jitter value (in milliseconds).
+    width: "400"
+chaos_tune_fault_policy_types:
+    content: Type of network policy.
+    width: "400"
+chaos_tune_fault_pod_selector:
+    content: Labels of destination pods. 
+    width: "400"
+chaos_tune_fault_ports:
+    content: Comma-separated list of target ports.
+    width: "400"
+chaos_tune_fault_namespace_selector:
+    content: Labels of the destination namespaces.
+    width: "400"
+chaos_infra_access_type:
+    content: Choose between cluster-wide access and namespace-wide access when setting up a chaos infrastructure.
+    width: "400"
+chaos_infra_namespace:
+    content: Namespace where you wish to install the chaos infrastructure.
+    width: "400"
+chaos_infra_service_acc:
+    content: Service account that you wish to associate with the installed chaos infrastructure.
+    width: "400"
+chaos_infra_basic_config:
+    content: Select the scope of the deployment, the namespace and the service account name.
+    width: "400"
+chaos_infra_adv_config:
+    content: As an advanced user, choose between nodeSelectors (for node affinity) and tolerations (for anti-affinity) that are tunables to adjust the topology.
+    width: "400"
+chaos_infra_selected_connector:
+    content: Connector that you will select to deploy chaos infrastructure and apply the manifest.
+    width: "400"
+chaos_probe_name:
+    content: Name of the probe used to perform chaos experiment health check.
+    width: "400"
+chaos_probe_type:
+    content: Select from four probes- Command, HTTP, K8s, and Prometheus.
+    width: "400"
+chaos_probe_mode:
+    content: Select from five modes- SOT, EOT, Edge, Continuous, and OnChaos.
+    width: "400"
+chaos_probe_timeout:
+    content: Time limit that you set for the probe to execute the specified check and return the result.
+    width: "400"
+chaos_probe_retry:
+    content: Number of times a check is re-run when it fails in the first attempt, before declaring the probe status as failed.
+    width: "400"
+chaos_probe_interval:
+    content: Duration between subsequent retries of a check.
+    width: "400"
+chaos_probe_polling_interval:
+    content: Time interval during which the continuous probe is in sleep state after every iteration.
+    width: "400"
+chaos_probe_initial_delay:
+    content: Initial waiting time interval for the probe (in seconds).
+    width: "400"
+chaos_probe_stop_failure:
+    content: Choose between true or false to stop or continue the experiment execution after probe failure.
+    width: "400"
+chaos_probe_http_url:
+    content: URL specified to validate the HTTP probe.
+    width: "400"
+chaos_probe_http_skip_cc:
+    content: If the URL specified is secure (i.e. HTTPS), check the skip certificate checks checkbox to skip performing certificate checks during probe execution, else uncheck it.
+    width: "400"
+chaos_probe_http_method:
+    content: Choose between HTTP GET and POST methods, which is mapped against a received status code.
+    width: "400"
+chaos_probe_http_criteria:
+    content: Choose between the conditions ==, !=, or oneOf based on the URL and the response code received.
+    width: "400"
+chaos_probe_response_code:
+    content: The value that is mapped against the received status code to validate the probe.
+    width: "400"
+chaos_probe_content_type:
+    content: Content-Type representation header used for the body (for HTTP POST request only).
+    width: "400"
+chaos_probe_http_body:
+    content: Content that you specify inside the HTTP POST request body.
+    width: "400"
+chaos_probe_k8s_group:
+    content: Kubernetes resource group that is used to filter the K8s resource names.
+    width: "400"
+chaos_probe_k8s_version:
+    content: Kubernetes resource version that you specify in the K8s probe.
+    width: "400"
+chaos_probe_k8s_resource:
+    content: Kubernetes resource type that is used to filter the K8s resource names.
+    width: "400"
+chaos_probe_k8s_namespace:
+    content: Specify the target namespace where GVR (Group Version Resource) is used to filter the K8s resource.
+    width: "400"
+chaos_probe_k8s_operation:
+    content: Choose between create, delete, present, and absent (CRUD operations) that is performed on the filtered resource names.
+    width: "400"
+chaos_probe_k8s_field_selector:
+    content: Select the Kubernetes resource based on the K8s resource.
+    width: "400"
+chaos_probe_k8s_label_selector:
+    content: Select the Kubernetes resources with a specific label based on the K8s resource.
+    width: "400"
+chaos_probe_prom_endpoint:
+    content: Specify the URL of the Prometheus service.
+    width: "400"
+chaos_probe_prom_query:
+    content: Specify the Prometheus query that you wish to execute.
+    width: "400"
+chaos_probe_prom_criteria:
+    content: Choose between >=, <=, ==, >, <, and != after executing the PromQL command to compare between the actual and expected output.
+    width: "400"
+chaos_probe_prom_value:
+    content: The expected value after executing the PromQL command.
+    width: "400"
+chaos_probe_cmd_command:
+    content: Command that you specify, which is executed in the command probe.
+    width: "400"
+chaos_probe_cmd_type:
+    content: Choose between int, float, and string type of output after executing the command in the command probe.
+    width: "400"
+chaos_probe_cmd_criteria:
+    content: Depending on the command type, you need to choose a condition to compare the expected and actual output after executing the command in the command probe. 
+    width: "400"
+chaos_probe_cmd_value:
+    content: The expected value after executing the command in the command probe.
+    width: "400"
+chaos_resilience_score:
+    content: Measure of how adaptable the target application is, with respect to the chaos experiment performed against it.
+    width: "400"
+chaos_last_resilience_score:
+    content: Last resilience score is determined based on this formula- Σ (Weights(fault) * Probe Percentage(fault)) / Σ Weights(fault).
+    width: "400"
+chaos_avg_resilience_score:
+    content: Average resilience score determined considering all the runs of a specific chaos experiment.
+chaos_target_app_ns:
+    content: Specify the namespace where your target application is housed.
+    width: "400"
+chaos_target_app_kind:
+    content: Choose between deployment, statefulset, daemonset, deploymentconfig, and rollout that describes the kind of target application.
+    width: "400"
+chaos_target_app_label:
+    content: Label of the target application. For example, nginx target application can have the label as app=nginx. 
+    width: "400"
+chaos_infra_cluster_scope:
+    content: This scope indicates that the chaos infrastructure can access and target chaos in all the namespaces of the cluster.
+    width: "400"
+chaos_infra_namespace_scope:
+    content: This scope indicates that the chaos infrastructure can access and target chaos in a specific namespace only.
+    width: "400"
+chaos_probe_card_result:
+    content: Displays the number of probes that passed and failed.
+    width: "400"
 ServiceNowCreate_stepName_StepConfig:
     content: ""
     width: "400"
