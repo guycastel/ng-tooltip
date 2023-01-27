@@ -174,7 +174,10 @@ k8InfraReleaseName: |-
 manifestDetails_identifier: Enter a name that identifies this manifest. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
 manifestDetails_gitFetchType: Select a branch or commit Id for the manifest. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
 manifestDetails_commitId: Enter the commit Id in the repo where the manifest is located. You can also use a [Git commit tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
-manifestDetails_branch: Enter the branch in the repo where the manifest is located, such as `main`.
+manifestDetails_branch: |- 
+    Enter the branch in the repo where the manifest is located, such as `main`.
+    
+    Harness expressions are supported, but Harness secrets are not supported.
 imagePath_imagePath: |+
     Enter the name of the artifact you want to deploy, such as `library/nginx` or `jsmtih/privateimage`. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
 
@@ -1900,8 +1903,9 @@ manifestDetails_paths:
 
         If the Connector you selected in **Specify K8s Manifest Store** already has the repo name, you simply need to add the path from the root of the repo. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
 
-        ### All manifests and values files
-        If you enter a folder, Harness will automatically detect and use all of the manifests and values YAML files in that folder. Values files can also be added separately as a [Values YAML type](https://docs.harness.io/article/q002wjjl4d). 
+        If you enter a folder, Harness will automatically detect and use all of the manifests and values YAML files in that folder. Values files can also be added separately as a [Values YAML type](https://docs.harness.io/article/q002wjjl4d).
+        
+        Harness expressions are supported, but Harness secrets are not supported.
     width: "400"
 manifestDetails_skipResourceVersioning: |-
     By default, Harness versions ConfigMaps and Secrets deployed into Kubernetes clusters. Harness uses a ConfigMap for release versioning.
