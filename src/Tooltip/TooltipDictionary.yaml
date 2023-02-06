@@ -7052,3 +7052,6 @@ os:
 poolName:
     content: Enter the pool name as specified in the `pool.yml` setup file in your build infrastructure.
     width: "400"
+pipelineReferenceBranch:
+    content: Enter the branch in the Github Repository where the pipeline is available.
+    width: "400"
