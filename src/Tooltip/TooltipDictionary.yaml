@@ -6753,6 +6753,36 @@ chaos_infra_namespace_scope:
 chaos_probe_card_result:
     content: Displays the number of probes that passed and failed.
     width: "400"
+chaos_lci_task_poll_interval:
+    content: Interval between subsequent poll queries to the server for a new experiment.
+    width: "400"
+chaos_lci_task_update_interval:
+    content: Duration between subsequent status updates of an active fault to the server.
+    width: "400"
+chaos_lci_result_update_retry_interval:
+    content: Interval between subsequent retries when updating the result in case the result updation to the server fails.
+    width: "400"
+chaos_lci_task_update_retries:
+    content: Maximum number of task updation retry count in case of failure. If the retry count is breached, the active fault is aborted and the result is attempted to be sent.
+    width: "600"
+chaos_lci_task_update_retries_interval:
+    content: Interval between subsequent task updation retries in case of failure.
+    width: "400"
+chaos_lci_liveness_update_interval:
+    content: Interval between the chaos infrastructure heartbeats.
+    width: "400"
+chaos_lci_log_file_max_size:
+    content:  Maximum size limit for the chaos infrastructure log file rotation. Upon breaching the size limit, a new log file is created to store the logs and the older log file is retired as a backup archive.
+    width: "400"
+chaos_lci_log_file_max_backups:
+    content: Maximum number of backup archives to be retained at any given time. The oldest archive gets deleted first when a new log file is created.
+    width: "600"
+chaos_lci_log_file_max_age:
+    content: Number of days after which the log files are not retained.
+    width: "400"
+chaos_lci_log_file_directory:
+    content: Directory where all the log files are stored.
+    width: "400"
 ServiceNowCreate_stepName_StepConfig:
     content: ""
     width: "400"
