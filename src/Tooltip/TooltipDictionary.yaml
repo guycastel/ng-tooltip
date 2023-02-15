@@ -1513,8 +1513,6 @@ gcpConnectorSecretKeyTooltip: |-
     To obtain the Google Cloud's Account Service Key File, see [Creating and managing service account keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) from Google.
 
     Use JSON formatting. P12 service account keys are not recommended unless they are necessary for backwards compatibility.
-
-    Here's an [Account Service Key download example](https://files.helpdocs.io/kw8ldg1itf/articles/6x52zvqsta/1593629254966/image.png).
 K8sConnectorDetails: |+
     Choose the method for Harness to use when connecting to the cluster. [Learn More](https://docs.harness.io/article/sjjik49xww)
 
@@ -1588,8 +1586,6 @@ NexusConnectorAuthentication: |-
 
     - Repo: All repositories (Read)
     - Nexus UI: Repository Browser
-
-    In Nexus, it looks like [this](https://files.helpdocs.io/i5nl071jo5/articles/faor0dc98d/1609804056785/image.png).
 
     If used as a Docker Repo, the user needs:
 
@@ -1678,12 +1674,8 @@ stepGithubAuthForm_apiAccessToken: ""
 githubApiAuthentication: You can use a Personal Access Token or GitHub App for authentication. [Learn More about using a GitHub App with Harness](https://docs.harness.io/article/nze5evmqu1)
 stepGithubAuthForm_installationId: |-
     Enter the Installation Id located in the URL of the installed GitHub App.
-
-    See an [example](https://files.helpdocs.io/i5nl071jo5/articles/nze5evmqu1/1614213226801/image.png).
 stepGithubAuthForm_applicationId: |-
     Enter the **GitHub App Id** from the GitHub App **General** tab.
-
-    See an [example](https://files.helpdocs.io/i5nl071jo5/articles/nze5evmqu1/1614213187702/image.png).
 createUpdateSecretForm_secretManagerIdentifier: Harness includes a built-in Secrets Management feature that enables you to store encrypted secrets, such as access keys, and use them in your Harness Connectors and Pipelines. [Learn More](https://docs.harness.io/article/bo4qbrcggv)
 createUpdateSecretForm_name: Enter a name for the encrypted text. This is the name you will use to reference the text elsewhere in your resources. [Learn More](https://docs.harness.io/article/osfw70e59c)
 createUpdateSecretForm_value: Enter a value for the encrypted text. [Learn More](https://docs.harness.io/article/osfw70e59c)
@@ -2359,8 +2351,6 @@ wizardForm_webhook_headerConditions.0.key:
 
         For example `<+trigger.header['X-GitHub-Event']>`.
 
-        <img src="https://files.helpdocs.io/i5nl071jo5/articles/hndnde8usz/1624919275031/clean-shot-2021-06-28-at-15-27-08.png" width="95%" height="95%">
-
         [Learn More](https://docs.harness.io/article/hndnde8usz)
     width: "650"
 wizardForm_webhook_headerConditions.0.operator:
@@ -2389,7 +2379,6 @@ wizardForm_webhook_payloadConditions.0.key:
 
         To reference payload values, you use `<+eventPayload.` followed by the path to the key name. For example, `<+eventPayload.repository.name>`.
 
-        <img src="https://files.helpdocs.io/i5nl071jo5/articles/hndnde8usz/1624919275031/clean-shot-2021-06-28-at-15-27-08.png" width="95%" height="95%">
     width: "650"
 wizardForm_webhook_payloadConditions.0.operator:
     content: |-
@@ -2402,10 +2391,6 @@ wizardForm_webhook_payloadConditions.0.operator:
 wizardForm_webhook_payloadConditions.0.value:
     content: |-
         Enter a value for the payload condition comparison. [Learn More](https://docs.harness.io/article/rset0jry8q)
-
-        For example:
-
-        <img src="https://files.helpdocs.io/i5nl071jo5/articles/rset0jry8q/1613777562060/image.png" width="95%" height="95%">
     width: "650"
 k8sDirectInfraConnector:
     content: |-
@@ -2670,9 +2655,6 @@ listenOnNewArtifactManifest:
         For example, see [Helm Chart Triggers](https://docs.harness.io/article/54eqk0d1bd).
 
         **Note:** if this setting is not enabled, it is because the version setting in the **Service Definition** is not a [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) (`<+input>`). For example, for a Helm Chart package in **Service Definition**, the **Chart Version** setting must be `<+input>`.
-         
-         
-        ![Chart Version](https://files.helpdocs.io/i5nl071jo5/articles/7oml3zx0fw/1648509593378/clean-shot-2022-03-28-at-16-19-11.png)
 
         ---
 
@@ -2774,8 +2756,6 @@ headerConditions:
 
         For example `<+trigger.header['X-GitHub-Event']>`.
 
-        <img src="https://files.helpdocs.io/i5nl071jo5/articles/hndnde8usz/1624919275031/clean-shot-2021-06-28-at-15-27-08.png" width="95%" height="95%">
-
         **Notes:** 
         - When Harness evaluates the header key you enter, the comparison is case insensitive.
         - Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
@@ -2790,8 +2770,6 @@ payloadConditions:
         Harness treats the JSON payload as a data model and parses the payload and listens for events on a JSON payload key.
 
         To reference payload values, you use `<+eventPayload.` followed by the path to the key name. For example, `<+eventPayload.repository.name>`.
-
-        <img src="https://files.helpdocs.io/i5nl071jo5/articles/hndnde8usz/1624919275031/clean-shot-2021-06-28-at-15-27-08.png" width="95%" height="95%">
 
         **Notes:** 
         - Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
@@ -3610,8 +3588,6 @@ k8DeleteData_spec.deleteResources.spec.manifestPaths:
     content: |-
         Enter the path to the manifest for the resource you want to delete. The path is relative to the folder path entered in **File/Folder Path** in the **Manifest Details** settings.
 
-        <figure><img src="https://files.helpdocs.io/i5nl071jo5/articles/30bs4noarh/1649101864406/clean-shot-2022-04-04-at-12-50-51.png" /></figure>
-
         [Learn More](https://docs.harness.io/article/eaj0xuegln)
     width: "500"
 monitoredServicesTitle:
@@ -3857,9 +3833,6 @@ nexusArtifact_tag:
 artifactoryArtifact_repository:
     content: |-
         Enter the name of the repository where the Artifact is located. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
-
-        - <a href="https://files.helpdocs.io/i5nl071jo5/articles/2nx0de3w99/1649712423214/clean-shot-2022-04-11-at-14-26-40.png">Docker example</a>
-        - <a href="https://files.helpdocs.io/i5nl071jo5/articles/5fnx4hgwsa/1653344758802/clean-shot-2022-05-23-at-15-25-41.png">ZIP example</a>
     width: "400"
 artifactoryArtifact_repositoryUrl:
     content: Enter the URL you would use in the Docker login to fetch the Artifact. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
@@ -4723,8 +4696,6 @@ AzureWebAppDeploymentTypeArtifacts:
         Click **Add Primary Artifact**.
 
         You will use a Harness Connector to connect to your artifact registry and then specify the artifact to use in **Artifact Details**.
-
-        [See an example](https://files.helpdocs.io/kw8ldg1itf/articles/muegjde97q/1661812877449/image.png)
     width: "400"
 AzureWebAppInfraDefinitionDetails:
     content: |-
@@ -4778,8 +4749,6 @@ AzureSlotDeployment-EXECUTION_spec.deploymentSlot:
         Enter the name of the Source slot for the deployment. This slot is where Harness deploys the new Web App version. [Learn More](https://docs.harness.io/article/muegjde97q)
 
         Make sure the slot you enter is running.
-
-        [See an example](https://files.helpdocs.io/kw8ldg1itf/articles/muegjde97q/1661557362872/image.png)
     width: "400"
 AzureWebAppRollback-EXECUTION_name:
     content: Enter a name for this step.
@@ -4967,8 +4936,6 @@ azureAuthForm_applicationId:
     content: |-
         This is the Application (Client) Id for the Azure app registration you are using. [Learn More](https://docs.harness.io/article/9epdx5m9ae)
 
-        [See an example](https://files.helpdocs.io/i5nl071jo5/articles/9epdx5m9ae/1652392300818/clean-shot-2022-05-12-at-14-50-05.png)
-
         It is found in the Azure Active Directory (AAD) App registrations or Managed Identity. 
 
         For more information, see [Azure docs](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v1-add-azure-ad-app).
@@ -4980,8 +4947,6 @@ azureAuthForm_applicationId:
 azureAuthForm_tenantId:
     content: |-
         The Tenant Id is the Id of the Azure Active Directory (AAD) in which you created your application. [Learn More](https://docs.harness.io/article/9epdx5m9ae)
-
-        [See an example](https://files.helpdocs.io/i5nl071jo5/articles/9epdx5m9ae/1652392300818/clean-shot-2022-05-12-at-14-50-05.png)
 
         This Id is also called the Directory Id. 
 
@@ -4999,8 +4964,6 @@ azureAuthForm_secretText:
     content: |-
         Create or use an existing [Harness Text Secret](https://docs.harness.io/article/osfw70e59c).
 
-        [See an example](https://files.helpdocs.io/i5nl071jo5/articles/9epdx5m9ae/1652392300818/clean-shot-2022-05-12-at-14-50-05.png)
-
         **Note:** Harness supports PEM files only. Currently, Harness does not support PFX files.
     width: "400"
 azureAuthForm_secretFile:
@@ -5013,8 +4976,6 @@ AzureConnectorDetails:
         - If you have a Harness Delegate installed in your Azure subscription (preferably in your target AKS cluster) you can select **Use the credentials of a specific Harness Delegate**.
 
         - If you want to use credentials from your Azure registration, select **Specify credentials here**.
-
-        See an example of [Specify credentials here](https://files.helpdocs.io/i5nl071jo5/articles/9epdx5m9ae/1652392300818/clean-shot-2022-05-12-at-14-50-05.png)
     width: "400"
 azureAuthForm_managedIdentity:
     content: |-
@@ -5028,8 +4989,6 @@ azureAuthForm_managedIdentity:
 azureAuthForm_clientId:
     content: |-
         Enter the Client Id from your Managed Identity. [Learn More](https://docs.harness.io/article/9epdx5m9ae)
-
-        [See an example](https://files.helpdocs.io/i5nl071jo5/articles/9epdx5m9ae/1654019415607/clean-shot-2022-05-31-at-10-48-35.png)
 
         You can also use a [Pod Assigned Managed Identity](https://docs.microsoft.com/en-us/azure/aks/use-azure-ad-pod-identity).
     width: "400"
