@@ -1475,7 +1475,7 @@ cvData_spec.monitoredServiceRef:
     content: Harness automatically creates a Monitored Service using a concatenation of the Service and Environment names. In Monitored Service, click Click to autocreate a monitored service. If the stage Service or Environment settings are Runtime Inputs, the Monitored Service and Health Sources settings will show up in the Runtime Input settings when you run the Pipeline. [Learn More](https://docs.harness.io/article/3xhqq9xllp-verify-deployments-with-the-verify-step#step_4_create_a_monitored_service)
     width: "400"
 cvData_spec.spec.sensitivity:
-    content: In Sensitivity, you select the risk level that will be used as failure criteria during the deployment. When the criteria are met, the Failure Strategy for the stage or step is executed. [Learn More](https://docs.harness.io/article/3xhqq9xllp-verify-deployments-with-the-verify-step#step_6_select_sensitivity)
+    content: Choose the level of sensitivity. It is used as an input for the sensitivity in the Verification stage. If you set the sensitivity to high, even small anomalies will be treated as verification failures. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-execution/cv-category/verify-deployments-with-the-verify-step/#step_6_select_sensitivity)
     width: "400"
 cvData_spec.spec.duration:
     content: In Duration, select the number of data points Harness uses. If you enter 10 minutes, Harness will take the first 10 minutes worth of the log/APM data points and analyze it. The recommended Duration is 10 min for logging providers and 15 min for APM and infrastructure providers. [Learn More](https://docs.harness.io/article/3xhqq9xllp-verify-deployments-with-the-verify-step#step_7_select_duration)
