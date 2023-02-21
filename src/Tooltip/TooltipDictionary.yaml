@@ -1672,10 +1672,8 @@ stepGithubAuthForm_accessToken: |-
     **Note:** If you've set up 2FA in your Git repo, then you need to generate a PAT in your repo and enter that token in the **Personal Access Token** setting. See [GitHub settings](https://github.com/settings/tokens/new) for steps on setting up the personal access token. 
 stepGithubAuthForm_apiAccessToken: ""
 githubApiAuthentication: You can use a Personal Access Token or GitHub App for authentication. [Learn More about using a GitHub App with Harness](https://docs.harness.io/article/nze5evmqu1)
-stepGithubAuthForm_installationId: |-
-    Enter the Installation Id located in the URL of the installed GitHub App.
-stepGithubAuthForm_applicationId: |-
-    Enter the **GitHub App Id** from the GitHub App **General** tab.
+stepGithubAuthForm_installationId: Enter the Installation Id located in the URL of the installed GitHub App.
+stepGithubAuthForm_applicationId: Enter the **GitHub App Id** from the GitHub App **General** tab.
 createUpdateSecretForm_secretManagerIdentifier: Harness includes a built-in Secrets Management feature that enables you to store encrypted secrets, such as access keys, and use them in your Harness Connectors and Pipelines. [Learn More](https://docs.harness.io/article/bo4qbrcggv)
 createUpdateSecretForm_name: Enter a name for the encrypted text. This is the name you will use to reference the text elsewhere in your resources. [Learn More](https://docs.harness.io/article/osfw70e59c)
 createUpdateSecretForm_value: Enter a value for the encrypted text. [Learn More](https://docs.harness.io/article/osfw70e59c)
@@ -2378,7 +2376,6 @@ wizardForm_webhook_payloadConditions.0.key:
         Harness treats the JSON payload as a data model and parses the payload and listens for events on a JSON payload key.
 
         To reference payload values, you use `<+eventPayload.` followed by the path to the key name. For example, `<+eventPayload.repository.name>`.
-
     width: "650"
 wizardForm_webhook_payloadConditions.0.operator:
     content: |-
@@ -2389,8 +2386,7 @@ wizardForm_webhook_payloadConditions.0.operator:
         **Note:** Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
     width: "400"
 wizardForm_webhook_payloadConditions.0.value:
-    content: |-
-        Enter a value for the payload condition comparison. [Learn More](https://docs.harness.io/article/rset0jry8q)
+    content: Enter a value for the payload condition comparison. [Learn More](https://docs.harness.io/article/rset0jry8q)
     width: "650"
 k8sDirectInfraConnector:
     content: |-
@@ -3831,8 +3827,7 @@ nexusArtifact_tag:
     content: Select the Docker image tag. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
     width: "400"
 artifactoryArtifact_repository:
-    content: |-
-        Enter the name of the repository where the Artifact is located. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
+    content: Enter the name of the repository where the Artifact is located. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
     width: "400"
 artifactoryArtifact_repositoryUrl:
     content: Enter the URL you would use in the Docker login to fetch the Artifact. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
@@ -4006,9 +4001,9 @@ tfRemoteWizardForm_spec.configuration.configFiles.store.spec.commitId:
     width: "400"
 ciEcrStep_spec.baseImageConnectorRefs:
     content: |-
-        Select an authenticated Connector to download base images from the container registry. Otherwise, the Step downloads base images without authentication. 
+        Select an authenticated connector to download base images from a DockerHub container registry. If you don't select a Base Image Connector, the step downloads base images without authentication.
 
-        Specifying a Base Image Connector is recommended because unauthenticated downloads generally have a lower rate limit than authenticated downloads. ​
+        Specifying a Base Image Connector is recommended because unauthenticated downloads generally have a lower rate limit than authenticated downloads.
     width: "400"
 ServerlessAwsLambdaDeploymentTypeManifests:
     content: |-
@@ -6731,7 +6726,7 @@ chaos_lci_liveness_update_interval:
     content: Interval between the chaos infrastructure heartbeats.
     width: "400"
 chaos_lci_log_file_max_size:
-    content:  Maximum size limit for the chaos infrastructure log file rotation. Upon breaching the size limit, a new log file is created to store the logs and the older log file is retired as a backup archive.
+    content: Maximum size limit for the chaos infrastructure log file rotation. Upon breaching the size limit, a new log file is created to store the logs and the older log file is retired as a backup archive.
     width: "400"
 chaos_lci_log_file_max_backups:
     content: Maximum number of backup archives to be retained at any given time. The oldest archive gets deleted first when a new log file is created.
