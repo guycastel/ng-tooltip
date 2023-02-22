@@ -2614,7 +2614,6 @@ helmWithHttp_commandFlags:
         Select the Helm command type you want to use. For example:
 
         - [Template](https://v2.helm.sh/docs/helm/#helm-template): `helm template` to render the helm template files.
-        - [Fetch](https://v2.helm.sh/docs/helm/#helm-fetch): `helm fetch` (v1) or [`helm pull`](https://helm.sh/docs/helm/helm_pull/) (v2) to get the Helm chart.
     width: "400"
 "helmWithHttp_commandFlags[0].flag":
     content: Add any options for the command.
@@ -3157,7 +3156,6 @@ helmWithGcs_commandFlags:
         Select the Helm command type you want to use. For example:
 
         - [Template](https://v2.helm.sh/docs/helm/#helm-template): `helm template` to render the helm template files.
-        - [Fetch](https://v2.helm.sh/docs/helm/#helm-fetch): `helm fetch` (v1) or [`helm pull`](https://helm.sh/docs/helm/helm_pull/) (v2) to get the Helm chart.
     width: "400"
 "helmWithGcs_commandFlags[0].flag":
     content: Add any options for the command.
