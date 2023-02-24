@@ -7037,3 +7037,9 @@ poolName:
 pipelineReferenceBranch:
     content: Enter the branch in the Github Repository where the pipeline is available.
     width: "400"
+nexus2-tag:
+    content: Select the Nexus tag for the package selected
+    width: "400"
+nexus3-tag:
+    content: Select the Nexus tag for the package selected
+    width: "400"
