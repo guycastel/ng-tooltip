@@ -7057,3 +7057,85 @@ nexus2-tag:
 nexus3-tag:
     content: Select the Nexus tag for the package selected
     width: "400"
+AquaTrivy_stepName_StepConfig:
+    content: Enter a unique and descriptive name for the Aqua Trivy scan step.
+    width: "400"
+securityStepTargetType:
+    content: "The target type to scan for vulnerabilities. This menu shows supported types only. "
+    width: "400"
+securityStepTargetName:
+    content: The Identifier that you want to assign to the target you’re scanning in the pipeline. Use a unique, descriptive name such as `codebaseAlpha` or `jsmith/myalphaservice`.
+    width: "400"
+securityStepTargetVariant:
+    content: An identifier for a specific target to scan, such as the branch name or image tag. This identifier is used to differentiate or group results for a target. Harness maintains a historical trend for each variant.
+    width: "400"
+securityStepImageType:
+    content: |-
+        The registry type where the image is stored: 
+
+        * **Docker v2** — A registry that uses the Docker Registry v2 API such as [Docker Hub](https://docs.docker.com/registry/spec/api/), [Google Container Registry](https://cloud.google.com/container-registry), or [Google Artifact Registry](https://cloud.google.com/artifact-registry).
+
+        * **[Amazon Container Registry](https://aws.amazon.com/ecr/)**
+
+        * **[JFrog Docker Registry](https://aws.amazon.com/ecr/)**
+
+        * **Local Image**
+    width: "400"
+securityStepImageDomain:
+    content: |-
+        The URL of the artifact repository that contains the image to scan. Examples: 
+        * `docker.io`
+        * `app.harness.io/registry`
+        * `us-east1-docker.pkg.dev`
+        * `us.gcr.io`
+    width: "400"
+securityStepImageName:
+    content: "The image name. For non-local images, you also need to specify the image repository. Example: `jsmith/myalphaservice`"
+    width: "400"
+securityStepImageTag:
+    content: "The image tag. Examples: `latest`, `1.2.3`"
+    width: "400"
+securityStepImageAccessId:
+    content: Username to log in to the container registry.
+    width: "400"
+securityStepImageAccessToken:
+    content: The access token used to log in to the container registry. In most cases this is a password or an API key. You should create a secret with your encrypted token and reference the secret using the format `<+secrets.getValue(project.container-access-id>`. [Learn more](https://developer.harness.io/docs/platform/security/add-file-secrets/)
+    width: "400"
+securityStepLogLevel:
+    content: |-
+        The minimum severity of the messages you want to include in your scan logs. You can specify one of the following:
+        * **`DEBUG`**
+        * **`INFO`**
+        * **`WARNING`**
+        * **`ERROR`**
+    width: "400"
+securityStepArgsCli:
+    content: You can use this field to customize the scan with specific command-line arguments supported by that scanner.
+    width: "400"
+securityStepFailOnSeverity:
+    content: |-
+        Every Security step has a Fail on Severity setting. If the scan finds any vulnerability with the specified severity or higher, the pipeline fails. It is good practice to include this setting in every Security step in an integrated pipeline. You can specify one of the following:
+        * **`CRITICAL`**
+        * **`HIGH`**
+        * **`MEDIUM`**
+        * **`LOW`**
+        * **`INFO`**
+    width: "400"
+AquatrivyStep_spec.settings:
+    content: You can specify additional arguments for Aqua Trivy scans. [Learn more](https://developer.harness.io/docs/security-testing-orchestration/sto-techref-category/aqua-trivy-scanner-reference)
+    width: "400"
+AquatrivyStep_name:
+    content: ""
+    width: "400"
+AquatrivyStep_description:
+    content: ""
+    width: "400"
+securityStepMode:
+    content: |-
+        The orchestration mode to use for the scan: 
+        * **Orchestrated** scans are fully orchestrated. A Security step in the Harness pipeline orchestrates a scan and then normalizes and compresses the results.
+        * **Ingestion** (`ingestionOnly`) scans are not orchestrated. The Security step ingest results from a previous scan (for for a scan run in an previous step) and then normallizes and compresses the results. 
+    width: "400"
+securityStepConfig:
+    content: The predefined configuration to use for the scan. All scan steps have at least one configuration.
+    width: "400"
