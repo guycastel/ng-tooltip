@@ -7060,11 +7060,28 @@ nexus3-tag:
 AquaTrivy_stepName_StepConfig:
     content: Enter a unique and descriptive name for the Aqua Trivy scan step.
     width: "400"
+AquatrivyStep_name:
+    content: Enter a unique and descriptive name for the Aqua Trivy scan step.
+    width: "400"
+securityStepMode:
+    content: |-
+        The orchestration mode to use for the scan. The menu shows only the modes that are supported for the specific scanner. 
+
+        * **Orchestrated** scans are fully orchestrated. A Security step in the Harness pipeline orchestrates a scan and then normalizes and compresses the results. [Learn more](https://developer.harness.io/docs/security-testing-orchestration/use-sto/run-an-orchestrated-scan-in-sto)
+
+         * **Extraction** (`dataLoad`) scans are partially orchestrated. The Security step pulls scan results from an external SaaS service and then normalizes and compresses the data.
+
+         * **Ingestion** (`ingestionOnly`) scans are not orchestrated. The Security step ingest results from a previous scan (for for a scan run in an previous step) and then normallizes and compresses the results. [Learn more](https://developer.harness.io/docs/security-testing-orchestration/use-sto/ingest-scan-results-into-an-sto-pipeline)
+    width: "400"
+securityStepConfig:
+    content: The predefined configuration to use for the scan. All scan steps have at least one configuration.
+    width: "400"
 securityStepTargetType:
-    content: "The target type to scan for vulnerabilities. This menu shows supported types only. 
+    content: |
+        The target type to scan for vulnerabilities. This menu shows supported types only.
     width: "400"
 securityStepTargetName:
-    content: The Identifier that you want to assign to the target you’re scanning in the pipeline. Use a unique, descriptive name such as `codebaseAlpha` or `jsmith/myalphaservice`.
+    content: The label that you want to assign to the target you’re scanning. This the target name that will appear in the UI. Use a unique, descriptive name such as `codebaseAlpha` or `jsmith/myalphaservice`.
     width: "400"
 securityStepTargetVariant:
     content: An identifier for a specific target to scan, such as the branch name or image tag. This identifier is used to differentiate or group results for a target. Harness maintains a historical trend for each variant.
@@ -7077,7 +7094,7 @@ securityStepImageType:
 
         * **[Amazon Container Registry](https://aws.amazon.com/ecr/)**
 
-        * **[JFrog Docker Registry](https://aws.amazon.com/ecr/)**
+        * **[JFrog Docker Registry](https://jfrog.com/container-registry/)**
 
         * **Local Image**
     width: "400"
@@ -7099,7 +7116,8 @@ securityStepImageAccessId:
     content: Username to log in to the container registry.
     width: "400"
 securityStepImageAccessToken:
-    content: The access token used to log in to the container registry. In most cases this is a password or an API key. You should create a secret with your encrypted token and reference the secret using the format `<+secrets.getValue(project.container-access-id>`. [Learn more](https://developer.harness.io/docs/platform/security/add-file-secrets/)
+    content: |
+        The access token used to log in to the container registry. In most cases this is a password or an API key. You should create a secret with your encrypted token and reference the secret using the format `<+secrets.getValue(project.container-access-id>`. [Learn more](https://developer.harness.io/docs/platform/security/add-file-secrets/)
     width: "400"
 securityStepLogLevel:
     content: |-
@@ -7122,21 +7140,6 @@ securityStepFailOnSeverity:
         * **`INFO`**
     width: "400"
 AquatrivyStep_spec.settings:
-    content: You can specify additional arguments for Aqua Trivy scans. [Learn more](https://developer.harness.io/docs/security-testing-orchestration/sto-techref-category/aqua-trivy-scanner-reference)
-    width: "400"
-AquatrivyStep_name:
-    content: ""
-    width: "400"
-AquatrivyStep_description:
-    content: ""
-    width: "400"
-securityStepMode:
-    content: |-
-        The orchestration mode to use for the scan. The menu shows only the modes that are supported for the specific scanner. 
-        * **Orchestrated** scans are fully orchestrated. A Security step in the Harness pipeline orchestrates a scan and then normalizes and compresses the results.
-        * **Extraction** (`dataLoad`) scans are partially orchestrated. The Security step pulls scan results from an external SaaS service and then normalizes and compresses the data.
-        * **Ingestion** (`ingestionOnly`) scans are not orchestrated. The Security step ingest results from a previous scan (for for a scan run in an previous step) and then normallizes and compresses the results. 
-    width: "400"
-securityStepConfig:
-    content: The predefined configuration to use for the scan. All scan steps have at least one configuration.
+    content: |
+        You can specify additional arguments for Aqua Trivy scans. [Learn more](https://developer.harness.io/docs/security-testing-orchestration/sto-techref-category/aqua-trivy-scanner-reference)
     width: "400"
