@@ -7141,5 +7141,82 @@ securityStepFailOnSeverity:
     width: "400"
 AquatrivyStep_spec.settings:
     content: |
-        You can specify additional arguments for Aqua Trivy scans. [Learn more](https://developer.harness.io/docs/security-testing-orchestration/sto-techref-category/aqua-trivy-scanner-reference)
+        Specify additional settings for the scan. [Learn more](https://developer.harness.io/docs/security-testing-orchestration/sto-techref-category/aqua-trivy-scanner-reference)
+    width: "400"
+securityStepTargetWorkspace:
+    content: |-
+        The workspace path on the pod running the Security step. The workspace path is `/harness` by default. 
+
+        You can override this if you want to scan only a subset of the workspace. For example, suppose the pipeline publishes artifacts to a specific subfolder. You can specify the workspace path as `/harness/path/to/artifacts/subfolder`.  
+    width: "400"
+BanditStep_spec.settings:
+    content: Specify additional settings for the Bandit scan. [Learn more](https://developer.harness.io/docs/security-testing-orchestration/sto-techref-category/bandit-scanner-reference)
+    width: "400"
+securityStepAuthDomain:
+    content: "The fully-qualified URL to the scanner. "
+    width: "400"
+securityStepAuthSSL:
+    content: "The step and the scanner communicate over SSL by default. Set this to **false** to disable SSL (not safe). "
+    width: "400"
+securityStepAuthVersion:
+    content: The scanner API version. Some scanners require this.
+    width: "400"
+securityStepAuthType:
+    content: |-
+        The scanner API version. Specify one of the following:
+        * Username & Password
+        * API Key
+    width: "400"
+securityStepAuthAccessToken:
+    content: The access token to log in to the scanner. In most cases this is a password or an API key. You should create a secret with your encrypted token and reference the secret using the format `<+secrets.getValue(project.container-access-id>`.  [Learn more](https://developer.harness.io/docs/platform/security/add-file-secrets)
+    width: "400"
+securityStepToolProjectName:
+    content: The name of the scan project as defined in the scanner. This is the also the target name in the Harness UI (Security Tests &gt; Test Targets).
+    width: "400"
+securityStepToolProjectVersion:
+    content: The version of the scan project, as defined in the  scanner.
+    width: "400"
+securityStepAuthAccessId:
+    content: Username to log in to the scanner.
+    width: "400"
+securityStepToolTeamName:
+    content: The product team name. In Checkmarx, for example, supports team names in the format `/<server-name>/<team-name>` such as `/server1.myorg.org/devOpsEast`.
+    width: "400"
+securityStepToolInclude:
+    content: "The initial scope for the scan. This should match the format required by the scanner. "
+    width: "400"
+securityStepToolJavaLibraries:
+    content: |
+        A comma-separated list of paths to files with third-party libraries used by your tests. If you’re running a SonarQube scan, for example, this corresponds to the `sonar.java.libraries` parameter.  
+    width: "400"
+securityStepToolJavaBinaries:
+    content: |
+        A comma-separated list of paths to the folders with the bytecode files you want to scan.  If you’re running a SonarQube scan, for example, this corresponds to the sonar.java.binaries parameter. 
+    width: "400"
+securityStepToolProductLookupType:
+    content: ""
+    width: "400"
+securityStepToolProductToken:
+    content: The access token used to log in to a specific product in the scanner. This is required for some scans. In most cases this is a password or an API key. You should create a secret with your encrypted ID and reference the secret using the format `<+secrets.getValue(project.product-access-token>`.  [Learn more](https://developer.harness.io/docs/platform/security/add-file-secrets)
+    width: "400"
+securityStepToolExclude:
+    content: Exclusions to the initial scope for the scan. This should match the format required by the scanner.
+    width: "400"
+securityStepInstanceDomain:
+    content: "Domain of the application instance to scan. You can include the full path to the app in this field, or split the full path between the Domain and the Path fields. Example: `https://myapp.io/portal/us`"
+    width: "400"
+securityStepInstanceProtocol:
+    content: HTTPS (default) or HTTP.
+    width: "400"
+securityStepInstancePort:
+    content: The TCP port used by the scanned app instance.
+    width: "400"
+securityStepInstancePath:
+    content: Path to append to the application instance domain, if you're splitting the full path between the **Domain** and **Path** settings. For example, you might specify the domain as `https://myapp.io` and the path as `/portal/us`.
+    width: "400"
+securityStepToolContext:
+    content: "The context to use for the scan. If you’re running a ZAP scan, for example, you can define contexts to include multiple URLs in the same scan.  "
+    width: "400"
+securityStepToolPort:
+    content: The version of the scan project, as defined in the scanner.
     width: "400"
