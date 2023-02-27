@@ -7061,7 +7061,7 @@ AquaTrivy_stepName_StepConfig:
     content: Enter a unique and descriptive name for the Aqua Trivy scan step.
     width: "400"
 securityStepTargetType:
-    content: "The target type to scan for vulnerabilities. This menu shows supported types only. "
+    content: "The target type to scan for vulnerabilities. This menu shows supported types only. 
     width: "400"
 securityStepTargetName:
     content: The Identifier that you want to assign to the target you’re scanning in the pipeline. Use a unique, descriptive name such as `codebaseAlpha` or `jsmith/myalphaservice`.
@@ -7132,8 +7132,9 @@ AquatrivyStep_description:
     width: "400"
 securityStepMode:
     content: |-
-        The orchestration mode to use for the scan: 
+        The orchestration mode to use for the scan. The menu shows only the modes that are supported for the specific scanner. 
         * **Orchestrated** scans are fully orchestrated. A Security step in the Harness pipeline orchestrates a scan and then normalizes and compresses the results.
+        * **Extraction** (`dataLoad`) scans are partially orchestrated. The Security step pulls scan results from an external SaaS service and then normalizes and compresses the data.
         * **Ingestion** (`ingestionOnly`) scans are not orchestrated. The Security step ingest results from a previous scan (for for a scan run in an previous step) and then normallizes and compresses the results. 
     width: "400"
 securityStepConfig:
