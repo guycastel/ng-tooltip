@@ -3742,14 +3742,12 @@ sshVerifyConnectionForm_host:
     content: Enter the hostname of the remote server you want to SSH into. [Learn more](https://docs.harness.io/article/xmp9j0dk8b-add-use-ssh-secrets#add_ssh_credential)
     width: "400"
 portBindings:
-    content: |
-        When a Pipeline runs on an AWS build farm, some Steps might run on a bare metal VM and others run in a container. The port used to communicate with the Service Dependency depends on where the Step is running: bare-metal Steps use the Host Port and containerized Steps use the Container Port. 
+    content: |-
+        Depending on the build infrastructure, some steps might run on VMs while other steps run in containers. The port used to communicate with a service dependency started in a Background step depends on where the step is running: VMs use the **Host Port** and containerized steps use the **Container Port**. 
 
-        Suppose you create a Service Dependency with the Name and Id **myloginservice**. 
-        - A containerized Step talks to the service using **myloginservice:_container_port_**. 
-        - A  Run or Run Test Step that runs directly on the VM talks to the service using **localhost:_host_port_**.
+        Containerized steps talk to the background service using `[background-step-id]:container_port`. Whereas steps that run directly on the VM can talk to the background service using `localhost:host_port`.
 
-        The binding of Host and Container Ports is similar to [port mapping in Docker](https://docs.docker.com/config/containers/container-networking/). Usually the ports are the same unless the default Host Port for the service dependency is already in use by another local service. 
+        [Learn more](https://developer.harness.io/docs/continuous-integration/ci-technical-reference/background-step-settings#port-bindings).
     width: "400"
 dependencyBase_spec.portBindings:
     content: |
