@@ -7218,5 +7218,5 @@ securityStepToolContext:
     content: "The context to use for the scan. If you’re running a ZAP scan, for example, you can define contexts to include multiple URLs in the same scan.  "
     width: "400"
 securityStepToolPort:
-    content: The version of the scan project, as defined in the scanner.
+    content: The TCP port to communicate with the scanner. You can specify this to override the default port for that scanner.
     width: "400"
