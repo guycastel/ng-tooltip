@@ -4013,7 +4013,7 @@ tfRemoteWizardForm_spec.configuration.configFiles.store.spec.commitId:
     width: "400"
 ciEcrStep_spec.baseImageConnectorRefs:
     content: |-
-        Select an authenticated connector to download base images from a DockerHub container registry. If you don't select a Base Image Connector, the step downloads base images without authentication.
+        Select an authenticated connector to download base images from a Docker-compliant container registry. If you don't select a Base Image Connector, the step downloads base images without authentication.
 
         Specifying a Base Image Connector is recommended because unauthenticated downloads generally have a lower rate limit than authenticated downloads.
     width: "400"
