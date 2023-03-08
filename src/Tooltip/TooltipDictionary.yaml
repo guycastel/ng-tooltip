@@ -216,7 +216,7 @@ gcsBucket:
     content: Enter the source GCS bucket name. [Learn More](https://cloud.google.com/storage/docs/creating-buckets)
     width: "400"
 sourcePath:
-    content: "Path to the artifact files you want to upload. You can use standard [glob expressions](https://en.wikipedia.org/wiki/Glob_(programming)) to upload multiple files. For example, `src/js/**/*.js` will upload all Javascript files in `src/js/subfolder-1/`, `src/js/subfolder-2`, and so on. "
+    content: Path to the artifact files you want to upload.
     width: "400"
 gcsS3Target: The path to store the cache in, relatively to the bucket. If not provided the cache will be save to [bucket]/
 restoreCacheKey:
@@ -3609,15 +3609,13 @@ monitoredServiceType:
     content: Select the Service type. You can choose Application or Infrastructure.
     width: "150"
 serviceSelectOrCreate:
-    content: Select a user journey from the list. To create a new user journey, click Add New. A user journey is a visualization of a user's interaction with a service to achieve a specific goal over time and across different channels.
+    content: A service represents your microservice and other workloads logically. You can select an existing service or create a new one.
     width: "300"
 environmentSelectOrCreate:
-    content: Environment represents your deployment targets logically (QA, Prod, etc). Select the Environment where the Harness Service is deployed from the list or click Add New to create a new Environment.
+    content: Environment represents your deployment targets logically (QA, Prod, etc). You can select an existing environment or create a new one.
     width: "400"
 MonitoredServiceForm_name:
-    content: |+
-        The field auto-populates the concatenation of the selected Harness Service and Environment name.
-
+    content: This field is autopopulated by combining the Service and Environment names.
     width: "400"
 changeSourceaForm_name:
     content: "Enter a name for the Change Source. "
@@ -3635,10 +3633,10 @@ selectFeature:
     content: Select the APM or logging tool feature to be used.
     width: "400"
 NameIdDescriptionTagsHealthSource_description:
-    content: It is a text string.
+    content: Enter a description.
     width: "400"
 NameIdDescriptionTagsHealthSource_tags:
-    content: You can add Tags to Harness entities and then use the Tags to search for all matching entities.
+    content: Assign an existing tag or create a new tag for the entities. Tags are metadata and they can contain any character. You can use tags to search and filter the monitored service.
     width: "400"
 changeSourceProviderType:
     content: Select the Change Source type.
@@ -4450,7 +4448,7 @@ CustomApproval_stepName_StepConfig:
     content: A Custom Approval step can approve or reject a stage at any point in its execution. You add a script to this step and use its results as approval and rejection criteria.
     width: "400"
 universalInputNameWithId:
-    content: When you create an entity or resource, Harness provides a unique identifier (Id) to it. You can alter the name but not the Id. [Learn More](https://docs.harness.io/article/7rsydu6iq2)
+    content: When you create an entity or resource, Harness provides a unique identifier (Id) to it. You can alter the name but not the Id. [Learn More](https://developer.harness.io/docs/platform/references/renaming-entities-and-resources/)
     width: "400"
 CustomApprovalForm_name:
     content: Enter a name for this step.
