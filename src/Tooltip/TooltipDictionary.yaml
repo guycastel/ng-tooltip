@@ -90,7 +90,7 @@ jfrogArt_name: |-
     The [Upload Artifacts to JFrog Artifactory](https://docs.harness.io/article/gjoggc66fy) step creates a Docker image from a Dockerfile and pushes it to a JFrog Artifactory Docker repository.
 conditionalExecution:
     content: |-
-        Conditional Execution lets you set when and if to run or skip a stage. [Learn More](https://newdocs.helpdocs.io/article/i36ibenkq2)
+        Conditional Execution lets you set when and if to run or skip a stage. [Learn More](https://developer.harness.io/docs/platform/pipelines/w_pipeline-steps-reference/step-skip-condition-settings/)
 
         Conditional Execution uses JEXL operators and expressions.
          
@@ -1452,7 +1452,7 @@ Verify_stepName_StepConfig: |-
     - Verify that the deployed service is running safely and perform automatic rollbacks.
     - Apply machine learning to every deployment to identify and flag anomalies in future deployments.
 
-    [Learn More](https://docs.harness.io/article/3xhqq9xllp)
+    [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-execution/cv-category/verify-deployments-with-the-verify-step/)
 cvData_name:
     content: Enter a name for the Verify step.
     width: "400"
