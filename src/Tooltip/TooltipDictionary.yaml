@@ -7220,3 +7220,6 @@ securityStepToolContext:
 securityStepToolPort:
     content: The TCP port to communicate with the scanner. You can specify this to override the default port for that scanner.
     width: "400"
+encryptedWebhookSecretIdentifier:
+    content: Create or select a secret for authenticating the webhook call. For the secret to work with your webhook, you need to configure the repository webhook with the same secret. [Learn More](https://developer.harness.io/docs/platform/Triggers/triggering-pipelines)
+    width: "400"
