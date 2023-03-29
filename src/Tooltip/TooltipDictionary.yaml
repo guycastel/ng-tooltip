@@ -3567,7 +3567,7 @@ notifications.notificationMethod:
     content: Select the Notification Method. [Learn more](https://docs.harness.io/article/4bor7kyimj-notify-users-of-pipeline-events)
     width: "400"
 configureSlackNotifications_webhookUrl:
-    content: Enter your Slack Webhook URL. [Learn more](https://docs.harness.io/article/4bor7kyimj-notify-users-of-pipeline-events#option_slack_notifications)
+    content: Enter your Slack Webhook URL. [Learn more](https://docs.harness.io/article/4bor7kyimj-notify-users-of-pipeline-events#option-slack-notifications)
     width: "400"
 configureSlackNotifications_userGroups:
     content: Select user groups to send notifications.
@@ -3582,7 +3582,13 @@ configureEmailNotifications_userGroups:
     content: Select user groups to send notifications.
     width: "400"
 configureEmailNotifications_emailIds:
-    content: Enter the email addresses that you want to notify. [Learn more](https://docs.harness.io/article/4bor7kyimj-notify-users-of-pipeline-events#option_email_notifications)
+    content: Enter the email addresses that you want to notify. [Learn more](https://docs.harness.io/article/4bor7kyimj-notify-users-of-pipeline-events#option-email-notifications)
+    width: "400"
+configurePagerDutyNotifications_userGroups:
+    content: Select user groups to send notifications.
+    width: "400"
+configurePagerDutyNotifications_key:
+    content: Enter your PagerDuty Key. [Learn more](https://docs.harness.io/article/4bor7kyimj-notify-users-of-pipeline-events#option-pagerduty-notifications)
     width: "400"
 k8DeleteData_spec.deleteResources.spec.resourceNames:
     content: |-
