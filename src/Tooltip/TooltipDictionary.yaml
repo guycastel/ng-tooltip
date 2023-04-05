@@ -5516,7 +5516,7 @@ gitops-repo-overview_name:
     content: Enter a name for this setting. [Learn More](https://docs.harness.io/article/pptv7t53i9)
     width: "400"
 repo:
-    content: enter the URL to your repo. For example, `https://github.com/argoproj/argocd-example-apps.git`. [Learn More](https://docs.harness.io/article/58i67mkxap)
+    content: enter the URL to your repo up to the org. For example, `https://github.com/argoproj`. [Learn More](https://docs.harness.io/article/58i67mkxap)
     width: "400"
 gitops-repository-credentials-overview_connectionType:
     content: |-
