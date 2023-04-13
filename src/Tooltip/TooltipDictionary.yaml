@@ -3398,9 +3398,7 @@ Run_stepName_StepConfig:
     width: "400"
 ciRunStep_spec.command:
     content: |-
-        POSIX shell script executed inside the container. In the **Shell** setting in **Optional Configuration**, you can select Bash or Shell.
-
-        The script is invoked as if it were the container’s entry point. [Learn More](https://docs.harness.io/article/1i1ttvftm4)
+        Enter POSIX shell script commands. [Learn More](https://docs.harness.io/article/1i1ttvftm4)
     width: "400"
 ciRunStep_spec.outputVariables:
     content: Output Variables can be used to expose Environment Variables to be used by other steps/stages of the pipeline.
