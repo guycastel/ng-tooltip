@@ -1485,7 +1485,7 @@ cvData_spec.spec.duration:
     width: "400"
 cvData_spec.spec.trafficsplit: ""
 cvData_spec.spec.deploymentTag: |-
-    Use a [Harness expression](https://newdocs.helpdocs.io/article/lml71vhsim) to reference the artifact in the stage Service settings.
+    Use a [Harness expression](https://developer.harness.io/docs/platform/Variables-and-Expressions/harness-variables) to reference the artifact in the stage Service settings.
 
     The expression `<+serviceConfig.artifacts.primary.tag>` references the primary artifact. [Learn More](https://docs.harness.io/article/3xhqq9xllp)
 awsAuthentication: Provide the credentials Harness will use to connect to AWS. [Learn More](https://docs.harness.io/article/m5vkql35ca)
