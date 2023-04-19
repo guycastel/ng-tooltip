@@ -6217,7 +6217,7 @@ deployServiceStepForm_parallel:
     width: "425"
 multiEnvInfraToggle:
     content: |-
-        Enable this setting to deploy the service(s) in **Service** to mutiple Environment Infrastructures. [Learn More](https://docs.harness.io/article/tabk4u2e9n)
+        Enable this setting to deploy the service(s) in **Service** to mutiple Environment Infrastructures. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/advanced/multiserv-multienv/)
 
         You can deploy to one or more Infrastructures in one or more Environments.
     width: "400"
