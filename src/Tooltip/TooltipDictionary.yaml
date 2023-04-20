@@ -5171,6 +5171,12 @@ imagePath_spec.version:
 
         You can use [fixed values, runtime inputs, and expressions](https://developer.harness.io/docs/platform/references/runtime-inputs/). 
     width: "400"
+imagePath_spec.tags:
+  content: Add the tag that is used by your AMI.
+  width: "400"
+imagePath_spec.filters:
+  content: Add AMI ID filters to locate the AMI resource.
+  width: "400"
 optionalConfiguration_spec.inputs:
     content: Using Script Input Variables enables you to easily identify and manage the Harness expressions used in your script. You can also template your script. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
     width: "400"
