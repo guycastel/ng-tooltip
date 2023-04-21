@@ -7237,3 +7237,12 @@ securityStepToolPort:
 encryptedWebhookSecretIdentifier:
     content: Create or select a secret for authenticating the webhook call. For the secret to work with your webhook, you need to configure the repository webhook with the same secret. [Learn More](https://developer.harness.io/docs/platform/Triggers/triggering-pipelines)
     width: "400"
+acrArtifact_subscriptionId:
+    content: Provide Azure Subscription
+    width: "400"
+acrArtifact_registry:
+    content: Provide the Azure Container Registry where  Artifact is available
+    width: "400"
+acrArtifact_repository:
+    content: Provide a Repository in the specified Azure Container Registry where Artifact is available
+    width: "400"
