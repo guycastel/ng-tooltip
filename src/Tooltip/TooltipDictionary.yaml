@@ -1472,22 +1472,22 @@ cvData_timeout:
         [Learn More](https://docs.harness.io/article/3xhqq9xllp-verify-deployments-with-the-verify-step#step_2_enter_a_name_and_timeout)
     width: "400"
 cvData_spec.type:
-    content: In Continuous Verification Type, select a type that matches your deployment strategy. Rolling, Canary, Blue Green, and Load Test simply refer to the strategy in the stage. [Learn More](https://docs.harness.io/article/3xhqq9xllp-verify-deployments-with-the-verify-step#step_3_select_a_continuous_verification_type)
+    content: In Continuous Verification Type, select a type that matches your deployment strategy. Rolling, Canary, Blue Green, and Load Test simply refer to the strategy in the stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/verify/verify-deployments-with-the-verify-step#continuous-verification-type)
     width: "400"
 cvData_spec.monitoredServiceRef:
-    content: Harness automatically creates a Monitored Service using a concatenation of the Service and Environment names. In Monitored Service, click Click to autocreate a monitored service. If the stage Service or Environment settings are Runtime Inputs, the Monitored Service and Health Sources settings will show up in the Runtime Input settings when you run the Pipeline. [Learn More](https://docs.harness.io/article/3xhqq9xllp-verify-deployments-with-the-verify-step#step_4_create_a_monitored_service)
+    content: Harness automatically creates a Monitored Service using a concatenation of the Service and Environment names. In Monitored Service, click to autocreate a monitored service. If the stage Service or Environment settings are Runtime Inputs, the Monitored Service and Health Sources settings will show up in the Runtime Input settings when you run the Pipeline.
     width: "400"
 cvData_spec.spec.sensitivity:
-    content: Choose the level of sensitivity. It is used as an input for the sensitivity in the Verification stage. If you set the sensitivity to high, even small anomalies will be treated as verification failures. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-execution/cv-category/verify-deployments-with-the-verify-step/#step_6_select_sensitivity)
+    content: Choose the level of sensitivity. It is used as an input for the sensitivity in the Verification stage. If you set the sensitivity to high, even small anomalies will be treated as verification failures. [Learn More](https://developer.harness.io/docs/continuous-delivery/verify/verify-deployments-with-the-verify-step#sensitivity)
     width: "400"
 cvData_spec.spec.duration:
-    content: In Duration, select the number of data points Harness uses. If you enter 10 minutes, Harness will take the first 10 minutes worth of the log/APM data points and analyze it. The recommended Duration is 10 min for logging providers and 15 min for APM and infrastructure providers. [Learn More](https://docs.harness.io/article/3xhqq9xllp-verify-deployments-with-the-verify-step#step_7_select_duration)
+    content: In Duration, select the number of data points Harness uses. If you enter 10 minutes, Harness will take the first 10 minutes worth of the log/APM data points and analyze it. The recommended Duration is 10 min for logging providers and 15 min for APM and infrastructure providers. [Learn More](https://developer.harness.io/docs/continuous-delivery/verify/verify-deployments-with-the-verify-step#duration)  
     width: "400"
 cvData_spec.spec.trafficsplit: ""
 cvData_spec.spec.deploymentTag: |-
-    Use a [Harness expression](https://developer.harness.io/docs/platform/Variables-and-Expressions/harness-variables) to reference the artifact in the stage Service settings.
+    Use a [Harness expression](https://developer.harness.io/docs/platform/variables-and-expressions/harness-variables/) to reference the artifact in the stage Service settings.
 
-    The expression `<+serviceConfig.artifacts.primary.tag>` references the primary artifact. [Learn More](https://docs.harness.io/article/3xhqq9xllp)
+    The expression `<+serviceConfig.artifacts.primary.tag>` references the primary artifact.
 awsAuthentication: Provide the credentials Harness will use to connect to AWS. [Learn More](https://docs.harness.io/article/m5vkql35ca)
 stepAwsAuthForm_accessKey: |-
     Enter the Access Key. You can either the key in plaintext or use an Encrypted [Harness Secret](https://docs.harness.io/article/osfw70e59c).
