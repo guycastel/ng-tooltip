@@ -174,9 +174,9 @@ k8InfraReleaseName: |-
 manifestDetails_identifier: Enter a name that identifies this manifest. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
 manifestDetails_gitFetchType: Select a branch or commit Id for the manifest. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
 manifestDetails_commitId: Enter the commit Id in the repo where the manifest is located. You can also use a [Git commit tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
-manifestDetails_branch: |- 
+manifestDetails_branch: |-
     Enter the branch in the repo where the manifest is located, such as `main`.
-    
+
     Harness expressions are supported, but Harness secrets are not supported.
 imagePath_imagePath: |+
     Enter the name of the artifact you want to deploy, such as `library/nginx` or `jsmtih/privateimage`. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
@@ -1904,7 +1904,7 @@ manifestDetails_paths:
         If the Connector you selected in **Specify K8s Manifest Store** already has the repo name, you simply need to add the path from the root of the repo. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
 
         If you enter a folder, Harness will automatically detect and use all of the manifests and values YAML files in that folder. Values files can also be added separately as a [Values YAML type](https://docs.harness.io/article/q002wjjl4d).
-        
+
         Harness expressions are supported, but Harness secrets are not supported.
     width: "400"
 manifestDetails_skipResourceVersioning: |-
@@ -3401,8 +3401,7 @@ Run_stepName_StepConfig:
         The Run step pulls in a Docker image, like the Docker image for Maven, and then you run a script with the tool, like `mvn clean install`.
     width: "400"
 ciRunStep_spec.command:
-    content: |-
-        Enter POSIX shell script commands. [Learn More](https://docs.harness.io/article/1i1ttvftm4)
+    content: Enter POSIX shell script commands. [Learn More](https://docs.harness.io/article/1i1ttvftm4)
     width: "400"
 ciRunStep_spec.outputVariables:
     content: Output Variables can be used to expose Environment Variables to be used by other steps/stages of the pipeline.
@@ -5172,11 +5171,11 @@ imagePath_spec.version:
         You can use [fixed values, runtime inputs, and expressions](https://developer.harness.io/docs/platform/references/runtime-inputs/). 
     width: "400"
 imagePath_spec.tags:
-  content: Add the tag that is used by your AMI.
-  width: "400"
+    content: Add the tag that is used by your AMI.
+    width: "400"
 imagePath_spec.filters:
-  content: Add AMI ID filters to locate the AMI resource.
-  width: "400"
+    content: Add AMI ID filters to locate the AMI resource.
+    width: "400"
 optionalConfiguration_spec.inputs:
     content: Using Script Input Variables enables you to easily identify and manage the Harness expressions used in your script. You can also template your script. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
     width: "400"
@@ -5524,7 +5523,7 @@ gitops-repo-overview_name:
     content: Enter a name for this setting. [Learn More](https://docs.harness.io/article/pptv7t53i9)
     width: "400"
 repo:
-    content: enter the URL to your repo up to the org. For example, `https://github.com/argoproj`. [Learn More](https://docs.harness.io/article/58i67mkxap)
+    content: Enter the URL to your repository. For example, `https://github.com/repo.git`. [Learn More](https://docs.harness.io/article/58i67mkxap)
     width: "400"
 gitops-repository-credentials-overview_connectionType:
     content: |-
