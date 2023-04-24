@@ -1901,7 +1901,7 @@ manifestDetails_paths:
     content: |-
         Enter the path to the manifest file or folder in the repo.
 
-        If the Connector you selected in **Specify K8s Manifest Store** already has the repo name, you simply need to add the path from the root of the repo. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
+        If the Connector you selected in **Manifest Store** already has the repo name, you simply need to add the path from the root of the repo. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
 
         If you enter a folder, Harness will automatically detect and use all of the manifests and values YAML files in that folder. Values files can also be added separately as a [Values YAML type](https://docs.harness.io/article/q002wjjl4d).
 
