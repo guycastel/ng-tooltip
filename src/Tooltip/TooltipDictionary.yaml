@@ -2262,6 +2262,9 @@ wizardForm_webhook_event:
         If the event type you select results in the **Actions** settings appearing, select the actions for the Webhook or select **Any Actions**.
          [Learn More](https://docs.harness.io/article/hndnde8usz)
     width: "400"
+webhookTriggerActions:
+    content: Select the actions for the Webhook. [Learn More](https://docs.harness.io/article/hndnde8usz)
+    width: "400"    
 wizardForm_webhook_anyAction:
     content: |
         Select **Any Actions** to have any of the actions in the event type's payload object initiate the Trigger. For example, `opened`, `edited`, `deleted`.
@@ -5277,6 +5280,9 @@ pollInterval:
 
         - minimum value: `2m`
         - maxium value: `1h`
+    width: "400"
+wizardForm_webhook_webhookId:
+    content: In case you want to enable polling for webhook deliveries, please set this to the value of Github’s Harness webhook ID. [Learn More](https://developer.harness.io/docs/platform/triggers/triggering-pipelines/#polling-frequency)
     width: "400"
 WinRmDeploymentTypeArtifacts:
     content: Add a Connector to the artifact repository. Harness connects to the artifact repository by using the Connector. For Secure Shell and WinRM, you can create a Connector for Artifactory, Jenkins, Custom, Nexus, or AWS.
