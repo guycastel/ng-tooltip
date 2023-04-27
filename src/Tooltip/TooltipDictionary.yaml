@@ -1481,7 +1481,7 @@ cvData_spec.spec.sensitivity:
     content: Choose the level of sensitivity. It is used as an input for the sensitivity in the Verification stage. If you set the sensitivity to high, even small anomalies will be treated as verification failures. [Learn More](https://developer.harness.io/docs/continuous-delivery/verify/verify-deployments-with-the-verify-step#sensitivity)
     width: "400"
 cvData_spec.spec.duration:
-    content: In Duration, select the number of data points Harness uses. If you enter 10 minutes, Harness will take the first 10 minutes worth of the log/APM data points and analyze it. The recommended Duration is 10 min for logging providers and 15 min for APM and infrastructure providers. [Learn More](https://developer.harness.io/docs/continuous-delivery/verify/verify-deployments-with-the-verify-step#duration)  
+    content: In Duration, select the number of data points Harness uses. If you enter 10 minutes, Harness will take the first 10 minutes worth of the log/APM data points and analyze it. The recommended Duration is 10 min for logging providers and 15 min for APM and infrastructure providers. [Learn More](https://developer.harness.io/docs/continuous-delivery/verify/verify-deployments-with-the-verify-step#duration)
     width: "400"
 cvData_spec.spec.trafficsplit: ""
 cvData_spec.spec.deploymentTag: |-
@@ -2264,7 +2264,7 @@ wizardForm_webhook_event:
     width: "400"
 webhookTriggerActions:
     content: Select the actions for the Webhook. [Learn More](https://docs.harness.io/article/hndnde8usz)
-    width: "400"    
+    width: "400"
 wizardForm_webhook_anyAction:
     content: |
         Select **Any Actions** to have any of the actions in the event type's payload object initiate the Trigger. For example, `opened`, `edited`, `deleted`.
@@ -7250,4 +7250,7 @@ acrArtifact_registry:
     width: "400"
 acrArtifact_repository:
     content: Provide a Repository in the specified Azure Container Registry where Artifact is available
+    width: "400"
+selective-stage-execution-dropdown:
+    content: To run specific stages in your Pipeline activated by  trigger, you must allow selective stage(s) execution. [Learn More](https://developer.harness.io/docs/platform/pipelines/run-specific-stage-in-pipeline/#step-1-select-stage-execution-settings)
     width: "400"
