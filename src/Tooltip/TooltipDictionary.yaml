@@ -7254,3 +7254,9 @@ acrArtifact_repository:
 selective-stage-execution-dropdown:
     content: To run specific stages in your Pipeline activated by  trigger, you must allow selective stage(s) execution. [Learn More](https://developer.harness.io/docs/platform/pipelines/run-specific-stage-in-pipeline/#step-1-select-stage-execution-settings)
     width: "400"
+azureArtifactsAuthForm_azureArtifactsUrl:
+    content: Enter the URL of the Azure Artifact repository where the artifacts needs to be fetched
+    width: "400"
+azureArtifactsAuthForm_tokenRef:
+    content: Enter a personal access token containing your security credentials for Azure Artifacts
+    width: "400"
