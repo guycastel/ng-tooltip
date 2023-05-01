@@ -7,7 +7,7 @@ jiraApprovalIssueKey: |-
 
     You can use an expression to reference the **Key Id** from another **Jira Create** or **Jira Update** step.
 
-    The **Jira Create** or **Jira Update** step you want to reference must be *before* the **Jira Approval** step that references it in the Pipeline and stage. [Learn More](https://docs.harness.io/article/2lhfk506r8)
+    The **Jira Create** or **Jira Update** step you want to reference must be *before* the **Jira Approval** step that references it in the Pipeline and stage. [Learn More](https://developer.harness.io/docs/platform/approvals/adding-jira-approval-stages/)
 ONNtooltipId: Your pipeline name
 specifyYourService:
     content: Harness Services represent your microservices/apps logically. You can propagate the same Service to as many stages as you need. [Learn More](https://docs.harness.io/article/hv2758ro4e)
@@ -144,7 +144,7 @@ deployService_name: |-
 
     When a Service is added to the stage in a Pipeline, you define its Service Definition. Service Definitions represent the real artifacts, manifests, and variables of a Service. They are the actual files and variable values. 
 
-    You can also propagate and override a Service in subsequent stages by selecting its name in that stage's **Service** settings. [Learn More](https://docs.harness.io/article/t57uzu1i41)
+    You can also propagate and override a Service in subsequent stages by selecting its name in that stage's **Service** settings. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/propagate-and-override-cd-services)
 specifyYourEnvironment:
     content: |-
         Select or create a new Environment. [Learn More](https://docs.harness.io/article/9ryi1ay01f)
@@ -396,8 +396,8 @@ infraProvisionerBase_provisionerEnabled:
     content: |-
         Select this option to use an infrastructure provisioner to dynamically provision the target infrastructure for the deployment. 
 
-        - [Terraform](https://docs.harness.io/article/w6i5f7cpc9)
-        - [CloudFormation](https://docs.harness.io/article/vynj4hxt98)
+        - [Terraform](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/terraform-how-tos)
+        - [CloudFormation](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/cloudformation-infra/cloud-formation-how-tos)
     width: "400"
 terraformPlanEditView-tfPlan-INFRASTRUCTURE_name: Enter a name for this step.
 terraformPlanEditView-tfPlan-INFRASTRUCTURE_spec.configuration.command: Identify if the plan created by this step will be used with a Terraform Apply or Terraform Destroy step. [Learn More](https://docs.harness.io/article/uznls2lvod)
@@ -424,8 +424,8 @@ terraformEdit-TerraformDestroy-INFRASTRUCTURE_spec.provisionerIdentifier: |-
 
     The Terraform Delete step will delete the infrastructure provisioned by the Terraform Apply step. [Learn More](https://docs.harness.io/article/uznls2lvod)
 jiraCreate_name: Enter a name for this step.
-jiraCreate_spec.projectKey: Select the Jira project where you want to create a ticket. [Learn More](https://docs.harness.io/article/yu40zr6cvm)
-jiraCreate_spec.issueType: Select a Jira issue type from the list of types in the Jira project you selected. [Learn More](https://docs.harness.io/article/yu40zr6cvm)
+jiraCreate_spec.projectKey: Select the Jira project where you want to create a ticket. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/approvals/using-jira-and-service-now-approval-steps-in-cd-stages)
+jiraCreate_spec.issueType: Select a Jira issue type from the list of types in the Jira project you selected. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/approvals/using-jira-and-service-now-approval-steps-in-cd-stages)
 jiraCreate_spec.summary: Add a summary for the new Jira ticket.
 harnessApproval_name: Enter a name for this step.
 harnessApproval_spec.includePipelineExecutionHistory: Enable this option to provide approvers with the execution history for this Pipeline. This can help approvers make their decision. [Learn More](https://docs.harness.io/article/fkvso46bok)
@@ -764,7 +764,7 @@ k8DeleteData_spec.deleteResources.spec.deleteNamespace:
 
         [Learn More](https://docs.harness.io/article/eaj0xuegln)
     width: "400"
-K8sCanaryDelete_stepName: The **Canary Delete** step is used to clean up the workload deployed by the [Canary](https://docs.harness.io/article/17wrdeuv0x-) step. [Learn More](https://docs.harness.io/article/922mtcvank)
+K8sCanaryDelete_stepName: The **Canary Delete** step is used to clean up the workload deployed by the [Canary](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/kubernetes-executions/create-a-kubernetes-canary-deployment) step. [Learn More](https://docs.harness.io/article/922mtcvank)
 k*CanaryDelete_timeout: |-
     Enter a timeout for this step. 
 
@@ -781,9 +781,9 @@ k*CanaryDelete_timeout: |-
 
     Timeouts can be set at the Pipeline level also.
 K8sRollingDeploy_stepName: |-
-    The **K8s Rollout Deploy** step performs a Kubernetes [rolling update strategy](https://docs.harness.io/article/0zsf97lo3c-deployment-concepts). 
+    The **K8s Rollout Deploy** step performs a Kubernetes [rolling update strategy](https://developer.harness.io/docs/continuous-delivery/manage-deployments/deployment-concepts-deployment-concepts). 
 
-    All nodes within a single environment are incrementally added one-by-one with a new service/artifact version. The rolling update uses the number of pods you specified in **Manifests** (number of replicas). [Learn More](https://docs.harness.io/article/2bwlugh9gi)
+    All nodes within a single environment are incrementally added one-by-one with a new service/artifact version. The rolling update uses the number of pods you specified in **Manifests** (number of replicas). [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/cd-k8s-ref/kubernetes-rollout-step)
 k8RolloutDeploy_timeout: |-
     Enter a timeout for this step. 
 
@@ -1008,7 +1008,7 @@ barrierStep_timeout: |-
 
     Timeouts can be set at the Pipeline level also.
 JiraCreate_stepName: |-
-    You can use this step to create a Jira issue as part of the execution of a Pipeline. [Learn More](https://docs.harness.io/article/yu40zr6cvm)
+    You can use this step to create a Jira issue as part of the execution of a Pipeline. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/approvals/using-jira-and-service-now-approval-steps-in-cd-stages)
 
     Jira issues are often used as part of a Jira Approval stage. [Learn More](https://docs.harness.io/article/2lhfk506r8)
 
@@ -2575,11 +2575,11 @@ manifestStore_connectorRef:
         - [Connect to a Cloud Provider](https://docs.harness.io/article/s9j6cggx1p-connect) for AWS S3 or Google Cloud Storage.
     width: "400"
 helmWithHttp_identifier:
-    content: Enter a name that identifies this Helm chart. It doesn't have to be the chart name. It can be the name of the service you are deploying or another name. [Learn More](https://docs.harness.io/article/7owpxsaqar)
+    content: Enter a name that identifies this Helm chart. It doesn't have to be the chart name. It can be the name of the service you are deploying or another name. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
     width: "400"
 helmWithHttp_chartName:
     content: |-
-        Enter the name of the Helm chart for Harness to pull. Don't include the chart version. You will add that in the **Chart Version** setting. [Learn More](https://docs.harness.io/article/7owpxsaqar)
+        Enter the name of the Helm chart for Harness to pull. Don't include the chart version. You will add that in the **Chart Version** setting. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
         If you want to provide the chart name later, you have the following options: 
 
@@ -2593,7 +2593,7 @@ helmWithHttp_chartVersion:
 
         You can list all available versions of a chart using the `search repo` command with the `--versions` option. See [helm search repo](https://helm.sh/docs/helm/helm_search_repo) from Helm.
 
-        If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://docs.harness.io/article/7owpxsaqar)
+        If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
         If you are going to use a Harness Trigger to run this Pipeline when a new version is added to your chart repo, select the [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
     width: "400"
@@ -2819,16 +2819,16 @@ schedulePanel:
         You can use the schedule options to define the Cron expression or type in a Cron expression of your own and see how it evaluates. [Learn More](https://docs.harness.io/article/4z9mf24m1b)
     width: "400"
 kustomizeGit_identifier:
-    content: Enter a unique name for the Kustomize manifest. This doesn't have to be the same as the actual file or folder name. Enter a name that tells other Project members what Kustomization this is. [Learn More](https://docs.harness.io/article/uiqe6jz9o1)
+    content: Enter a unique name for the Kustomize manifest. This doesn't have to be the same as the actual file or folder name. Enter a name that tells other Project members what Kustomization this is. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments)
     width: "400"
 kustomizeGit_gitFetchType:
-    content: Select if you want Harness to fetch the latest file from the branch or a specific Commit Id. [Learn More](https://docs.harness.io/article/uiqe6jz9o1)
+    content: Select if you want Harness to fetch the latest file from the branch or a specific Commit Id. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments)
     width: "400"
 kustomizeGit_branch:
-    content: Enter the branch name or CommitId, depending on what you selected in **Git Fetch Type**. [Learn More](https://docs.harness.io/article/uiqe6jz9o1)
+    content: Enter the branch name or CommitId, depending on what you selected in **Git Fetch Type**. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments)
     width: "400"
 kustomizePathHelperText:
-    content: Enter the path from the root of the repo to the Kustomize folder. [Learn More](https://docs.harness.io/article/uiqe6jz9o1)
+    content: Enter the path from the root of the repo to the Kustomize folder. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments)
     width: "400"
 pluginPathHelperText:
     content: |-
@@ -2888,17 +2888,17 @@ samlProviderForm_entityIdentifier:
     content: Enter your custom Entity Id. The default Entity Id is `app.harness.io`. The value you enter here will override the default Entity Id. [Learn more](https://docs.harness.io/article/mlpksc7s6c-single-sign-on-saml)
     width: "400"
 kustomizePath_identifier:
-    content: Enter a name for this kustomize patch so your team members will know what kustomization it performs. [Learn More](https://docs.harness.io/article/98u2hvzj0t-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
+    content: Enter a name for this kustomize patch so your team members will know what kustomization it performs. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
     width: "400"
 kustomizePath_gitFetchType:
-    content: Select the branch or Git commit Id to use when fetching the kustomize patch. [Learn More](https://docs.harness.io/article/98u2hvzj0t-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
+    content: Select the branch or Git commit Id to use when fetching the kustomize patch. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
     width: "400"
 kustomizePath_branch:
-    content: Enter the name of the branch where the kustomize patch is located. [Learn More](https://docs.harness.io/article/98u2hvzj0t-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
+    content: Enter the name of the branch where the kustomize patch is located. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
     width: "400"
 kustomizePath_paths:
     content: |-
-        Enter the path to the patch file(s) from the root of the repo. The files you add should be the same files listed in `patchesStrategicMerge` of the main kustomize file in your Service. [Learn More](https://docs.harness.io/article/98u2hvzj0t-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
+        Enter the path to the patch file(s) from the root of the repo. The files you add should be the same files listed in `patchesStrategicMerge` of the main kustomize file in your Service. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
 
         **Important:** You cannot use Harness [variables](https://docs.harness.io/article/lml71vhsim) in the base manifest or kustomization.yaml. You can only use Harness variables in kustomize patches you add here in Kustomize Patches **Manifest Details**.
     width: "400"
@@ -2993,7 +2993,7 @@ createBudgetSetBudget:
         - [Projected Cost](https://docs.harness.io/article/08r3t4z0jo-create-a-budget#projected_cost)
     width: "400"
 helmWithGit_identifier:
-    content: Enter a name that identifies this Helm chart. It doesn't have to be the chart name. It can be the name of the service you are deploying or another name. [Learn More](https://docs.harness.io/article/7owpxsaqar)
+    content: Enter a name that identifies this Helm chart. It doesn't have to be the chart name. It can be the name of the service you are deploying or another name. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
     width: "400"
 helmWithGit_repoName:
     content: |-
@@ -3062,7 +3062,7 @@ helmWithGit_branch:
         For **Specific Commit Id**, you can also use a [Git commit tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
     width: "400"
 helmWithS3_identifier:
-    content: Enter a name that identifies this Helm chart. It doesn't have to be the chart name. It can be the name of the service you are deploying or another name. [Learn More](https://docs.harness.io/article/7owpxsaqar)
+    content: Enter a name that identifies this Helm chart. It doesn't have to be the chart name. It can be the name of the service you are deploying or another name. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
     width: "400"
 helmWithS3_region:
     content: "Select the AWS region you want to use, such as `US East (N. Virginia)`. "
@@ -3078,7 +3078,7 @@ helmWithS3_folderPath:
     width: "400"
 helmWithS3_chartName:
     content: |-
-        Enter the name of the Helm chart for Harness to pull. Don't include the chart version. You will add that in the **Chart Version** setting. [Learn More](https://docs.harness.io/article/7owpxsaqar)
+        Enter the name of the Helm chart for Harness to pull. Don't include the chart version. You will add that in the **Chart Version** setting. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
         If you want to provide the chart name later, you have the following options: 
 
@@ -3092,7 +3092,7 @@ helmWithS3_chartVersion:
 
         You can list all available versions of a chart using the `search repo` command with the `--versions` option. See [helm search repo](https://helm.sh/docs/helm/helm_search_repo) from Helm.
 
-        If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://docs.harness.io/article/7owpxsaqar)
+        If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
         If you are going to use a Harness Trigger to run this Pipeline when a new version is added to your chart repo, select the [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
     width: "400"
@@ -3126,7 +3126,7 @@ helmWithS3_commandFlags:
     content: Add any options for the command.
     width: "400"
 helmWithGcs_identifier:
-    content: Enter a name that identifies this Helm chart. It doesn't have to be the chart name. It can be the name of the service you are deploying or another name. [Learn More](https://docs.harness.io/article/7owpxsaqar)
+    content: Enter a name that identifies this Helm chart. It doesn't have to be the chart name. It can be the name of the service you are deploying or another name. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
     width: "400"
 helmWithGcs_bucketName:
     content: Select the GCS bucket where the chart is located.
@@ -3139,7 +3139,7 @@ helmWithGcs_folderPath:
     width: "400"
 helmWithGcs_chartName:
     content: |-
-        Enter the name of the Helm chart for Harness to pull. Don't include the chart version. You will add that in the **Chart Version** setting. [Learn More](https://docs.harness.io/article/7owpxsaqar)
+        Enter the name of the Helm chart for Harness to pull. Don't include the chart version. You will add that in the **Chart Version** setting. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
         If you want to provide the chart name later, you have the following options: 
 
@@ -3153,7 +3153,7 @@ helmWithGcs_chartVersion:
 
         You can list all available versions of a chart using the `search repo` command with the `--versions` option. See [helm search repo](https://helm.sh/docs/helm/helm_search_repo) from Helm.
 
-        If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://docs.harness.io/article/7owpxsaqar)
+        If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
         If you are going to use a Harness Trigger to run this Pipeline when a new version is added to your chart repo, select the [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
     width: "400"
@@ -3528,14 +3528,14 @@ RollingDetailsHeader:
         When to use Rolling Deployments:
         - When you need to support both new and old deployments.
         - Load balancing scenarios that require reduced downtime.
-        [Learn More](https://docs.harness.io/article/0zsf97lo3c)
+        [Learn More](https://developer.harness.io/docs/continuous-delivery/manage-deployments/deployment-concepts)
     width: "400"
 BlueGreenDetailsHeader:
     content: |-
         When to use Blue/Green Deployments:
         - When you want to perform verification in a full production environment.
         - When you want zero downtime.
-        [Learn More](https://docs.harness.io/article/0zsf97lo3c)
+        [Learn More](https://developer.harness.io/docs/continuous-delivery/manage-deployments/deployment-concepts)
     width: "400"
 CanaryDetailsHeader:
     content: |-
@@ -4161,7 +4161,7 @@ selectPropagatedState:
         In many cases, you'll want to use some of the propagated Service's settings, such as manifests, but want to override others, such as values.yaml files, artifacts, or variables. 
           
 
-        Harness lets you propagate and override. [Learn More](https://docs.harness.io/article/t57uzu1i41)
+        Harness lets you propagate and override. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/propagate-and-override-cd-services)
     width: "400"
 serverlessAwsLambda_configOverridePath:
     content: |-
@@ -4303,7 +4303,7 @@ DeleteStack_stepName_ProvisionerStepConfig:
     width: "400"
 StepGroup_stepName_StepConfig:
     content: |-
-        Steps can be added to Pipelines individually or as a step group. [Learn More](https://docs.harness.io/article/ihnuhrtxe3)
+        Steps can be added to Pipelines individually or as a step group. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/step-groups)
 
         Step groups can be run serially or in parallel.
 
@@ -4313,7 +4313,7 @@ StepGroup_stepName_StepConfig:
         [Watch a video](https://www.youtube.com/watch?v=J5eHYSbE8cg)
     width: "500"
 stepGroup_name:
-    content: Enter a name for this step group. [Learn More](https://docs.harness.io/article/ihnuhrtxe3)
+    content: Enter a name for this step group. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/step-groups)
     width: "400"
 manifestDetails_valuesPaths:
     content: |-
@@ -4359,7 +4359,7 @@ osTemplateWithGit_paramsPaths:
     width: "400"
 kustomizeGit_patchesPaths:
     content: |-
-        Enter the path to the Patches file(s) you want to use in the same repo. Enter the path from the repo root to the file or folder. [Learn More](https://docs.harness.io/article/98u2hvzj0t)
+        Enter the path to the Patches file(s) you want to use in the same repo. Enter the path from the repo root to the file or folder. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments)
 
         If you add multiple Patches files and they have any identical labels, the Patches files override in a reverse order. For example, the third Patches file listed overrides the second and first Patches files.
 
@@ -4371,28 +4371,28 @@ cdOverViewTitle:
     content: |-
         Deployments is where you build your CD Pipelines. [Learn More](https://docs.harness.io/article/cqgeblt4uh)
 
-        Deployments are tracked in the **Overview** dashboard and Services are tracked in the **Services** dashboard. [Learn More](https://docs.harness.io/article/phiv0zaoex)
+        Deployments are tracked in the **Overview** dashboard and Services are tracked in the **Services** dashboard. [Learn More](https://developer.harness.io/docs/continuous-delivery/monitor-deployments/monitor-cd-deployments)
 
         The Overview dashboard provides status for deployments and workloads and an overall **Deployments Health** metric.
     width: "400"
 overview_WORKLOAD:
-    content: View the deployments for each Service, including their success rate. [Learn More](https://docs.harness.io/article/phiv0zaoex)
+    content: View the deployments for each Service, including their success rate. [Learn More](https://developer.harness.io/docs/continuous-delivery/monitor-deployments/monitor-cd-deployments)
     width: "400"
 overview_FAILED_DEPLOYMENT:
     content: |-
-        View Pipeline deployment failures. [Learn More](https://docs.harness.io/article/phiv0zaoex)
+        View Pipeline deployment failures. [Learn More](https://developer.harness.io/docs/continuous-delivery/monitor-deployments/monitor-cd-deployments)
 
         Click on a failed execution to see its details.
     width: "400"
 overview_ACTIVE_DEPLOYMENT:
     content: |-
-        View active deployments. [Learn More](https://docs.harness.io/article/phiv0zaoex)
+        View active deployments. [Learn More](https://developer.harness.io/docs/continuous-delivery/monitor-deployments/monitor-cd-deployments)
 
         Click on a deployment to see its execution in detail.
     width: "400"
 deploymentsText:
     content: |-
-        View all of the deployments in this Project. [Learn More](https://docs.harness.io/article/phiv0zaoex)
+        View all of the deployments in this Project. [Learn More](https://developer.harness.io/docs/continuous-delivery/monitor-deployments/monitor-cd-deployments)
 
         Click on a deployment to see its execution in detail.
 
@@ -4744,7 +4744,7 @@ azureAllowSimultaneousDeployments:
     content: |-
         By default, Harness queues deployments to the same infrastructure to avoid conflicts.
 
-        Enable this setting to allow multiple Pipelines to deploy to the same Infrastructure simultaneously. [Learn More](https://docs.harness.io/article/7ogetmgq7y)
+        Enable this setting to allow multiple Pipelines to deploy to the same Infrastructure simultaneously. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/flow-control/controlling-deployments-with-barriers-resource-constraints-and-queue-steps)
     width: "400"
 AzureSlotDeployment_stepName_StepConfig:
     content: The Slot Deployment step is where you select the Web App and source deployment slot for the deployment. [Learn More](https://docs.harness.io/article/muegjde97q)
@@ -5099,13 +5099,13 @@ helmDeploy_timeout:
         The maximum is `53w`.
     width: "400"
 helmDeploy_name:
-    content: Enter a name for this step. [Learn More](https://docs.harness.io/article/lbhf2h71at-native-helm-quickstart)
+    content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/native-helm/native-helm-quickstart-native-helm-quickstart)
     width: "400"
 HelmDeploy_stepName_StepConfig:
     content: |-
         This Helm Deploy step performs a Rolling deployment strategy. 
 
-        This step deploys your application using the Helm chart or Values YAML file you added to the Service in this stage. [Learn More](https://docs.harness.io/article/lbhf2h71at-native-helm-quickstart)
+        This step deploys your application using the Helm chart or Values YAML file you added to the Service in this stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/native-helm/native-helm-quickstart-native-helm-quickstart)
     width: "400"
 kustomizeBasePath:
     content: Enter the path where your Kustomize manifests and dependencies are available.
@@ -5159,13 +5159,13 @@ imagePath_spec.timeout:
     content: Specify a timeout in weeks, days, hours, minutes, seconds, or milliseconds. This timeout is used for the script to execute before failing the artifact JSON retrieval.
     width: "400"
 imagePath_spec.scripts.fetchAllArtifacts.spec.source.spec.script:
-    content: Enter a script to fetch a JSON payload. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
+    content: Enter a script to fetch a JSON payload. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/add-a-custom-artifact-source-for-cd)
     width: "400"
 imagePath_spec.scripts.fetchAllArtifacts.artifactsArrayPath:
-    content: Enter the root object of the array. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
+    content: Enter the root object of the array. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/add-a-custom-artifact-source-for-cd)
     width: "400"
 imagePath_spec.scripts.fetchAllArtifacts.versionPath:
-    content: Enter the path in the payload array to the version. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
+    content: Enter the path in the payload array to the version. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/add-a-custom-artifact-source-for-cd)
     width: "400"
 imagePath_spec.version:
     content: |
@@ -5180,10 +5180,10 @@ imagePath_spec.filters:
     content: Add AMI ID filters to locate the AMI resource.
     width: "400"
 optionalConfiguration_spec.inputs:
-    content: Using Script Input Variables enables you to easily identify and manage the Harness expressions used in your script. You can also template your script. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
+    content: Using Script Input Variables enables you to easily identify and manage the Harness expressions used in your script. You can also template your script. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/add-a-custom-artifact-source-for-cd)
     width: "400"
 optionalConfiguration_spec.scripts.fetchAllArtifacts.attributes:
-    content: You can map any additional values from your JSON array. [Learn More](https://docs.harness.io/article/hnqkhh7gut)
+    content: You can map any additional values from your JSON array. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/add-a-custom-artifact-source-for-cd)
     width: "400"
 optionalConfiguration_spec.delegateSelectors:
     content: Define a Delegate Selector or leave this field empty to allow Harness to select a Delegate. [Learn More](https://docs.harness.io/article/nnuf8yv13o)
@@ -5995,11 +5995,11 @@ nullDeploymentTypeVariables:
     content: Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
     width: "400"
 NativeHelmDeploymentTypeManifests:
-    content: Add the Helm Values YAML file or a Helm chart you want to deploy. [Learn More](https://docs.harness.io/article/lbhf2h71at)
+    content: Add the Helm Values YAML file or a Helm chart you want to deploy. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/native-helm/native-helm-quickstart)
     width: "400"
 NativeHelmDeploymentTypeArtifacts:
     content: |-
-        Add the artifact you want to deploy. [Learn More](https://docs.harness.io/article/2nx0de3w99)
+        Add the artifact you want to deploy. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/native-helm/native-helm-quickstart)
 
         If your Helm Values YAML or Helm chart has the artifact hardcoded, then you don't need to add an artifact here.
 
@@ -6101,7 +6101,7 @@ NativeHelmInfrastructureDefinitionMethod:
         A connection to the cloud platform where your cluster is hosted, such as GKE on GCP. It uses a platform [Cloud Connector](https://docs.harness.io/category/1ehb4tcksy) to connect to the cluster. The Connector uses platform-specific auth such as a GCP service account (with Kubernetes Engine Admin and Storage Object Viewer roles) or it inherits credentials from a Harness Delegate running in your infrastructure.
     width: "400"
 SshInfrastructureDefinitionMethod:
-    content: Select the target platform for the SSH deployment. [Learn More](https://docs.harness.io/article/mpx2y48ovx-ssh-ng)
+    content: Select the target platform for the SSH deployment. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/traditional/ssh-ng)
     width: "400"
 updateInfraVariablesDT:
     content: The properties displayed here are from the Deployment Template you selected. You can override the default settings of these properties. [Learn More](https://docs.harness.io/article/6k9t49p6mn-custom-deployment-tutorial#deployment_template_infrastructure_variables)
@@ -6386,7 +6386,7 @@ HelmWithOCI_chartVersion:
 
         You can list all available versions of a chart using the `search repo` command with the `--versions` option. See [helm search repo](https://helm.sh/docs/helm/helm_search_repo) from Helm.
 
-        If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://docs.harness.io/article/7owpxsaqar)
+        If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
     width: "400"
 HelmWithOCI_valuesPaths:
     content: |-
