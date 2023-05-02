@@ -1863,7 +1863,7 @@ awsSMConfigForm_assumeStsRoleDuration: |-
 connectorDetailsStepFormAzureKeyVault_name: Enter a name for this Azure Key Vault Connector. [Learn More](https://docs.harness.io/article/53jrd1cv4i)
 connectorDetailsStepFormVault_name: Enter a name for this HashiCorp Vault Connector. [Learn More](https://docs.harness.io/article/s65mzbyags)
 vaultConfigForm_renewalIntervalMinutes: Enter how often Harness Delegate reloads the Vault access token. [Learn More](https://docs.harness.io/article/s65mzbyags)
-autostoppingRule: AutoStopping Rules make sure that your non-production resources run only when used, and never when idle. It also allows you to run your workloads on fully orchestrated spot instances without any worry of spot interruptions. [Learn More](https://docs.harness.io/article/wzr5tz0ero)
+autostoppingRule: AutoStopping Rules make sure that your non-production resources run only when used, and never when idle. It also allows you to run your workloads on fully orchestrated spot instances without any worry of spot interruptions. [Learn More](https://developer.harness.io/docs/cloud-cost-management/use-ccm-cost-optimization/optimize-cloud-costs-with-intelligent-cloud-auto-stopping-rules/add-connectors/auto-stopping-rules)
 summaryOfRulesHeader: |-
     AutoStopping dashboard allows you to view a summary of all the AutoStopping rules you have created in a simple and intuitive interface. The following are the key features of the AutoStopping Rules dashboard:
 
