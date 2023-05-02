@@ -1965,75 +1965,75 @@ gitSyncRepoForm_name: |-
     It doesn't have to be the same as the Git repo name. The name you enter here will appear in Harness only. It'll identify the Project repo. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 gitSyncRepoForm_repo: |-
     Once you add a Connector above you should see the repo URL in **Repository Name**.
 
     Click **Test Connection**. Once Harness verifies the connection, you will see `Connection Successful`. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience) 
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 gitSyncRepoForm_rootfolder: |-
     The Harness Folder is the default folder in the repo where you are syncing your Project.
 
     Enter the name of the folder in your repo where you want to sync. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 gitSyncRepoForm_branch: |-
     Select the branch that you want to use, such as **main**. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience) 
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 gitSyncRepoTab_repo: |-
     This is the URL of the repo where Harness syncs this Project.
 
     Click **Test Connection**. Harness verifies the connection. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 gitSyncRepoTab_rootFolder: |-
     The Harness Folder is the default folder in the repo where you are syncing your Project.
 
     Enter the name of the folder in your repo where you want to sync. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 gitSyncRepoTab_isDefault: |-
     **What is the default folder?** When a Pipeline in one repo needs to access a Connector/Secret/etc in another repo at runtime, the Pipeline will always use the Connector/Secret/etc in their **default folder**. Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 connectorDetailsStepFormGithub_repo: |-
     Enter a name for the repo.
 
     It doesn't have to be the same as the Git repo name. The name you enter here will appear in Harness only. It'll identify the Project repo for other users. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_name: |-
     Enter a name for the Connector.
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_repoIdentifier: |-
     Enter the name of the repo to use. 
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_rootFolder: |-
     The Harness Folder is the default folder in the repo where you are syncing your Project.
 
     Enter the name of the folder in your repo where you want to sync. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities)
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_filePath: |-
     Enter a name for the YAML file, such as `Example.yaml`. Harness will generate one automatically from the Pipeline name, but you can add your own. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities) 
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_commitMsg: |-
     Enter a message for the commit that adds this Connector. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities) 
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_createPr: |-
     You can start a pull request for adding this Connector. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities) 
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_branch: |-
     Enter a branch name to add this Connector to a branch. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities)
 
-    New to Harness Git Experience? See the [Quickstart](https://docs.harness.io/article/dm69dkv34g-harness-git-experience-quickstart).
+    New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 conditionalExecutionDeployStage: Conditional Execution applies to all steps that do not have their own Conditional Execution. A step's Conditional Execution overrides its stage's Conditional Execution. [Learn More](https://docs.harness.io/article/i36ibenkq2)
 failureStrategyDeployStage: |-
     Define the failure strategy for this stage. [Learn More](https://docs.harness.io/article/htrur23poj)
