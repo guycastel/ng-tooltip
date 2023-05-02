@@ -2140,7 +2140,7 @@ gcpInfraNamespace: |-
 gcpInfraAllowSimultaneousDeployments: By default, Harness queues deployments to the same infrastructure to avoid conflicts. If you want to allow simultaneous deployments to this infrastructure, enable this option.
 cfFlagElem_name: "Enter a name for your boolean flag. When you name a feature flag, Harness automatically generates its identifier. "
 cfFlagElem_permanent:
-    content: Select for flags you intend to stay in your systems indefinitely. Permanent flags are never marked as stale. [Learn More](https://docs.harness.io/article/2s5qt02s74)
+    content: Select for flags you intend to stay in your systems indefinitely. Permanent flags are never marked as stale. [Learn More](https://developer.harness.io/docs/feature-flags/ff-creating-flag/filtering-flags-by-state)
     width: "400"
 cfEnvDialog_name: Enter the name of your Environment.
 userGroupRleAssignmentForm_name: Assign role bindings for the user group. [Learn more](https://docs.harness.io/article/vz5cq0nfg2-rbac-in-harness#role_assignment)
