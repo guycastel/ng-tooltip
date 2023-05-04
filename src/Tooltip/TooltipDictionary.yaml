@@ -7260,3 +7260,6 @@ azureArtifactsAuthForm_azureArtifactsUrl:
 azureArtifactsAuthForm_tokenRef:
     content: Enter a personal access token containing your security credentials for Azure Artifacts
     width: "400"
+inline-deployToFilteredList:
+    content: When configuring this option, you will be able to apply a list of tags. Harness will evaluate all environments and infrastructures with all the configured tags defined on it. This means we search for a union of all the tags provided as a filter criteria
+    width: "400"
