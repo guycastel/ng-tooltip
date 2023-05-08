@@ -1926,7 +1926,7 @@ addEditCustomVariableForm_type: Select the variable type. If you select **Secret
 delegateSetupStepForm_name:
     content: Enter a name for the delegate. The names of Kubernetes delegates are included in **StatefulSet** metadata. [Learn More](https://docs.harness.io/article/2132l9r4gt)
     width: "400"
-delegateSetupStepForm_delegateConfigurationId: Delegate Configurations profiles are depricated, please use `INIT_SCRIPT` instead. [Learn More](https://docs.harness.io/article/yte6x6cyhn-run-scripts-on-delegates)
+delegateSetupStepForm_delegateConfigurationId: Delegate Configurations profiles are deprecated, use `INIT_SCRIPT` instead. [Learn More](https://docs.harness.io/article/yte6x6cyhn-run-scripts-on-delegates)
 delegateSetupStepForm_k8sConfigDetails.namespace:
     content: |
         By default, the Delegate resides in a namespace in the target cluster with a service account attached to it. The service account uses a **ClusterRole** for permission to deploy to all namespaces in the cluster.
