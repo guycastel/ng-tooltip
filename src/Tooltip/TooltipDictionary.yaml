@@ -79,7 +79,7 @@ dockerHubStep_name: |-
 ciGcrStep_name: |-
     Enter a name for this step.
 
-    The [Build and Push to GCR](https://docs.harness.io/article/66ykcm0sf0) step creates a Docker image from a Dockerfile and pushes it to a GCR Docker repository.
+    The [Build and Push to GCR step](https://developer.harness.io/docs/continuous-integration/use-ci/build-and-upload-artifacts/build-and-push-to-gcr) creates a Docker image from a Dockerfile and pushes it to a GCR Docker repository.
 ciEcrStep_name: |-
     Enter a name for this step.
 
@@ -136,7 +136,7 @@ vaultConfigForm_secretEngineVersion: Enter the engine version. [Learn more](http
 vaultConfigForm_renewalInterv: Enter how often Harness Delegate should reload the Vault access token. [Learn more](https://docs.harness.io/article/s65mzbyags-add-hashicorp-vault)
 vaultConfigForm_readOnly: Select to make secrets within this vault Read-Only. [Learn More](https://docs.harness.io/article/s65mzbyags)
 vaultConfigForm_default: Make this your default secrets manager.
-stepGithubAuthForm_enableAPIAccess: Select this option if you are using this GitHub Connector for a Harness [Trigger](https://docs.harness.io/article/hndnde8usz-triggering-pipelines), [Harness Git Experience](https://docs.harness.io/article/utikdyxgfz-harness-git-experience-overview), or authenticating using a [GitHub App](https://docs.harness.io/article/nze5evmqu1-git-hub-app-support).
+stepGithubAuthForm_enableAPIAccess: Select this option if you'll use this GitHub connector for a [trigger](https://developer.harness.io/docs/platform/triggers/triggering-pipelines/), the [Harness Git Experience](https://developer.harness.io/docs/platform/git-experience/git-experience-overview/), or authenticating with a [GitHub App](https://developer.harness.io/docs/platform/connectors/code-repositories/git-hub-app-support/).
 deployService_name: |-
     Enter a name for this Service. 
 
@@ -198,46 +198,49 @@ image:
 privileged:
     content: "Run all containers with the Docker `--privileged` flag enabled. This option is disabled by default. You can override this setting in individual Run and Run Tests steps. "
     width: "400"
-optimize: Enables redo snapshot mode
-dockerfile: If not provided assumed to be in the root folder of the codebase
-context: Context represents a directory containing a Dockerfile which kaniko will use to build your image. For example, a COPY command in your Dockerfile should refer to a file in the build context.
-target: Build the specified stage as defined inside the Dockerfile
+optimize: Enable `--snapshotMode=redo`. This setting can reduce the time it takes to create snapshots. [Learn more](https://github.com/GoogleContainerTools/kaniko/blob/main/README.md#flag---snapshotmode)
+dockerfile: The Dockerfile name. If not provided, the Dockerfile is assumed to be in the root folder of the codebase.
+context: Enter a path to a directory containing files that make up the [build's context](https://docs.docker.com/engine/reference/commandline/build/#description). When the pipeline runs, the build process can refer to any files found in the context. For example, a Dockerfile can use a `COPY` instruction to reference a file in the context.
+target: The Docker [target build stage](https://docs.docker.com/engine/reference/commandline/build/#target) as defined inside the Dockerfile.
 region:
     content: |-
         The AWS region to use when pushing the image.
 
-        The registry format for ECR is:
+        The registry format for ECR is: `docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repo:tag>`
 
-        `docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repo:tag>` 
-
-        A region is required.
-
-        See [Pushing a Docker image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html) from AWS.
+        To learn more, go to the AWS docs on [pushing a Docker image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html).
     width: "400"
 imageName: The name of the image that will be pushed to the target container registry.
 gcsBucket:
     content: Enter the source GCS bucket name. [Learn More](https://cloud.google.com/storage/docs/creating-buckets)
     width: "400"
 sourcePath:
-    content: Path to the artifact files you want to upload.
+    content: Path to the artifact file/folder to upload. Harness creates the compressed file automatically.
     width: "400"
-gcsS3Target: The path to store the cache in, relatively to the bucket. If not provided the cache will be save to [bucket]/
+gcsS3Target:
+    content: |-
+        The path, relative to the bucket, where you want to store the cache/artifact.
+
+        Do not include the bucket name; you specified this in the Bucket field.
+
+        If no path is specified, the cache/artifact is saved to `[bucket]/[key]`.
+    width: "400"
 restoreCacheKey:
     content: |-
-        The key that can be used to restore this cache. You can use the checksum macro to create a key that is based on a file’s checksum.
+        The key that can be used to restore this cache. You can use the checksum macro to create a key that is based on a file's checksum.
 
         For example, `myApp-{ { checksum filePath1 } }`.
     width: "400"
 archiveFormat:
     content: Select archive format. The default format is TAR.
     width: "400"
-failIfKeyNotFound: Fail step if the key doesn’t exist. Default is False.
+failIfKeyNotFound: Fail step if the key doesn't exist. Default is False.
 s3Bucket:
-    content: The S3 bucket name for the uploaded artifact.
+    content: The name of the S3 bucket name where you want to upload the artifact.
     width: "400"
-endpoint: Endpoint for S3 compatible providers (not needed for AWS).
+endpoint: Endpoint for S3-compatible providers. Not needed for AWS.
 pathStyle: Select whether to use Virtual Hosted Style (http://bucket.host/key) or Path Style (http://host/bucket/key). For MinIO use Path Style (true). Default value is false.
-saveCacheKey: The key the cache will be identified by. You can use the checksum macro to create a key that is based on a file’s checksum. For example, myApp-{ { checksum filePath1 } }
+saveCacheKey: The key the cache will be identified by. You can use the checksum macro to create a key that is based on a file's checksum. For example, myApp-{ { checksum filePath1 } }
 saveCacheOverride:
     content: |-
         Select this option to override the cache if the key already exists.
@@ -266,9 +269,9 @@ ecrAccount:
         See [Pushing a Docker image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html) from AWS.
     width: "400"
 ecrRemoteCache: The remote cache repository needs to be created in the same account and region as the build image. The repository must already exist for caching to work
-gcrHost: GCR Host
-gcrProjectID: GCR Project Id
-gcrRemoteCache: The remote cache repository needs to be created in the same host and project as the build image. The repository will be automatically created if it doesn’t exist.
+gcrHost: The GCR hostname. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/build-and-upload-artifacts/build-and-push-to-gcr#host)
+gcrProjectID: GCP resource manager project ID. [Learn more](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects)
+gcrRemoteCache: The name of the remote cache image, such as `gcr.io/project-id/<image>`.The remote cache repository needs to be created in the same host and project as the build image. The repository is automatically created if it doesn't exist. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/build-and-upload-artifacts/build-and-push-to-gcr#remote-cache-image)
 jFrogArtifactoryTarget: Repository name relative to the server URL in the connector. If pom.xml is not present then target should be full path to artifacts folder (groupId/artifactId/version)
 pluginImage: The name of the Plugin Docker image. The image name should include the tag and will default to the latest tag if unspecified. You can use any docker image from any docker registry, including docker images from private registries
 runTestsArgs:
@@ -1648,33 +1651,13 @@ stepGithubAuthForm_username: Your personal GitHub account username.
 stepGithubAuthForm_password: |-
     A Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) for the credentials of your GitHub user account.
 
-    A Personal Access Token (PAT) is required if your GitHub authentication uses 2FA. Select **Username and Token** in **Authentication**.
-
-    Typically, you can validate your token from the command line before using it in Harness. For example:
-
-    `curl -i https://api.github.com -u <username>:<token>`
+    If your GitHub authentication uses 2FA, you must use a Personal Access Token (select **Username and Token** in **Authentication**).
 gitHubPersonalAccessTooltip: |-
-    A Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) for the Personal Access Token (PAT).
-
-    A PAT is required if your GitHub authentication uses 2FA.
-
-    Typically, you can validate your token from the command line before using it in Harness. For example:
-
-    `curl -i https://api.github.com -u <username>:<token>`
-
-    **Note:** If you've set up 2FA in your Git repo, then you need to generate a PAT in your repo and enter that token in the **Personal Access Token** setting. See [GitHub settings](https://github.com/settings/tokens/new) for steps on setting up the personal access token. 
+    A Harness encrypted text secret for a Personal Access Token (PAT) for your GitHub account. A PAT is required if your GitHub authentication uses 2FA. [Learn more](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-hub-connector-settings-reference#personal-access-token)
 stepGithubAuthForm_accessToken: |-
-    A Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) for the Personal Access Token (PAT).
-
-    A PAT is required if your GitHub authentication uses 2FA.
-
-    Typically, you can validate your token from the command line before using it in Harness. For example:
-
-    `curl -i https://api.github.com -u <username>:<token>`
-
-    **Note:** If you've set up 2FA in your Git repo, then you need to generate a PAT in your repo and enter that token in the **Personal Access Token** setting. See [GitHub settings](https://github.com/settings/tokens/new) for steps on setting up the personal access token. 
+    A Harness encrypted text secret for a Personal Access Token (PAT) for your GitHub account. A PAT is required if your GitHub authentication uses 2FA. [Learn more](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-hub-connector-settings-reference#personal-access-token)
 stepGithubAuthForm_apiAccessToken: ""
-githubApiAuthentication: You can use a Personal Access Token or GitHub App for authentication. [Learn More about using a GitHub App with Harness](https://docs.harness.io/article/nze5evmqu1)
+githubApiAuthentication: You can use a [Personal Access Token](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-hub-connector-settings-reference#authentication) or [GitHub App](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/git-hub-app-support) for authentication.
 stepGithubAuthForm_installationId: Enter the Installation Id located in the URL of the installed GitHub App.
 stepGithubAuthForm_applicationId: Enter the **GitHub App Id** from the GitHub App **General** tab.
 createUpdateSecretForm_secretManagerIdentifier: Harness includes a built-in Secrets Management feature that enables you to store encrypted secrets, such as access keys, and use them in your Harness Connectors and Pipelines. [Learn More](https://docs.harness.io/article/bo4qbrcggv)
@@ -2162,7 +2145,10 @@ shell: |-
     - **Bash**
     - **Shell**
 runAsUser:
-    content: Run with this user Id for all containers in the pod.  A typical example of a Run as User value would be 1000. To override this default, set Run as User in individual Steps.
+    content: |-
+        Specify the user ID to use to run all processes in the pod if running in containers.
+
+        For more information, go to [Set the security context for a pod](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod).
     width: "400"
 ccmOverviewTitle: |-
     Harness Cloud Cost Management (CCM) is an intelligent cloud cost management solution for FinOps, Infrastructure, and Engineering teams. Harness CCM provides:
@@ -2556,10 +2542,10 @@ rightBarForm_depth:
     content: |
         The number of commits to fetch when Harness clones a repo.
 
-        - For manual Builds, when a user clicks **Build** in the Harness UI, the default Depth is 50 (each `git clone` operation fetches the most recent 50 commits). A setting of 0 fetches all commits in the branch.
-        - For triggered Builds, the default Depth is 0 (fetch all commits to the branch).
+        - For manually-triggered builds the default depth is `50` (each `git clone` operation fetches the most recent 50 commits).
+        - For all other trigger types, the default depth is `0` (fetch all commits from the branch).
 
-        For details, see [https://git-scm.com/docs/git-clone](https://git-scm.com/docs/git-clone).
+        [Learn more](https://git-scm.com/docs/git-clone)
     width: "400"
 rightBarForm_sslVerify:
     content: |-
@@ -2903,7 +2889,7 @@ kustomizePath_paths:
         **Important:** You cannot use Harness [variables](https://docs.harness.io/article/lml71vhsim) in the base manifest or kustomization.yaml. You can only use Harness variables in kustomize patches you add here in Kustomize Patches **Manifest Details**.
     width: "400"
 ciBuildInfra_serviceAccountName:
-    content: The Service Account for Step containers to use when communicating with the Kubernetes API server. Leave blank to use the default service account for the namespace. [Learn More](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
+    content: Specify a Kubernetes service account for step containers to use when communicating with the Kubernetes API server. Leave blank to use the namespace's default service account. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/set-up-build-infrastructure/ci-stage-settings#infrastructure)
     width: "400"
 ciRunStep_timeout:
     content: The default **Timeout** limit for the step is **10 hours**. The Step fails when the Timeout is reached, and the Pipeline execution continues.
@@ -3277,9 +3263,7 @@ ciEcrStep_spec.tags:
     content: |-
         Specify one or more [tags](https://docs.docker.com/engine/reference/commandline/build/#tag-an-image--t) for the Docker image.
 
-        Each tag should added separately. 
-
-        Click **Add** to add each tag separately.
+        Select **Add** to add each tag separately.
     width: "600"
 ciEcrStep_spec.labels:
     content: Use Labels to add metadata to the Docker image.
@@ -3291,21 +3275,21 @@ ciEcrStep_timeout:
     content: Timeout for the step. Once the timeout is reached, the step fails.
     width: "400"
 ciGcrStep_spec.connectorRef:
-    content: The Harness GCP Connector to use to connect to GCR. [Learn More](https://docs.harness.io/article/yykfduond6)
+    content: The Harness GCP connector to use to connect to GCR. [Learn More](https://developer.harness.io/docs/platform/connectors/cloud-providers/ref-cloud-providers/gcs-connector-settings-reference/)
     width: "400"
 ciGcrStep_spec.tags:
     content: |-
         Specify one or more [tags](https://docs.docker.com/engine/reference/commandline/build/#tag-an-image--t) for the Docker image.
 
-        Each tag should added separately. 
+        Each tag should added separately.
 
         Click **Add** to add each tag separately.
     width: "400"
 ciGcrStep_spec.labels:
-    content: "[Docker object labels](https://docs.docker.com/config/labels-custom-metadata/) to add metadata to the Docker image."
+    content: "[Docker object labels](https://docs.docker.com/config/labels-custom-metadata/) add metadata to the Docker image."
     width: "400"
 ciGcrStep_spec.buildArgs:
-    content: The Docker [build-time variables](https://docs.docker.com/engine/reference/commandline/build/#set-build-time-variables---build-arg) (`--build-arg`).
+    content: The Docker [build-time variables](https://docs.docker.com/engine/reference/commandline/build/#build-arg).
     width: "400"
 ciGcrStep_timeout:
     content: Timeout for the step. Once the timeout is reached, the step fails.
@@ -3343,7 +3327,7 @@ ciS3Base_spec.connectorRef:
     content: |-
         The Harness AWS Connector to use when connecting to AWS S3.
 
-        The AWS IAM roles and policies associated with the account used in the Harness AWS Connector must be able to push to S3. [Learn More](https://newdocs.helpdocs.io/article/m5vkql35ca)
+        The AWS IAM roles and policies associated with the account used in the Harness AWS Connector must be able to push to S3. [Learn More](https://developer.harness.io/docs/platform/connectors/cloud-providers/ref-cloud-providers/aws-connector-settings-reference)
     width: "400"
 ciS3Base_name:
     content: Enter a name for this step.
@@ -3791,10 +3775,10 @@ depth:
     content: |
         The number of commits to fetch when Harness clones a repo.
 
-        - For manual Builds, when a user clicks **Build** in the Harness UI, the default Depth is 50 (each `git clone` operation fetches the most recent 50 commits). A setting of 0 fetches all commits in the branch.
-        - For triggered Builds, the default Depth is 0 (fetch all commits to the branch).
+        - For manually-triggered builds the default depth is `50` (each `git clone` operation fetches the most recent 50 commits).
+        - For all other trigger types, the default depth is `0` (fetch all commits from the branch).
 
-        For details, see [https://git-scm.com/docs/git-clone](https://git-scm.com/docs/git-clone).
+        [Learn more](https://git-scm.com/docs/git-clone)
     width: "400"
 prCloneStrategy:
     content: |
@@ -3864,14 +3848,14 @@ imagePath_version:
     content: Enter your Artifact version. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
     width: "400"
 serviceAccountName:
-    content: ""
+    content: Specify a Kubernetes service account for step containers to use when communicating with the Kubernetes API server. Leave blank to use the namespace's default service account. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/set-up-build-infrastructure/ci-stage-settings#infrastructure)
     width: "400"
 automountServiceAccountToken:
     content: By default, k8s mounts a token for the Service Account when it creates a pod, which enables the pod to communicate with the k8s API server. When this option is disabled, the service account token will not get mounted.
     width: "400"
 priorityClassName:
     content: |-
-        The PriorityClass of the Stage pod in case resources run out on the host node. 
+        The PriorityClass of the Stage pod in case resources run out on the host node.
 
 
         Enter the name of a PriorityClass defined in your build infrastructure. You can also enter the predefined classes `system-cluster-critical` or `system-node-critical`, which ensure that the Stage is always scheduled first.
