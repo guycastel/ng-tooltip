@@ -1861,7 +1861,7 @@ ciRunTests_name:
     content: Enter a unique step name.
     width: "400"
 ciRunTests_description: Description for the step.
-RunTests_stepName_StepConfig: The Run Tests step can be used to run tests in your CI stages. When you use Run Tests, you enable Test Intelligence for your CI stage. [Learn More](https://docs.harness.io/article/ota4xj59le)
+RunTests_stepName_StepConfig: The Run Tests step can be used to run tests in your CI stages. When you use Run Tests, you can [enable Test Intelligence](https://developer.harness.io/docs/continuous-integration/use-ci/set-up-test-intelligence/).
 ciRunTests_spec.runOnlySelectedTests: This option enables Test Intelligence. If this option is unchecked and set to False, then the Test Intelligence will be disabled and all tests will run. [Learn More](https://docs.harness.io/article/vtu9k1dsfa)
 ciBuildInfra_connectorRef: Select a Harness Connector for a Kubernetes cluster. A Kubernetes cluster is used as a build farm. [Learn More](https://docs.harness.io/article/ia5dwx5ya8)
 notificationsOverview_name: Enter a name for your Notification Rule. Notification Rules are used to create a notification strategy for your Pipeline. [Learn More](https://docs.harness.io/article/4bor7kyimj)
