@@ -147,7 +147,7 @@ deployService_name: |-
     You can also propagate and override a Service in subsequent stages by selecting its name in that stage's **Service** settings. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/propagate-and-override-cd-services)
 specifyYourEnvironment:
     content: |-
-        Select or create a new Environment. [Learn More](https://docs.harness.io/article/9ryi1ay01f)
+        Select or create a new Environment. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview/)
 
         Environments represent your deployment environments (QA, Prod, etc). 
 
@@ -3519,16 +3519,22 @@ BlueGreenDetailsHeader:
         When to use Blue/Green Deployments:
         - When you want to perform verification in a full production environment.
         - When you want zero downtime.
-        [Learn More](https://developer.harness.io/docs/continuous-delivery/manage-deployments/deployment-concepts)
+
+        Learn more about [deployment strategies](https://developer.harness.io/docs/continuous-delivery/manage-deployments/deployment-concepts/).
     width: "400"
 CanaryDetailsHeader:
     content: |-
         When to use Canary Deployments:
         - When you want to verify whether the new version of the application is working correctly in your production environment before replacing the previous version.
         - This is currently the most common way to deploy apps/services into production.
+
+        Learn more about [deployment strategies](https://developer.harness.io/docs/continuous-delivery/manage-deployments/deployment-concepts/).
     width: "400"
 DefaultDetailsHeader:
-    content: Select this option if you do not want Harness to automatically provide deployment steps.
+    content: |-
+        Select this option if you do not want Harness to automatically provide deployment steps.
+
+        Learn more about [deployment strategies](https://developer.harness.io/docs/continuous-delivery/manage-deployments/deployment-concepts/).
     width: "400"
 build:
     content: |-
@@ -4509,7 +4515,7 @@ pipelineAdvancedSteps_delegateSelectors:
 
         You can select one or more Delegates for each Pipeline step.
 
-        You only need to select one of a Delegate's Tags to select it. All Delegates with the Tag are selected. [Learn More](https://docs.harness.io/article/nnuf8yv13o)
+        You only need to select one of a Delegate's Tags to select it. All Delegates with the Tag are selected. [Learn More](https://developer.harness.io/docs/platform/delegates/manage-delegates/select-delegates-with-selectors/)
     width: "400"
 ff_flagFilters_enabledFlags:
     content: Flags that are currently toggled on.
@@ -5158,10 +5164,10 @@ imagePath_spec.version:
         You can use [fixed values, runtime inputs, and expressions](https://developer.harness.io/docs/platform/references/runtime-inputs/). 
     width: "400"
 imagePath_spec.tags:
-    content: Add the tag that is used by your AMI.
+    content: Add the tag that is used by your AMI. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
     width: "400"
 imagePath_spec.filters:
-    content: Add AMI ID filters to locate the AMI resource.
+    content: Add AMI ID filters to locate the AMI resource. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
     width: "400"
 optionalConfiguration_spec.inputs:
     content: Using Script Input Variables enables you to easily identify and manage the Harness expressions used in your script. You can also template your script. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/add-a-custom-artifact-source-for-cd)
@@ -5176,16 +5182,16 @@ connectorId_Nexus:
     content: Select or create a new Connector.
     width: "400"
 connectorId_Aws:
-    content: Create a new AWS Connector or select an existing AWS Connector.
+    content: Create a new AWS Connector or select an existing AWS Connector. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
     width: "400"
 artifactoryArtifact_region:
-    content: Select the region.
+    content: Select the region where the artifact is located. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
     width: "400"
 artifactoryArtifact_bucketName:
-    content: Select or add a bucket name.
+    content: Select or add a bucket name. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
     width: "400"
 artifactoryArtifact_filePath:
-    content: Enter the file path.
+    content: Enter the file path to the artifact. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
     width: "400"
 pdcInfra_connectorRef:
     content: Create or select an existing Connector.
@@ -5494,7 +5500,7 @@ ECSDeploymentTypeManifests:
     width: "400"
 specifyYourInfrastructure:
     content: |-
-        Infrastructure Definitions are the actual clusters, hosts, etc., where Harness deploys a Service.  [Learn More](https://docs.harness.io/article/9ryi1ay01f)
+        Infrastructure Definitions are the actual clusters, hosts, etc., where Harness deploys a Service.  [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview/)
 
         For example, you might have a QA Environment with separate Infrastructure Definitions for each Kubernetes cluster you use in QA.
 
@@ -5964,10 +5970,10 @@ ECSInfraSpecEditable_cluster:
     content: Select the target cluster. The list is populated using the AWS Connector you created. [Learn More](https://docs.harness.io/article/vytf6s0kwc).
     width: "400"
 CustomDeploymentDeploymentTypeArtifacts:
-    content: Add the artifact you want to deploy in this custom deployment. [Learn More](https://docs.harness.io/article/6k9t49p6mn)
+    content: Add the artifact you want to deploy in this custom deployment. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/custom-deployments/custom-deployment-tutorial/)
     width: "400"
 CustomDeploymentDeploymentTypeVariables:
-    content: Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
+    content: Add any variables you want to use in your deployment. [Learn More](https://developer.harness.io/docs/platform/variables-and-expressions/harness-variables/)
     width: "400"
 AzureWebAppDeploymentTypeConfigFiles:
     content: Add any config files you want to use in your deployment.
@@ -6198,7 +6204,7 @@ fetchInstanceScriptForm_timeout:
         Timeouts can be set at the Pipeline level also.
     width: "400"
 multiServiceToggle:
-    content: Enable this setting to deploy multiple Services in this stage. [Learn More](https://docs.harness.io/article/tabk4u2e9n)
+    content: Enable this setting to deploy multiple services in this stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/advanced/multiserv-multienv/)
     width: "400"
 deployServiceStepForm_parallel:
     content: |
@@ -6304,25 +6310,25 @@ ecsWithS3_paths:
     content: Enter the path from the root of the bucket to the folder containing the Task or Service Definition or to the Task or Service Definition JSON or YAML file.
     width: "400"
 connectorId_Gcp:
-    content: Select or create a GCP Connector to connect Harness to your GCP account. [Learn More](https://developer.harness.io/docs/platform/connectors/ref-cloud-providers/gcs-connector-settings-reference/)
+    content: Select or create a GCP Connector to connect Harness to the artifact registry, cloud storage, or cloud source on your GCP account. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
     width: "400"
 imagePath_identifier:
     content: Enter a name for this artifact.
     width: "400"
 imagePath_spec.repositoryType:
-    content: Select the format of the artifact.
+    content: Select the format of the artifact. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
     width: "400"
 imagePath_spec.project:
-    content: Enter the name of the GCP project where the repo is located.
+    content: Enter the name of the GCP project where the repo is located. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
     width: "400"
 imagePath_spec.region:
-    content: Select the region where the repo is located.
+    content: Select the region where the repo is located. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
     width: "400"
 imagePath_spec.repositoryName:
-    content: Enter the name of the repo.
+    content: Enter the name of the repo. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
     width: "400"
 imagePath_spec.package:
-    content: Enter the artifact name.
+    content: Enter the artifact name. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
     width: "400"
 imagePath_versionType:
     content: |-
@@ -6889,10 +6895,10 @@ serverlessLambdaWithS3_configOverridePath:
         This option is the same as the `--config` option in `serverless deploy`. See [AWS - deploy](https://www.serverless.com/framework/docs/providers/aws/cli-reference/deploy) from Serverless.
     width: "450"
 imagePath_spec.packageName:
-    content: Enter the name of the package. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-services/k8s-services/kubernetes-services)
+    content: Enter the name of the package. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
     width: "400"
 imagePath_spec.org:
-    content: Enter the Github org name, if needed.
+    content: Enter the Github org name, if needed. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
     width: "400"
 imagePath_spec.packageType:
     content: Select the type of package you are using. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-services/k8s-services/kubernetes-services)
@@ -7227,10 +7233,10 @@ encryptedWebhookSecretIdentifier:
     content: Create or select a secret for authenticating the webhook call. For the secret to work with your webhook, you need to configure the repository webhook with the same secret. [Learn More](https://developer.harness.io/docs/platform/Triggers/triggering-pipelines)
     width: "400"
 acrArtifact_subscriptionId:
-    content: Provide Azure Subscription
+    content: Provide the Azure subscription Id. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
     width: "400"
 acrArtifact_registry:
-    content: Provide the Azure Container Registry where  Artifact is available
+    content: Provide the Azure Container Registry where the artifact is available.  [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
     width: "400"
 acrArtifact_repository:
     content: Provide a Repository in the specified Azure Container Registry where Artifact is available
@@ -7347,4 +7353,250 @@ imagePath_spec.extension:
     width: "400"
 imagePath_spec.classifier:
     content: Filter the artifact by classifier, such as `sources`.
+    width: "400"
+imagePath_spec.inputs:
+    content: |-
+        While you can simply declare a variable in your script using a Harness expression or string for its value, using Script Input Variables provides some additional benefits:
+
+        - You can more easily identify and manage the Harness expressions used in your script.
+        - You can template your script.
+        - You can declare the variable using Name and Value in Script Input Variables and then reference the variable in the script just as you would any other variable: `$var_name`.  [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/add-a-custom-artifact-source-for-cd/)
+    width: "400"
+imagePath_spec.scripts.fetchAllArtifacts.attributes:
+    content: In Additional Attributes, you can map any additional values from your JSON array. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/add-a-custom-artifact-source-for-cd/)
+    width: "400"
+imagePath_spec.delegateSelectors:
+    content: Select a specific Harness delegate to run the script on.
+    width: "400"
+acrArtifact_tag:
+    content: Enter the tag of the image you want to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
+    width: "400"
+connectorId_Azure:
+    content: You connect to ACR using a Harness Azure Connector. [Learn More](https://developer.harness.io/docs/platform/Connectors/Cloud-providers/add-a-microsoft-azure-connector)
+    width: "400"
+connectorId_Bamboo:
+    content: |-
+        You can use Bamboo for build plans when performing deployments using the SSH/WinRM, Serverless.com Framework, and Deployment Templates deployment types. You can also trigger deployments based on new build plans in Bamboo.
+
+        You connect to Bamboo using a Harness Bamboo connector. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+imagePath_spec.planKey:
+    content: Select the name of the plan. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+imagePath_spec.artifactPaths:
+    content: Select the artifact path for the plan. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+imagePath_spec.build:
+    content: Select the plan to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+connectorId_Github:
+    content: |-
+        You can use Github Packages as artifacts for deployments. 
+
+        You connect to Github using a Harness Github Connector, username, and Personal Access Token (PAT). [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+connectorId_AzureArtifacts:
+    content: You connect to your Azure DevOps artifacts using a Harness Azure Artifacts connector. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+imagePath_scope:
+    content: Select Org or Project. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+imagePath_project:
+    content: Select the Azure DevOps project to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+imagePath_feed:
+    content: Select the artifact feed. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+imagePath_packageType:
+    content: Select the type of package. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+imagePath_package:
+    content: Select the name of the package on Azure Artifacts. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+googleCloudStorageArtifact_project:
+    content: Select the GCP project where the bucket is located. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+googleCloudStorageArtifact_bucket:
+    content: Select the GCS bucket. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+googleCloudStorageArtifact_artifactPath:
+    content: Select the name of the artifact you want to deploy. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+googleCloudSourceArtifact_project:
+    content: Select the GCP project where the cloud source repo is located. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+googleCloudSourceArtifact_repository:
+    content: Select the cloud source repo where the function is located. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+googleCloudSourceArtifact_fetchType:
+    content: Select how you want to fetch the function file. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+googleCloudSourceArtifact_sourceDirectory:
+    content: Select the source directory for the function. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+artifactSourceConfigRuntimeInputsForm_data.artifacts.primary.spec.digest:
+    content: |-
+        Select the Docker image digest. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+
+        A Docker image digest is a unique identifier for a Docker image. It is a cryptographic hash of the image's contents, and it is used to ensure that the image has not been tampered with.
+    width: "400"
+CustomDeploymentDeploymentTypeConfigFiles:
+    content: |-
+        You can use files added to the **Config Files** section in your Harness services in your manifests. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/cd-services-config-files)
+
+        You can reference unencrypted and encrypted files, and they can be single or multiline.
+    width: "400"
+AsgDeploymentTypeManifests_awsAsgHeader:
+    content: Enter the configuration files. Only **Launch Template** and **ASG Configuration** are required. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgDeploymentTypeManifests_launchTemplate:
+    content: Enter a standard AWS JSON or YAML formatted [launch template](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html). [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgDeploymentTypeManifests_asgConfiguration:
+    content: Add a [ASG configuration file](https://docs.aws.amazon.com/codedeploy/latest/userguide/tutorials-auto-scaling-group-create-auto-scaling-group.html#tutorials-auto-scaling-group-create-auto-scaling-group-cli). [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgDeploymentTypeManifests_scalingPolicy:
+    content: |-
+        Enter a [scaling policy](https://docs.aws.amazon.com/autoscaling/ec2/userguide/examples-scaling-policies.html). [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+
+        This is the same as the **Automatic scaling** option in the ASG console setup.
+    width: "400"
+AsgDeploymentTypeManifests_scheduledUpdateGroupAction:
+    content: Enter a [Scheduled update group action](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scheduled-scaling.html). [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgDeploymentTypeArtifacts:
+    content: Add the private AMI image to use for the ASG instances. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgDeploymentTypeConfigFiles:
+    content: |-
+        AWS does not have a dedicated public resource for ASG configuration file formatting because ASG creation is typically done using the AWS CLI, SDKs, or Management Console, which have their own syntax and methods for specifying the parameters.
+
+        However, the AWS CLI [create-auto-scaling-group](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/create-auto-scaling-group.html) command reference documentation provides a detailed description of the parameters that can be used when creating an ASG. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgDeploymentTypeVariables:
+    content: Add service variables and then reference them in any of the ASG configuration files you added to the service. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+harnessFileStore_identifier:
+    content: Enter a name for this file.
+    width: "400"
+GoogleCloudFunctionsDeploymentTypeManifests:
+    content: The Function Definition is the parameter file you use to define your Google Function. The parameter file you add here maps to one Google Function. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+GoogleCloudFunctionsSecondManifestStep:
+    content: Select Add Function Definition and connect Harness with the Git repo where the manifest YAML is located. You can also use the Harness File Store. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+googleCloudStorageArtifact_identifier:
+    content: Enter a name for your Cloud Function file. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+GoogleCloudFunctionsDeploymentTypeArtifacts:
+    content: Add the location of the function ZIP file that corresponds to the manifest file you added in Function Definition. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+GoogleCloudFunctionsDeploymentTypeVariables:
+    content: |-
+        Service variables are a powerful way to template your services or make them more dynamic. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+
+        In the Variables section of the service, you can add service variables and then reference them in any of the manifest YAML file you added to the service.
+    width: "400"
+GoogleCloudFunctionsDeploymentTypeConfigFiles:
+    content: You can use files added to the Config Files section in your Harness services in your manifests. You can reference unencrypted and encrypted files, and they can be single or multiline. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/cd-services-config-files)
+    width: "400"
+cdEditStage_environmentType:
+    content: |-
+        Select 1st gen or 2nd gen. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+
+        - **2nd gen**: The YAML parameters for Google Functions 2nd gen are defined in the [google.cloud.functions.v2 function message](https://cloud.google.com/functions/docs/reference/rpc/google.cloud.functions.v2#function) from Google Cloud.
+        - **1st gen**: The YAML parameters for Google Functions 1st gen are defined in the [google.cloud.functions.v1 CloudFunction message](https://cloud.google.com/functions/docs/reference/rpc/google.cloud.functions.v1#cloudfunction) from Google Cloud.
+    width: "400"
+deployServiceStepForm_service:
+    content: Select or create a Harness service. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview/)
+    width: "400"
+primaryArtifactRef:
+    content: Select the artifact to deploy in this stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+GoogleCloudFunctionsInfraDefinitionDetails:
+    content: |-
+        You will need a Harness GCP Connector with the  permissions required to deploy Cloud Functions in GCP. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+
+        You can pick the same GCP connector you used in the Harness service to connect to Google Cloud Storage for the artifact, or create a new connector.
+    width: "400"
+GoogleCloudFunctionInfraSpecEditable_connectorRef:
+    content: Select or create a Harness GCP connector that connects Harness with the account where you want the Cloud Function deployed. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+GoogleCloudFunctionInfraSpecEditable_project:
+    content: Select the GCP project where you want to deploy. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+GoogleCloudFunctionInfraSpecEditable_region:
+    content: Select the GCP region where you want to deploy. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+BasicDetailsHeader:
+    content: |-
+        The basic deployment execution strategy deploys the new service version and routes 100% of any traffic over to this new version.
+
+        Learn more about [deployment strategies](https://developer.harness.io/docs/continuous-delivery/manage-deployments/deployment-concepts/).
+    width: "400"
+deployCloudFunctionStep_name:
+    content: Enter a name for this Google Cloud Functions step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+DeployCloudFunction_stepName_StepConfig:
+    content: The Deploy Cloud Function step deploys the new function version and routes 100% of traffic over to the new function version. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+deployCloudFunctionStep_timeout:
+    content: |
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+deployCloudFunctionStep_spec.updateFieldMask:
+    content: A Google Cloud Function [field mask](https://cloud.google.com/functions/docs/reference/rpc/google.cloud.functions.v2#updatefunctionrequest) is a way to specify a subset of fields that should be returned by a get operation or modified by an update operation. Field masks are used to avoid unnecessary work and improve performance. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+DeployCloudFunctionWithNoTraffic_stepName_StepConfig:
+    content: |-
+        This step deploys the new function version but does not route any traffic over to the new function version. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+
+        This step is typically used in the first part of a canary or blue green deployment.
+    width: "400"
+deployCloudFunctionWithNoTrafficStep_name:
+    content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+deployCloudFunctionWithNoTrafficStep_timeout:
+    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+deployCloudFunctionWithNoTrafficStep_spec.updateFieldMask:
+    content: A Google Cloud Function [field mask](https://cloud.google.com/functions/docs/reference/rpc/google.cloud.functions.v2#updatefunctionrequest) is a way to specify a subset of fields that should be returned by a get operation or modified by an update operation. Field masks are used to avoid unnecessary work and improve performance. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+CloudFunctionTrafficShift_stepName_StepConfig:
+    content: |
+        This step is used in canary and blue green deployments to route traffic. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+
+        You can also route traffic incrementally using multiple Cloud Function Traffic Shift steps with gradually increasing routing percentages.
+    width: "400"
+cloudFunctionTrafficShiftStep_name:
+    content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+cloudFunctionTrafficShiftStep_timeout:
+    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+cloudFunctionTrafficShiftStep_spec.trafficPercent:
+    content: |-
+        Enter the percentage of traffic to switch to the new revision of the function. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+
+        - For canary deployments, you can add multiple Cloud Function Traffic Shift steps to rollout the shift.
+        - For blue green deployments, you can simply use 100 in the **Traffic Percent** setting to shift all traffic to the new version.
+    width: "400"
+CloudFunctionRollback_stepName_StepConfig:
+    content: |-
+        If deployment failure occurs, the stage or step failure strategy is initiated. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+         
+
+        Typically, this runs the **Cloud Function Rollback** step in the **Rollback** section of **Execution**. Harness adds the **Cloud Function Rollback** step automatically.
+         
+
+        The Harness rollback capabilities are based on the Google Cloud Function [revisions](https://cloud.google.com/run/docs/managing/revisions) available in Google Cloud.
+         
+
+        If the function already exists (for example, revision 10) and a new revision is deployed (for example, revision 11) but a step after the deployment there is a failure and rollback is triggered, then Harness will deploy a new function revision (revision 12) but it will contain the artifact and metadata for revision 10.
+    width: "400"
+cloudFunctionRollbackStep_name:
+    content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
+    width: "400"
+cloudFunctionRollbackStep_timeout:
+    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
     width: "400"
