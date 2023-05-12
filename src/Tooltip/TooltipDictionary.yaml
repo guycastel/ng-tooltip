@@ -178,13 +178,15 @@ manifestDetails_branch: |-
     Enter the branch in the repo where the manifest is located, such as `main`.
 
     Harness expressions are supported, but Harness secrets are not supported.
-imagePath_imagePath: |+
-    Enter the name of the artifact you want to deploy, such as `library/nginx` or `jsmtih/privateimage`. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
+imagePath_imagePath:
+    content: |+
+        Enter the name of the artifact you want to deploy, such as `library/nginx` or `jsmtih/privateimage`. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
 
-    Official images in public repos often need the label `library`, e.g. `library/tomcat`.
+        Official images in public repos often need the label `library`, e.g. `library/tomcat`.
 
-    Wildcards are not supported.
+        Wildcards are not supported.
 
+    width: "400"
 imagePath_tag: Enter the Docker [image tag](https://docs.docker.com/engine/reference/commandline/tag/).
 setContainerResources:
     content: Maximum resource limits for containers that clone the codebase at runtime. See [Resource units in Kubernetes](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#resource-units-in-kubernetes).
@@ -3831,13 +3833,13 @@ nexusArtifact_tag:
     content: Select the Docker image tag. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
     width: "400"
 artifactoryArtifact_repository:
-    content: Enter the name of the repository where the Artifact is located. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
+    content: Enter the name of the repository where the Artifact is located. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
     width: "400"
 artifactoryArtifact_repositoryUrl:
-    content: Enter the URL you would use in the Docker login to fetch the Artifact. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
+    content: Enter the URL you would use in the Docker login to fetch the Artifact. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
     width: "400"
 artifactoryArtifact_artifactPath:
-    content: Enter the name of the Artifact you want to deploy. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
+    content: Enter the name of the Artifact you want to deploy. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
     width: "400"
 artifactoryArtifact_tag:
     content: Enter the image tag artifact name.
@@ -7278,4 +7280,71 @@ manifestDetails_enableDeclarativeRollback:
         `kubectl apply -f <prevision version of manifest>` instead of `kubectl rollout undo`.
 
         This method reduces the risk of getting in the wrong state in the subsequent deployment because the merge state is impacted by the `rollout undo` command. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/cd-k8s-ref/kubernetes-rollback/)
+    width: "400"
+createArtifactSourceTemplate_name:
+    content: |
+        Enter a name for this artifact source template. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/templates/artifact-source-template/)
+    width: "400"
+createArtifactSourceTemplate_versionLabel:
+    content: |-
+        Enter a version label for this version of the template. 
+
+        You can update the version each time you change and save a template. 
+        [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/templates/artifact-source-template/)
+    width: "400"
+createArtifactSourceTemplate_iconFile:
+    content: Upload an icon image for the template. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/templates/artifact-source-template/)
+    width: "400"
+artifactSourceConfig_artifactRepoType:
+    content: |-
+        Select the artifact repo provider where your images are stored. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/templates/artifact-source-template/)
+
+        Harness support multiple artifact registry providers, including Google Container Registry (GCR), AWS Elastic Container Registry (ECR), and Azure Container Registry (ACR).
+
+        Harness includes a platform-agnostic artifact registry type named Docker Registry. Use Docker Registry for images on any registry, including Docker Hub.
+    width: "400"
+connectorId_DockerRegistry:
+    content: Select or create a platform-agnostic Docker Registry connector. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+imagePath_digest:
+    content: |-
+        Select the Docker image digest. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+
+        A Docker image digest is a unique identifier for a Docker image. It is a cryptographic hash of the image's contents, and it is used to ensure that the image has not been tampered with.
+    width: "400"
+artifactSourceConfig_artifactSourceDetails:
+    content: Enter the details required to pull your artifact from the remote registry. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+artifactSourceConfig_artifactConnector:
+    content: Select or create a Harness connector to connect Harness with your registry account. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+imagePath_repositoryFormat:
+    content: Select the type of artifact you want to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+imagePath_repository:
+    content: Select the repo hosting your artifact. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+imagePath_spec.artifactPath:
+    content: Enter the path to the artifact you want. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+    width: "400"
+imagePath_spec.repositoryUrl:
+    content: "**Repository URL** is typically used for a custom infrastructure (for example, when Nexus is hosted behind a reverse proxy). [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)"
+    width: "400"
+imagePath_spec.repositoryPort:
+    content: "**Repository Port** is more commonly used and can be taken from the repo settings. Each repo uses its own port. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)"
+    width: "400"
+imagePath_spec.groupId:
+    content: |-
+        Select the repo group for your artifact. If you don't see it, the API might have timed out. Enter its name and Harness will query for it.
+
+        For Nexus 2, you can enter a variable expression to parameterize this setting.
+    width: "400"
+imagePath_spec.artifactId:
+    content: Select the artifact in the repository. If you don't see it, the API might have timed out. Enter its name and Harness will query for it.
+    width: "400"
+imagePath_spec.extension:
+    content: Filter the artifacts by extension, such as `war`.
+    width: "400"
+imagePath_spec.classifier:
+    content: Filter the artifact by classifier, such as `sources`.
     width: "400"
