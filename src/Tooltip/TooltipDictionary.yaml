@@ -396,7 +396,9 @@ awsCCDetailsForm_url: |-
     For example: `https://git-codecommit.us-east-2.amazonaws.com/v1/repos/MyDemoRepo`
 connectorDetailsStepFormBitbucket_name: Enter a name for this Bitbucket Connector. You will use this name to select the Connector in Pipeline steps and settings. [Learn More](https://docs.harness.io/article/iz5tucdwyu)
 connectorDetailsStepFormJira_name: Enter a name for this Connector. You will use this name to select the Connector in Pipeline steps and settings. [Learn More](https://docs.harness.io/article/ud8rysntnz)
-k8InfraAllowSimultaneousDeployments: By default, Harness queues deployments to the same infrastructure to avoid conflicts. If you want to allow simultaneous deployments to this infrastructure, enable this option.
+k8InfraAllowSimultaneousDeployments:
+    content: By default, Harness queues deployments to the same infrastructure to avoid conflicts. If you want to allow simultaneous deployments to this infrastructure, enable this option. [Learn More](https://developer.harness.io/docs/continuous-delivery/manage-deployments/controlling-deployments-with-barriers-resource-constraints-and-queue-steps)
+    width: "400"
 infraProvisionerBase_provisionerEnabled:
     content: |-
         Select this option to use an infrastructure provisioner to dynamically provision the target infrastructure for the deployment. 
@@ -5959,9 +5961,9 @@ ecsRunTaskStepForm_spec.skipSteadyStateCheck:
     width: "400"
 awsConnector:
     content: |-
-        Add or select an AWS Connector to connect Harness with the AWS account and service you are using (ECS, Lambda, etc). 
+        Add or select an AWS Connector to connect Harness with the AWS account and service you are using. 
 
-        For details on the requirements of each AWS service, go to [AWS Connector Settings Reference](https://docs.harness.io/article/m5vkql35ca)
+        For details on the requirements of each AWS service, go to [AWS Connector Settings Reference](https://developer.harness.io/docs/platform/connectors/cloud-providers/ref-cloud-providers/aws-connector-settings-reference/)
     width: "400"
 ECSInfraSpecEditable_region:
     content: Select the AWS region where your ECS cluster is located. [Learn More](https://docs.harness.io/article/vytf6s0kwc).
@@ -7598,5 +7600,139 @@ cloudFunctionRollbackStep_name:
     content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
     width: "400"
 cloudFunctionRollbackStep_timeout:
+    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+AsgInfraDefinitionDetails:
+    content: To define the target ASG region, you add an infrastructure definition to a Harness environment. The infrastructure definition uses a Harness AWS connector and a region setting to define the deployment target.
+    width: "400"
+AsgInfraSpecEditable_region:
+    content: Select the AWS region where you want the ASG deployed. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgRollingDeploy_stepName_StepConfig:
+    content: This step deploys a new ASG with the number of desired instances you have defined in your ASG configuration file in the Harness service used in the pipeline. Any other configuration files in the service are also applied. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgRollingDeploy_name:
+    content: Enter a name for this ASG deploy step. [Learn More](https://developer.harness.io/docs/platform/references/renaming-entities-and-resources/)
+    width: "400"
+AsgRollingDeploy_timeout:
+    content: |
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+AsgRollingDeploy_spec.useAlreadyRunningInstances:
+    content: Enable this setting to use the scaling settings on the last ASG version deployed. [Learn More](https://developer.harness.io/docs/platform/references/renaming-entities-and-resources/)
+    width: "400"
+AsgCanaryDeploy_stepName_StepConfig:
+    content: |-
+        This step deploys a new ASG version with the name of your ASG and the extension `__Canary`. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+
+        The canary ASG version can use the `desiredCapacity` in your ASG configuration file or you can set it in the Instances setting in the ASG Canary Deploy step.
+    width: "400"
+AsgCanaryDeploy_name:
+    content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgCanaryDeploy_timeout:
+    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+AsgCanaryDeploy_spec.instanceSelection:
+    content: |-
+        Specify how many instances to use in this temporary ASG.
+
+        The **Instances** setting replaces the `desiredCapacity` in your ASG configuration file. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgBlueGreenRollback_stepName_StepConfig:
+    content: |-
+        The ASG Blue Green Rollback rolls back the routes and ASG created/updated in the Blue Green deployment.
+
+        Harness stores configurations of the ASG you are deploying twice:
+
+        - First storage: Harness stores the ASG configuration at the start of deployment for rollback during deployment.
+        - Second storage: Harness stores the ASG configuration at the end of deployment for rollbacks post deployment. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgBlueGreenRollbackFormikForm_name:
+    content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgBlueGreenRollbackFormikForm_timeout:
+    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+AsgBlueGreenDeploy_stepName_StepConfig:
+    content: |-
+        This is the first step in an ASG blue green deployment. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+
+        In this step you specify the production and stage listener ports and rules to use.
+
+        The new ASG is deployed to the stage target group.
+    width: "400"
+AsgBlueGreenDeployStepEdit_name:
+    content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgBlueGreenDeployStepEdit_timeout:
+    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+AsgBlueGreenDeployStepEdit_spec.useAlreadyRunningInstances:
+    content: Enable this setting to use the scaling settings on the last ASG version deployed. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgBlueGreenDeployStepEdit_spec.loadBalancer:
+    content: Select the load balancer to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgBlueGreenDeployStepEdit_spec.prodListener:
+    content: Select the listener to use for prod traffic. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgBlueGreenDeployStepEdit_spec.prodListenerRuleArn:
+    content: Select the ARN for the prod listener rule. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgBlueGreenDeployStepEdit_spec.stageListener:
+    content: Select the listener to use for stage traffic. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgBlueGreenDeployStepEdit_spec.stageListenerRuleArn:
+    content: Select the ARN for the stage listener rule. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgBlueGreenSwapService_stepName_StepConfig:
+    content: |-
+        This step does the following:
+
+        - Harness modifies the ELB prod listener to forward requests to target groups associated with each new ASG version.
+        - Harness swaps all traffic from stage to production listeners and ports.
+        - Harness modifies the ELB stage listener to forward requests to target groups associated with old ASG version. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgSwapService_name:
+    content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgSwapService_timeout:
+    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+AsgSwapService_spec.downsizeOldAsg:
+    content: |-
+        Select this option to downsize the ASG that Harness swapped the traffic from. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+
+        For example, if there was an existing ASG named `asgdemo__1` and you deployed a new version of the ASG named `asgdemo__2` and swapped traffic to it, selecting **Downsize old ASG** will downsize `asgdemo__1`.
+    width: "400"
+AsgRollingRollback_stepName_StepConfig:
+    content: |-
+        If deployment failure occurs, the stage or step failure strategy is initiated. 
+
+        Typically, this runs the **ASG Rolling Rollback** step in the **Rollback** section of **Execution**. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+
+        During rollback of the first deployment, Harness deletes the ASG.
+
+        During rollback of subsequent deployments, Harness reverts the ASG to the previous state of ASG before deployment.
+
+        Harness stores configurations of the ASG you are deploying twice:
+
+        - First storage: Harness stores the ASG configuration at the start of deployment for rollback during deployment.
+        - Second storage: Harness stores the ASG configuration at the end of deployment for rollbacks post deployment.
+    width: "400"
+AsgRollingRollbackFormikForm_name:
+    content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgRollingRollbackFormikForm_timeout:
+    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+AsgCanaryDelete_stepName_StepConfig:
+    content: This step deletes the temporary ASG created by the ASG Canary Deploy step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgCanaryDeleteFormikForm_name:
+    content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
+    width: "400"
+AsgCanaryDeleteFormikForm_timeout:
     content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
     width: "400"
