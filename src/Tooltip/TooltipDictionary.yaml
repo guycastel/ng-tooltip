@@ -1652,10 +1652,8 @@ stepGithubAuthForm_password: |-
     A Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) for the credentials of your GitHub user account.
 
     If your GitHub authentication uses 2FA, you must use a Personal Access Token (select **Username and Token** in **Authentication**).
-gitHubPersonalAccessTooltip: |-
-    A Harness encrypted text secret for a Personal Access Token (PAT) for your GitHub account. A PAT is required if your GitHub authentication uses 2FA. [Learn more](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-hub-connector-settings-reference#personal-access-token)
-stepGithubAuthForm_accessToken: |-
-    A Harness encrypted text secret for a Personal Access Token (PAT) for your GitHub account. A PAT is required if your GitHub authentication uses 2FA. [Learn more](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-hub-connector-settings-reference#personal-access-token)
+gitHubPersonalAccessTooltip: A Harness encrypted text secret for a Personal Access Token (PAT) for your GitHub account. A PAT is required if your GitHub authentication uses 2FA. [Learn more](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-hub-connector-settings-reference#personal-access-token)
+stepGithubAuthForm_accessToken: A Harness encrypted text secret for a Personal Access Token (PAT) for your GitHub account. A PAT is required if your GitHub authentication uses 2FA. [Learn more](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-hub-connector-settings-reference#personal-access-token)
 stepGithubAuthForm_apiAccessToken: ""
 githubApiAuthentication: You can use a [Personal Access Token](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-hub-connector-settings-reference#authentication) or [GitHub App](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/git-hub-app-support) for authentication.
 stepGithubAuthForm_installationId: Enter the Installation Id located in the URL of the installed GitHub App.
@@ -7246,4 +7244,26 @@ azureArtifactsAuthForm_tokenRef:
     width: "400"
 inline-deployToFilteredList:
     content: When configuring this option, you will be able to apply a list of tags. Harness will evaluate all environments and infrastructures with all the configured tags defined on it. This means we search for a union of all the tags provided as a filter criteria
+    width: "400"
+OciHelmRepoAuthenticationDetails:
+    content: |-
+        Configure the Helm OCI Registry settings. 
+        [Learn More](https://developer.harness.io/docs/platform/connectors/artifact-repositories/connect-to-an-artifact-repo/#step-add-a-helm-3-oci-helm-registry)
+    width: "400"
+OciHelmRepoUrl:
+    content: |-
+        The Helm repository URL. 
+
+        The following URL types are supported.
+
+        * URL without the oci:// prefix. For example, public.ecr.aws.
+        * URL with the oci:// prefix. For example, oci://public.ecr.aws.
+        * URL with port number. For example, public.ecr.aws:443.
+        * URL with the oci:// prefix and port number. For example, oci://public.ecr.aws:443.
+    width: "400"
+OciHelmRepoAuthentication:
+    content: |-
+        You can select Username and Password and enter the user name and password. For password, you can create a new secret or use an existing one. 
+
+        You can select Anonymous to authenticate to the registry without any credentials. 
     width: "400"
