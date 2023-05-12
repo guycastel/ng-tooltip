@@ -7267,3 +7267,15 @@ OciHelmRepoAuthentication:
 
         You can select Anonymous to authenticate to the registry without any credentials. 
     width: "400"
+manifestDetails_enableDeclarativeRollback:
+    content: |-
+        By default, Harness uses Kubernetes `kubectl rollout undo` during rollback.
+
+        You can use an alternative rollback behavior for Kubernetes deployments called declarative rollback.
+
+        Declarative rollback uses:
+
+        `kubectl apply -f <prevision version of manifest>` instead of `kubectl rollout undo`.
+
+        This method reduces the risk of getting in the wrong state in the subsequent deployment because the merge state is impacted by the `rollout undo` command. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/cd-k8s-ref/kubernetes-rollback/)
+    width: "400"
