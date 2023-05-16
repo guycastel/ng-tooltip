@@ -147,11 +147,12 @@ deployService_name: |-
     You can also propagate and override a Service in subsequent stages by selecting its name in that stage's **Service** settings. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/propagate-and-override-cd-services)
 specifyYourEnvironment:
     content: |-
-        Select or create a new Environment. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview/)
+        Configure an Environment you wish to deploy with this stage. You can define it upfront
+        as a fixed value, pass it in at runtime as a runtime input, or have it computed at runtime as an expression.<br>
 
-        Environments represent your deployment environments (QA, Prod, etc). 
+        <strong>Please note</strong>: when configuring an Environment as an expression, Harness will not be able to process any of its dependent runtime inputs in the Studio. The Studio doesn't know what the expression (Environment Identifier) will resolve to.<br>
 
-        Environments contain Infrastructure Definitions that list your target clusters, hosts, namespaces, etc.
+        You can still update the Pipeline via Pipeline YAML Editor to provide additional inputs.
     width: "400"
 k8InfraConnector: |-
     Select or create the Connector that connects Harness to your target cluster. [Learn More](https://docs.harness.io/article/0ud2ut4vt2)
@@ -5502,11 +5503,12 @@ ECSDeploymentTypeManifests:
     width: "400"
 specifyYourInfrastructure:
     content: |-
-        Infrastructure Definitions are the actual clusters, hosts, etc., where Harness deploys a Service.  [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview/)
+        Configure an Infrastructure you wish to deploy at this stage. You can define it upfront
+        as a fixed value, pass it in at runtime as a runtime input, or have it computed at runtime as an expression.</br>
 
-        For example, you might have a QA Environment with separate Infrastructure Definitions for each Kubernetes cluster you use in QA.
+        <strong>Please note</strong>: when configuring an Infrastructure as an expression, Harness will not be able to process any of its dependent runtime inputs in the Studio. The Studio doesn't know what the expression (Infrastructure Identifier) will resolve to.<br>
 
-        You can add multiple Infrastructure Definitions to a single Environment.
+        You can still update the Pipeline via Pipeline YAML Editor to provide additional inputs.
     width: "400"
 dynatraceHealthSourceForm_dynatraceService:
     content: Dynatrace analytics are performed at Dynatrace's service level. Select the Dynatrace service to monitor.
@@ -7522,7 +7524,12 @@ cdEditStage_environmentType:
         - **1st gen**: The YAML parameters for Google Functions 1st gen are defined in the [google.cloud.functions.v1 CloudFunction message](https://cloud.google.com/functions/docs/reference/rpc/google.cloud.functions.v1#cloudfunction) from Google Cloud.
     width: "400"
 deployServiceStepForm_service:
-    content: Select or create a Harness service. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview/)
+    content: |-
+        Configure a Service you wish to deploy with this stage. You can define it upfront as a fixed value, pass it in at runtime as a runtime input, or have it computed at runtime as an expression.<br>
+
+        <strong>Please note</strong>: when configuring a Service as an expression, Harness will not be able to process any of its dependent runtime inputs in the Studio. The Studio doesn't know what the expression (Service Identifier) will resolve to.<br>
+
+        You can still update the Pipeline via Pipeline YAML Editor to provide additional inputs.
     width: "400"
 primaryArtifactRef:
     content: Select the artifact to deploy in this stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
