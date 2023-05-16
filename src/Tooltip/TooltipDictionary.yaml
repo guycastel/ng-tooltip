@@ -7231,6 +7231,18 @@ securityStepToolContext:
 securityStepToolPort:
     content: The TCP port to communicate with the scanner. You can specify this to override the default port for that scanner.
     width: "400"
+securityStepInstanceUsername:
+    content: Username for scanning the specified application instance.
+    width: "400"
+securityStepInstancePassword:
+    content: Password to use for scanning the specified application instance. You should create a Harness text secret with your encrypted password and reference the secret using the format `<+secrets.getValue("my-secret")>`.  [Learn more](https://developer.harness.io/docs/platform/Secrets/add-use-text-secrets).
+    width: "400"
+securityStepToolScanId:
+    content: The Scan ID of a tool-specific individual scan. For Burp Enterprise scans, this will be a part of the URL in the enterprise UI.
+    width: "400"
+securityStepToolSiteId:
+    content: The Site ID of a tool-specific individual site. For Burp Enterprise sites, this will be a part of the URL in the enterprise UI.
+    width: "400"
 encryptedWebhookSecretIdentifier:
     content: Create or select a secret for authenticating the webhook call. For the secret to work with your webhook, you need to configure the repository webhook with the same secret. [Learn More](https://developer.harness.io/docs/platform/Triggers/triggering-pipelines)
     width: "400"
