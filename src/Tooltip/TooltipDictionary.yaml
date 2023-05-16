@@ -14,7 +14,7 @@ specifyYourService:
     width: "400"
 stageOverviewDeploymentType:
     content: |-
-        The deployment type is how your Service will be deployed. For example, using Kubernetes, Native Helm, Serverless, etc.
+        The deployment type is how your service will be deployed. For example, using Kubernetes, Native Helm, Serverless, etc.
           
 
         Select the platform for your deployment. When you select a platform, its specific settings appear.
@@ -147,12 +147,11 @@ deployService_name: |-
     You can also propagate and override a Service in subsequent stages by selecting its name in that stage's **Service** settings. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/propagate-and-override-cd-services)
 specifyYourEnvironment:
     content: |-
-        Configure an Environment you wish to deploy with this stage. You can define it upfront
-        as a fixed value, pass it in at runtime as a runtime input, or have it computed at runtime as an expression.<br>
+        Select or create a new Environment. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview/)
 
-        <strong>Please note</strong>: when configuring an Environment as an expression, Harness will not be able to process any of its dependent runtime inputs in the Studio. The Studio doesn't know what the expression (Environment Identifier) will resolve to.<br>
+        Environments represent your deployment environments (QA, Prod, etc). 
 
-        You can still update the Pipeline via Pipeline YAML Editor to provide additional inputs.
+        Environments contain Infrastructure Definitions that list your target clusters, hosts, namespaces, etc.
     width: "400"
 k8InfraConnector: |-
     Select or create the Connector that connects Harness to your target cluster. [Learn More](https://docs.harness.io/article/0ud2ut4vt2)
@@ -162,16 +161,24 @@ k8InfraNamespace: |-
     Enter the target namespace in the target cluster. 
 
     The namespace must already exist during deployment. Harness will not create a new namespace using the one you entered here. [Learn More](https://docs.harness.io/article/0ud2ut4vt2)
-k8InfraReleaseName: |-
-    During deployment Harness creates a ConfigMap listing the resources of the release and uses the **Release name** for tracking them. 
+k8InfraReleaseName:
+    content: |-
+        ### Important
+        Do not change the **Release name** value between deployments.
 
-    The **Release name** is a combination of `release-` and a unique string created using the Harness expression `<+INFRA_KEY>`. 
+        The **Release name** is used by Harness for tracking releases of app versions and rollback. If you change the **Release name** value between deployments, Harness will see each release as different apps, will not track them as versions of the same app, and will not be able to perform rollback.
 
-    For example, in a Kubernetes deployment you can see `harness.io/release-name=release-2f9eadcc06e2c2225265ab3cbb1160bc5eacfd4f`.
-
-    The release name must be unique across the cluster. `release-<+INFRA_KEY>` ensures a unique name.
-
-    `release-` is used as a prefix because Kubernetes service and pod names must follow RFC-1035 and must consist of lowercase alphanumeric characters or '-', start with an alphabetic character, and end with an alphanumeric character.
+        ### Release name summary
+        During deployment Harness creates a ConfigMap listing the resources of the release and uses the **Release name** for tracking them. 
+         
+        The **Release name** is a combination of `release-` and a unique string created using the Harness expression `<+INFRA_KEY>`. 
+         
+        For example, in a Kubernetes deployment you can see `harness.io/release-name=release-2f9eadcc06e2c2225265ab3cbb1160bc5eacfd4f`.
+         
+        The release name must be unique across the cluster. `release-<+INFRA_KEY>` ensures a unique name.
+         
+        `release-` is used as a prefix because Kubernetes service and pod names must follow RFC-1035 and must consist of lowercase alphanumeric characters or '-', start with an alphabetic character, and end with an alphanumeric character.
+    width: "400"
 manifestDetails_identifier: Enter a name that identifies this manifest. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
 manifestDetails_gitFetchType: Select a branch or commit Id for the manifest. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
 manifestDetails_commitId: Enter the commit Id in the repo where the manifest is located. You can also use a [Git commit tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
@@ -446,7 +453,9 @@ terraformRollback_spec.provisionerIdentifier: |-
     Enter the same Provisioner Identifier you used in the Terraform Plan and/or Apply steps that provisioned the infrastructure you want to roll back. Harness will roll back the exact infrastructure provisioned in those steps.
     [Learn More](https://docs.harness.io/article/jgi6d73noy)
 shellScriptForm_name: Enter a name for this step.
-shellScriptForm_spec.shell: Select the shell type of you script. [Learn More](https://docs.harness.io/article/k5lu0u6i1i)
+shellScriptForm_spec.shell:
+    content: Select the shell type of you script. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
+    width: "400"
 k8BgSwap_name: Enter a name for this step. [Learn More](https://docs.harness.io/article/mog5tnk5pi)
 k8BG_name: Enter a name for this step.
 k8Apply_name: Enter a name for this step.
@@ -572,17 +581,19 @@ shellScriptForm_timeout: |-
     The maximum is `53w`.
 
     Timeouts can be set at the Pipeline level also.
-shellScriptForm_spec.source.spec.script: |-
-    Enter your script. For example, here is a script that exports the variable names `BUILD_NO` and `LANG`:
+shellScriptForm_spec.source.spec.script:
+    content: |-
+        Enter your script. For example, here is a script that exports the variable names `BUILD_NO` and `LANG`:
 
-    ```
-    export BUILD_NO="345"
-    export LANG="en-us" 
-    ```
-    You must use quotes around the value because environment variables are Strings.
+        ```
+        export BUILD_NO="345"
+        export LANG="en-us" 
+        ```
+        You must use quotes around the value because environment variables are Strings.
 
-    You can use Harness [variable expressions](https://docs.harness.io/article/lml71vhsim-harness-variables) in your script and its comments. Harness will attempt to evaluate and render the variable expressions at runtime. Do not use variable expressions that Harness cannot evaluate at this point in the Execution.
-    [Learn More](https://docs.harness.io/article/k5lu0u6i1i)
+        You can use Harness [variable expressions](https://developer.harness.io/docs/platform/variables-and-expressions/harness-variables/) in your script and its comments. Harness will attempt to evaluate and render the variable expressions at runtime. Do not use variable expressions that Harness cannot evaluate at this point in the Execution.
+        [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
+    width: "400"
 Http_stepName: The HTTP step can run HTTP methods containing URLs, methods, headers, and variables. You can add assertions that use the response from the HTTP method.
 httpWidget_name: Enter a name for this step. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
 httpWidget_timeout: |-
@@ -729,13 +740,15 @@ K8sApply_stepName: |-
     In some cases, you might have resources in **Manifests** that you do not want to deploy as part of the main deployment, but want to apply as another step in the stage.
 
     In these cases, you use the **K8s Apply** step to deploy those resources. [Learn More](https://docs.harness.io/article/00el61pzok)
-k8Apply_spec.filePaths: |-
-    Enter the path to a manifest file. **File Path** has the following requirements:
+k8Apply_spec.filePaths:
+    content: |-
+        Enter the path to a manifest file. **File Path** has the following requirements:
 
-    - The path to the manifest for the **Apply** step must be subordinate to the path for the manifest in the **Manifests** section of the **Service Definition**. The manifest cannot be in the same folder as **Manifests**.
-    - The path must include the folder name and the file name.
+        - The path to the manifest for the **Apply** step must be subordinate to the path for the manifest in the **Manifests** section of the **Service Definition**. The manifest cannot be in the same folder as **Manifests**.
+        - The path must include the folder name and the file name.
 
-    [Learn More](https://docs.harness.io/article/00el61pzok)
+        [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/kubernetes-executions/deploy-manifests-using-apply-step)
+    width: "400"
 k8Apply_spec.skipDryRun: |-
     By default, Harness uses the `--dry-run` flag on the `kubectl apply` command, which prints the object that would be sent to the cluster without really sending it. 
 
@@ -1414,12 +1427,14 @@ inlineVarFileForm_varFile.spec.content: |-
     region = "asia-east1-a"
     ```
 approverInputs: You can enter variables and when the approver views the step, they can provide new values for the variables. [Learn More](https://docs.harness.io/article/fkvso46bok)
-K8sApply_stepName_StepConfig: |-
-    By default, the Harness Kubernetes Rolling, Canary, and Blue Green steps will deploy all of the resources you have set up in the Service Definition **Manifests** section.
+K8sApply_stepName_StepConfig:
+    content: |-
+        By default, the Harness Kubernetes Rolling, Canary, and Blue Green steps will deploy all of the resources you have set up in the Service Definition **Manifests** section.
 
-    In some cases, you might have resources in **Manifests** that you do not want to deploy as part of the main deployment, but want to apply as another step in the stage.
+        In some cases, you might have resources in **Manifests** that you do not want to deploy as part of the main deployment, but want to apply as another step in the stage.
 
-    CD stages include an **K8s Apply** step that allows you to deploy any resource you have set up in the **Manifests** section. [Learn More](https://docs.harness.io/article/00el61pzok)
+        CD stages include an **K8s Apply** step that allows you to deploy any resource you have set up in the **Manifests** section. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/kubernetes-executions/deploy-manifests-using-apply-step)
+    width: "400"
 K8sRollingDeploy_stepName_StepConfig: |-
     The **K8s Rollout Deploy** step performs a rolling update strategy. 
 
@@ -1443,13 +1458,15 @@ K8sBGSwapServices_stepName_StepConfig: |-
     The **K8s Blue Green Swap Services** step is added automatically when you apply the Blue Green strategy. [Learn More](https://docs.harness.io/article/mog5tnk5pi)
 
     The **K8s Blue Green Swap Services** step swaps the primary service to the pod set running the new app and the stage service to the pod set running the previous app version. [Learn More](https://docs.harness.io/article/mog5tnk5pi)
-ShellScript_stepName_StepConfig: |
-    You can run shell scripts in a CD stage using the **Shell Script** step. [Learn More](https://docs.harness.io/article/k5lu0u6i1i)
+ShellScript_stepName_StepConfig:
+    content: |
+        You can run shell scripts in a CD stage using the **Shell Script** step. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
 
-    With the **Shell Script** step, you can execute scripts in the shell session of the stage in the following ways:
+        With the **Shell Script** step, you can execute scripts in the shell session of the stage in the following ways:
 
-    - Execute scripts on the host running a Harness Delegate. You can use the **Delegate Selectors**  setting in **Advanced** to identify which Harness Delegate to use.
-    - Execute scripts on a remote target host in the deployment Infrastructure Definition.
+        - Execute scripts on the host running a Harness Delegate. You can use the **Delegate Selectors**  setting in **Advanced** to identify which Harness Delegate to use.
+        - Execute scripts on a remote target host in the deployment Infrastructure Definition.
+    width: "400"
 Barrier_stepName_StepConfig: Barriers allow you to synchronize different stages in your Pipeline, and control the flow of your deployment systematically. [Learn More](https://docs.harness.io/article/dmlf8w2aeh)
 "flowControl_barriers[0].name": |-
     Barriers allow you to synchronize different stages in your Pipeline, and control the flow of your deployment systematically. [Learn More](https://docs.harness.io/article/dmlf8w2aeh)
@@ -1868,19 +1885,35 @@ RunTests_stepName_StepConfig: The Run Tests step can be used to run tests in you
 ciRunTests_spec.runOnlySelectedTests: This option enables Test Intelligence. If this option is unchecked and set to False, then the Test Intelligence will be disabled and all tests will run. [Learn More](https://docs.harness.io/article/vtu9k1dsfa)
 ciBuildInfra_connectorRef: Select a Harness Connector for a Kubernetes cluster. A Kubernetes cluster is used as a build farm. [Learn More](https://docs.harness.io/article/ia5dwx5ya8)
 notificationsOverview_name: Enter a name for your Notification Rule. Notification Rules are used to create a notification strategy for your Pipeline. [Learn More](https://docs.harness.io/article/4bor7kyimj)
-pipelineEvents_types.AllEvents: Select this option to receive notifications for all Pipeline events. [Learn More](https://docs.harness.io/article/4bor7kyimj)
-pipelineEvents_types.PipelineStart: Select this option to receive notifications when the Pipeline execution starts. [Learn More](https://docs.harness.io/article/4bor7kyimj)
-pipelineEvents_types.PipelineEnd: Select this option to receive notifications when the Pipeline execution ends. [Learn More](https://docs.harness.io/article/4bor7kyimj)
-pipelineEvents_types.PipelineSuccess: Select this option to receive notifications if the Pipeline execution is successful. For CD, Harness considers a deployment successful when the deployed service reaches steady state. [Learn More](https://docs.harness.io/article/4bor7kyimj)
-pipelineEvents_types.PipelineFailed: Select this option to receive notifications when the Pipeline execution fails. [Learn More](https://docs.harness.io/article/4bor7kyimj)
-pipelineEvents_types.PipelinePaused: Select this option to receive notifications when the Pipeline execution is paused. [Learn More](https://docs.harness.io/article/4bor7kyimj)
-pipelineEvents_types.StageFailed:
-    content: Select this option to receive notifications when the Stage execution fails. [Learn More](https://docs.harness.io/article/4bor7kyimj)
+pipelineEvents_types.AllEvents:
+    content: Select this option to receive notifications for all Pipeline events. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
-pipelineEvents_types.StageSuccess: Select this option to receive notifications when each Pipeline stage execution is successful. You can select the stages to use. [Learn More](https://docs.harness.io/article/4bor7kyimj)
-pipelineEvents_types.StageStart: Select this option to receive notifications when each Pipeline stage execution starts. You can select the stages to use. [Learn More](https://docs.harness.io/article/4bor7kyimj)
+pipelineEvents_types.PipelineStart:
+    content: Select this option to receive notifications when the Pipeline execution starts. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    width: "400"
+pipelineEvents_types.PipelineEnd:
+    content: Select this option to receive notifications when the Pipeline execution ends. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    width: "400"
+pipelineEvents_types.PipelineSuccess:
+    content: Select this option to receive notifications if the Pipeline execution is successful. For CD, Harness considers a deployment successful when the deployed service reaches steady state. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    width: "400"
+pipelineEvents_types.PipelineFailed:
+    content: Select this option to receive notifications when the Pipeline execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    width: "400"
+pipelineEvents_types.PipelinePaused:
+    content: Select this option to receive notifications when the Pipeline execution is paused. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    width: "400"
+pipelineEvents_types.StageFailed:
+    content: Select this option to receive notifications when the Stage execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    width: "400"
+pipelineEvents_types.StageSuccess:
+    content: Select this option to receive notifications when each Pipeline stage execution is successful. You can select the stages to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    width: "400"
+pipelineEvents_types.StageStart:
+    content: Select this option to receive notifications when each Pipeline stage execution starts. You can select the stages to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    width: "400"
 pipelineEvents_types.StepFailed:
-    content: Select this option to receive notifications when each Pipeline step execution fails. [Learn More](https://docs.harness.io/article/4bor7kyimj)
+    content: Select this option to receive notifications when each Pipeline step execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 manifestDetails_repoName: Enter the name of the repo where the files are located. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
 manifestDetails_paths:
@@ -2793,13 +2826,13 @@ triggerOverview_description:
     content: Enter a description for this Trigger that tells other Project members when this Trigger is used.
     width: "400"
 triggerOverview_tags:
-    content: You can add Tags to Harness entities and then use the Tags to search for all matching entities. For example, you can add a Tag to a Trigger and then filter the list of Triggers by Tag. [Learn More](https://docs.harness.io/article/i8t053o0sq)
+    content: You can add Tags to Harness entities and then use the Tags to search for all matching entities. For example, you can add a Tag to a Trigger and then filter the list of Triggers by Tag. [Learn More](https://developer.harness.io/docs/platform/references/tags-reference/)
     width: "400"
 cronExpression:
-    content: This checks if the Cron expression is valid. If it is highlighted in red, it is invalid. Revise the expression to try again. [Learn More](https://docs.harness.io/article/4z9mf24m1b)
+    content: This setting validates the Cron expression. If it is highlighted in red, it is invalid. Revise the expression to try again. [Learn More](https://docs.harness.io/article/4z9mf24m1b)
     width: "400"
 expressionBreakdown:
-    content: This is the how the Cron expression is evaluated as a scedule. [Learn More](https://docs.harness.io/article/4z9mf24m1b)
+    content: This is the how the Cron expression is evaluated as a schedule. [Learn More](https://docs.harness.io/article/4z9mf24m1b)
     width: "400"
 schedulePanel:
     content: |-
@@ -3561,7 +3594,7 @@ samlProviderForm_clientSecret:
     content: Enter the client secret from your Azure app. [Learn more](https://docs.harness.io/article/mlpksc7s6c-single-sign-on-saml#users_in_over_150_groups)
     width: "400"
 notifications.notificationMethod:
-    content: Select the Notification Method. [Learn more](https://docs.harness.io/article/4bor7kyimj-notify-users-of-pipeline-events)
+    content: Select the Notification Method. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 configureSlackNotifications_webhookUrl:
     content: Enter your Slack Webhook URL. [Learn more](https://docs.harness.io/article/4bor7kyimj-notify-users-of-pipeline-events#option-slack-notifications)
@@ -3585,7 +3618,7 @@ configurePagerDutyNotifications_userGroups:
     content: Select user groups to send notifications.
     width: "400"
 configurePagerDutyNotifications_key:
-    content: Enter your PagerDuty Key. [Learn more](https://docs.harness.io/article/4bor7kyimj-notify-users-of-pipeline-events#option-pagerduty-notifications)
+    content: Enter your PagerDuty Key. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 k8DeleteData_spec.deleteResources.spec.resourceNames:
     content: |-
@@ -5203,7 +5236,7 @@ connectorDetailsStepFormPdc_name:
     content: Enter a name for the Connector.
     width: "400"
 pdcDetailsForm_hosts:
-    content: "Enter the host name(s) for one or more target hosts. "
+    content: Enter the host name(s) for one or more target hosts. Enter each host on a separate line.
     width: "400"
 pdcInfra_credentialsRef:
     content: Create a new secret or select an existing secret.
@@ -5503,12 +5536,11 @@ ECSDeploymentTypeManifests:
     width: "400"
 specifyYourInfrastructure:
     content: |-
-        Configure an Infrastructure you wish to deploy at this stage. You can define it upfront
-        as a fixed value, pass it in at runtime as a runtime input, or have it computed at runtime as an expression.</br>
+        Infrastructure Definitions are the actual clusters, hosts, etc., where Harness deploys a Service.  [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview/)
 
-        <strong>Please note</strong>: when configuring an Infrastructure as an expression, Harness will not be able to process any of its dependent runtime inputs in the Studio. The Studio doesn't know what the expression (Infrastructure Identifier) will resolve to.<br>
+        For example, you might have a QA Environment with separate Infrastructure Definitions for each Kubernetes cluster you use in QA.
 
-        You can still update the Pipeline via Pipeline YAML Editor to provide additional inputs.
+        You can add multiple Infrastructure Definitions to a single Environment.
     width: "400"
 dynatraceHealthSourceForm_dynatraceService:
     content: Dynatrace analytics are performed at Dynatrace's service level. Select the Dynatrace service to monitor.
@@ -5523,7 +5555,7 @@ gitops-repo-overview_name:
     content: Enter a name for this setting. [Learn More](https://docs.harness.io/article/pptv7t53i9)
     width: "400"
 repo:
-    content: Enter the URL to your repository. For example, `https://github.com/repo.git`. [Learn More](https://docs.harness.io/article/58i67mkxap)
+    content: Enter the URL to your repository. For example, `https://github.com/repo.git`. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/add-a-harness-git-ops-repository)
     width: "400"
 gitops-repository-credentials-overview_connectionType:
     content: |-
@@ -5963,12 +5995,12 @@ ecsRunTaskStepForm_spec.skipSteadyStateCheck:
     width: "400"
 awsConnector:
     content: |-
-        Add or select an AWS Connector to connect Harness with the AWS account and service you are using. 
+        Add or select an AWS connector to connect Harness with the AWS account and service you are using. 
 
         For details on the requirements of each AWS service, go to [AWS Connector Settings Reference](https://developer.harness.io/docs/platform/connectors/cloud-providers/ref-cloud-providers/aws-connector-settings-reference/)
     width: "400"
 ECSInfraSpecEditable_region:
-    content: Select the AWS region where your ECS cluster is located. [Learn More](https://docs.harness.io/article/vytf6s0kwc).
+    content: Select the AWS region where your target environment is located. [Learn More](https://developer.harness.io/docs/platform/Connectors/Cloud-providers/ref-cloud-providers/aws-connector-settings-reference)
     width: "400"
 ECSInfraSpecEditable_cluster:
     content: Select the target cluster. The list is populated using the AWS Connector you created. [Learn More](https://docs.harness.io/article/vytf6s0kwc).
@@ -7233,18 +7265,6 @@ securityStepToolContext:
 securityStepToolPort:
     content: The TCP port to communicate with the scanner. You can specify this to override the default port for that scanner.
     width: "400"
-securityStepInstanceUsername:
-    content: Username for scanning the specified application instance.
-    width: "400"
-securityStepInstancePassword:
-    content: Password to use for scanning the specified application instance. You should create a Harness text secret with your encrypted password and reference the secret using the format `<+secrets.getValue("my-secret")>`.  [Learn more](https://developer.harness.io/docs/platform/Secrets/add-use-text-secrets).
-    width: "400"
-securityStepToolScanId:
-    content: The Scan ID of a tool-specific individual scan. For Burp Enterprise scans, this will be a part of the URL in the enterprise UI.
-    width: "400"
-securityStepToolSiteId:
-    content: The Site ID of a tool-specific individual site. For Burp Enterprise sites, this will be a part of the URL in the enterprise UI.
-    width: "400"
 encryptedWebhookSecretIdentifier:
     content: Create or select a secret for authenticating the webhook call. For the secret to work with your webhook, you need to configure the repository webhook with the same secret. [Learn More](https://developer.harness.io/docs/platform/Triggers/triggering-pipelines)
     width: "400"
@@ -7524,12 +7544,7 @@ cdEditStage_environmentType:
         - **1st gen**: The YAML parameters for Google Functions 1st gen are defined in the [google.cloud.functions.v1 CloudFunction message](https://cloud.google.com/functions/docs/reference/rpc/google.cloud.functions.v1#cloudfunction) from Google Cloud.
     width: "400"
 deployServiceStepForm_service:
-    content: |-
-        Configure a Service you wish to deploy with this stage. You can define it upfront as a fixed value, pass it in at runtime as a runtime input, or have it computed at runtime as an expression.<br>
-
-        <strong>Please note</strong>: when configuring a Service as an expression, Harness will not be able to process any of its dependent runtime inputs in the Studio. The Studio doesn't know what the expression (Service Identifier) will resolve to.<br>
-
-        You can still update the Pipeline via Pipeline YAML Editor to provide additional inputs.
+    content: Select or create a Harness service. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview/)
     width: "400"
 primaryArtifactRef:
     content: Select the artifact to deploy in this stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
@@ -7753,5 +7768,177 @@ AsgCanaryDeleteFormikForm_name:
     content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
     width: "400"
 AsgCanaryDeleteFormikForm_timeout:
+    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+k8Apply_spec.skipRendering:
+    content: |-
+        By default, Harness uses Go templating and a values.yaml for templating manifest files. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/kubernetes-executions/deploy-manifests-using-apply-step)
+
+        In some cases, you might not want to use Go templating because your manifests use some other formatting.
+
+        Use the **Skip K8s Manifest(s) Rendering** option if you want Harness to skip rendering your manifest files using Go templating.
+    width: "400"
+connectorConnectionTestId:
+    content: |-
+        Harness will use the connection information and credentials you provided and attempt to connect to the third party tool or platform. 
+
+        If you encounter errors, Harness will report the cause of the error.
+
+        For help with any errors, go to [Harness Troubleshooting](https://developer.harness.io/docs/troubleshooting/troubleshooting-nextgen).
+    width: "400"
+pdcHostDetails:
+    content: |-
+        Physical data centers are commonly used for traditional deployments ([SSH](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/traditional/ssh-ng), [WinRM](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/traditional/win-rm-tutorial)).
+
+        You can select the hosts you want to deploy to manually or using a JSON file.
+    width: "400"
+gitops-application-home-page-overview_Overview:
+    content: A GitOps Application syncs a source manifest with a target cluster using a GitOps Agent. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/harness-cd-git-ops-quickstart)
+    width: "400"
+App-Overview-Form_spec.destination.namespace:
+    content: Enter the destination namespace.
+    width: "400"
+source-step_helm_chart:
+    content: Select the source chart to sync.
+    width: "400"
+App-Overview-Form_spec.revisionHistoryLimit:
+    content: Specify the number of old ReplicaSets to retain to allow rollback.
+    width: "400"
+App-Overview-Form_automated:
+    content: With automatic sync enabled, changes to the source manifest initiate sync automatically.
+    width: "400"
+gitops-gnupg-key-form-overview_agent:
+    content: |-
+        GnuPG keys can be used to configure Harness GitOps to only sync against commits that are signed in Git using GnuPG.
+
+        Select or create the GitOps Agent that will use this GnuPG key.
+
+        The GitOps Agent you select will enforce signature verification.
+    width: "400"
+gitops-gnupg-key-form-keyData:
+    content: Enter the base64 encoded data for this key.
+    width: "400"
+serverName:
+    content: Enter the name of the repo server issuing the certificate.
+    width: "400"
+tls-repo-form_gitops-agent:
+    content: |-
+        You can apply a repository certificate or known host key to a GitOps Agent.
+
+        The GitOps Agent will use the certificate or key for all the connections it makes to repositories.
+    width: "400"
+certData:
+    content: Enter the PEM data of the certificate.
+    width: "400"
+gitops-create-cluster-overview_header:
+    content: |-
+        A cluster is the target deployment cluster that is compared to the desire state.
+
+        Clusters are synced with the source manifests you add as GitOps Repositories.
+    width: "400"
+gitops-create-cluster-overview_name:
+    content: "Enter a name for how this cluster is displayed in Harness. It does not need to be the same name as the actual cluster. "
+    width: "400"
+gitops-create-cluster-overview_agent:
+    content: Select the Harness GitOps Agent to use to connect to this cluster. Typically, this is an Agent running in the cluster.
+    width: "400"
+clusterUsername:
+    content: Enter the username for the Kubernetes subject you want to use for authentication.
+    width: "400"
+clusterPassword:
+    content: Enter the password for the Kubernetes subject you want to use for authentication.
+    width: "400"
+clusterClientKey:
+    content: Enter the name of the client key you want to use to authenticate a client to the Kubernetes API server.
+    width: "400"
+clusterClientKeyCertificate:
+    content: Enter the client key certificate.
+    width: "400"
+gitops-repopage-createrepo-overview_name:
+    content: Enter a name for this repo. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/add-a-harness-git-ops-repository)
+    width: "400"
+gitops-repopage-createrepo-overview_agent:
+    content: |
+        Select or create the Agent you want to use to fetch manifests from this repo. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/add-a-harness-git-ops-repository)
+    width: "400"
+gitops-repopage-createrepo-overview_header:
+    content: |-
+        Harness GitOps Repositories are connections to repos containing the declarative description of a desired state. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/add-a-harness-git-ops-repository)
+
+        The declarative description can be in Kubernetes manifests, Helm Chart, Kustomize manifests, etc.
+
+        A Harness GitOps Repository is used for Harness GitOps only. For other Harness features like CI, CD pipelines, etc, use a standard [Git Connector](https://developer.harness.io/docs/platform/connectors/code-repositories/add-a-git-hub-connector/).
+    width: "400"
+artifactoryArtifact_identifier:
+    content: |-
+        Enter a name for this artifact source. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
+
+
+        You can use the Harness expression `<+artifact.primary.identifier>` to reference this setting in your pipelines.
+    width: "400"
+shellScriptInputVariable_Bash:
+    content: |-
+        In addition to declaring variables in your script, you can use **Input Variables** to identify and manage your script inputs across stages or to template your script by using expressions for variable values. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
+
+        Declare the variable using **Name** and **Value**. 
+
+        You can reference the variable in the script just as you would any other variable: `$var_name`.
+
+        You can also use expressions in **Value**. For example, if you have an output variable from a previous Shell Script step, you can copy its expression from the executed step **Outputs** and paste it here.
+    width: "400"
+shellScriptOutputVariable_Bash:
+    content: |-
+        The output from variables you declare in your script cannot be used outside the script unless you use **Output Variables**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
+
+        Use **Output Variables** to export variables from the script to other steps in the stage.
+
+        Shell Script step output variables have a maximum size of 512KB.
+    width: "400"
+shellScriptOutputVariable_PowerShell:
+    content: |-
+        The output from variables you declare in your script cannot be used outside the script unless you use **Output Variables**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
+
+        Use **Output Variables** to export variables from the script to other steps in the stage.
+
+        Shell Script step output variables have a maximum size of 512KB.
+    width: "400"
+shellScriptInputVariable_PowerShell:
+    content: |-
+        In addition to declaring variables in your script, you can use **Input Variables** to identify and manage your script inputs across stages or to template your script by using expressions for variable values. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
+
+        Declare the variable using **Name** and **Value**. 
+
+        You can reference the variable in the script just as you would any other variable: `${var_name}`.
+
+        You can also use expressions in **Value**. For example, if you have an output variable from a previous Shell Script step, you can copy its expression from the executed step **Outputs** and paste it here.
+    width: "400"
+infrastructure-modal_name:
+    content: Enter a name for this infrastructure definition.
+    width: "400"
+AwsLambdaInfrastructureDefinitionMethod:
+    content: Select the target infrastructure type. Some deployment types have multiple  infrastructure types you can select. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview)
+    width: "400"
+"deployEnvironmentEntityWidgetForm_infrastructureInputs.['Lambda'].Lambda.spec.region":
+    content: Select the region where your target AWS service is running.
+    width: "400"
+AwsLambdaDeploy_stepName_StepConfig:
+    content: |-
+        The AWS Lambda Deploy step requires no configuration because Harness handles the logic to deploy the artifact to the proper AWS account and region. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/lambda/aws-lambda-deployments)
+
+        Harness will deploy the Lambda function and automatically route the traffic from the old version of the Lambda function to the newly deployed one.
+    width: "400"
+awsLambdaDeployStep_name:
+    content: Enter a name for this step.
+    width: "400"
+awsLambdaDeployStep_timeout:
+    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+AwsLambdaRollback_stepName_StepConfig:
+    content: When a pipeline deployment fails, Harness will automatically roll back your Lambda function to the previous version using the AWS Lambda Rollback step. Harness remembers the successful version of the AWS Lambda service deployed and rollback for you. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/lambda/aws-lambda-deployments)
+    width: "400"
+awsLambdaDeployRollbackStep_name:
+    content: Enter a name for this step.
+    width: "400"
+awsLambdaDeployRollbackStep_timeout:
     content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
     width: "400"
