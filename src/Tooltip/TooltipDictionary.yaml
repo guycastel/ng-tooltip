@@ -10,7 +10,10 @@ jiraApprovalIssueKey: |-
     The **Jira Create** or **Jira Update** step you want to reference must be *before* the **Jira Approval** step that references it in the Pipeline and stage. [Learn More](https://developer.harness.io/docs/platform/approvals/adding-jira-approval-stages/)
 ONNtooltipId: Your pipeline name
 specifyYourService:
-    content: Harness Services represent your microservices/apps logically. You can propagate the same Service to as many stages as you need. [Learn More](https://docs.harness.io/article/hv2758ro4e)
+    content: |-
+        Harness Services represent your microservices/apps logically. You can propagate the same Service to as many stages as you need. [Learn More](https://docs.harness.io/article/hv2758ro4e)
+
+        **Note:** if you configure a service as an expression, the **Visual** pipeline editor cannot show any of its dependent inputs because it does not have a service Id to use. You can still update the pipeline via the **YAML** pipeline editor to provide additional inputs.
     width: "400"
 stageOverviewDeploymentType:
     content: |-
@@ -152,6 +155,8 @@ specifyYourEnvironment:
         Environments represent your deployment environments (QA, Prod, etc). 
 
         Environments contain Infrastructure Definitions that list your target clusters, hosts, namespaces, etc.
+
+        **Note:** if you configure an environment as an expression, the **Visual** pipeline editor cannot show any of its dependent inputs because it does not have an environment Id to use. You can still update the pipeline via the **YAML** pipeline editor to provide additional inputs.
     width: "400"
 k8InfraConnector: |-
     Select or create the Connector that connects Harness to your target cluster. [Learn More](https://docs.harness.io/article/0ud2ut4vt2)
@@ -5538,6 +5543,8 @@ specifyYourInfrastructure:
     content: |-
         Infrastructure Definitions are the actual clusters, hosts, etc., where Harness deploys a Service.  [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview/)
 
+        **Note:** if you configure an infrastructure as an expression, the **Visual** pipeline editor cannot show any of its dependent inputs because it does not have an infrastructure Id to use. You can still update the pipeline via the **YAML** pipeline editor to provide additional inputs.
+
         For example, you might have a QA Environment with separate Infrastructure Definitions for each Kubernetes cluster you use in QA.
 
         You can add multiple Infrastructure Definitions to a single Environment.
@@ -7544,7 +7551,10 @@ cdEditStage_environmentType:
         - **1st gen**: The YAML parameters for Google Functions 1st gen are defined in the [google.cloud.functions.v1 CloudFunction message](https://cloud.google.com/functions/docs/reference/rpc/google.cloud.functions.v1#cloudfunction) from Google Cloud.
     width: "400"
 deployServiceStepForm_service:
-    content: Select or create a Harness service. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview/)
+    content: |-
+        Select or create a Harness service. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview/)
+
+        **Note:** if you configure a service as an expression, the **Visual** pipeline editor cannot show any of its dependent inputs because it does not have a service Id to use. You can still update the pipeline via the **YAML** pipeline editor to provide additional inputs.
     width: "400"
 primaryArtifactRef:
     content: Select the artifact to deploy in this stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
@@ -7791,7 +7801,38 @@ pdcHostDetails:
         Physical data centers are commonly used for traditional deployments ([SSH](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/traditional/ssh-ng), [WinRM](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/traditional/win-rm-tutorial)).
 
         You can select the hosts you want to deploy to manually or using a JSON file.
-    width: "400"
+
+        ### JSON file
+
+        Here's an example of a JSON hosts file:
+
+        ```
+        [
+            {
+                "hostname": "ec2-54-87-31-191.compute-1.amazonaws.com:5986",
+                "hostAttributes": {
+                    "type": "node",
+                    "region": "east",
+                    "name": "node1",
+                    "ip": "54.87.31.191"
+                }
+            },
+            {
+                "hostname": "ec2-3-83-239-167.compute-1.amazonaws.com:5986",
+                "hostAttributes": {
+                    "type": "db",
+                    "region": "east",
+                    "name": "node2",
+                    "ip": "3.83.239.167"
+                }
+            }
+        ]
+        ```
+
+        - The `hostname` and `hostAttributes` properties are mandatory.
+        - The `hostAttributes` property can have as many key-value pairs as you need.
+        - When you select this PDC connector in an infrastructure definition, you can select **Filter by host attributes** to select the host(s) for deployment.
+    width: "600"
 gitops-application-home-page-overview_Overview:
     content: A GitOps Application syncs a source manifest with a target cluster using a GitOps Agent. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/harness-cd-git-ops-quickstart)
     width: "400"
