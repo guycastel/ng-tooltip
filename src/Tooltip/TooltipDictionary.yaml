@@ -7983,3 +7983,29 @@ awsLambdaDeployRollbackStep_name:
 awsLambdaDeployRollbackStep_timeout:
     content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
     width: "400"
+httpStepHeaders:
+    content: |-
+        Enter headers for the message, such as the media type for the message. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-http-requests-in-cd-pipelines/)
+
+        For example, if you are using the GET method, the headers are used to specify the GET response body message type Harness will check for.
+
+        You can enter multiple header entries. You can use Harness secrets for token headers, also.
+
+        For example, in **Key**, enter **Token**.
+
+        In **Value**, enter a secret reference like `<+secrets.getValue("aws-playground_AWS_secret_key")>`.
+    width: "400"
+httpStepOutputVariables:
+    content: |-
+        Create output variables to be used by other steps in the stage. The Value setting can contain any HTTP step input, output, or response information.
+
+        You can also use JSON and XML functors in the values for the output variable. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/http-step/#output-variables)
+    width: "400"
+httpStepInputVariables:
+    content: |
+        Create input variables that can be used by other fields within the step. The Value setting can contain fixed values, expressions, or runtime inputs. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/http-step/#input-variables)
+
+        These variables can be used by other fields like URLs by using the following expressions:
+        * `<+spec.inputVariables.variable_name>`
+        * `<+step.spec.inputVariables.variable_name>`
+    width: "400"
