@@ -4252,7 +4252,7 @@ ciBuildInfra_harnessImageConnectorRef:
     width: "400"
 conditionalExecutionCustomStage:
     content: |-
-        Conditional Execution lets you set when and if to run or skip a stage. [Learn More](https://newdocs.helpdocs.io/article/i36ibenkq2)
+        Conditional Execution lets you set when and if to run or skip a stage. [Learn More](https://developer.harness.io/docs/platform/pipelines/w_pipeline-steps-reference/step-skip-condition-settings/)
 
         Conditional Execution uses JEXL operators and expressions.
           
