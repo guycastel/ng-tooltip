@@ -388,7 +388,9 @@ connectorDetailsStepFormHttpHelmRepo_name: |+
     For Helm charts stored in repos such as Amazon S3 or GCS (Google Cloud Storage), you will need to create a cloud platform Connector for that repo. For more information, see [Cloud Platform Connectors](https://docs.harness.io/category/1ehb4tcksy).
 
 connectorDetailsStepFormNexus_name: Enter a name for this Connector. You will use this name to select the Connector in Pipeline steps and settings. [Learn More](https://docs.harness.io/article/faor0dc98d)
-nexusAuth_nexusServerUrl: The URL that you use to connect to your Nexus server. For example, `https://nexus2.dev.mycompany.io`. [Learn More](https://docs.harness.io/article/faor0dc98d)
+nexusAuth_nexusServerUrl:
+    content: The URL that you use to connect to your Nexus server. For example, `https://nexus3.dev.mycompany.io/repository/your-repo-name`. [Learn More](https://docs.harness.io/article/faor0dc98d)
+    width: "400"
 nexusAuth_nexusVersion: |-
     Harness lists the supported Nexus versions, 2.x and 3.x:
 
