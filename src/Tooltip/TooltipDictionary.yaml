@@ -2723,13 +2723,14 @@ version:
         [Learn more about different Trigger types](https://docs.harness.io/category/oya6qhmmaw)
     width: "400"
 pipelineInputLabel:
-    content: |+
+    content: |-
         If some of your Pipeline settings use [Runtime Inputs](https://docs.harness.io/article/f6yobn7iq0), you can provide the values for those settings here and they will be used when this Trigger executes.
 
         If your Pipeline uses [Input Sets](https://docs.harness.io/article/3fqwa8et3d), you can select the Input Set to use when the Trigger executes the Pipeline.
 
         [Learn more about different Trigger types](https://docs.harness.io/category/oya6qhmmaw-trigger-category)
 
+        [Learn more about how to pass payload data from trigger](https://developer.harness.io/docs/platform/triggers/custom-trigger-passing-data/)
     width: "400"
 triggerConfigurationLabel:
     content: |-
