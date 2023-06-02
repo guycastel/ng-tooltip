@@ -18,10 +18,10 @@ specifyYourService:
 stageOverviewDeploymentType:
     content: |-
         The deployment type is how your service will be deployed. For example, using Kubernetes, Native Helm, Serverless, etc.
-          
+
 
         Select the platform for your deployment. When you select a platform, its specific settings appear.
-          
+
 
         **Note:** If you change the deployment type (for example, from Kubernetes to Native Helm) there might be some conflicting resources in the target environment. As a result, Stage execution can fail. If this happens, delete all the conflicting resources and try again. You will also lose any deployment type-specific steps in this stage's **Execution**.
     width: "400"
@@ -96,7 +96,7 @@ conditionalExecution:
         Conditional Execution lets you set when and if to run or skip a stage. [Learn More](https://developer.harness.io/docs/platform/pipelines/w_pipeline-steps-reference/step-skip-condition-settings/)
 
         Conditional Execution uses JEXL operators and expressions.
-         
+
         Examples:
 
         `<+execution.steps.echo.status> == "SUCCEEDED"`
@@ -175,13 +175,13 @@ k8InfraReleaseName:
 
         ### Release name summary
         During deployment Harness creates a ConfigMap listing the resources of the release and uses the **Release name** for tracking them. 
-         
+
         The **Release name** is a combination of `release-` and a unique string created using the Harness expression `<+INFRA_KEY>`. 
-         
+
         For example, in a Kubernetes deployment you can see `harness.io/release-name=release-2f9eadcc06e2c2225265ab3cbb1160bc5eacfd4f`.
-         
+
         The release name must be unique across the cluster. `release-<+INFRA_KEY>` ensures a unique name.
-         
+
         `release-` is used as a prefix because Kubernetes service and pod names must follow RFC-1035 and must consist of lowercase alphanumeric characters or '-', start with an alphabetic character, and end with an alphanumeric character.
     width: "400"
 manifestDetails_identifier: Enter a name that identifies this manifest. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
@@ -849,7 +849,7 @@ k8CanaryDeploy_timeout: |-
     Timeouts can be set at the Pipeline level also.
 k8CanaryDeploy_spec.instanceSelection: |-
     Define how many pods are deployed for a Canary test of the configuration files in your Service Definition **Manifests** section:
-     
+
     - If you selected **Instance Count**, this is simply the number of pods.
     - If you selected **Percentage**, enter a percentage of the pods defined in your Service Definition **Manifests** files.
 
@@ -2199,7 +2199,7 @@ ccmOverviewTitle: |-
     - Complete cost transparency across engineering and finance with robust business intelligence (BI)
     - Ability to reduce wasted cloud costs by up to 75% with Intelligent Cloud AutoStopping
     - ML-based recommendations
-     
+
     [Learn more](https://docs.harness.io/article/n8e7rddf8w)
 overviewSummaryTotalCost: For Kubernetes clusters, the total cost is the sum of all the node costs. For ECS clusters, the sum of all container instances.
 overviewSummaryForecastedCost: |
@@ -3248,7 +3248,7 @@ ecrArtifact_tag:
 artifactConnForm_connectorId:
     content: |-
         Select or add a Connector to connect Harness with your cloud or registry. [Learn More](https://docs.harness.io/article/euueiiai4m)
-          
+
 
         CD Pipelines typically pull from registries only. CI Pipelines typically pull and push with registries.
     width: "400"
@@ -4064,7 +4064,7 @@ ciEcrStep_spec.baseImageConnectorRefs:
 ServerlessAwsLambdaDeploymentTypeManifests:
     content: |-
         Add your serverless.yml file as a manifest. Harness will fetch your serverless.yml file at deployment runtim. [Learn More](https://docs.harness.io/article/5fnx4hgwsa)
-          
+
 
         **Notes:** 
         - The serverless.yaml file you use with Harness can use Harness [secrets](https://docs.harness.io/article/osfw70e59c) and [built-in and custom expressions](https://docs.harness.io/article/lml71vhsim).
@@ -4080,10 +4080,10 @@ ServerlessAwsLambdaDeploymentTypeArtifacts:
         Add the function you want to deploy as an artifact. 
 
         For example, a function stored in a cloud repo as a ZIP file. [Learn More](https://docs.harness.io/article/5fnx4hgwsa)
-          
+
 
         You do not have to use an Artifact if the serverless.yml file you added to **Manifests** has the `package: artifact` hardcoded.
-          
+
 
         If you add an artifact to Harness in **Artifacts**, you need to use the Harness expression `<+artifact.path>` in your serverless.yml file like this:
 
@@ -4106,7 +4106,7 @@ awsRegion:
 awsStage:
     content: |-
         Enter the name of the stage in your service that you want to deploy to, such as `dev`. 
-          
+
         This is the same as the `--stage` option in the `serverless deploy` command. [Learn More](https://docs.harness.io/article/5fnx4hgwsa)
     width: "400"
 serverlessAwsLambda_identifier:
@@ -4142,10 +4142,10 @@ UseanyavailableDelegate:
 OnlyuseDelegateswithallofthefollowingtags:
     content: |-
         Select this option to use specific Delegates using their Tags. [Learn More](https://newdocs.helpdocs.io/article/nnuf8yv13o)
-          
+
 
         You only need to select one of a Delegate's Tags to select it. All Delegates with the Tag are selected.
-          
+
 
         This option is useful when you have installed specific software on specific Delegates and want to ensure that your Pipeline uses those Delegates.
     width: "500"
@@ -4164,10 +4164,10 @@ ServerlessAwsLambdaDeploy_timeout:
 serverlessDeployCommandOptions:
     content: |-
         Add any `serverless deploy` command options. See [Serverless AWS - Deploy](https://www.serverless.com/framework/docs/providers/aws/cli-reference/deploy) for the list of options.
-          
+
 
         In the deployment logs, you will see the options added to the serverless deploy command.
-          
+
 
         For example, if you add `--conceal` in **Serverless Deploy Command Options** you will see the following:
 
@@ -4190,17 +4190,17 @@ ServerlessLambdaRB_timeout:
 selectPropagatedState:
     content: |-
         You can use the same Service across your Pipeline stages. 
-          
+
 
         In many cases, you'll want to use some of the propagated Service's settings, such as manifests, but want to override others, such as values.yaml files, artifacts, or variables. 
-          
+
 
         Harness lets you propagate and override. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/propagate-and-override-cd-services)
     width: "400"
 serverlessAwsLambda_configOverridePath:
     content: |-
         Use this setting when your Serverless manifest is not named `serverless.yml|.yaml|.js|.json`. 
-          
+
 
         The is the same as the `--config` option in `serverless deploy`. See [AWS - deploy](https://www.serverless.com/framework/docs/providers/aws/cli-reference/deploy) from Serverless.
     width: "400"
@@ -4209,7 +4209,7 @@ serviceNowCreate_name:
     width: "400"
 serviceNowCreate_timeout:
     content: |-
-        
+
         Enter a timeout for this step. 
 
         You can use:
@@ -4258,8 +4258,8 @@ conditionalExecutionCustomStage:
         Conditional Execution lets you set when and if to run or skip a stage. [Learn More](https://developer.harness.io/docs/platform/pipelines/w_pipeline-steps-reference/step-skip-condition-settings/)
 
         Conditional Execution uses JEXL operators and expressions.
-          
-          
+
+
         Examples:
 
         `<+steps.mystep.output.status> == “success”`
@@ -7633,13 +7633,13 @@ cloudFunctionTrafficShiftStep_spec.trafficPercent:
 CloudFunctionRollback_stepName_StepConfig:
     content: |-
         If deployment failure occurs, the stage or step failure strategy is initiated. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions)
-         
+
 
         Typically, this runs the **Cloud Function Rollback** step in the **Rollback** section of **Execution**. Harness adds the **Cloud Function Rollback** step automatically.
-         
+
 
         The Harness rollback capabilities are based on the Google Cloud Function [revisions](https://cloud.google.com/run/docs/managing/revisions) available in Google Cloud.
-         
+
 
         If the function already exists (for example, revision 10) and a new revision is deployed (for example, revision 11) but a step after the deployment there is a failure and rollback is triggered, then Harness will deploy a new function revision (revision 12) but it will contain the artifact and metadata for revision 10.
     width: "400"
@@ -8017,4 +8017,13 @@ triggerArtifactTag:
         If you use a Fixed Value for the artifact Tag (for example, 2), when the trigger executes the pipeline, Harness will deploy the artifact with that tag (2).
 
         If you want the pipeline to deploy the artifact version that initiated the trigger, use the expression <+trigger.artifact.build>. [Learn more](https://developer.harness.io/docs/platform/triggers/trigger-on-a-new-artifact/#using-the-triggerartifactbuild-and-lastpublishedtag-expressions)
+    width: "400"
+roleARN:
+    content: The IAM role that Harness GitOps has to assume to deploy applications to the AWS cluster.
+    width: "400"
+awsClusterName:
+    content: The name of your AWS cluster.
+    width: "400"
+clusterCAData:
+    content: The public certificate of the Kubernetes API (Base64 encode).
     width: "400"
