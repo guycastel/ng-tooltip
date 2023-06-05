@@ -8027,3 +8027,7 @@ awsClusterName:
 clusterCAData:
     content: The public certificate of the Kubernetes API (Base64 encode).
     width: "400"
+serviceDashboardTotalServices:
+    content: |
+        Total Services represents all services currently defined in the system, and can be different from Active Services used for billing purposes, which accounts for current or past services, deployed actively in the last 30 days. To see Active Services, visit the Subscriptions page under Account Settings.
+    width: "400"    
