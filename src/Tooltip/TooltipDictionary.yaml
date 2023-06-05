@@ -8031,3 +8031,17 @@ serviceDashboardTotalServices:
     content: |
         Total Services represents all services currently defined in the system, and can be different from Active Services used for billing purposes, which accounts for current or past services, deployed actively in the last 30 days. To see Active Services, visit the Subscriptions page under Account Settings.
     width: "400"    
+enableJITProvisioning:
+  content: |
+    Enable Just-In-Time (JIT) provisioning to add users to Harness on their first login via the configured SAML provider.
+
+    To control who can get added to Harness on their first login, you can define the key-value that must be present in the SAML assertions.
+  width: "400"
+jitProvisioningKey:
+  content: |
+    Provide the key that must be present in the SAML assertion at the time of first login.
+  width: "400"
+jitProvisioningValue:
+  content: |
+    Provide the value corresponding to the validation key that must be present in the SAML assertion at the time of first login.
+  width: "400"
