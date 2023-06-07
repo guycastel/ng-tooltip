@@ -1529,8 +1529,8 @@ stepAwsAuthForm_secretKeyRef: |-
     Enter the Secret Key. You can either create a new Encrypted [Harness Secret](https://docs.harness.io/article/osfw70e59c) or select an existing one.
 
     See [Access Keys and Secret Keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys) from AWS.
-Connectviaanyavailabledelegate: If you do not select specific Delegates, Harness uses any available Delegate to perform this Connector's tasks. [Learn More](https://docs.harness.io/article/2k7lnc7lvl)
-Connectonlyviadelegateswhichhasallofthefollowingtags: If you select specific Delegates to perform tasks for this Connector, Harness uses those Delegates only. If these Delegates cannot perform the task, Harness does **not** use another Delegate. [Learn More](https://docs.harness.io/article/2k7lnc7lvl)
+Connectviaanyavailabledelegate: If you do not select specific delegates, Harness uses any available delegate to perform this connector's tasks. [Learn More](https://docs.harness.io/article/2k7lnc7lvl)
+Connectonlyviadelegateswhichhasallofthefollowingtags: If you select specific delegates to perform tasks for this connector, Harness uses those delegates only. If these delegates cannot perform the task, Harness does **not** use another delegate. [Learn More](https://docs.harness.io/article/2k7lnc7lvl)
 gcpAuthenticationDetails:
     content: |-
         Choose the method for Harness to use when connecting to GCP. [Learn More](https://docs.harness.io/article/yykfduond6)
@@ -1972,7 +1972,7 @@ delegateSetupStepForm_name:
 delegateSetupStepForm_delegateConfigurationId: Delegate Configurations profiles are deprecated, use `INIT_SCRIPT` instead. [Learn More](https://docs.harness.io/article/yte6x6cyhn-run-scripts-on-delegates)
 delegateSetupStepForm_k8sConfigDetails.namespace:
     content: |
-        By default, the Delegate resides in a namespace in the target cluster with a service account attached to it. The service account uses a **ClusterRole** for permission to deploy to all namespaces in the cluster.
+        By default, the delegate resides in a namespace in the target cluster with a service account attached to it. The service account uses a **ClusterRole** for permission to deploy to all namespaces in the cluster.
 
         This centralized model is simple and efficient, but does not let you restrict deployments to specific namespaces. Any team member can deploy to any namespace.
 
@@ -3399,11 +3399,11 @@ RestoreCacheS3_stepName_StepConfig:
     width: "400"
 restoreCacheS3_spec.connectorRef:
     content: |-
-        The Harness AWS Connector to use when restoring the cache from AWS S3. [Learn More](https://newdocs.helpdocs.io/article/m5vkql35ca-aws-connector-settings-reference)
+        The [Harness AWS connector](https://developer.harness.io/docs/platform/connectors/cloud-providers/ref-cloud-providers/aws-connector-settings-reference/) to use when restoring the cache from AWS S3.
 
-        Typically, this is the same Connector used when you saved the cache using the [Save Cache to S3](https://docs.harness.io/article/qtvjvrp9sn-save-cache-to-s-3-step-settings) step.
+        Typically, this is the same connector used in the [Save Cache to S3 step](https://docs.harness.io/article/qtvjvrp9sn-save-cache-to-s-3-step-settings).
 
-        The AWS IAM roles and policies associated with the account used in the Harness AWS Connector must be able to read from S3.
+        The AWS IAM roles and policies associated with the account used in the Harness AWS connector must be able to read from S3.
     width: "400"
 restoreCacheS3_timeout:
     content: Timeout for the step. Once the timeout is reached, the step fails.
@@ -4123,31 +4123,29 @@ serverlessAwsLambda_paths:
     width: "400"
 UseanyavailableDelegate:
     content: |-
-        Select this option to let Harness select a Delegate at runtime.
+        Select this option to let Harness select a delegate at runtime.
 
-        When a task is ready to be assigned, the Harness Manager first validates its lists of Delegates to see which Delegate should be assigned the task.
+        When a task is ready to be assigned, the Harness Manager first validates its lists of delegates to see which delegate to assign to the task.
 
-        The following information describes how the Harness Manager validates and assigns tasks to a Delegate:
+        The following information describes how the Harness Manager validates and assigns tasks to a delegate:
 
-        - **Heartbeats:** running Delegates send heartbeats to the Harness Manager in 1 minute intervals. If the Manager does not have a heartbeat for a Delegate when a task is ready to be assigned, it will not assign the task to that Delegate.
+        - **Heartbeats:** Running delegates send heartbeats to the Harness Manager in one-minute intervals. If the Manager doesn't have a heartbeat for a delegate when a task is ready to be assigned, it doesn't assign the task to that delegate.
 
-        - **Tags:** see [Select Delegates with Tags](https://newdocs.helpdocs.io/article/nnuf8yv13o).
+        - **Tags:** Go to [Use delegate selectors](https://developer.harness.io/docs/platform/Delegates/manage-delegates/select-delegates-with-selectors).
 
-        - **Allowlisting:** once a Delegate has been validated for a task, it is allowlisted for that task and will likely be used again for that task. The allowlisting criteria is the URL associated with the task, such as a connection to a cloud platform, repo, or API. A Delegate is allowlisted for all tasks using that URL. The Time-To-Live (TTL) for the allowlisting is 6 hours, and the TTL is reset with each successful task validation.
+        - **Allowlisting:** Once a delegate has been validated for a task, it is allowlisted for that task, and it is likely to be used again for that task. The allowlisting criteria is the URL associated with the task, such as a connection to a cloud platform, repo, or API. A delegate is allowlisted for all tasks using that URL. The Time-To-Live (TTL) for the allowlisting is six hours, and the TTL resets with each successful task validation.
 
-        - **Blocklisting:** if a Delegate fails to perform a task that Delegate is blocklisted for that task and will not be tried again. TTL is 5 minutes. This is true if there is only one Delegate and even if the Delegate is selected for that task with a Selector.
+        - **Blocklisting:** If a delegate fails to perform a task, it is blocklisted for that task and won't be tried again. TTL is five minutes. This is true if there is only one delegate and if a delegate is selected for that task with a selector.
 
-        [Learn how Harness picks Delegates](https://docs.harness.io/article/2k7lnc7lvl)
+        [Learn how Harness picks delegates](https://docs.harness.io/article/2k7lnc7lvl)
     width: "500"
 OnlyuseDelegateswithallofthefollowingtags:
     content: |-
-        Select this option to use specific Delegates using their Tags. [Learn More](https://newdocs.helpdocs.io/article/nnuf8yv13o)
+        Select this option to use tags to select specific delegates. [Learn More](https://developer.harness.io/docs/platform/delegates/manage-delegates/select-delegates-with-selectors)
 
+        You need to select only one of a delegate's tags to select it. All delegates with that tag are selected.
 
-        You only need to select one of a Delegate's Tags to select it. All Delegates with the Tag are selected.
-
-
-        This option is useful when you have installed specific software on specific Delegates and want to ensure that your Pipeline uses those Delegates.
+        This option is useful when you have installed specific software on specific delegates and you want to ensure that your pipeline uses those delegates.
     width: "500"
 artifactoryArtifact_artifactDirectory:
     content: Enter the name of the folder/directory where the artifact is located.
@@ -4249,7 +4247,7 @@ ciBuildInfra_harnessImageConnectorRef:
     content: |-
         By default, Harness pulls certain images from public Docker Hub repos that are needed to run a build. You can override this by using a Connector that downloads these images from the Harness Container Image Registry instead. 
 
-        This option is useful when your default Delegate cannot access the public registry (due to security policies in your organization, for example, or if your infrastructure is running in a private cloud).
+        This option is useful when your default delegate cannot access the public registry (due to security policies in your organization, for example, or if your infrastructure is running in a private cloud).
 
         To override how the Build Stage pulls these images, create a Connector as described in [Connect to Harness Container Image Registry Using Docker Connector](https://docs.harness.io/article/my8n93rxnw).
     width: "400"
@@ -4268,10 +4266,10 @@ conditionalExecutionCustomStage:
         [Learn More about JEXL](https://commons.apache.org/proper/commons-jexl/reference/syntax.html)
     width: "500"
 failureStrategyCustomStage:
-    content: Define the failure strategy for all steps and step groups in the stage. The stage-level strategy is overridden by step and step group failure strategies, if present. [Learn More](https://newdocs.helpdocs.io/article/htrur23poj)
+    content: Define the failure strategy for all steps and step groups in the stage. Stage-level failure strategies are overridden by step and step group failure strategies, if present. [Learn More](https://developer.harness.io/docs/platform/pipelines/w_pipeline-steps-reference/step-failure-strategy-settings)
     width: "400"
 pipelineCreate_connectorRef:
-    content: Select or create a Git Connector to connect to the repo for your Project. [Learn More](https://newdocs.helpdocs.io/category/xyexvcc206-ref-source-repo-provider)
+    content: Select or create a Git connector to connect to the repo for your project. [Learn More](https://developer.harness.io/docs/category/code-repo-connectors/)
     width: "400"
 pipelineCreate_repo:
     content: Select your repository. Limited repositories are populated here, so if your repo is not included, enter its name. [Learn more](https://docs.harness.io/article/grfeel98am-configure-git-experience-for-harness-entities#step_1_add_a_remote_pipeline)
@@ -4311,11 +4309,11 @@ CreateStack_stepName_ProvisionerStepConfig:
     width: "400"
 awsConnector_spec.configuration.parameters.store.spec.connectorRef:
     content: |-
-        Select your Git platform, and then select or add a Git Connector. 
+        Select your Git platform, and then select or add a Git connector.
 
-        See [Code Repo Connectors](https://newdocs.helpdocs.io/category/xyexvcc206) for steps on adding a Git Connector.
+        For information on adding Git connectors, go to [Code Repo Connectors](https://developer.harness.io/docs/category/code-repo-connectors/).
 
-        For AWS S3, see [Add an AWS Connector](https://docs.harness.io/article/98ezfwox9u).
+        For AWS S3, go to [Add an AWS connector](https://developer.harness.io/docs/platform/connectors/cloud-providers/add-aws-connector).
     width: "400"
 RemoteStepTwo_spec.configuration.parameters.identifier:
     content: Enter an Identifier for the file. This is just a name that indicates what the parameters are for. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
@@ -4509,7 +4507,7 @@ CustomApprovalForm_spec.source.spec.script:
 
         The script is executed on the host of the Harness Delegate that runs the step. The script is not executed on the deployment target host(s).
 
-        You can select one or more specific Delegates using the **Delegate Selector** setting in the step's **Advanced** settings.
+        You can select one or more specific delegates using the **Delegate Selector** setting in the step's **Advanced** settings.
     width: "400"
 CustomApprovalForm_spec.retryInterval:
     content: |-
@@ -4555,11 +4553,11 @@ approvalrejectionCriteria:
     width: "400"
 pipelineAdvancedSteps_delegateSelectors:
     content: |-
-        Select the Delegate(s) you want to use to execute this step.
+        Select the delegate(s) you want to use to execute this step.
 
-        You can select one or more Delegates for each Pipeline step.
+        You can select one or more delegates for each pipeline step.
 
-        You only need to select one of a Delegate's Tags to select it. All Delegates with the Tag are selected. [Learn More](https://developer.harness.io/docs/platform/delegates/manage-delegates/select-delegates-with-selectors/)
+        You need to select only one of a delegate's tags to select it. All delegates with that tag are selected. [Learn More](https://developer.harness.io/docs/platform/delegates/manage-delegates/select-delegates-with-selectors/)
     width: "400"
 ff_flagFilters_enabledFlags:
     content: Flags that are currently toggled on.
@@ -4900,7 +4898,7 @@ customRemoteManifest_filePath:
     content: Enter the folder path for the manifests folder.
     width: "400"
 customRemoteManifest_delegateSelectors:
-    content: Select the Selector for the Delegate(s) you want to use or leave this field empty to allow Harness to select a Delegate.
+    content: Select the selector for the delegate(s) you want to use or leave this field empty to allow Harness to select a delegate.
     width: "400"
 connectorDetailsStepFormCustomSecretManager_name:
     content: Enter a name for your Custom Secret Manager. You can also edit the automatically generated Id.
@@ -5220,7 +5218,7 @@ optionalConfiguration_spec.scripts.fetchAllArtifacts.attributes:
     content: You can map any additional values from your JSON array. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/add-a-custom-artifact-source-for-cd)
     width: "400"
 optionalConfiguration_spec.delegateSelectors:
-    content: Define a Delegate Selector or leave this field empty to allow Harness to select a Delegate. [Learn More](https://docs.harness.io/article/nnuf8yv13o)
+    content: Define a delegate selector or leave this field empty to allow Harness to select a delegate. [Learn More](https://docs.harness.io/article/nnuf8yv13o)
     width: "400"
 connectorId_Nexus:
     content: Select or create a new Connector.
@@ -5453,11 +5451,11 @@ ecsBlueGreenCreateServiceStepEdit_timeout:
     width: "400"
 ecsBlueGreenCreateServiceStepEdit_spec.loadBalancer:
     content: |-
-        Click here and select the AWS load balancer to use. 
+        Click here and select the AWS load balancer to use.
 
-        Harness uses the Delegate to locate the load balancers and list them in **Elastic Load Balancer**. 
+        Harness uses the delegate to locate the load balancers and list them in **Elastic Load Balancer**.
 
-        If you do not see your load balancer, ensure that the Delegate can connect to ECS.
+        If you do not see your load balancer, ensure that the delegate can connect to ECS.
 
         Once the load balancer is selected, Harness will populate the Prod and Stage Listener drop-downs. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
     width: "400"
@@ -6161,7 +6159,7 @@ fetchInstancesScriptTitleDT:
 
         **Important:** The `$INSTANCE_OUTPUT_PATH` expression must come last in your script.
 
-        This shell script will be executed at runtime by the Harness Delegate on its host. This should be a shell script you have run on the Delegate host to ensure that the host can connect to your server(s).
+        This shell script will be executed at runtime by the Harness Delegate on its host. This should be a shell script you have run on the delegate host to ensure that the host can connect to your server(s).
 
         The script should return a JSON array containing the target host information Harness needs to deploy.
 
@@ -6306,19 +6304,19 @@ stageExecution_settings:
     width: "400"
 delegateSelector:
     content: |-
-        Select a Harness Delegate to use for the entire Pipeline. 
+        Select a Harness Delegate to use for the entire pipeline.
 
-        You can also select Delegates at the stage and step level.
+        You can also select delegates at the stage and step level.
 
-        If you select Delegates at the stage or step level, those Delegates will be used to run those stages or steps.
+        If you select delegates at the stage or step level, those delegates are used to run those stages or steps.
     width: "400"
 pipelineAdvancedOptions_delegateSelectors:
     content: |-
-        Select a Harness Delegate to use for the entire Pipeline. 
+        Select a Harness Delegate to use for the entire pipeline.
 
-        You can also select Delegates at the stage and step level.
+        You can also select delegates at the stage and step level.
 
-        If you select Delegates at the stage or step level, those Delegates will be used to run those stages or steps.
+        If you select delegates at the stage or step level, those delegates are used to run those stages or steps.
     width: "450"
 runPipelineFormTitle:
     content: |-
