@@ -7,7 +7,7 @@ jiraApprovalIssueKey: |-
 
     You can use an expression to reference the **Key Id** from another **Jira Create** or **Jira Update** step.
 
-    The **Jira Create** or **Jira Update** step you want to reference must be *before* the **Jira Approval** step that references it in the Pipeline and stage. [Learn More](https://developer.harness.io/docs/platform/approvals/adding-jira-approval-stages/)
+    The **Jira Create** or **Jira Update** step you want to reference must be *before* the **Jira Approval** step that references it in the pipeline and stage. [Learn More](https://developer.harness.io/docs/platform/approvals/adding-jira-approval-stages/)
 ONNtooltipId: Your pipeline name
 specifyYourService:
     content: |-
@@ -145,7 +145,7 @@ deployService_name: |-
 
     A Service represents your microservices, Serverless functions, and other workloads logically. A Service is a logical entity to be deployed, monitored, or changed independently. [Learn More](https://docs.harness.io/article/hv2758ro4e)
 
-    When a Service is added to the stage in a Pipeline, you define its Service Definition. Service Definitions represent the real artifacts, manifests, and variables of a Service. They are the actual files and variable values. 
+    When a Service is added to the stage in a pipeline, you define its Service Definition. Service Definitions represent the real artifacts, manifests, and variables of a Service. They are the actual files and variable values. 
 
     You can also propagate and override a Service in subsequent stages by selecting its name in that stage's **Service** settings. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/propagate-and-override-cd-services)
 specifyYourEnvironment:
@@ -307,7 +307,7 @@ runTestsPackages:
 runTestsTestAnnotations: "List of test annotations used in unit testing. They should be separated by comma. Any method annotated with this will be treated as test method. The defaults are: org.junit.Test, org.junit.jupiter.api.Test, org.testng.annotations.Test"
 gcpConnector: GCP connector to use for saving the cache to GCS
 saveCacheS3Connector: AWS connector to use for saving the cache to S3
-stageSpecificationsSharedPaths: By default, all of a stage’s steps use the same workspace to share data. If you need to share additional paths between steps, add Shared Paths.
+stageSpecificationsSharedPaths: By default, all of a stage's steps use the same workspace to share data. If you need to share additional paths between steps, add Shared Paths.
 connectorDetailsStepFormGithub_name: Enter a name for this Connector. You will use this name to select the Connector.
 gitDetailsStepForm_url: |-
     Enter the URL for your repo or account:
@@ -320,7 +320,7 @@ gitDetailsStepForm_validationRepo: |-
     Enter a repo name to test the credentials. The Connector will connect to the repo to test account credentials. The repo is not linked to the Connector.
 
     The Connector will still be created at the Account level.
-connectorDetailsStepFormAws_name: Enter a name for this AWS Connector. You will use the name to select this Connector in Pipeline steps and settings. [Learn More](https://docs.harness.io/article/m5vkql35ca)
+connectorDetailsStepFormAws_name: Enter a name for this AWS Connector. You will use the name to select this Connector in pipeline steps and settings. [Learn More](https://docs.harness.io/article/m5vkql35ca)
 stepAwsAuthForm_crossAccountAccess: |-
     Select this option if you want to use one AWS account for the connection, but you want to deploy or build in a different AWS account. 
 
@@ -339,7 +339,7 @@ stepAwsAuthForm_externalId: |-
     For more information, see [How to Use an External Id When Granting Access to Your AWS Resources to a Third Party](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html) from AWS.
 connectorDetailsStepFormGcp_name: Enter a name for this GCP Connector. [Learn More](https://docs.harness.io/article/yykfduond6)
 connectorDetailsStepFormK8sCluster_name: |-
-    Enter a name for this Kubernetes Cluster Connector. 
+    Enter a name for this Kubernetes Cluster Connector.
 
     The Kubernetes Cluster Connector is platform-agnostic. Use it to access a cluster on any platform. [Learn More](https://docs.harness.io/article/sjjik49xww)
 k8ClusterForm_masterUrl: |-
@@ -348,8 +348,8 @@ k8ClusterForm_masterUrl: |-
     ```
     kubectl cluster-info
     ```
-    [Learn More](https://docs.harness.io/article/sjjik49xww)
-connectorDetailsStepFormArtifactory_name: Enter a name for this Connector. You will use this name to select the Connector in Pipeline steps and settings. [Learn More](https://docs.harness.io/article/euueiiai4m)
+    [Learn More](https://developer.harness.io/docs/platform/connectors/cloud-providers/ref-cloud-providers/kubernetes-cluster-connector-settings-reference/)
+connectorDetailsStepFormArtifactory_name: Enter a name for this connector. You will use this name to select the connector in pipeline steps and settings. [Learn More](https://docs.harness.io/article/euueiiai4m)
 stepArtifactoryAuthForm_artifactoryServerUrl:
     content: |-
         Enter in your base URL followed by your module name.
@@ -368,7 +368,7 @@ stepArtifactoryAuthForm_artifactoryServerUrl:
 
         **Note:** using `artifactory/` at the end of the URL often solves path issues.
     width: "500"
-connectorDetailsStepFormDockerRegistry_name: Enter a name for this Connector. You will use this name to select the Connector in Pipeline steps and settings. [Learn More](https://docs.harness.io/article/u9bsd77g5a)
+connectorDetailsStepFormDockerRegistry_name: Enter a name for this connector. You will use this name to select the connector in pipeline steps and settings. [Learn More](https://docs.harness.io/article/u9bsd77g5a)
 dockerAuthForm_dockerRegistryUrl:
     content: |-
         The URL of the Docker Registry. This is usually the URL used for your [docker login](https://docs.docker.com/engine/reference/commandline/login/) credentials.
@@ -383,11 +383,11 @@ helmRepoAuthForm_helmRepoUrl: |-
 
     For example: `https://charts.bitnami.com/bitnami`
 connectorDetailsStepFormHttpHelmRepo_name: |+
-    Enter a name for this Connector. You will use this name to select the Connector in Pipeline steps and settings. [Learn More](https://docs.harness.io/article/a0jotsvsi7)
+    Enter a name for this connector. You will use this name to select the connector in pipeline steps and settings. [Learn More](https://docs.harness.io/article/a0jotsvsi7)
 
     For Helm charts stored in repos such as Amazon S3 or GCS (Google Cloud Storage), you will need to create a cloud platform Connector for that repo. For more information, see [Cloud Platform Connectors](https://docs.harness.io/category/1ehb4tcksy).
 
-connectorDetailsStepFormNexus_name: Enter a name for this Connector. You will use this name to select the Connector in Pipeline steps and settings. [Learn More](https://docs.harness.io/article/faor0dc98d)
+connectorDetailsStepFormNexus_name: Enter a name for this connector. You will use this name to select the connector in pipeline steps and settings. [Learn More](https://docs.harness.io/article/faor0dc98d)
 nexusAuth_nexusServerUrl:
     content: The URL that you use to connect to your Nexus server. For example, `https://nexus3.dev.mycompany.io/repository/your-repo-name`. [Learn More](https://docs.harness.io/article/faor0dc98d)
     width: "400"
@@ -396,11 +396,11 @@ nexusAuth_nexusVersion: |-
 
     - For Nexus 2.x, Harness supports repository formats Maven, npm, and NuGet. See Sonatype's website at [Supported Formats](https://help.sonatype.com/repomanager3/supported-formats).
     - For Nexus 3.x, Harness supports repository formats Docker 3.0 and greater, Maven, npm, NuGet.
-connectorDetailsStepFormCodecommit_name: Enter a name for this Connector. You will use this name to select the Connector in Pipeline steps and settings. [Learn More](https://developer.harness.io/docs/platform/Connectors/connect-to-code-repo)
+connectorDetailsStepFormCodecommit_name: Enter a name for this connector. You will use this name to select the connector in pipeline steps and settings. [Learn More](https://developer.harness.io/docs/platform/Connectors/connect-to-code-repo)
 awsCCDetailsForm_urlType: |-
     You can select **Region** or **Repository**.
 
-    You can add a connection to your entire region or just a repo in the account. Selecting a region enables you to use one Connector for all of your subordinate repositories.
+    You can add a connection to your entire region or just a repo in the account. Selecting a region enables you to use one connector for all of your subordinate repositories.
 
     You must enter a repo URL even if you select region. Harness will use the repo URL Later to test this connection.
 
@@ -409,8 +409,8 @@ awsCCDetailsForm_url: |-
     Enter the path of the AWS CodeCommit repository to use.
 
     For example: `https://git-codecommit.us-east-2.amazonaws.com/v1/repos/MyDemoRepo`
-connectorDetailsStepFormBitbucket_name: Enter a name for this Bitbucket Connector. You will use this name to select the Connector in Pipeline steps and settings. [Learn More](https://docs.harness.io/article/iz5tucdwyu)
-connectorDetailsStepFormJira_name: Enter a name for this Connector. You will use this name to select the Connector in Pipeline steps and settings. [Learn More](https://docs.harness.io/article/ud8rysntnz)
+connectorDetailsStepFormBitbucket_name: Enter a name for this Bitbucket connector. You will use this name to select the connector in pipeline steps and settings. [Learn More](https://docs.harness.io/article/iz5tucdwyu)
+connectorDetailsStepFormJira_name: Enter a name for this connector. You will use this name to select the connector in pipeline steps and settings. [Learn More](https://docs.harness.io/article/ud8rysntnz)
 k8InfraAllowSimultaneousDeployments:
     content: By default, Harness queues deployments to the same infrastructure to avoid conflicts. If you want to allow simultaneous deployments to this infrastructure, enable this option. [Learn More](https://developer.harness.io/docs/continuous-delivery/manage-deployments/controlling-deployments-with-barriers-resource-constraints-and-queue-steps)
     width: "400"
@@ -450,12 +450,12 @@ jiraCreate_spec.projectKey: Select the Jira project where you want to create a t
 jiraCreate_spec.issueType: Select a Jira issue type from the list of types in the Jira project you selected. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/approvals/using-jira-and-service-now-approval-steps-in-cd-stages)
 jiraCreate_spec.summary: Add a summary for the new Jira ticket.
 harnessApproval_name: Enter a name for this step.
-harnessApproval_spec.includePipelineExecutionHistory: Enable this option to provide approvers with the execution history for this Pipeline. This can help approvers make their decision. [Learn More](https://docs.harness.io/article/fkvso46bok)
+harnessApproval_spec.includePipelineExecutionHistory: Enable this option to provide approvers with the execution history for this pipeline. This can help approvers make their decision. [Learn More](https://docs.harness.io/article/fkvso46bok)
 harnessApproval_spec.approvers.userGroups: Select the Harness User Groups that will approve the step. [Learn More](https://docs.harness.io/article/fkvso46bok)
 harnessApproval_spec.approvers.minimumCount: Enter how many of the Users in the User Groups must approve the step. [Learn More](https://docs.harness.io/article/fkvso46bok)
-harnessApproval_spec.approvers.disallowPipelineExecutor: Enable this option if you don't want to allow the User that initiated the Pipeline execution to approve this step. [Learn More](https://docs.harness.io/article/fkvso46bok)
+harnessApproval_spec.approvers.disallowPipelineExecutor: Enable this option if you don't want to allow the User that initiated the pipeline execution to approve this step. [Learn More](https://docs.harness.io/article/fkvso46bok)
 terraformRollback_name: |
-    Enter a name for this step. 
+    Enter a name for this step.
 terraformRollback_spec.provisionerIdentifier: |-
     Enter the same Provisioner Identifier you used in the Terraform Plan and/or Apply steps that provisioned the infrastructure you want to roll back. Harness will roll back the exact infrastructure provisioned in those steps.
     [Learn More](https://docs.harness.io/article/jgi6d73noy)
@@ -549,21 +549,19 @@ barrierStep_name: Enter a name for this step.
 barrierStep_spec.barrierRef: |-
     Select a Barrier name for the new barrier. [Learn More](https://docs.harness.io/article/dmlf8w2aeh)
 
-    Barriers are added in the Pipeline's **Flow Control** settings. If you do not see any names in **Barrier Reference**, then no barriers have been added to **Flow Control**.
+    Barriers are added in the pipeline's **Flow Control** settings. If you do not see any names in **Barrier Reference**, then no barriers have been added to **Flow Control**.
 
     You can have multiple barriers in a stage. Every barrier in the same stage must use a unique Barrier Reference.
 pipelineCreate_name: |-
-    Enter a name for the Pipeline. You can also edit the automatically generated Id. 
+    Enter a name for the pipeline. You can change the pipeline's name at any time.
 
-    The Pipeline name can be edited later, but Ids cannot be edited once a Pipeline has been saved.
-
-    If you are new to Harness, try a [Quickstart](https://docs.harness.io/article/u8lgzsi7b3).
+    If you are new to Harness, try a [tutorial](https://developer.harness.io/docs/getting-started/quickstarts/).
 pipelineCreate_timeout: |-
-    Enter a timeout for the entire Pipeline. You can also make this setting a runtime input or use a Harness expression. 
+    Enter a timeout for the entire pipeline. You can also make this setting a runtime input or use a Harness expression.
 
-    Keep in mind that all Pipeline steps have timeout settings too.
+    Keep in mind that all pipeline steps have timeout settings too.
 
-    Also, Approval steps and stages might pause execution but they do not stop the Pipeline Timeout counter.
+    Also, Approval steps and stages might pause execution but they do not stop the pipeline timeout counter.
 
     You can change this setting at any time.
 ShellScript_stepName: |-
@@ -574,7 +572,7 @@ ShellScript_stepName: |-
 
     See **Execution Target** in **Optional Configuration** to select where the script is run. [Learn More](https://docs.harness.io/article/k5lu0u6i1i)
 shellScriptForm_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -587,7 +585,7 @@ shellScriptForm_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 shellScriptForm_spec.source.spec.script:
     content: |-
         Enter your script. For example, here is a script that exports the variable names `BUILD_NO` and `LANG`:
@@ -604,7 +602,7 @@ shellScriptForm_spec.source.spec.script:
 Http_stepName: The HTTP step can run HTTP methods containing URLs, methods, headers, and variables. You can add assertions that use the response from the HTTP method.
 httpWidget_name: Enter a name for this step. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
 httpWidget_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -617,7 +615,7 @@ httpWidget_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 httpWidget_spec.url: Enter the URL for the HTTP call.  [Learn More](https://docs.harness.io/article/64hhfpbgbj)
 httpWidget_spec.method: Select the [HTTP method](https://restfulapi.net/http-methods/). [Learn More](https://docs.harness.io/article/64hhfpbgbj)
 httpWidget_spec.requestBody: Enter the message body (if any) of the HTTP message. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
@@ -649,11 +647,11 @@ httpWidget_spec.outputVariables: |-
 
     You can also use JSON and XML functors in the values for the output variable. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
 JiraApproval_stepName: |-
-    You can use Jira issues to approve or reject a Pipeline or stage at any point in its execution.
+    You can use Jira issues to approve or reject a pipeline or stage at any point in its execution.
 
     During deployment, the Jira issue you select is evaluated according to **Approval Criteria** you define in this step. 
 
-    If the issue meets the criteria the Pipeline or stage may proceed. [Learn More](https://docs.harness.io/article/2lhfk506r8)
+    If the issue meets the criteria the pipeline or stage may proceed. [Learn More](https://docs.harness.io/article/2lhfk506r8)
 jiraApproval_name: Enter a name for this step.
 jiraApproval_timeout: |-
     Enter a timeout for this step. Jira communication can take a few minutes. Do not use a brief timeout.
@@ -669,21 +667,21 @@ jiraApproval_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 jiraApproval_spec.connectorRef: Create or select the Jira Connector to use. [Learn More](https://docs.harness.io/article/e6s32ec7i7)
 jiraApprovalapprovalCriteria: |-
-    The **Approval Criteria** determines if the Pipeline or stage is approved or rejected. [Learn More](https://docs.harness.io/article/2lhfk506r8)
+    The **Approval Criteria** determines if the pipeline or stage is approved or rejected. [Learn More](https://docs.harness.io/article/2lhfk506r8)
 
     You can specify criteria using **Conditions** and/or **JEXL Expression**. If you use them in combination they both must evaluate to `True` for criteria to work.
 
-    Whether the Pipeline/stage stops executing depends on the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph-define-a-failure-strategy-on-stages-and-steps).
+    Whether the pipeline/stage stops executing depends on the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph-define-a-failure-strategy-on-stages-and-steps).
 
     In **Optional Configuration**, in **Rejection Criteria**, you can define criteria for rejecting the approval.
 
     If you add rejection criteria it is used in addition to the settings in **Approval Criteria**.
 K8sBGSwapServices_stepName: In this step, Harness swaps the primary service (prod traffic) to the pod set running the new app and the stage service (stage traffic) to the set running the old app. [Learn More](https://docs.harness.io/article/mog5tnk5pi)
 k8BgSwap_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -696,9 +694,9 @@ k8BgSwap_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 K8sBlueGreenDeploy_stepName: |-
-    This step deploys your new app version to the stage pod set. 
+    This step deploys your new app version to the stage pod set.
 
     The first time this step is run it creates any needed Kubernetes services and pod sets for the app.
 
@@ -706,7 +704,7 @@ K8sBlueGreenDeploy_stepName: |-
 
     [Learn More](https://docs.harness.io/article/mog5tnk5pi)
 k8BG_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -719,13 +717,13 @@ k8BG_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 k8BG_spec.skipDryRun: |-
     By default, Harness uses the `--dry-run` flag on the `kubectl apply` command, which prints the object that would be sent to the cluster without really sending it. 
 
     If the **Skip Dry Run** option is selected, Harness will not use the `--dry-run` flag.
 k8Apply_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -738,7 +736,7 @@ k8Apply_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 K8sApply_stepName: |-
     The **K8s Apply** step allows you to deploy any resource you have set up in the **Manifests** section in **Service**.
 
@@ -766,7 +764,7 @@ k8Apply_spec.skipSteadyStateCheck: |-
     If you select this option, Harness will not check that the workload has reached steady state.
 K8sDelete_stepName: The K8s Delete step can remove any deployed Kubernetes resources. [Learn More](https://docs.harness.io/article/eaj0xuegln)
 k8DeleteData_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -779,12 +777,12 @@ k8DeleteData_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 k8DeleteData_spec.deleteResources.spec.deleteNamespace:
     content: |
-        **Release Name** deletes all of the resources for a release. 
+        **Release Name** deletes all of the resources for a release.
 
-        Release names are configured in the Stage **Infrastructure** and release names can be viewed in the **Execution History** of a Pipeline.  
+        Release names are configured in the Stage **Infrastructure** and release names can be viewed in the **Execution History** of a pipeline.
 
         If you select the **Delete namespace** option, Harness will delete the namespace(s) defined in the release.
 
@@ -794,7 +792,7 @@ k8DeleteData_spec.deleteResources.spec.deleteNamespace:
     width: "400"
 K8sCanaryDelete_stepName: The **Canary Delete** step is used to clean up the workload deployed by the [Canary](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/kubernetes-executions/create-a-kubernetes-canary-deployment) step. [Learn More](https://docs.harness.io/article/922mtcvank)
 k*CanaryDelete_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -807,13 +805,13 @@ k*CanaryDelete_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 K8sRollingDeploy_stepName: |-
     The **K8s Rollout Deploy** step performs a Kubernetes [rolling update strategy](https://developer.harness.io/docs/continuous-delivery/manage-deployments/deployment-concepts-deployment-concepts). 
 
     All nodes within a single environment are incrementally added one-by-one with a new service/artifact version. The rolling update uses the number of pods you specified in **Manifests** (number of replicas). [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/cd-k8s-ref/kubernetes-rollout-step)
 k8RolloutDeploy_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -826,14 +824,14 @@ k8RolloutDeploy_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 k8RolloutDeploy_spec.skipDryRun: |-
     By default, Harness uses the `--dry-run` flag on the `kubectl apply` command, which prints the object that would be sent to the cluster without really sending it. 
 
     If the **Skip Dry Run** option is selected, Harness will not use the `--dry-run` flag.
 K8sCanaryDeploy_stepName: The **K8s Canary Deploy** step sets how many pods are created for a Canary deployment of the files in your Service Definition **Manifests** section. [Learn More](https://docs.harness.io/article/i5p4feil89)
 k8CanaryDeploy_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -846,7 +844,7 @@ k8CanaryDeploy_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 k8CanaryDeploy_spec.instanceSelection: |-
     Define how many pods are deployed for a Canary test of the configuration files in your Service Definition **Manifests** section:
 
@@ -860,7 +858,7 @@ k8CanaryDeploy_spec.skipDryRun: |-
     If the **Skip Dry Run** option is selected, Harness will not use the `--dry-run` flag.
 K8sScale_stepName: The **K8s Scale** step you can scale the number of running pods up or down by count or percentage. [Learn More](https://docs.harness.io/article/jxe5z9domw)
 k8Scale_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -873,7 +871,7 @@ k8Scale_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 k8Scale_spec.instanceSelection: |-
     Define how many pods you want:
 
@@ -890,7 +888,7 @@ K8sRollingRollback_stepName: |-
 
     **Rollback rolls back workloads only.** If there are other objects or operations executed in your stage, Harness does not roll those back.
 k8RollingRB_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -903,7 +901,7 @@ k8RollingRB_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 TerraformDestroy_stepName: |-
     The **Terraform Destroy** step removes any provisioned infrastructure, just like running the `terraform destroy` command. [Learn More](https://docs.harness.io/article/j75xc704c8)
 
@@ -911,7 +909,7 @@ TerraformDestroy_stepName: |-
 
     The **Terraform Destroy** step can also be used as part of target infrastructure provisioning. [Learn More](https://docs.harness.io/article/uznls2lvod-provision-infra-dynamically-with-terraform)
 terraformEdit-TerraformDestroy-EXECUTION_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -924,10 +922,10 @@ terraformEdit-TerraformDestroy-EXECUTION_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 TerraformRollback_stepName: Use the Terraform Rollback step to roll back your infrastructure and resources and return your environment to its pre-deployment state. [Learn More](https://docs.harness.io/article/jgi6d73noy)
 terraformRollback_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -940,9 +938,9 @@ terraformRollback_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 terraformEdit-TerraformApply-EXECUTION_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -955,11 +953,11 @@ terraformEdit-TerraformApply-EXECUTION_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 TerraformApply_stepName: |-
     You can apply a Terraform plan or script using the **Terraform Apply** step. [Learn More](https://docs.harness.io/article/hdclyshiho)
 
-    Typically the **Terraform Apply** step is used with the **Terraform Plan** step to apply a plan. 
+    Typically the **Terraform Apply** step is used with the **Terraform Plan** step to apply a plan.
 
     For steps on using the Terraform Plan step, see [Plan Terraform Provisioning with the Terraform Plan Step](https://docs.harness.io/article/52n3j0ci72).
 tfConfigurationFile: |-
@@ -968,11 +966,11 @@ tfConfigurationFile: |-
     Here, you'll add a connection to the Terraform script repo. [Learn More](https://docs.harness.io/article/hdclyshiho)
 configForm_spec.configuration.spec.configFiles.store.spec.connectorRef: Select or create a Connector for your Git repo. [Learn More](https://docs.harness.io/article/hdclyshiho)
 configForm_spec.configuration.spec.configFiles.store.spec.gitFetchType: |-
-    Select **Latest from Branch** or **Specific Commit Id**. When you run the Pipeline, Harness will fetch the script from the repo.
+    Select **Latest from Branch** or **Specific Commit Id**. When you run the pipeline, Harness will fetch the script from the repo.
 
     If you think the script might change often, you might want to use a **Specific Commit Id**.
 
-    For example, if you are going to be fetching the script multiple times in your Pipeline, Harness will fetch the script each time. If you select **Latest from Branch** and the branch changes between fetches, different scripts are run.
+    For example, if you are going to be fetching the script multiple times in your pipeline, Harness will fetch the script each time. If you select **Latest from Branch** and the branch changes between fetches, different scripts are run.
 configForm_spec.configuration.spec.configFiles.store.spec.commitId: Enter the Commit Id to use.
 configForm_spec.configuration.spec.configFiles.store.spec.branch: Enter the name of the branch to use.
 configForm_spec.configuration.spec.configFiles.store.spec.folderPath: Enter the path from the root of the repo to the folder containing the script. [Learn More](https://docs.harness.io/article/hdclyshiho)
@@ -981,7 +979,7 @@ TerraformPlan_stepName: |-
 
     You can then add a **Terraform Apply** step later in your stage to apply the plan. [Learn More](https://docs.harness.io/article/52n3j0ci72)
 terraformPlanEditView-tfPlan-EXECUTION_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -994,14 +992,14 @@ terraformPlanEditView-tfPlan-EXECUTION_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.secretManagerRef: |-
     A Terraform plan is a sensitive file that could be misused to alter resources if someone has access to it. Harness avoids this issue by never passing the Terraform plan file as plain text.
 
     Select a [Secrets Manager](https://docs.harness.io/article/hngrlb7rd6) to use for encrypting/decrypting and saving the Terraform plan file. [Learn More](https://docs.harness.io/article/52n3j0ci72)
-HarnessApproval_stepName: The Manual Approval step lets you specify Harness User Group(s) to approve or reject a Pipeline at any point in its execution. [Learn More](https://docs.harness.io/article/fkvso46bok)
+HarnessApproval_stepName: The Manual Approval step lets you specify Harness User Group(s) to approve or reject a pipeline at any point in its execution. [Learn More](https://docs.harness.io/article/fkvso46bok)
 harnessApproval_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -1014,14 +1012,14 @@ harnessApproval_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 harnessApproval_spec.approvalMessage: Add the message for the Users in **Approvers**. [Learn More](https://docs.harness.io/article/fkvso46bok)
 Barrier_stepName: |-
-    Barriers allow you to synchronize different stages in your Pipeline, and control the flow of your deployment systematically.
+    Barriers allow you to synchronize different stages in your pipeline, and control the flow of your deployment systematically.
 
-    Before you add a **Barrier** step to a stage, barriers must be are added in the Pipeline's **Flow Control** settings. [Learn More](https://docs.harness.io/article/dmlf8w2aeh)
+    Before you add a **Barrier** step to a stage, barriers must be are added in the pipeline's **Flow Control** settings. [Learn More](https://docs.harness.io/article/dmlf8w2aeh)
 barrierStep_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -1034,15 +1032,15 @@ barrierStep_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 JiraCreate_stepName: |-
-    You can use this step to create a Jira issue as part of the execution of a Pipeline. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/approvals/using-jira-and-service-now-approval-steps-in-cd-stages)
+    You can use this step to create a Jira issue as part of the execution of a pipeline. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/approvals/using-jira-and-service-now-approval-steps-in-cd-stages)
 
     Jira issues are often used as part of a Jira Approval stage. [Learn More](https://docs.harness.io/article/2lhfk506r8)
 
     [Video walkthrough](https://youtu.be/xVeICozz4lU)
 jiraCreate_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -1055,21 +1053,21 @@ jiraCreate_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 jiraCreate_spec.connectorRef: Create or select the [Jira Connector](https://docs.harness.io/article/e6s32ec7i7) to use.
 jiraCreate_spec.description: Add a description for the issue.
 jiraCreateAddFields: |-
     Add specific fields within a Jira issue.
 
-    Harness supports only Jira fields of type `Option`, `Array`, `Any`, `Number`, `Date`, and `String`. 
+    Harness supports only Jira fields of type `Option`, `Array`, `Any`, `Number`, `Date`, and `String`.
 
     Harness does not integrate with Jira fields that manage users, issue links, or attachments. This means that Jira fields like Assignee and Sprint are not accessible in Harness' Jira integration.
 jiraSelectFromFieldList: Select from the fields Harness retrieved from Jira using the Jira Connector, Project, and Issue Type.
 jiraProvideFromFieldList: Add fields for the issue.
-JiraUpdate_stepName: You can update a Jira issue as a step in the execution of a Pipeline. [Learn More](https://docs.harness.io/article/urdkli9e74)
+JiraUpdate_stepName: You can update a Jira issue as a step in the execution of a pipeline. [Learn More](https://docs.harness.io/article/urdkli9e74)
 jiraUpdate_name: Enter a name for this step.
 jiraUpdate_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -1082,13 +1080,13 @@ jiraUpdate_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 jiraUpdate_spec.connectorRef: Create or select the [Jira Connector](https://docs.harness.io/article/e6s32ec7i7) to use.
 jiraUpdate_spec.issueKey: Enter the Jira issue key of the issue you want to update.
 jiraUpdate_spec.transitionTo.status: Enter the status type (Issue Action) to update the issue with (In Progress, Done, etc). Harness will automatically update the issue with this status.
 jiraUpdate_spec.transitionTo.transitionName: Enter the name of the transition to move the issues into.
 terraformPlanEditView-tfPlan-INFRASTRUCTURE_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -1101,13 +1099,13 @@ terraformPlanEditView-tfPlan-INFRASTRUCTURE_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 terraformPlanEditView-tfPlan-INFRASTRUCTURE_spec.configuration.secretManagerRef: |-
     A Terraform plan is a sensitive file that could be misused to alter resources if someone has access to it. Harness avoids this issue by never passing the Terraform plan file as plain text.
 
     Select a [Secrets Manager](https://docs.harness.io/article/hngrlb7rd6) to use for encrypting/decrypting and saving the Terraform plan file.
 terraformEdit-TerraformApply-INFRASTRUCTURE_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -1120,9 +1118,9 @@ terraformEdit-TerraformApply-INFRASTRUCTURE_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 terraformEdit-TerraformDestroy-INFRASTRUCTURE_timeout: |-
-    Enter a timeout for this step. 
+    Enter a timeout for this step.
 
     You can use:
 
@@ -1135,7 +1133,7 @@ terraformEdit-TerraformDestroy-INFRASTRUCTURE_timeout: |-
 
     The maximum is `53w`.
 
-    Timeouts can be set at the Pipeline level also.
+    You can also set timeouts at the pipeline level.
 TerraformPlan_stepName_ProvisionerStepConfig: |-
     When used in a stage's **Dynamic Provisioning** settings, the **Terraform Plan** step is where you connect Harness to your script repo and add your Terraform scripts. You can also define options like Workspace, etc. [Learn More](https://docs.harness.io/article/uznls2lvod)
 
@@ -1474,11 +1472,11 @@ ShellScript_stepName_StepConfig:
         - Execute scripts on the host running a Harness Delegate. You can use the **Delegate Selectors**  setting in **Advanced** to identify which Harness Delegate to use.
         - Execute scripts on a remote target host in the deployment Infrastructure Definition.
     width: "400"
-Barrier_stepName_StepConfig: Barriers allow you to synchronize different stages in your Pipeline, and control the flow of your deployment systematically. [Learn More](https://docs.harness.io/article/dmlf8w2aeh)
+Barrier_stepName_StepConfig: Barriers allow you to synchronize different stages in your pipeline, and control the flow of your deployment systematically. [Learn More](https://docs.harness.io/article/dmlf8w2aeh)
 "flowControl_barriers[0].name": |-
-    Barriers allow you to synchronize different stages in your Pipeline, and control the flow of your deployment systematically. [Learn More](https://docs.harness.io/article/dmlf8w2aeh)
+    Barriers allow you to synchronize different stages in your pipeline, and control the flow of your deployment systematically. [Learn More](https://docs.harness.io/article/dmlf8w2aeh)
 
-    Once you add a Barrier here in **Flow Control**, you reference it in the **Barrier** steps you add to the stages of your Pipeline.
+    Once you add a Barrier here in **Flow Control**, you reference it in the **Barrier** steps you add to the stages of your pipeline.
 Verify_stepName_StepConfig: |-
     The **Verify** step in a CD stage uses Harness Continuous Verification (CV) to verify your deployments.
 
@@ -1493,13 +1491,14 @@ cvData_name:
     width: "400"
 cvData_timeout:
     content: |-
-        In Timeout, enter a timeout value for the step. You can use:
-        w for weeks
-        d for days
-        h for hours
-        m for minutes
-        s for seconds
-        ms for milliseconds
+        In **Timeout**, enter a timeout value for the step. You can use:
+
+        - w for weeks
+        - d for days
+        - h for hours
+        - m for minutes
+        - s for seconds
+        - ms for milliseconds
 
         [Learn More](https://docs.harness.io/article/3xhqq9xllp-verify-deployments-with-the-verify-step#step_2_enter_a_name_and_timeout)
     width: "400"
@@ -1507,7 +1506,7 @@ cvData_spec.type:
     content: In Continuous Verification Type, select a type that matches your deployment strategy. Rolling, Canary, Blue Green, and Load Test simply refer to the strategy in the stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/verify/verify-deployments-with-the-verify-step#continuous-verification-type)
     width: "400"
 cvData_spec.monitoredServiceRef:
-    content: Harness automatically creates a Monitored Service using a concatenation of the Service and Environment names. In Monitored Service, click to autocreate a monitored service. If the stage Service or Environment settings are Runtime Inputs, the Monitored Service and Health Sources settings will show up in the Runtime Input settings when you run the Pipeline.
+    content: Harness automatically creates a Monitored Service using a concatenation of the Service and Environment names. In Monitored Service, click to autocreate a monitored service. If the stage Service or Environment settings are Runtime Inputs, the Monitored Service and Health Sources settings will show up in the Runtime Input settings when you run the pipeline.
     width: "400"
 cvData_spec.spec.sensitivity:
     content: Choose the level of sensitivity. It is used as an input for the sensitivity in the Verification stage. If you set the sensitivity to high, even small anomalies will be treated as verification failures. [Learn More](https://developer.harness.io/docs/continuous-delivery/verify/verify-deployments-with-the-verify-step#sensitivity)
@@ -1687,7 +1686,7 @@ stepGithubAuthForm_apiAccessToken: ""
 githubApiAuthentication: You can use a [Personal Access Token](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-hub-connector-settings-reference#authentication) or [GitHub App](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/git-hub-app-support) for authentication.
 stepGithubAuthForm_installationId: Enter the Installation Id located in the URL of the installed GitHub App.
 stepGithubAuthForm_applicationId: Enter the **GitHub App Id** from the GitHub App **General** tab.
-createUpdateSecretForm_secretManagerIdentifier: Harness includes a built-in Secrets Management feature that enables you to store encrypted secrets, such as access keys, and use them in your Harness Connectors and Pipelines. [Learn More](https://docs.harness.io/article/bo4qbrcggv)
+createUpdateSecretForm_secretManagerIdentifier: Harness includes a built-in Secrets Management feature that enables you to store encrypted secrets, such as access keys, and use them in your Harness connectors and pipelines. [Learn More](https://docs.harness.io/article/bo4qbrcggv)
 createUpdateSecretForm_name: Enter a name for the encrypted text. This is the name you will use to reference the text elsewhere in your resources. [Learn More](https://docs.harness.io/article/osfw70e59c)
 createUpdateSecretForm_value: Enter a value for the encrypted text. [Learn More](https://docs.harness.io/article/osfw70e59c)
 createUpdateSecretForm_reference: Enter a value for the reference secret.
@@ -1714,7 +1713,7 @@ ff_segments_heading: |-
     [Learn More](https://docs.harness.io/article/5qz1qrugyk-add-target-groups)
 ff_env_heading:
     content: |
-        Harness Environments represent your deployment targets (QA, Prod, etc). You can add the same Environment to as many Pipelines and stages as you need. [Learn More](https://docs.harness.io/article/cqgeblt4uh)
+        Harness Environments represent your deployment targets (QA, Prod, etc). You can add the same Environment to as many pipelines and stages as you need. [Learn More](https://docs.harness.io/article/cqgeblt4uh)
     width: "400"
 ff_ffVariations_heading: |-
     A Feature flag has default variations.  A boolean flag can have false set as its default off variation and true set as its default on variation. A multivariate flag could have variation 1 set as its default off variation and variation 2 set as its default on variation, with variation 3 configured to appear when a user has a certain email address
@@ -1891,36 +1890,36 @@ ciRunTests_description: Description for the step.
 RunTests_stepName_StepConfig: The Run Tests step can be used to run tests in your CI stages. When you use Run Tests, you can [enable Test Intelligence](https://developer.harness.io/docs/continuous-integration/use-ci/set-up-test-intelligence/).
 ciRunTests_spec.runOnlySelectedTests: This option enables Test Intelligence. If this option is unchecked and set to False, then the Test Intelligence will be disabled and all tests will run. [Learn More](https://docs.harness.io/article/vtu9k1dsfa)
 ciBuildInfra_connectorRef: Select a Harness Connector for a Kubernetes cluster. A Kubernetes cluster is used as a build farm. [Learn More](https://docs.harness.io/article/ia5dwx5ya8)
-notificationsOverview_name: Enter a name for your Notification Rule. Notification Rules are used to create a notification strategy for your Pipeline. [Learn More](https://docs.harness.io/article/4bor7kyimj)
+notificationsOverview_name: Enter a name for your Notification Rule. Notification Rules are used to create a notification strategy for your pipeline. [Learn More](https://docs.harness.io/article/4bor7kyimj)
 pipelineEvents_types.AllEvents:
-    content: Select this option to receive notifications for all Pipeline events. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications for all pipeline events. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.PipelineStart:
-    content: Select this option to receive notifications when the Pipeline execution starts. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when the pipeline execution starts. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.PipelineEnd:
-    content: Select this option to receive notifications when the Pipeline execution ends. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when the pipeline execution ends. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.PipelineSuccess:
-    content: Select this option to receive notifications if the Pipeline execution is successful. For CD, Harness considers a deployment successful when the deployed service reaches steady state. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications if the pipeline execution is successful. For CD, Harness considers a deployment successful when the deployed service reaches steady state. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.PipelineFailed:
-    content: Select this option to receive notifications when the Pipeline execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when the pipeline execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.PipelinePaused:
-    content: Select this option to receive notifications when the Pipeline execution is paused. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when the pipeline execution is paused. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.StageFailed:
     content: Select this option to receive notifications when the Stage execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.StageSuccess:
-    content: Select this option to receive notifications when each Pipeline stage execution is successful. You can select the stages to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when each pipeline stage execution is successful. You can select the stages to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.StageStart:
-    content: Select this option to receive notifications when each Pipeline stage execution starts. You can select the stages to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when each pipeline stage execution starts. You can select the stages to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.StepFailed:
-    content: Select this option to receive notifications when each Pipeline step execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when each pipeline step execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 manifestDetails_repoName: Enter the name of the repo where the files are located. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
 manifestDetails_paths:
@@ -1945,18 +1944,18 @@ manifestDetails_skipResourceVersioning: |-
     [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
 Http_stepName_StepConfig: You can use the HTTP step to run HTTP methods containing URLs, methods, headers, assertions, and variables. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
 HarnessApproval_stepName_StepConfig: |-
-    You can specify Harness User Group(s) to approve or reject a Pipeline at any point in its execution. During deployment, the User Group members use the Harness Manager to approve or reject the Pipeline deployment manually. [Learn More](https://docs.harness.io/article/fkvso46bok)
+    You can specify Harness User Group(s) to approve or reject a pipeline at any point in its execution. During deployment, the User Group members use the Harness Manager to approve or reject the pipeline deployment manually. [Learn More](https://docs.harness.io/article/fkvso46bok)
 
-    Approvals are added in between Stages to prevent the Pipeline execution from proceeding without an approval.
+    Approvals are added in between Stages to prevent the pipeline execution from proceeding without an approval.
 cdEditStage_name:
-    content: A Stage is a subset of a Pipeline that contains the logic to perform one major segment of the Pipeline process. Stages are based on the different milestones of your Pipeline, such as building, approving, and delivering. [Learn More](https://docs.harness.io/article/2chyf1acil)
+    content: A Stage is a subset of a pipeline that contains the logic to perform one major segment of the pipeline process. Stages are based on the different milestones of your pipeline, such as building, approving, and delivering. [Learn More](https://docs.harness.io/article/2chyf1acil)
     width: "400"
 overviewStageVariables: |-
-    Stage variables are custom variables you can add and reference in your stage and Pipeline. They are available across the Pipeline. You can override their values in subsequent stages. [Learn More](https://docs.harness.io/article/2chyf1acil)
+    Stage variables are custom variables you can add and reference in your stage and pipeline. They are available across the pipeline. You can override their values in subsequent stages. [Learn More](https://docs.harness.io/article/2chyf1acil)
 
     You can even reference stage variables in the files fetched at runtime.
 
-    For example, you could create a stage variable `name` and then reference it in the Kubernetes values.yaml file used by this stage: `name: <+stage.variables.name>`. When you run this Pipeline, you provide a value for `name` and that value is used for the values.yaml file.
+    For example, you could create a stage variable `name` and then reference it in the Kubernetes values.yaml file used by this stage: `name: <+stage.variables.name>`. When you run this pipeline, you provide a value for `name` and that value is used for the values.yaml file.
 
     You reference stage variables **within their stage** using the expression `<+stage.variables.[variable name]>`.
 
@@ -2021,7 +2020,7 @@ gitSyncRepoTab_rootFolder: |-
 
     New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 gitSyncRepoTab_isDefault: |-
-    **What is the default folder?** When a Pipeline in one repo needs to access a Connector/Secret/etc in another repo at runtime, the Pipeline will always use the Connector/Secret/etc in their **default folder**. Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
+    **What is the default folder?** When a pipeline in one repo needs to access a resource, such as a connector or secret, in another repo at runtime, the pipeline always uses the resource in the default folder in the external repo. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
     New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 connectorDetailsStepFormGithub_repo: |-
@@ -2045,7 +2044,7 @@ saveToGitForm_rootFolder: |-
 
     New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_filePath: |-
-    Enter a name for the YAML file, such as `Example.yaml`. Harness will generate one automatically from the Pipeline name, but you can add your own. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities) 
+    Enter a name for the YAML file, such as `Example.yaml`. Harness will generate one automatically from the pipeline name, but you can add your own. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities) 
 
     New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_commitMsg: |-
@@ -2071,17 +2070,17 @@ failureStrategyDeployStage: |-
     - **Step-level:** this failure strategy overrides (or enhances) the stage-level failure strategy.
     - **Step Group-level:** you can set up a failure strategy for all steps in the group. Individual steps in the group will not have a failure strategy. This strategy also overrides the stage-level strategy.
     - **Stage-level:** the failure strategy for all steps and step groups in the stage. The stage-level strategy can be overridden by step and step group failure strategies, if present.
-overlayInputSet_name: Overlays are groups of Input Sets. Overlays enable you to provide several Input Sets when executing a Pipeline. [Learn More](https://docs.harness.io/article/3fqwa8et3d)
+overlayInputSet_name: Overlays are groups of Input Sets. Overlays enable you to provide several Input Sets when executing a pipeline. [Learn More](https://docs.harness.io/article/3fqwa8et3d)
 inputSetForm_name: |-
-    An Input Set includes all the runtime inputs for the Pipeline. 
+    An Input Set includes all the runtime inputs for the pipeline.
 
-    You can create multiple Input Sets, each with a different set of values for the Pipeline's runtime inputs.
+    You can create multiple Input Sets, each with a different set of values for the pipeline's runtime inputs.
 
-    When you run the Pipeline you can select an Input Set to automatically populate the runtime inputs. [Learn More](https://docs.harness.io/article/3fqwa8et3d)
+    When you run the pipeline you can select an Input Set to automatically populate the runtime inputs. [Learn More](https://docs.harness.io/article/3fqwa8et3d)
 userRoleAssignementForm_user: |-
     Enter the email address(es) that the User will use to log into Harness.
 
-    If you have Roles and Resource Groups defined, select the Roles and Resource Groups for this user.  [Learn More](https://docs.harness.io/article/hyoe7qcaz6)
+    If you have Roles and Resource Groups defined, select the Roles and Resource Groups for this user. [Learn More](https://docs.harness.io/article/hyoe7qcaz6)
 userGroupForm_name: |-
     Enter a name for this User Group.
 
@@ -2242,7 +2241,7 @@ GitOpsProviderStepFormNameIdDescriptionTags_description: |-
 GitOpsProviderStepFormNameIdDescriptionTags_tags:
     content: |
         Enter a tag for your Adapter.
-        This is an optional field. 
+        This is an optional field.
         A Tag field allows you to label the content with keywords (tags)
     width: "400"
 GitOpsProviderStepFormundefined_spec.adapterUrl: |-
@@ -2250,7 +2249,7 @@ GitOpsProviderStepFormundefined_spec.adapterUrl: |-
     This URL allows customers to interact with the ArgoCD server directly from Harness UI with minimal configuration.
 
     [Learn more to Create Argo CD Adapter](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
-ciBuildInfra_initTimeout: Enter the Timeout for the initialization phase. During this phase, Harness downloads the build step images and spins up the containers to execute the build steps.
+ciBuildInfra_initTimeout: Enter the timeout for the initialization phase. During this phase, Harness downloads the build step images and spins up the containers to execute the build steps.
 ciBuildInfra_annotations: Kubernetes Annotation to the pod YAML that will be used to create the pod in which the stage's steps will be executed. [Learn More](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
 ciBuildInfra_labels: Key/Value pair that will be added to the Kubernetes pod YAML, which is used to create the pod in which the stage's steps will be executed. [Learn More](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
 GCSUpload_stepName_StepConfig:
@@ -2302,9 +2301,9 @@ wizardForm_webhook_anyAction:
     width: "400"
 wizardForm_webhook_autoAbortPreviousExecutions:
     content: |-
-        Use this option if you want to override active Pipeline executions whenever the branch is updated.
+        Use this option if you want to override active pipeline executions whenever the branch is updated.
 
-        If you select this option, when the branch you specified in the **Connector** is updated, then any active Pipeline executions using both that branch and this Trigger are cancelled.
+        If you select this option, when the branch you specified in the **Connector** is updated, then any active pipeline executions using both that branch and this Trigger are cancelled.
 
         The updated branch will initiate a new Trigger execution. [Learn More](https://docs.harness.io/article/hndnde8usz)
     width: "400"
@@ -2454,7 +2453,7 @@ k8sDirectInfraConnector:
     content: |-
         Select the Connector for your Terraform plan repo. [Learn More](https://docs.harness.io/article/uznls2lvod)
 
-        When you run the Pipeline, Harness will fetch the script from the repo.
+        When you run the pipeline, Harness will fetch the script from the repo.
     width: "400"
 "wizardForm_webhook_pipeline.stages[0].stage.spec.infrastructure.infrastructureDefinition.provisioner.steps[0].step.spec.configuration.configFiles.store.spec.branch":
     content: Select the branch for your Terraform plan. [Learn More](https://docs.harness.io/article/uznls2lvod)
@@ -2578,7 +2577,7 @@ rightBarForm_repoName:
 
 
 
-        If you select **Git Account** as the URL Type, you will be prompted to provide a **repo name** when you use this connector in a Harness Pipeline. [Learn More](https://docs.harness.io/article/v9sigwjlgo)
+        If you select **Git Account** as the URL Type, you will be prompted to provide a **repo name** when you use this connector in a Harness pipeline. [Learn More](https://docs.harness.io/article/v9sigwjlgo)
 
     width: "400"
 rightBarForm_depth:
@@ -2592,7 +2591,7 @@ rightBarForm_depth:
     width: "400"
 rightBarForm_sslVerify:
     content: |-
-        If True (the default), the Pipeline verifies your Git SSL certificates. The build fails if the certificate check fails. You should set this to False only if you have a known issue with the certificate and are willing to run your builds anyway.
+        If True (the default), the pipeline verifies your Git SSL certificates. The build fails if the certificate check fails. You should set this to False only if you have a known issue with the certificate and are willing to run your builds anyway.
         You can use self-signed certificates in your build infrastructure. [Learn more](https://docs.harness.io/article/e5qkn9atiw)
     width: "400"
 manifestStore_connectorRef:
@@ -2618,13 +2617,13 @@ helmWithHttp_chartName:
     width: "400"
 helmWithHttp_chartVersion:
     content: |-
-        Enter the version of the chart you want to deploy. This is found in the Chart.yaml `version` label in your chart. 
+        Enter the version of the chart you want to deploy. This is found in the Chart.yaml `version` label in your chart.
 
         You can list all available versions of a chart using the `search repo` command with the `--versions` option. See [helm search repo](https://helm.sh/docs/helm/helm_search_repo) from Helm.
 
         If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
-        If you are going to use a Harness Trigger to run this Pipeline when a new version is added to your chart repo, select the [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
+        If you are going to use a Harness Trigger to run this pipeline when a new version is added to your chart repo, select the [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
     width: "400"
 helmWithHttp_helmVersion:
     content: Select the version of Helm used in your chart. See [Helm Version Support Policy](https://helm.sh/docs/topics/version_skew/) from Helm.
@@ -2656,7 +2655,7 @@ helmWithHttp_commandFlags:
     width: "400"
 artifactManifestLabel:
     content: |-
-        Select the manifest that Harness will listen on for this Trigger. This is a manifest in the **Service Definition** section of one of this Pipeline's stages. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
+        Select the manifest that Harness will listen on for this Trigger. This is a manifest in the **Service Definition** section of one of this pipeline's stages. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
 
         Depending on how the **Service Definition** is set up, the manifest might be a Helm Chart package or other package.
 
@@ -2669,7 +2668,7 @@ wizardForm_artifacts_identifier:
         This unique Id is generated automatically using the name you entered in **Name**, but you can edit it as needed. [Learn More](https://docs.harness.io/article/li0my8tcz3)
     width: "400"
 wizardForm_artifacts_name:
-    content: Enter a name for this Trigger. The name will identify the Trigger on the Deployments page and this Pipeline's Execution History page so you can see which Trigger executed the Pipeline.
+    content: Enter a name for this Trigger. The name will identify the Trigger on the Deployments page and this pipeline's Execution History page so you can see which Trigger executed the pipeline.
     width: "400"
 artifactTrigger_description:
     content: "Enter a description for this Trigger that tells other Project members when this Trigger is used. "
@@ -2681,7 +2680,7 @@ listenOnNewArtifactManifest:
     content: |
         ### On New Manifest Triggers
 
-        Harness will listen on the manifest (Helm Chart) that you select. When a new version of the manifest is added to its repo, the Trigger will execute this Pipeline. 
+        Harness will listen on the manifest (Helm Chart) that you select. When a new version of the manifest is added to its repo, the Trigger will execute this pipeline.
 
         For example, see [Helm Chart Triggers](https://docs.harness.io/article/54eqk0d1bd).
 
@@ -2691,7 +2690,7 @@ listenOnNewArtifactManifest:
 
         ### On New Artifact Triggers
 
-        On New Artifact Triggers simply listen to the registry where one or more of the artifacts in your Pipeline are hosted. [Learn More](https://docs.harness.io/article/c1eskrgngf)
+        On New Artifact Triggers simply listen to the registry where one or more of the artifacts in your pipeline are hosted. [Learn More](https://docs.harness.io/article/c1eskrgngf)
 
         **Note:** If this setting is not enabled, it is because the artifact **Tag** setting is not a Runtime Input (`<+input>`).
     width: "500"
@@ -2709,14 +2708,14 @@ artifactManifestConditions:
     width: "400"
 version:
     content: |-
-        Enter the condition that must be matched in order for the Trigger to execute. 
+        Enter the condition that must be matched in order for the Trigger to execute.
 
-        You can use wildcards in the condition's value and you can select **Regex** and use regular expressions. 
+        You can use wildcards in the condition's value and you can select **Regex** and use regular expressions.
 
-        For example, if a build is todolist-v2.0: 
+        For example, if a build is todolist-v2.0:
 
-        - With Regex **not selected**, both `todolist*` or `*olist*` will match. 
-        - With Regex selected, the regex `todolist-v\d.\d` will match. 
+        - With Regex **not selected**, both `todolist*` or `*olist*` will match.
+        - With Regex selected, the regex `todolist-v\d.\d` will match.
 
         The same Regex and wildcard formatting applies to manifests, artifacts, or whatever Trigger type you are creating.
 
@@ -2724,9 +2723,9 @@ version:
     width: "400"
 pipelineInputLabel:
     content: |-
-        If some of your Pipeline settings use [Runtime Inputs](https://docs.harness.io/article/f6yobn7iq0), you can provide the values for those settings here and they will be used when this Trigger executes.
+        If some of your pipeline settings use [Runtime Inputs](https://docs.harness.io/article/f6yobn7iq0), you can provide the values for those settings here and they will be used when this Trigger executes.
 
-        If your Pipeline uses [Input Sets](https://docs.harness.io/article/3fqwa8et3d), you can select the Input Set to use when the Trigger executes the Pipeline.
+        If your pipeline uses [Input Sets](https://docs.harness.io/article/3fqwa8et3d), you can select the Input Set to use when the Trigger executes the pipeline.
 
         [Learn more about different Trigger types](https://docs.harness.io/category/oya6qhmmaw-trigger-category)
 
@@ -2734,9 +2733,9 @@ pipelineInputLabel:
     width: "400"
 triggerConfigurationLabel:
     content: |-
-        You can trigger Pipelines in response to Git events automatically.
+        You can trigger pipelines in response to Git events automatically.
 
-        For example, when a pull request or push event occurs on a Git repo, a CI or CD Pipeline can execute. [Learn More](https://docs.harness.io/article/hndnde8usz)
+        For example, when a pull request or push event occurs on a Git repo, a CI or CD pipeline can execute. [Learn More](https://docs.harness.io/article/hndnde8usz)
     width: "400"
 wizardForm_webhook_identifier:
     content: |-
@@ -2821,14 +2820,14 @@ payloadConditions:
 
         To reference payload values, you use `<+eventPayload.` followed by the path to the key name. For example, `<+eventPayload.repository.name>`.
 
-        **Notes:** 
+        **Notes:**
         - Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
         - If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty.
 
         [Learn More](https://docs.harness.io/article/rset0jry8q)
     width: "600"
 wizardForm_scheduled_name:
-    content: Enter a name for this Trigger. The name will identify the Trigger on the Deployments page and this Pipeline's Execution History page so you can see which Trigger executed the Pipeline.
+    content: Enter a name for this Trigger. The name will identify the Trigger on the Deployments page and this pipeline's Execution History page so you can see which Trigger executed the pipeline.
     width: "400"
 triggerOverview_description:
     content: Enter a description for this Trigger that tells other Project members when this Trigger is used.
@@ -2936,7 +2935,7 @@ ciBuildInfra_serviceAccountName:
     content: Specify a Kubernetes service account for step containers to use when communicating with the Kubernetes API server. Leave blank to use the namespace's default service account. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/set-up-build-infrastructure/ci-stage-settings#infrastructure)
     width: "400"
 ciRunStep_timeout:
-    content: The default **Timeout** limit for the step is **10 hours**. The Step fails when the Timeout is reached, and the Pipeline execution continues.
+    content: The default **Timeout** limit for the step is 10 hours. The step fails when the timeout is reached, and the pipeline execution continues.
     width: "400"
 limitMemory:
     content: Maximum memory that the container can use. You can specify an integer or fixed-point value with the suffix G, M, Gi, or Mi. Do not include spaces when entering a fixed value. Default is **500Mi**.
@@ -2945,7 +2944,7 @@ limitCPULabel:
     content: Maximum number of cores that the container can use. CPU resource limits are measured in CPU units. You can specify a fraction as well. 0.1 is equivalent to 100m, or 100 millicpu. Do not include spaces when entering a fixed value. Default is **400m**.
     width: "400"
 ciRunTests_timeout:
-    content: The default **Timeout** for the CI step is **10 minutes**. The Step fails when the Timeout is reached, and the Pipeline execution continues.
+    content: The default **Timeout** for the CI step is 10 minutes. The step fails when the timeout is reached, and the pipeline execution continues.
     width: "400"
 addEditStageCustomVariableForm_name:
     content: |-
@@ -3110,7 +3109,7 @@ helmWithS3_chartName:
     content: |-
         Enter the name of the Helm chart for Harness to pull. Don't include the chart version. You will add that in the **Chart Version** setting. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
-        If you want to provide the chart name later, you have the following options: 
+        If you want to provide the chart name later, you have the following options:
 
         - Configure this setting as a [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) and provide the name at runtime.
         - Configure this setting as a Runtime Input and use [Input Sets](https://docs.harness.io/article/3fqwa8et3d) to provide the chart name.
@@ -3118,20 +3117,20 @@ helmWithS3_chartName:
     width: "400"
 helmWithS3_chartVersion:
     content: |-
-        Enter the version of the chart you want to deploy. This is found in the Chart.yaml `version` label in your chart. 
+        Enter the version of the chart you want to deploy. This is found in the Chart.yaml `version` label in your chart.
 
         You can list all available versions of a chart using the `search repo` command with the `--versions` option. See [helm search repo](https://helm.sh/docs/helm/helm_search_repo) from Helm.
 
         If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
-        If you are going to use a Harness Trigger to run this Pipeline when a new version is added to your chart repo, select the [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
+        If you are going to use a Harness Trigger to run this pipeline when a new version is added to your chart repo, select the [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
     width: "400"
 helmWithS3_helmVersion:
     content: Select the version of Helm used in your chart. See [Helm Version Support Policy](https://helm.sh/docs/topics/version_skew/) from Helm.
     width: "400"
 helmWithS3_skipResourceVersioning:
     content: |-
-        By default, Harness versions ConfigMaps and Secrets deployed into Kubernetes clusters. 
+        By default, Harness versions ConfigMaps and Secrets deployed into Kubernetes clusters.
 
         In some cases, such as when using public manifests or Helm charts, you cannot add the annotation.
 
@@ -3171,7 +3170,7 @@ helmWithGcs_chartName:
     content: |-
         Enter the name of the Helm chart for Harness to pull. Don't include the chart version. You will add that in the **Chart Version** setting. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
-        If you want to provide the chart name later, you have the following options: 
+        If you want to provide the chart name later, you have the following options:
 
         - Configure this setting as a [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) and provide the name at runtime.
         - Configure this setting as a Runtime Input and use [Input Sets](https://docs.harness.io/article/3fqwa8et3d) to provide the chart name.
@@ -3179,20 +3178,20 @@ helmWithGcs_chartName:
     width: "400"
 helmWithGcs_chartVersion:
     content: |-
-        Enter the version of the chart you want to deploy. This is found in the Chart.yaml `version` label in your chart. 
+        Enter the version of the chart you want to deploy. This is found in the Chart.yaml `version` label in your chart.
 
         You can list all available versions of a chart using the `search repo` command with the `--versions` option. See [helm search repo](https://helm.sh/docs/helm/helm_search_repo) from Helm.
 
         If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
-        If you are going to use a Harness Trigger to run this Pipeline when a new version is added to your chart repo, select the [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
+        If you are going to use a Harness Trigger to run this pipeline when a new version is added to your chart repo, select the [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
     width: "400"
 helmWithGcs_helmVersion:
     content: Select the version of Helm used in your chart. See [Helm Version Support Policy](https://helm.sh/docs/topics/version_skew/) from Helm.
     width: "400"
 helmWithGcs_skipResourceVersioning:
     content: |-
-        By default, Harness versions ConfigMaps and Secrets deployed into Kubernetes clusters. 
+        By default, Harness versions ConfigMaps and Secrets deployed into Kubernetes clusters.
 
         In some cases, such as when using public manifests or Helm charts, you cannot add the annotation.
 
@@ -3220,7 +3219,7 @@ gcrImagePath_registryHostname:
     width: "400"
 gcrImagePath_imagePath:
     content: |-
-        Enter the name of the artifact you want to deploy. 
+        Enter the name of the artifact you want to deploy.
 
         Images in repos need to reference a path starting with the project Id that the artifact is in, for example: `myproject-id/image-name`.
     width: "400"
@@ -3228,7 +3227,7 @@ gcrImagePath_tag:
     content: |-
         Enter the GCR image tag for the image.
 
-        If you use a Runtime Input, you can select the GCR image tag when you run this Pipeline. 
+        If you use a Runtime Input, you can select the GCR image tag when you run this pipeline.
     width: "400"
 ecrArtifact_identifier:
     content: Enter a name that identifies this artifact.
@@ -3238,7 +3237,7 @@ ecrArtifact_region:
     width: "400"
 ecrArtifact_imagePath:
     content: |-
-        Enter the name of the artifact you want to deploy. 
+        Enter the name of the artifact you want to deploy.
 
         Often, images in repos need to reference a path, for example: `app/myImage`.
     width: "400"
@@ -3249,8 +3248,7 @@ artifactConnForm_connectorId:
     content: |-
         Select or add a Connector to connect Harness with your cloud or registry. [Learn More](https://docs.harness.io/article/euueiiai4m)
 
-
-        CD Pipelines typically pull from registries only. CI Pipelines typically pull and push with registries.
+        CD pipelines typically pull from registries only. CI pipelines typically pull and push with registries.
     width: "400"
 ServiceNowApproval_stepName_StepConfig:
     content: Enter the name of the ServiceNow Approval step.
@@ -3274,7 +3272,7 @@ serviceNowApprovalTicketNumber:
     content: Enter the Ticket Number.
     width: "400"
 servicenowApprovalapprovalCriteria:
-    content: The Approval Criteria in the step determines if the Pipeline or stage is approved or rejected. [Learn More](https://docs.harness.io/article/h1so82u9ub-service-now-approvals)
+    content: The Approval Criteria in the step determines if the pipeline or stage is approved or rejected. [Learn More](https://docs.harness.io/article/h1so82u9ub-service-now-approvals)
     width: "400"
 ceGcpBillingExport_datasetId:
     content: Enter the dataset name. From the GCP console, copy the dataset name where the billing export is available. [Learn More](https://docs.harness.io/article/kxnsritjls-set-up-cost-visibility-for-gcp#step_2_gcp_billing_export)
@@ -3351,7 +3349,7 @@ dockerHubStep_spec.tags:
     content: |-
         Specify one or more [tags](https://docs.docker.com/engine/reference/commandline/build/#tag-an-image--t) for the Docker image.
 
-        Each tag should added separately. 
+        Each tag should added separately.
 
         Click **Add** to add each tag separately.
     width: "400"
@@ -3509,12 +3507,12 @@ editPolicyForm_name:
     width: "400"
 CreatePolicySet_type:
     content: |-
-        Select the type of Harness entity to apply the policy on. For example, **Pipeline**. [Learn More](https://docs.harness.io/article/1d3lmhv4jl)
+        Select the type of Harness entity to apply the policy on, such as **Pipeline**. [Learn More](https://docs.harness.io/article/1d3lmhv4jl)
 
         **New to Harness Governance?**
         Try the [Harness Governance Quickstart](https://docs.harness.io/article/jws2znftay).
 
-        **Note:** A Policy with the **Custom** entity type allows the flexibility to enforce policy evaluations during Pipeline execution with different input data. [Learn More](https://docs.harness.io/article/1d3lmhv4jl)
+        **Note:** A Policy with the **Custom** entity type allows the flexibility to enforce policy evaluations during pipeline execution with different input data. [Learn More](https://docs.harness.io/article/1d3lmhv4jl)
     width: "400"
 CreatePolicySet_event:
     content: |-
@@ -3537,14 +3535,14 @@ CreatePolicySet_name:
         **New to Harness Governance?** Try the [Harness Governance Quickstart](https://docs.harness.io/article/jws2znftay).
     width: "400"
 pipelineCreate_description:
-    content: Enter a description that tells your team members the purpose of this Pipeline.
+    content: Enter a description that tells your team members the purpose of this pipeline.
     width: "400"
 pipelineCreate_tags:
-    content: Tag this Pipeline so you can filter and search for it in Harness. [Learn More](https://docs.harness.io/article/i8t053o0sq)
+    content: Tag this pipeline so you can filter and search for it in Harness. [Learn More](https://docs.harness.io/article/i8t053o0sq)
     width: "400"
 "wizardForm_artifacts_stages[0].stage.spec.serviceConfig.serviceDefinition.spec.artifacts.primary.spec.tag":
     content: |-
-        Provide values for any Runtime inputs you have in your artifact settings. 
+        Provide values for any Runtime inputs you have in your artifact settings.
 
         The `<+trigger.artifact.build>` expression is used for **Tag** to ensure that the new artifact version that executed the Trigger is used for the deployment. [Learn More](https://docs.harness.io/article/c1eskrgngf)
     width: "400"
@@ -3813,7 +3811,7 @@ portBindings:
     width: "400"
 dependencyBase_spec.portBindings:
     content: |
-        When a Pipeline runs on an AWS build farm, some Steps might run on a bare metal VM and others run in a container. The port used to communicate with the Service Dependency depends on where the Step is running: bare-metal Steps use the Host Port and containerized Steps use the Container Port. 
+        When a pipeline runs on an AWS build farm, some Steps might run on a bare metal VM and others run in a container. The port used to communicate with the Service Dependency depends on where the Step is running: bare-metal Steps use the Host Port and containerized Steps use the Container Port. 
 
         Suppose you create a Service Dependency with the Name and Id **myloginservice**. 
         - A containerized step talks to the service using **myloginservice:_container_port_**. 
@@ -3834,8 +3832,8 @@ prCloneStrategy:
     content: |
         When a build is triggered by a pull request, this setting determines the branch to use for the artifact after the build process clones the repo.
 
-        - If **Merge Commit** (the default) is selected, the Pipeline tries to merge the Pull Request branch with the target branch before building the artifact. The artifact includes all PR and target commits, but builds can take longer and result in build failures.
-        - If **Source Branch** is selected, the Pipeline builds the artifact from the latest commit in the Pull Request branch. Builds can be faster and less likely to result in build failures, but the artifacts might not include some target-branch commits.
+        - If **Merge Commit** (the default) is selected, the pipeline tries to merge the Pull Request branch with the target branch before building the artifact. The artifact includes all PR and target commits, but builds can take longer and result in build failures.
+        - If **Source Branch** is selected, the pipeline builds the artifact from the latest commit in the Pull Request branch. Builds can be faster and less likely to result in build failures, but the artifacts might not include some target-branch commits.
 
         [Learn more](https://docs.harness.io/article/mozd8b49td)
     width: "400"
@@ -3848,7 +3846,7 @@ rightBarForm_cpuLimit:
     width: "400"
 sslVerify:
     content: |+
-        If True (the default), the Pipeline verifies your Git SSL certificates. The build fails if the certificate check fails. You should set this to False only if you have a known issue with the certificate and are willing to run your builds anyway.
+        If True (the default), the pipeline verifies your Git SSL certificates. The build fails if the certificate check fails. You should set this to False only if you have a known issue with the certificate and are willing to run your builds anyway.
         You can use self-signed certificates in your build infrastructure. [Learn more](https://docs.harness.io/article/e5qkn9atiw)
 
     width: "400"
@@ -4035,11 +4033,11 @@ tfRemoteWizardForm_spec.configuration.configFiles.store.spec.gitFetchType:
     content: |-
         Select **Latest from Branch** or **Specific Commit Id / Git Tag**. [Learn More](https://docs.harness.io/article/uznls2lvod)
 
-        When you run the Pipeline, Harness will fetch the script from the repo.
+        When you run the pipeline, Harness will fetch the script from the repo.
 
-        If you think the script might change often, you might want to use **Specific Commit Id**. 
+        If you think the script might change often, you might want to use **Specific Commit Id**.
 
-        For example, if you are going to be fetching the script multiple times in your Pipeline, Harness will fetch the script each time. If you select **Latest from Branch** and the branch changes between fetches, different scripts are run.
+        For example, if you are going to be fetching the script multiple times in your pipeline, Harness will fetch the script each time. If you select **Latest from Branch** and the branch changes between fetches, different scripts are run.
     width: "400"
 tfRemoteWizardForm_spec.configuration.configFiles.store.spec.branch:
     content: Enter the branch name.
@@ -4051,9 +4049,9 @@ tfRemoteWizardForm_spec.configuration.configFiles.store.spec.commitId:
     content: |-
         Enter the commit Id or Git tag to use.
 
-        If you think the script might change often, you might want to use a commit Id. 
+        If you think the script might change often, you might want to use a commit Id.
 
-        For example, if you are going to be fetching the script multiple times in your Pipeline, Harness will fetch the script each time. If you select **Latest from Branch** and the branch changes between fetches, different scripts are run.
+        For example, if you are going to be fetching the script multiple times in your pipeline, Harness will fetch the script each time. If you select **Latest from Branch** and the branch changes between fetches, different scripts are run.
     width: "400"
 ciEcrStep_spec.baseImageConnectorRefs:
     content: |-
@@ -4187,7 +4185,7 @@ ServerlessLambdaRB_timeout:
     width: "400"
 selectPropagatedState:
     content: |-
-        You can use the same Service across your Pipeline stages. 
+        You can use the same Service across your pipeline stages.
 
 
         In many cases, you'll want to use some of the propagated Service's settings, such as manifests, but want to override others, such as values.yaml files, artifacts, or variables. 
@@ -4197,7 +4195,7 @@ selectPropagatedState:
     width: "400"
 serverlessAwsLambda_configOverridePath:
     content: |-
-        Use this setting when your Serverless manifest is not named `serverless.yml|.yaml|.js|.json`. 
+        Use this setting when your Serverless manifest is not named `serverless.yml|.yaml|.js|.json`.
 
 
         The is the same as the `--config` option in `serverless deploy`. See [AWS - deploy](https://www.serverless.com/framework/docs/providers/aws/cli-reference/deploy) from Serverless.
@@ -4207,26 +4205,18 @@ serviceNowCreate_name:
     width: "400"
 serviceNowCreate_timeout:
     content: |-
-
-        Enter a timeout for this step. 
-
-        You can use:
+        Enter a timeout for this step. You can use:
 
         - `w`  for weeks
-
         - `d`  for days
-
         - `h`  for hours
-
         - `m`  for minutes
-
         - `s`  for seconds
-
         - `ms`  for milliseconds
 
         The maximum is `53w`.
 
-        Timeouts can be set at the Pipeline level also.
+        You can also set timeouts at the pipeline level.
     width: "400"
 serviceNowCreate_spec.connectorRef:
     content: Create or select the [ServiceNow Connector](https://docs.harness.io/article/illz8off8q-connect-to-service-now).
@@ -4335,7 +4325,7 @@ DeleteStack_stepName_ProvisionerStepConfig:
     width: "400"
 StepGroup_stepName_StepConfig:
     content: |-
-        Steps can be added to Pipelines individually or as a step group. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/step-groups)
+        Steps can be added to pipelines individually or as a step group. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/step-groups)
 
         Step groups can be run serially or in parallel.
 
@@ -4401,7 +4391,7 @@ kustomizeGit_patchesPaths:
     width: "400"
 cdOverViewTitle:
     content: |-
-        Deployments is where you build your CD Pipelines. [Learn More](https://docs.harness.io/article/cqgeblt4uh)
+        Deployments is where you build your CD pipelines. [Learn More](https://docs.harness.io/article/cqgeblt4uh)
 
         Deployments are tracked in the **Overview** dashboard and Services are tracked in the **Services** dashboard. [Learn More](https://developer.harness.io/docs/continuous-delivery/monitor-deployments/monitor-cd-deployments)
 
@@ -4412,7 +4402,7 @@ overview_WORKLOAD:
     width: "400"
 overview_FAILED_DEPLOYMENT:
     content: |-
-        View Pipeline deployment failures. [Learn More](https://developer.harness.io/docs/continuous-delivery/monitor-deployments/monitor-cd-deployments)
+        View pipeline deployment failures. [Learn More](https://developer.harness.io/docs/continuous-delivery/monitor-deployments/monitor-cd-deployments)
 
         Click on a failed execution to see its details.
     width: "400"
@@ -4426,26 +4416,40 @@ deploymentsText:
     content: |-
         View all of the deployments in this Project. [Learn More](https://developer.harness.io/docs/continuous-delivery/monitor-deployments/monitor-cd-deployments)
 
-        Click on a deployment to see its execution in detail.
+        Select a deployment to see its execution details.
 
-        Click **Run** to run a Pipeline.
+        Select **Run** to run a pipeline.
 
-        Use **Status** to view Pipelines according to their execution status.
+        Use **Status** to view pipelines according to their execution status.
 
-        Click more options (⋮) to:
-        - Edit a Pipeline.
+        Select more options (⋮) to:
+        - Edit a pipeline.
         - Pause, Abort, or Resume a paused execution.
         - Rerun a deployment.
         - Retry a failed deployment. [Learn More](https://docs.harness.io/article/z5n5llv35m)
     width: "400"
 addPipeline:
     content: |-
-        Create a new Pipeline. [Learn More](https://docs.harness.io/article/cqgeblt4uh)
+        Create a pipeline.
 
-        For quickstarts on different types of deployments, see [Quickstarts](https://docs.harness.io/category/c9j6jejsws).
+        Learn more:
+        - [CI pipelines](https://developer.harness.io/docs/continuous-integration/use-ci/prep-ci-pipeline-components/)
+        - [CD pipelines](https://developer.harness.io/docs/continuous-delivery/get-started/cd-pipeline-basics/)
+        - [Feature Flag pipelines](https://developer.harness.io/docs/feature-flags/ff-build-pipeline/build-feature-flag-pipeline/)
+        - [STO pipelines](https://developer.harness.io/docs/security-testing-orchestration/onboard-sto/sto-tutorials/)
+        - [All tutorials](https://developer.harness.io/tutorials)
     width: "400"
 pipelinesPageHeading:
-    content: A CD Pipeline is a series of Stages where each Stage deploys a Service to an Environment, performs an approval, or performs some other deployment-related operation. [Learn More](https://docs.harness.io/article/cqgeblt4uh)
+    content: |-
+        A pipeline consists of a series of stages where each stage contains steps that build, test, or deploy your code.
+
+        For example, each stage in a CD pipeline deploys a service to an environment, performs an approval, or performs some other deployment-related operation.
+
+        Learn more:
+        - [CI pipelines](https://developer.harness.io/docs/continuous-integration/use-ci/prep-ci-pipeline-components/)
+        - [CD pipelines](https://developer.harness.io/docs/continuous-delivery/get-started/cd-pipeline-basics/)
+        - [Feature Flag pipelines](https://developer.harness.io/docs/feature-flags/ff-build-pipeline/build-feature-flag-pipeline/)
+        - [STO pipelines](https://developer.harness.io/docs/security-testing-orchestration/onboard-sto/sto-tutorials/)
     width: "400"
 SecretsListViewdetails:
     content: View the different secret types.
@@ -4473,9 +4477,9 @@ ActiveUsersListViewemail:
     width: "400"
 templatesPageHeading:
     content: |-
-        Harness enables you to add Templates to create re-usable logic and Harness entities (like Steps, Stages, and Pipelines) in your Pipelines. 
+        Harness enables you to add Templates to create re-usable logic and Harness entities (like steps, stages, and pipelines) in your pipelines. 
 
-        You can link these Templates in your Pipelines or share them with your teams for improved efficiency. [Learn More](https://docs.harness.io/article/6tl8zyxeol)
+        You can link these Templates in your pipelines or share them with your teams for improved efficiency. [Learn More](https://docs.harness.io/article/6tl8zyxeol)
     width: "400"
 buildEnvironment:
     content: Select the build environment for the test.
@@ -4490,7 +4494,7 @@ CustomApproval_stepName_StepConfig:
     content: A Custom Approval step can approve or reject a stage at any point in its execution. You add a script to this step and use its results as approval and rejection criteria.
     width: "400"
 universalInputNameWithId:
-    content: When you create an entity or resource, Harness provides a unique identifier (Id) to it. You can alter the name but not the Id. [Learn More](https://developer.harness.io/docs/platform/references/renaming-entities-and-resources/)
+    content: When you create an entity or resource, Harness assigns a unique identifer to it. You can change the Id until the entity/reference is saved; once saved, the Id is locked. [Learn More](https://developer.harness.io/docs/platform/references/renaming-entities-and-resources/)
     width: "400"
 CustomApprovalForm_name:
     content: Enter a name for this step.
@@ -4519,7 +4523,7 @@ CustomApprovalForm_spec.scriptTimeout:
     content: Set how long the step should wait for the script to complete before timing out.
     width: "400"
 CustomApprovalForm_spec.outputVariables:
-    content: You can output variables from the script to be used in subsequent Pipeline steps or in this step's acceptance and rejection criteria.
+    content: You can output variables from the script to be used in subsequent pipeline steps or in this step's acceptance and rejection criteria.
     width: "400"
 approvalapprovalCriteria:
     content: |-
@@ -4576,18 +4580,18 @@ ff_flagFilters_potentiallyStaleFlags:
         Flags are marked as potentially stale if in the past 60 days:
 
         - They haven't been changed or evaluated.
-        - Their default rules or target rules haven’t been added to or updated.
-        - They haven’t been toggled on or off.
+        - Their default rules or target rules haven't been added to or updated.
+        - They haven't been toggled on or off.
     width: "400"
 Queue_stepName_StepConfig:
     content: |-
-        The Queue step controls how Harness requests your resources during a deployment. 
+        The Queue step controls how Harness requests your resources during a deployment.
 
-        You add Queue steps to multiple Pipelines and the second Pipeline/Stage execution is queued until the first Pipeline/Stage execution is completed.
+        You add Queue steps to multiple pipelines and the second pipeline/stage execution is queued until the first pipeline/Stage execution is completed.
 
-        Using the Queue step, you can prevent multiple Pipeline executions from requesting the same resources at the same time. [Learn More](https://docs.harness.io/article/5n96cc7cyo)
+        Using the Queue step, you can prevent multiple pipeline executions from requesting the same resources at the same time. [Learn More](https://docs.harness.io/article/5n96cc7cyo)
 
-        Queue steps can be used on different Pipelines or even multiple executions of the same Pipeline.
+        Queue steps can be used on different pipelines or even multiple executions of the same pipeline.
     width: "400"
 queueStep_name:
     content: Enter a name for this step. Harness will create an Id automatically. Ids are used to refer to steps and settings. [Learn More](https://docs.harness.io/article/7rsydu6iq2)
@@ -4601,18 +4605,18 @@ queueStep_timeout:
     width: "400"
 queueStep_spec.key:
     content: |-
-        Enter a unique key. This is the same key you will add to the Queue steps in other Pipelines.
+        Enter a unique key. This is the same key you will add to the Queue steps in other pipelines.
 
-        The key links Queue steps used in different Pipelines. [Learn More](https://docs.harness.io/article/5n96cc7cyo)
+        The key links Queue steps used in different pipelines. [Learn More](https://docs.harness.io/article/5n96cc7cyo)
     width: "400"
 queueStep_spec.scope:
     content: |-
         Select one of the following:
 
-        - **Pipeline:** the entire Pipeline must complete before any queued Pipelines can deploy.
-        - **Stage:** the current Stage must complete before any queued Pipelines can deploy.
+        - **Pipeline:** The entire pipeline must complete before any queued pipelines can deploy.
+        - **Stage:** The current stage must complete before any queued pipelines can deploy.
 
-        Queue steps can be used on different Pipelines or even multiple executions of the same Pipeline. [Learn More](https://docs.harness.io/article/5n96cc7cyo)
+        Queue steps can be used on different pipelines or even multiple executions of the same pipeline. [Learn More](https://docs.harness.io/article/5n96cc7cyo)
     width: "400"
 JenkinsBuild_stepName_StepConfig:
     content: |-
@@ -4652,7 +4656,7 @@ JenkinsStep_spec.captureEnvironmentVariable:
     content: If this setting is enabled then you can reference environment variables using Harness expressions. [Learn More](https://docs.harness.io/article/as4dtppasg)
     width: "400"
 et_EventList_Type:
-    content: Whether this event is an Exception, Log, HTTP Error, Timeout or Custom
+    content: Whether this event is an Exception, Log, HTTP Error, Timeout, or Custom
     width: "400"
 et_EventList_Description:
     content: Description for an event
@@ -4776,7 +4780,7 @@ azureAllowSimultaneousDeployments:
     content: |-
         By default, Harness queues deployments to the same infrastructure to avoid conflicts.
 
-        Enable this setting to allow multiple Pipelines to deploy to the same Infrastructure simultaneously. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/flow-control/controlling-deployments-with-barriers-resource-constraints-and-queue-steps)
+        Enable this setting to allow multiple pipelines to deploy to the same infrastructure simultaneously. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/flow-control/controlling-deployments-with-barriers-resource-constraints-and-queue-steps)
     width: "400"
 AzureSlotDeployment_stepName_StepConfig:
     content: The Slot Deployment step is where you select the Web App and source deployment slot for the deployment. [Learn More](https://docs.harness.io/article/muegjde97q)
@@ -4788,7 +4792,7 @@ AzureSlotDeployment-EXECUTION_timeout:
     content: |-
         Enter a minimum of 10m. The slot deployment relies on Azure and can take time.
 
-        If the step does not complete before the Timeout expires, the step or stage [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph) executes.
+        If the step does not complete before the timeout expires, the step or stage [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph) executes.
     width: "400"
 AzureSlotDeployment-EXECUTION_spec.webApp:
     content: Enter the name of the Azure Web App for deployment. [Learn More](https://docs.harness.io/article/muegjde97q)
@@ -4812,7 +4816,7 @@ AzureWebAppRollback-EXECUTION_timeout:
     content: |-
         Enter a minimum of 10m. The rollback relies on Azure and can take time.
 
-        If the step does not complete before the Timeout expires, the step or stage [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph) executes.
+        If the step does not complete before the timeout expires, the step or stage [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph) executes.
     width: "400"
 AzureTrafficShift_stepName_StepConfig:
     content: |-
@@ -4831,7 +4835,7 @@ AzureTrafficShift-EXECUTION_timeout:
     content: |-
         Enter a minimum of 10m. The traffic shift relies on Azure and can take time.
 
-        If the step does not complete before the Timeout expires, the step or stage [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph) executes.
+        If the step does not complete before the timeout expires, the step or stage [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph) executes.
     width: "400"
 AzureTrafficShift-EXECUTION_spec.traffic:
     content: |+
@@ -4859,7 +4863,7 @@ AzureWebAppSwapSlot-EXECUTION_timeout:
     content: |-
         Enter a minimum of 10m. The slot swap relies on Azure and can take time.
 
-        If the step does not complete before the Timeout expires, the step or stage [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph) executes.
+        If the step does not complete before the timeout expires, the step or stage [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph) executes.
     width: "400"
 AzureWebAppSwapSlot-EXECUTION_spec.targetSlot:
     content: |-
@@ -5388,7 +5392,7 @@ EcsRollingDeploy_stepName_StepConfig:
     width: "400"
 ecsRollingDeployStepEdit_timeout:
     content: |-
-        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph).
 
         You can use:
 
@@ -5401,11 +5405,11 @@ ecsRollingDeployStepEdit_timeout:
 
         The maximum is `53w`.
 
-        Timeouts can be set at the Pipeline level also.
+        You can also set timeouts at the pipeline level.
     width: "400"
 ecsRollingDeployStepEdit_spec.sameAsAlreadyRunningInstances:
     content: |-
-        This sets the number of desired ECS service instances for this stage to the same number as the already running instances. 
+        This sets the number of desired ECS service instances for this stage to the same number as the already running instances.
 
         Essentially, it ignores the desired count in the Service Definition of the new deployment. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
     width: "400"
@@ -5447,7 +5451,7 @@ ecsBlueGreenCreateServiceStepEdit_timeout:
 
         The maximum is `53w`.
 
-        Timeouts can be set at the Pipeline level also.
+        You can also set timeouts at the pipeline level.
     width: "400"
 ecsBlueGreenCreateServiceStepEdit_spec.loadBalancer:
     content: |-
@@ -5511,7 +5515,7 @@ ecsBlueGreenSwapTargetGroupsStepEdit_timeout:
 
         The maximum is `53w`.
 
-        Timeouts can be set at the Pipeline level also.
+        You can also set timeouts at the pipeline level.
     width: "400"
 ecsBlueGreenSwapTargetGroupsStepEdit_spec.doNotDownsizeOldService:
     content: |-
@@ -5659,7 +5663,7 @@ gitops-cluster-credentials-overview_namespaces:
     width: "400"
 cdEditStage_gitOpsEnabled:
     content: |-
-        Enable this option if you want to integrate Harness GitOps Applications with your CD pipelines. For example, [running a PR Pipeline for an ApplicatioSet](https://docs.harness.io/article/lf6a27usso).
+        Enable this option if you want to integrate Harness GitOps Applications with your CD pipelines. For example, [running a PR pipeline for an ApplicationSet](https://docs.harness.io/article/lf6a27usso).
 
         - [Harness GitOps Basics](https://docs.harness.io/article/w1vg9l1j7q)
         - [Harness GitOps Tutorial](https://docs.harness.io/article/pptv7t53i9)
@@ -5669,7 +5673,7 @@ updateReleaseRepo_name:
     width: "400"
 GitOpsUpdateReleaseRepo_stepName_StepConfig:
     content: |-
-        This step is used in a Harness GitOps PR Pipeline.
+        This step is used in a Harness GitOps PR pipeline.
 
         This step will fetch your JSON files, update them with your changes, Commit and Push, and then create the PR. [Learn More](https://docs.harness.io/article/lf6a27usso)
 
@@ -5677,7 +5681,7 @@ GitOpsUpdateReleaseRepo_stepName_StepConfig:
     width: "400"
 updateReleaseRepo_timeout:
     content: |-
-        Enter a timeout for this step. 
+        Enter a timeout for this step.
 
         You can use:
 
@@ -5690,13 +5694,13 @@ updateReleaseRepo_timeout:
 
         The maximum is `53w`.
 
-        Timeouts can be set at the Pipeline level also.
+        You can also set timeouts at the pipeline level.
     width: "400"
 updateReleaseRepo_spec.variables:
     content: |-
         You can use these variables to update key:value pairs in the config file you are deploying. [Learn More](https://docs.harness.io/article/lf6a27usso)
 
-        If there is a matching variable name in the variables of the Service or Environment used in this Pipeline, the variable entered in this step will override it.
+        If there is a matching variable name in the variables of the service or environment used in this pipeline, the variable entered in this step will override it.
     width: "400"
 MergePR_stepName_StepConfig:
     content: This step merges the new PR created by the preceding Update Release Repo step. [Learn More](https://docs.harness.io/article/lf6a27usso)
@@ -5706,7 +5710,7 @@ mergepr_name:
     width: "400"
 mergepr_timeout:
     content: |-
-        Enter a timeout for this step. 
+        Enter a timeout for this step.
 
         You can use:
 
@@ -5719,7 +5723,7 @@ mergepr_timeout:
 
         The maximum is `53w`.
 
-        Timeouts can be set at the Pipeline level also.
+        You can also set timeouts at the pipeline level.
     width: "400"
 mergepr_spec.deleteSourceBranch:
     content: Enable this setting to delete the source branch created by the PR in the preceding Update Release Repo step. [Learn More](https://docs.harness.io/article/lf6a27usso)
@@ -5783,7 +5787,7 @@ ecsCanaryDeleteStepForm_timeout:
 
         The maximum is `53w`.
 
-        Timeouts can be set at the Pipeline level also.
+        You can also set timeouts at the pipeline level.
     width: "400"
 ecsBlueGreenRollbackStepForm_timeout:
     content: |-
@@ -5800,7 +5804,7 @@ ecsBlueGreenRollbackStepForm_timeout:
 
         The maximum is `53w`.
 
-        Timeouts can be set at the Pipeline level also.
+        You can also set timeouts at the pipeline level.
     width: "400"
 ecsBlueGreenRollbackStepForm_name:
     content: Enter a name for this step. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
@@ -5820,7 +5824,7 @@ ecsRollingRollbackStepForm_timeout:
 
         The maximum is `53w`.
 
-        Timeouts can be set at the Pipeline level also.
+        You can also set timeouts at the pipeline level.
     width: "400"
 ecsCanaryDeployStepForm_timeout:
     content: |-
@@ -5837,7 +5841,7 @@ ecsCanaryDeployStepForm_timeout:
 
         The maximum is `53w`.
 
-        Timeouts can be set at the Pipeline level also.
+        You can also set timeouts at the pipeline level.
     width: "400"
 ecsRollingRollbackStepForm_name:
     content: Enter a name for this step. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
@@ -5856,14 +5860,14 @@ cloudFormationCreateStack-EXECUTION_timeout:
 cloudFormationCreateStack-EXECUTION_spec.provisionerIdentifier:
     content: |-
         Enter a unique value in **Provisioner Identifier**. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
-                The **Provisioner Identifier** identifies the stack provisioned by this step. 
+                The **Provisioner Identifier** identifies the stack provisioned by this step.
                 You reference the **Provisioner Identifier** in other steps to refer to the provisioning done by this step.
                 The most common use of **Provisioner Identifier** is between the Create Stack, Delete Stack, and Rollback Stack steps.
                 For example, in the case of a Create Stack failure, the Rollback Stack step rolls back the provisioning from the Create Stack step using its **Provisioner Identifier**.
                 **Note:** Only one **Create Stack** step with a specific **Provisioner Identifier** can be added in the same stage. If you add multiple Create Stack steps with the same **Provisioner Identifier**, only the first Create Stack step will be successful.
                 ### Provisioner Identifier Scope
-                The Provisioner Identifier is a Project-wide setting. You can reference it across Pipelines in the same Project.
-                For this reason, it's important that all your Project members know the Provisioner Identifiers. This will prevent one member building a Pipeline from accidentally impacting the provisioning of another member's Pipeline.
+                The Provisioner Identifier is a Project-wide setting. You can reference it across pipelines in the same Project.
+                For this reason, it's important that all your Project members know the Provisioner Identifiers. This will prevent one member building a pipeline from accidentally impacting the provisioning of another member's pipeline.
     width: "500"
 cloudFormationCreateStack-EXECUTION_spec.configuration.connectorRef:
     content: |-
@@ -5919,8 +5923,8 @@ cloudFormationRollbackStack-EXECUTION_spec.configuration.provisionerIdentifier:
                 For example, in the case of a Create Stack failure, the Rollback Stack step rolls back the provisioning from the Create Stack step using its **Provisioner Identifier**.
                 **Note:** Only one **Create Stack** step with a specific **Provisioner Identifier** can be added in the same stage. If you add multiple Create Stack steps with the same **Provisioner Identifier**, only the first Create Stack step will be successful.
                 ### Provisioner Identifier Scope
-                The Provisioner Identifier is a Project-wide setting. You can reference it across Pipelines in the same Project.
-                For this reason, it's important that all your Project members know the Provisioner Identifiers. This will prevent one member building a Pipeline from accidentally impacting the provisioning of another member's Pipeline.
+                The Provisioner Identifier is a Project-wide setting. You can reference it across pipelines in the same Project.
+                For this reason, it's important that all your Project members know the Provisioner Identifiers. This will prevent one member building a pipeline from accidentally impacting the provisioning of another member's pipeline.
     width: "500"
 cloudFormationDeleteStack-EXECUTION_name:
     content: Enter a name for the step. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
@@ -5982,7 +5986,7 @@ ecsRunTaskStepForm_timeout:
 
         The maximum is `53w`.
 
-        Timeouts can be set at the Pipeline level also.
+        You can also set timeouts at the pipeline level.
     width: "400"
 ecsRunTaskDefinition:
     content: Add a Task Definition to run. [Learn More](https://docs.harness.io/article/vytf6s0kwc-ecs-deployment-tutorial#ecs_run_task_step)
@@ -6126,13 +6130,10 @@ serviceVariableOverride_value:
     width: "400"
 NativeHelmInfrastructureDefinitionMethod:
     content: |-
-        There are different ways to connect to your target infrastructure: 
+        There are different ways to connect to your target infrastructure:
 
-        #### Direct Connection 
-        A vendor-agnostic connection to the cluster that uses a Harness [Kubernetes Cluster Connector](https://docs.harness.io/article/1gaud2efd4). The Connector uses the cluster master URL and an auth method such as a Kubernetes service account or it inherits credentials from a Harness Delegate running in your infrastructure.
-
-        #### Cloud Provider
-        A connection to the cloud platform where your cluster is hosted, such as GKE on GCP. It uses a platform [Cloud Connector](https://docs.harness.io/category/1ehb4tcksy) to connect to the cluster. The Connector uses platform-specific auth such as a GCP service account (with Kubernetes Engine Admin and Storage Object Viewer roles) or it inherits credentials from a Harness Delegate running in your infrastructure.
+        - **Direct Connection:** A vendor-agnostic connection to the cluster that uses a Harness [Kubernetes Cluster Connector](https://docs.harness.io/article/1gaud2efd4). The Connector uses the cluster master URL and an auth method such as a Kubernetes service account or it inherits credentials from a Harness Delegate running in your infrastructure.
+        - **Cloud Provider:** A connection to the cloud platform where your cluster is hosted, such as GKE on GCP. It uses a platform [Cloud Connector](https://docs.harness.io/category/1ehb4tcksy) to connect to the cluster. The Connector uses platform-specific auth such as a GCP service account (with Kubernetes Engine Admin and Storage Object Viewer roles) or it inherits credentials from a Harness Delegate running in your infrastructure.
     width: "400"
 SshInfrastructureDefinitionMethod:
     content: Select the target platform for the SSH deployment. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/traditional/ssh-ng)
@@ -6141,7 +6142,7 @@ updateInfraVariablesDT:
     content: The properties displayed here are from the Deployment Template you selected. You can override the default settings of these properties. [Learn More](https://docs.harness.io/article/6k9t49p6mn-custom-deployment-tutorial#deployment_template_infrastructure_variables)
     width: "400"
 customDeploymentAllowSimultaneousDeployments:
-    content: Enable this setting to allow multiple Pipelines to deploy to the same Infrastructure simultaneously. [Learn More](https://docs.harness.io/article/jrzwrdpvm2)
+    content: Enable this setting to allow multiple pipelines to deploy to the same infrastructure simultaneously. [Learn More](https://docs.harness.io/article/jrzwrdpvm2)
     width: "400"
 infraVariablesTitleDT:
     content: |-
@@ -6245,7 +6246,7 @@ fetchInstanceScriptForm_timeout:
 
         The maximum is `53w`.
 
-        Timeouts can be set at the Pipeline level also.
+        You can also set timeouts at the pipeline level.
     width: "400"
 multiServiceToggle:
     content: Enable this setting to deploy multiple services in this stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/advanced/multiserv-multienv/)
@@ -6297,10 +6298,10 @@ pipelineAdvancedOptions_timeout:
 
         The maximum is `53w`.
 
-        Timeouts can be set at the step level also.
+        You can also set timeouts at the step level.
     width: "400"
 stageExecution_settings:
-    content: If this Pipeline has multiple stages, select **Yes** and you can select which stage(s) you want to deploy at Pipeline runtime.
+    content: If this pipeline has multiple stages, select **Yes** and you can select which stage(s) you want to deploy at pipeline runtime.
     width: "400"
 delegateSelector:
     content: |-
@@ -6320,9 +6321,9 @@ pipelineAdvancedOptions_delegateSelectors:
     width: "450"
 runPipelineFormTitle:
     content: |-
-        Enter any required settings to run this Pipeline. For example, if you have any [Runtime Inputs](https://docs.harness.io/article/f6yobn7iq0) or [Input Sets](https://docs.harness.io/article/gfk52g74xt) in your Pipeline, you can select them here.
+        Enter any required settings to run this pipeline. For example, if you have any [Runtime Inputs](https://docs.harness.io/article/f6yobn7iq0) or [Input Sets](https://docs.harness.io/article/gfk52g74xt) in your pipeline, you can select them here.
 
-        If this Pipeline's **Advanced Options** has **Allow selective stage(s) executions?** set to **Yes**, you can select which stage(s) you want to deploy.
+        If this pipeline's **Advanced Options** has **Allow selective stage(s) executions?** set to **Yes**, you can select which stage(s) you want to deploy.
     width: "400"
 defaultSettingsForm_enable_force_delete:
     content: Select this to be able to force delete your entities if they are referenced in other Harness resources. [Learn more](https://docs.harness.io/article/amj1oz4x4k-entity-deletion-reference#force_delete)
@@ -7286,7 +7287,7 @@ acrArtifact_repository:
     content: Provide a Repository in the specified Azure Container Registry where Artifact is available
     width: "400"
 selective-stage-execution-dropdown:
-    content: To run specific stages in your Pipeline activated by  trigger, you must allow selective stage(s) execution. [Learn More](https://developer.harness.io/docs/platform/pipelines/run-specific-stage-in-pipeline/#step-1-select-stage-execution-settings)
+    content: To run specific stages in your pipeline activated by a trigger, you must allow selective stage(s) execution. [Learn More](https://developer.harness.io/docs/platform/pipelines/run-specific-stage-in-pipeline/#step-1-select-stage-execution-settings)
     width: "400"
 azureArtifactsAuthForm_azureArtifactsUrl:
     content: Enter the URL of the Azure Artifact repository where the artifacts needs to be fetched
@@ -7299,12 +7300,12 @@ inline-deployToFilteredList:
     width: "400"
 OciHelmRepoAuthenticationDetails:
     content: |-
-        Configure the Helm OCI Registry settings. 
+        Configure the Helm OCI Registry settings.
         [Learn More](https://developer.harness.io/docs/platform/connectors/artifact-repositories/connect-to-an-artifact-repo/#step-add-a-helm-3-oci-helm-registry)
     width: "400"
 OciHelmRepoUrl:
     content: |-
-        The Helm repository URL. 
+        The Helm repository URL.
 
         The following URL types are supported.
 
