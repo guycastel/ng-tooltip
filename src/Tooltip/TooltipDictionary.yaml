@@ -211,7 +211,10 @@ image:
         The image name should include the tag and will default to the latest tag if unspecified. You can use any Docker image from any Docker registry, including Docker images from private registries. [Learn More](https://docs.harness.io/article/1i1ttvftm4)
     width: "400"
 privileged:
-    content: "Run all containers with the Docker `--privileged` flag enabled. This option is disabled by default. You can override this setting in individual Run and Run Tests steps. "
+    content: |-
+        When this setting is enabled, Harness will run all containers with the Docker `--privileged` flag enabled. This option is disabled by default.
+
+        This option grants the container elevated privileges within the underlying host environment. This means that the container has access to all Linux kernel capabilities and devices, similar to running processes outside the container. It effectively removes the isolation provided by the container runtime and can potentially pose security risks if not used carefully.
     width: "400"
 optimize: Enable `--snapshotMode=redo`. This setting can reduce the time it takes to create snapshots. [Learn more](https://github.com/GoogleContainerTools/kaniko/blob/main/README.md#flag---snapshotmode)
 dockerfile: The Dockerfile name. If not provided, the Dockerfile is assumed to be in the root folder of the codebase.
@@ -3896,23 +3899,29 @@ imagePath_version:
     content: Enter your Artifact version. [Learn More](https://docs.harness.io/article/4ifq51cp0i)
     width: "400"
 serviceAccountName:
-    content: Specify a Kubernetes service account for step containers to use when communicating with the Kubernetes API server. Leave blank to use the namespace's default service account. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/set-up-build-infrastructure/ci-stage-settings#infrastructure)
-    width: "400"
+    content: Specify a Kubernetes service account for step containers to use when communicating with the Kubernetes API server. Leave blank to use the namespace's default service account.
+    width: "350"
 automountServiceAccountToken:
-    content: By default, k8s mounts a token for the Service Account when it creates a pod, which enables the pod to communicate with the k8s API server. When this option is disabled, the service account token will not get mounted.
+    content: |-
+        An application running inside a pod can access the Kubernetes API using automatically mounted service account credentials. See [Accessing the Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster) from Kubernetes to learn more.
+
+        To use a different service account, enter its name here.
     width: "400"
 priorityClassName:
     content: |-
-        The PriorityClass of the Stage pod in case resources run out on the host node.
+        The standard Kubernetes `PriorityClass`.
 
+        Enter a standard `priorityClassName` like `system-node-critical`.
 
-        Enter the name of a PriorityClass defined in your build infrastructure. You can also enter the predefined classes `system-cluster-critical` or `system-node-critical`, which ensure that the Stage is always scheduled first.
-
-
-        If you leave this field blank, the PriorityClass will be the `globalDefault` (if your infrastructure has one defined) or 0, which is lowest priority. [Learn more](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/#priorityclass)
+        If you leave this field empty, the `PriorityClass` will be the `globalDefault` (if your infrastructure has one defined) or 0, which is lowest priority. [Learn more](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/#priorityclass)
     width: "400"
 allowPrivilegeEscalation:
-    content: When enabled, a process can gain more privileges than its parent process. This setting determines whether the `no_new_privs` flag gets set on the container process.
+    content: |-
+        The standard `allowPrivilegeEscalation` property for Kubernetes `securityContext`.
+
+        When this setting in enabled, it allows the container to gain additional privileges beyond those initially granted during container startup.
+
+        This setting determines whether the `no_new_privs` flag gets set on the container process.
     width: "400"
 ciBuildInfra_addCapabilities:
     content: Set the `DefaultAddCapabilities` option in Kubernetes, which defines the list of capabilities to add to each Step by default. [Learn more](https://kubernetes.io/docs/concepts/security/pod-security-policy/#capabilities)
@@ -3924,11 +3933,14 @@ ciBuildInfra_hostNames:
     content: A list of [HostAliases](https://kubernetes.io/docs/tasks/network/customize-hosts-file-for-pods/) to set Pod-level override of hostname resolution.
     width: "400"
 runAsNonRoot:
-    content: |
-        Run all Steps as a non-root User. To specify a default User Id for all containers, set the Run as User field.
+    content: |-
+        
+        Use this setting to run the container as a non-root user.
+
+        To specify a default user Id for the container, add it in **Run as User**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
     width: "400"
 readOnlyRootFilesystem:
-    content: Run all Steps with a read-only root filesystem, with no writable layer.
+    content: Run this step with a read-only root filesystem, with no writable layer.
     width: "400"
 ciBuildInfra_volumes:
     content: A list of the volumes you want to mount onto the pod running the Stage.
@@ -7959,7 +7971,7 @@ infrastructure-modal_name:
     content: Enter a name for this infrastructure definition.
     width: "400"
 AwsLambdaInfrastructureDefinitionMethod:
-    content: Select the target infrastructure type. Some deployment types have multiple  infrastructure types you can select. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview)
+    content: Select the target infrastructure type. Some deployment types have multiple infrastructure types you can select. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview)
     width: "400"
 "deployEnvironmentEntityWidgetForm_infrastructureInputs.['Lambda'].Lambda.spec.region":
     content: Select the region where your target AWS service is running.
@@ -8029,18 +8041,189 @@ clusterCAData:
 serviceDashboardTotalServices:
     content: |
         Total Services represents all services currently defined in the system, and can be different from Active Services used for billing purposes, which accounts for current or past services, deployed actively in the last 30 days. To see Active Services, visit the Subscriptions page under Account Settings.
-    width: "400"    
+    width: "400"
 enableJITProvisioning:
-  content: |
-    Enable Just-In-Time (JIT) provisioning to add users to Harness on their first login via the configured SAML provider.
+    content: |
+        Enable Just-In-Time (JIT) provisioning to add users to Harness on their first login via the configured SAML provider.
 
-    To control who can get added to Harness on their first login, you can define the key-value that must be present in the SAML assertions.
-  width: "400"
+        To control who can get added to Harness on their first login, you can define the key-value that must be present in the SAML assertions.
+    width: "400"
 jitProvisioningKey:
-  content: |
-    Provide the key that must be present in the SAML assertion at the time of first login.
-  width: "400"
+    content: |
+        Provide the key that must be present in the SAML assertion at the time of first login.
+    width: "400"
 jitProvisioningValue:
-  content: |
-    Provide the value corresponding to the validation key that must be present in the SAML assertion at the time of first login.
-  width: "400"
+    content: |
+        Provide the value corresponding to the validation key that must be present in the SAML assertion at the time of first login.
+    width: "400"
+Container_stepName_StepConfig:
+    content: The Container step lets you run any Docker container in your Kubernetes cluster as part of your continuous deployment (CD) stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_name:
+    content: Enter a name for this Container step. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_timeout:
+    content: |
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
+ContainerStepEdit_spec.connectorRef:
+    content: |-
+        Select or create a Harness connector that connects to the Docker registry where your container is hosted.
+
+        Ensure that the user account used in the connector has permission to fetch the container. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.image:
+    content: |-
+        Enter the image and tag to use for this container, for example: `maven:3.6.3-jdk-8` or `curlimages/curl:7.73.0`. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+
+        If you are fetching the image from a provider that requires the Docker image's FQN (fully-qualified name), such as GCR or ECR, use the FQN here.
+
+        Here are some examples:
+
+        - Docker Hub: `maven:3.6.3-jdk-8`
+        - GCR: `us.gcr.io/playground-123/my-image`
+        - ECR: `40000005317.dkr.ecr.us-east-1.amazonaws.com/todolist:0.2`
+    width: "425"
+ContainerStepEdit_spec.shell:
+    content: Select the type of shell you want to run your script. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.command:
+    content: |-
+        Enter the commands you want to run in the container. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+
+        You don't need to create a Kubernetes deployment and service for the container in your script, because Harness handles Kubernetes orchestration.
+
+        You also don't need to add `docker run` to your script.
+
+        Instead, add the contents of the script you want to execute.
+    width: "400"
+ContainerStepEdit_spec.infrastructure.spec.connectorRef:
+    content: Select or create a Harness connector to connect to the cluster and namespace where you want to run the step. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.infrastructure.spec.namespace:
+    content: Enter the namespace in the cluster where you want to run the step. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.infrastructure.spec.resources.limits.memory:
+    content: The maximum memory that the container can use. You may express memory as a plain integer or as a fixed-point number using the suffixes G or M. You may also use the power-of-two equivalents Gi and Mi. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.infrastructure.spec.resources.limits.cpu:
+    content: |-
+        The maximum number of cores that the container can use. CPU limits are measured in cpu units. 
+
+        Fractional requests are allowed: you can specify one hundred millicpu as 0.1 or 100m. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.imagePullPolicy:
+    content: |-
+        Select an option to set the pull policy for the image:
+
+        - **Always:** The kubelet queries the container image registry to resolve the name to an image digest every time the kubelet launches a container. If the kubelet encounters an exact digest cached locally, it uses its cached image; otherwise, the kubelet downloads (pulls) the image with the resolved digest, and uses that image to launch the container.
+        - **If Not Present:** The image is pulled only if it is not already present locally.
+        - **Never:** The image is assumed to exist locally. No attempt is made to pull the image. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.infrastructure.spec.os:
+    content: Select the OS for the container. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.infrastructure.spec.containerSecurityContext.runAsUser:
+    content: To specify a default user Id for the container, add it in **Run as User**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.infrastructure.spec.harnessImageConnectorRef:
+    content: |
+        Add or select a connector to use instead of the default connector used for the Harness Container Image Registry. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+
+        By default, at pipeline runtime, Harness pulls certain images from public Docker Hub repos. These images are only used for backend processes. At runtime, the Harness Delegate makes an outbound connection to the public repo and pulls the images.
+
+        The Harness Container Image Registry is dedicated exclusively to Harness-supported images.
+
+        You might want to override the default behavior and download your build images from this repo instead. To view the list of images in this registry, enter the following command.
+
+        `curl -X  GET https://app.harness.io/registry/_catalog`
+    width: "500"
+ContainerStepEdit_spec.infrastructure.spec.initTimeout:
+    content: The standard Kubernetes `timeoutSeconds` for `initContainers`. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.infrastructure.spec.tolerations:
+    content: |-
+        The standard Kubernetes `tolerations`. 
+
+        Use the settings to specify that a pod can tolerate (or ignore) the effects of node taints. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.infrastructure.spec.nodeSelector:
+    content: |-
+        The standard Kubernetes `nodeSelector`.
+
+        Enter a key like `disktype` and and value like `ssd`. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.outputVariables:
+    content: |-
+        Output variables are outputs that are defined and captured after the Container step execution.
+
+        Output variables expose environment variables for use by other steps/stages of the pipeline. You may reference the output variable of a step using the step Id and the name of the variable in output variables. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.envVariables:
+    content: |-
+        Environment variables may be injected into the container and used in the script in Command. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+
+        When using these environment variables, make sure to enter a Name and Value for each variable.
+
+        You may also reference environment variables in the script by their name. For example, in Bash, this would be `$var_name` or `${var_name}`. In Windows PowerShell, the reference would be `$Env:varName`.
+    width: "400"
+ContainerStepEdit_volumes:
+    content: |-
+        This setting is the same as Kubernetes `volumeMounts`. 
+
+        Harness supports Host Path (`hostPath`), Empty Directory (`emptyDir`), and Persistent Volume Claim (`persistentVolumeClaim`). [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.infrastructure.spec.labels:
+    content: Enter any labels to apply to the pods. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.infrastructure.spec.annotations:
+    content: Enter any annotations to apply to the pods. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
+    width: "400"
+ContainerStepEdit_spec.infrastructure.spec.containerSecurityContext.capabilities.add:
+    content: |
+        The standard `add` setting for the `capabilities` property in the Kubernetes `securityContext`.
+
+        Simply add the name of the capability, like `NET_ADMIN`.
+    width: "400"
+ContainerStepEdit_spec.infrastructure.spec.containerSecurityContext.capabilities.drop:
+    content: |-
+        The standard `drop` setting for the `capabilities` property in the Kubernetes `securityContext`.
+
+        Simply add the name of the capability, like `CHOWN`.
+    width: "400"
+BambooBuild_stepName_StepConfig:
+    content: |-
+        Continuous Integration (CI) can be performed in Harness using the module and CI pipelines.
+
+        If you are using Harness CD but not Harness Continuous Integration (CI), you can still perform CI using the Bamboo step in your CD stage.
+
+        Harness integrates with Bamboo, enabling you to run Bamboo plans as part of your CD stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/builds/run-bamboo-plans-in-cd)
+    width: "400"
+BambooStep_name:
+    content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/builds/run-bamboo-plans-in-cd)
+    width: "400"
+BambooStep_spec.connectorRef:
+    content: |-
+        Select or create a Harness Bamboo connector. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/builds/run-bamboo-plans-in-cd)
+
+        Make sure the connector's user account has the following Bamboo permissions:
+
+        - View plan.
+        - Build plan (if you plan to trigger a build as part of your pipeline).
+
+        For more information, go to [Bamboo Permissions](https://confluence.atlassian.com/bamboo/bamboo-permissions-369296034.html).
+    width: "400"
+BambooStep_spec.planName:
+    content: Select the Bamboo plan to build. The list is automatically populated using the Bamboo server you set up in the Bamboo connector you selected. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/builds/run-bamboo-plans-in-cd)
+    width: "400"
+BambooStep_spec.planParameter:
+    content: |-
+        If you are using a parameterized build, when you select the plan in Plan Name, Harness will automatically populate any plan parameters from the server.
+
+        You can also add parameters manually by selecting Add Plan Parameter.
+
+        For example, let's say you have a build plan that generates a software package with a version number. Instead of hardcoding the version number in the build configuration, you can create a plan parameter called VersionNumber. This parameter can be set when running the plan with the Bamboo step, allowing you to specify the desired version dynamically. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/builds/run-bamboo-plans-in-cd)
+    width: "450"
+BambooStep_timeout:
+    content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
+    width: "400"
