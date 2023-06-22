@@ -2842,7 +2842,7 @@ cronExpression:
     content: This setting validates the Cron expression. If it is highlighted in red, it is invalid. Revise the expression to try again. [Learn More](https://docs.harness.io/article/4z9mf24m1b)
     width: "400"
 expressionBreakdown:
-    content: This is the how the Cron expression is evaluated as a schedule. [Learn More](https://docs.harness.io/article/4z9mf24m1b)
+    content: Evaluated Cron expression as schedule. [Learn More](https://docs.harness.io/article/4z9mf24m1b)
     width: "400"
 schedulePanel:
     content: |-
