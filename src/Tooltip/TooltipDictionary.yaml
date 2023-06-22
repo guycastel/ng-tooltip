@@ -8169,7 +8169,7 @@ ContainerStepEdit_spec.envVariables:
     width: "400"
 ContainerStepEdit_volumes:
     content: |-
-        This setting is the same as Kubernetes `volumeMounts`. 
+        This setting is the same as Kubernetes `volumes`. 
 
         Harness supports Host Path (`hostPath`), Empty Directory (`emptyDir`), and Persistent Volume Claim (`persistentVolumeClaim`). [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
     width: "400"
