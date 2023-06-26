@@ -8227,3 +8227,11 @@ BambooStep_spec.planParameter:
 BambooStep_timeout:
     content: Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/).
     width: "400"
+artifactDigestTooltip:
+    content: |-
+        Set this field to use a fixed version of the container image for the service. 
+
+        When a digest is specified, the image version specified in the Service stage must match the version specified by the artifact digest. If there is no match, the pipeline fails with an exception.
+
+        You can specify the artifact digest with the expression `<+pipeline.stages.s1.spec.artifacts.primary.digest>`.
+    width: "400"
