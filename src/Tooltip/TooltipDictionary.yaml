@@ -8233,5 +8233,5 @@ artifactDigestTooltip:
 
         When a digest is specified, the image version specified in the Service stage must match the version specified by the artifact digest. If there is no match, the pipeline fails with an exception.
 
-        You can specify the artifact digest with the expression `<+pipeline.stages.s1.spec.artifacts.primary.digest>`.
+        You can specify the artifact digest with the expression `<+pipeline.stages.STAGE_NAME.spec.artifacts.primary.digest>`.
     width: "400"
