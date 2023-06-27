@@ -1710,10 +1710,14 @@ ff_targets_heading:
         The targets added in your code are discovered automatically and populated in the Harness UI.
         [Learn More](https://docs.harness.io/article/dbk9uoaid3-add-targets)
     width: "400"
+ff_flagFilters_allFlags: |-
+    This count includes all flags. It does not include archived flags.
 ff_segments_heading: |-
     The Target Groups are a collection of targets. Target Groups allow you to serve flag variations to a list of targets in bulk.
 
     [Learn More](https://docs.harness.io/article/5qz1qrugyk-add-target-groups)
+ff_flagFilters_archivedFlags: |
+    This count includes flags that have been archived in the last 30 days. These flags can be restored. Flags archived more than 30 days ago are not included in the count, and cannot be restored.
 ff_env_heading:
     content: |
         Harness Environments represent your deployment targets (QA, Prod, etc). You can add the same Environment to as many pipelines and stages as you need. [Learn More](https://docs.harness.io/article/cqgeblt4uh)
