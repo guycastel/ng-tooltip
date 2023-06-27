@@ -8233,9 +8233,7 @@ BambooStep_timeout:
     width: "400"
 artifactDigestTooltip:
     content: |-
-        Set this field to use a fixed version of the container image for the service. 
-
-        When a digest is specified, the image version specified in the Service stage must match the version specified by the artifact digest. If there is no match, the pipeline fails with an exception.
-
-        You can specify the artifact digest with the expression `<+pipeline.stages.STAGE_NAME.spec.artifacts.primary.digest>`.
+        Set this field to use a container image with a fixed digest/SHA value.
+        
+        When a digest is specified, an image must exist with the version-digest/SHA combination specified in this configuration. If the image doesn't exist, the execution fails.
     width: "400"
