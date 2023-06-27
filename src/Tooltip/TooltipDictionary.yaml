@@ -100,7 +100,7 @@ conditionalExecution:
         Examples:
 
         `<+execution.steps.echo.status> == "SUCCEEDED"`
-        `<+environment.name> != “QA”`
+        `<+env.name> != "QA"`
 
         [Learn More about JEXL](https://commons.apache.org/proper/commons-jexl/reference/syntax.html)
     width: "500"
