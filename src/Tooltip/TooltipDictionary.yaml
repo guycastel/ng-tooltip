@@ -3606,7 +3606,7 @@ samlProviderForm_clientSecret:
     content: Enter the client secret from your Azure app. [Learn more](https://docs.harness.io/article/mlpksc7s6c-single-sign-on-saml#users_in_over_150_groups)
     width: "400"
 notifications.notificationMethod:
-    content: Select the Notification Method. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select the Notification Method. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
     width: "400"
 configureSlackNotifications_webhookUrl:
     content: Enter your Slack Webhook URL. [Learn more](https://docs.harness.io/article/4bor7kyimj-notify-users-of-pipeline-events#option-slack-notifications)
