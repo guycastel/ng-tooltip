@@ -1898,34 +1898,34 @@ ciRunTests_spec.runOnlySelectedTests: This option enables Test Intelligence. If 
 ciBuildInfra_connectorRef: Select a Harness Connector for a Kubernetes cluster. A Kubernetes cluster is used as a build farm. [Learn More](https://docs.harness.io/article/ia5dwx5ya8)
 notificationsOverview_name: Enter a name for your Notification Rule. Notification Rules are used to create a notification strategy for your pipeline. [Learn More](https://docs.harness.io/article/4bor7kyimj)
 pipelineEvents_types.AllEvents:
-    content: Select this option to receive notifications for all pipeline events. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications for all pipeline events. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.PipelineStart:
-    content: Select this option to receive notifications when the pipeline execution starts. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when the pipeline execution starts. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.PipelineEnd:
-    content: Select this option to receive notifications when the pipeline execution ends. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when the pipeline execution ends. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.PipelineSuccess:
-    content: Select this option to receive notifications if the pipeline execution is successful. For CD, Harness considers a deployment successful when the deployed service reaches steady state. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications if the pipeline execution is successful. For CD, Harness considers a deployment successful when the deployed service reaches steady state. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.PipelineFailed:
-    content: Select this option to receive notifications when the pipeline execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when the pipeline execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.PipelinePaused:
-    content: Select this option to receive notifications when the pipeline execution is paused. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when the pipeline execution is paused. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.StageFailed:
-    content: Select this option to receive notifications when the Stage execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when the Stage execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.StageSuccess:
-    content: Select this option to receive notifications when each pipeline stage execution is successful. You can select the stages to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when each pipeline stage execution is successful. You can select the stages to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.StageStart:
-    content: Select this option to receive notifications when each pipeline stage execution starts. You can select the stages to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when each pipeline stage execution starts. You can select the stages to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
     width: "400"
 pipelineEvents_types.StepFailed:
-    content: Select this option to receive notifications when each pipeline step execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select this option to receive notifications when each pipeline step execution fails. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
     width: "400"
 manifestDetails_repoName: Enter the name of the repo where the files are located. [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
 manifestDetails_paths:
@@ -3606,7 +3606,7 @@ samlProviderForm_clientSecret:
     content: Enter the client secret from your Azure app. [Learn more](https://docs.harness.io/article/mlpksc7s6c-single-sign-on-saml#users_in_over_150_groups)
     width: "400"
 notifications.notificationMethod:
-    content: Select the Notification Method. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Select the Notification Method. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
     width: "400"
 configureSlackNotifications_webhookUrl:
     content: Enter your Slack Webhook URL. [Learn more](https://docs.harness.io/article/4bor7kyimj-notify-users-of-pipeline-events#option-slack-notifications)
@@ -3630,7 +3630,7 @@ configurePagerDutyNotifications_userGroups:
     content: Select user groups to send notifications.
     width: "400"
 configurePagerDutyNotifications_key:
-    content: Enter your PagerDuty Key. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
+    content: Enter your PagerDuty Key. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
     width: "400"
 k8DeleteData_spec.deleteResources.spec.resourceNames:
     content: |-
@@ -7186,7 +7186,7 @@ securityStepImageAccessId:
     width: "400"
 securityStepImageAccessToken:
     content: |
-        The access token used to log in to the container registry. In most cases this is a password or an API key. You should create a secret with your encrypted token and reference the secret using the format `<+secrets.getValue(project.container-access-id>`. [Learn more](https://developer.harness.io/docs/platform/security/add-file-secrets/)
+        The access token used to log in to the container registry. In most cases this is a password or an API key. You should create a secret with your encrypted token and reference the secret using the format `<+secrets.getValue("account.my-access-token")>`. [Learn more](https://developer.harness.io/docs/platform/Secrets/add-use-text-secrets)
     width: "400"
 securityStepLogLevel:
     content: |-
