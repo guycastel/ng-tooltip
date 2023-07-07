@@ -1710,8 +1710,7 @@ ff_targets_heading:
         The targets added in your code are discovered automatically and populated in the Harness UI.
         [Learn More](https://docs.harness.io/article/dbk9uoaid3-add-targets)
     width: "400"
-ff_flagFilters_allFlags: |-
-    This count includes all flags. It does not include archived flags.
+ff_flagFilters_allFlags: This count includes all flags. It does not include archived flags.
 ff_segments_heading: |-
     The Target Groups are a collection of targets. Target Groups allow you to serve flag variations to a list of targets in bulk.
 
@@ -8234,6 +8233,21 @@ BambooStep_timeout:
 artifactDigestTooltip:
     content: |-
         Set this field to use a container image with a fixed digest/SHA value.
-        
+
         When a digest is specified, an image must exist with the version-digest/SHA combination specified in this configuration. If the image doesn't exist, the execution fails.
+    width: "400"
+harnessFileStore_skipResourceVersioning:
+    content: |-
+        Select this option if versioning is not required. 
+
+        Versioning cannot be done when declarative rollback is enabled.
+    width: "400"
+harnessFileStore_enableDeclarativeRollback:
+    content: |+
+        Select to reapply the last successful release's manifest during rollback.
+
+        Declarative rollback uses `kubectl apply -f <prevision version of manifest>` instead of `kubectl rollout undo`. This method reduces the risk of getting in the wrong state in the subsequent deployment because the merge state is impacted by the `rollout undo` command.
+
+        [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/cd-k8s-ref/kubernetes-rollback/#declarative-rollback)
+
     width: "400"
