@@ -3606,7 +3606,7 @@ samlProviderForm_clientSecret:
     content: Enter the client secret from your Azure app. [Learn more](https://docs.harness.io/article/mlpksc7s6c-single-sign-on-saml#users_in_over_150_groups)
     width: "400"
 notifications.notificationMethod:
-    content: Select the Notification Method. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notify-users-of-pipeline-events/)
+    content: Select the Notification Method. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/notifications/notify-users-of-pipeline-events/)
     width: "400"
 configureSlackNotifications_webhookUrl:
     content: Enter your Slack Webhook URL. [Learn more](https://docs.harness.io/article/4bor7kyimj-notify-users-of-pipeline-events#option-slack-notifications)
@@ -7237,7 +7237,7 @@ securityStepAuthType:
         * API Key
     width: "400"
 securityStepAuthAccessToken:
-    content: The access token to log in to the scanner. In most cases this is a password or an API key. You should create a secret with your encrypted token and reference the secret using the format `<+secrets.getValue("account.my-access-token")>`.  [Learn more](https://developer.harness.io/docs/platform/Secrets/add-use-text-secrets)
+    content: The access token to log in to the scanner. In most cases this is a password or an API key. You should create a secret with your encrypted token and reference the secret using the format `<+secrets.getValue(project.container-access-id>`.  [Learn more](https://developer.harness.io/docs/platform/security/add-file-secrets)
     width: "400"
 securityStepToolProjectName:
     content: The name of the scan project as defined in the scanner. This is the also the target name in the Harness UI (Security Tests &gt; Test Targets).
@@ -8236,18 +8236,44 @@ artifactDigestTooltip:
 
         When a digest is specified, an image must exist with the version-digest/SHA combination specified in this configuration. If the image doesn't exist, the execution fails.
     width: "400"
-harnessFileStore_skipResourceVersioning:
+retry-pipeline:
+    content: For information on pipeline execution options, go to [Harness docs](https://developer.harness.io/docs/category/pipelines).
+    width: "250"
+consoleViewToggle:
     content: |-
-        Select this option if versioning is not required. 
+        Toggle this setting to view the pipeline execution in the visual or console view.
 
-        Versioning cannot be done when declarative rollback is enabled.
+        For steps on searching in the logs, go to [Harness docs](https://developer.harness.io/docs/platform/pipelines/searching-the-console-view/).
+
+        Use the following shortcuts to search in the logs:
+
+        - **Up** to go up or go to the next search result.
+        - **Down** to go down or go to the previous search result.
+        - **Enter** to go to the next search result.
+        - **Esc** to cancel search.
+    width: "500"
+stepDetailsTab:
+    content: |
+        The **Details** tab shows the following:
+
+        - Step execution information.
+        - Logs for the step. You can [search the logs](https://developer.harness.io/docs/platform/pipelines/searching-the-console-view/).
+
+        If the step was executed by a Harness delegate, you will see the following:
+        - Delegate selection logs. Select this link to see how Harness selected the delegate for this step.
+        - Delegate task logs. Select this button to view the tasks performed by the step.
     width: "400"
-harnessFileStore_enableDeclarativeRollback:
-    content: |+
-        Select to reapply the last successful release's manifest during rollback.
+stepInputTab:
+    content: |-
+        This tab contains all of the inputs used for the step at execution runtime. 
 
-        Declarative rollback uses `kubectl apply -f <prevision version of manifest>` instead of `kubectl rollout undo`. This method reduces the risk of getting in the wrong state in the subsequent deployment because the merge state is impacted by the `rollout undo` command.
+        Hover over any input name or value to copy a [Harness variable expression](https://developer.harness.io/docs/platform/Variables-and-Expressions/harness-variables) you can use to reference the input name or value in subsequent steps or stages.
 
-        [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/cd-k8s-ref/kubernetes-rollback/#declarative-rollback)
+        **Note:** If the step used Harness variable expressions as inputs, the tab displays the resolved expressions.
+    width: "400"
+stepOutputTab:
+    content: |-
+        This tab contains all of the outputs from the step execution.
 
+        Hover over any output name or value to copy a [Harness variable expression](https://developer.harness.io/docs/platform/Variables-and-Expressions/harness-variables) you can use to reference the output name or value in subsequent steps or stages.
     width: "400"
