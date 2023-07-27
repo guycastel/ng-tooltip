@@ -8278,109 +8278,173 @@ stepOutputTab:
         Hover over any output name or value to copy a [Harness variable expression](https://developer.harness.io/docs/platform/Variables-and-Expressions/harness-variables) you can use to reference the output name or value in subsequent steps or stages.
     width: "400"
 defineAutoStoppingRule:
-    content: |-
-        AutoStopping optimizes on-demand instances by ensuring they are only running during usage and stopped when idle, resulting in cost savings from active usage only.
+    content: AutoStopping optimizes on-demand instances by ensuring they are only running during usage and stopped when idle, resulting in cost savings from active usage only.
     width: "400"
 idleTime:
-    content: |-
-        The duration that the AutoStopping rule waits before stopping idle instances.
+    content: The duration that the AutoStopping rule waits before stopping idle instances.
     width: "400"
 resourceManagement:
-    content: |-
-        Select the cloud resources that the AutoStopping Rule should manage. When these resources remain idle for a specified Idle Time, AutoStopping automatically stops them. You can create an AutoStopping Rule for single or multiple VMs, an Auto Scaling group, or a Kubernetes Cluster. Additionally, the Advanced Configuration feature allows you to define dependencies across multiple AutoStopping Rules.
-    width: "400"    
+    content: Select the cloud resources that the AutoStopping Rule should manage. When these resources remain idle for a specified Idle Time, AutoStopping automatically stops them. You can create an AutoStopping Rule for single or multiple VMs, an Auto Scaling group, or a Kubernetes Cluster. Additionally, the Advanced Configuration feature allows you to define dependencies across multiple AutoStopping Rules.
+    width: "400"
 resourceFulfilment:
-    content: |-
-        (Optional) Additionally, AutoStopping offers an optimization with orchestrated spot instances. Spot instances provide up to 90% cheaper rates than on-demand resources, but their availability is not guaranteed and can be interrupted with short notice. However, AutoStopping includes built-in spot orchestration. It automatically provisions a new spot instance to replace any interrupted instances and falls back to on-demand if spot capacity is unavailable. AutoStopping continuously monitors the spot market and seamlessly transitions between on-demand and spot instances, maximizing cost savings while maintaining availability.
+    content: (Optional) Additionally, AutoStopping offers an optimization with orchestrated spot instances. Spot instances provide up to 90% cheaper rates than on-demand resources, but their availability is not guaranteed and can be interrupted with short notice. However, AutoStopping includes built-in spot orchestration. It automatically provisions a new spot instance to replace any interrupted instances and falls back to on-demand if spot capacity is unavailable. AutoStopping continuously monitors the spot market and seamlessly transitions between on-demand and spot instances, maximizing cost savings while maintaining availability.
     width: "400"
 setupAdvancedConfig:
-    content: |-
-        This section provides you with some advanced setup options such as dry run, scheduling the rule, defining dependencies, and hiding the progress page that appears while warming up a rule after downtime until the intended service is up and running.
+    content: This section provides you with some advanced setup options such as dry run, scheduling the rule, defining dependencies, and hiding the progress page that appears while warming up a rule after downtime until the intended service is up and running.
     width: "400"
 dryRunToggleTooltip:
-    content: |-
-        Allows you to evaluate this feature without terminating your cloud resources. You can view the potential cost savings achieved by enforcing the rule without disrupting the production environment.
+    content: Allows you to evaluate this feature without terminating your cloud resources. You can view the potential cost savings achieved by enforcing the rule without disrupting the production environment.
     width: "400"
 workloadSelection:
-    content: |-
-        Select the network protocol based on the workload type handled by the target VM. For example, if the application or service running in the VM requires a more secure connection, you must select HTTPS. If your application requires precise and error-free data delivery, then select TCP.
+    content: Select the network protocol based on the workload type handled by the target VM. For example, if the application or service running in the VM requires a more secure connection, you must select HTTPS. If your application requires precise and error-free data delivery, then select TCP.
     width: "400"
 dnsProvider:
-    content: |-
-        The DNS provider that maps your custom domain to the hostname. It is either Amazon Route 53 or a custom domain name.
+    content: The DNS provider that maps your custom domain to the hostname. It is either Amazon Route 53 or a custom domain name.
     width: "400"
 loadBalancerRegion:
-    content: |-
-        The region where your target VM or the cloud resource is hosted.
+    content: The region where your target VM or the cloud resource is hosted.
     width: "400"
 loadBalancerVpc:
-    content: |-
-        The Virtual Private Cloud (VPC) where the VM or the cloud resource is hosted.
+    content: The Virtual Private Cloud (VPC) where the VM or the cloud resource is hosted.
     width: "400"
 lbProxyRegion:
-    content: |-
-        Select the region where your target VM or the cloud resource is hosted.
+    content: Select the region where your target VM or the cloud resource is hosted.
     width: "400"
 lbProxyAPIkey:
-    content: |-
-        The Harness APIkey for authentication. Enter a valid API key generated in Harness New Generation. Choose 'No Expiration' in the Expiration dropdown list.
+    content: The Harness APIkey for authentication. Enter a valid API key generated in Harness New Generation. Choose 'No Expiration' in the Expiration dropdown list.
     width: "400"
 lbProxyFormAws_vpc:
-    content: |-
-        A logically isolated section of the virtual network environment in AWS where you can launch cloud resources like virtual machines, storage, databases, etc.
+    content: A logically isolated section of the virtual network environment in AWS where you can launch cloud resources like virtual machines, storage, databases, etc.
     width: "400"
 lbProxySecurityGroups:
-    content: |-
-        Acts as a firewall that controls the traffic allowed to and from the resources in your virtual private cloud (VPC). You can ensure that all the traffic that flows at the instance level is only through your established ports and protocols.
+    content: Acts as a firewall that controls the traffic allowed to and from the resources in your virtual private cloud (VPC). You can ensure that all the traffic that flows at the instance level is only through your established ports and protocols.
     width: "400"
 lbProxyMachineType:
-    content: |-
-        AWS instance types are grouped together into families with several subcategories in each family. Select the instance family that you want to use for the load balancer.
+    content: AWS instance types are grouped together into families with several subcategories in each family. Select the instance family that you want to use for the load balancer.
     width: "400"
 lbProxyKeyPair:
-    content: |-
-       A combination of a public key that is used to encrypt data and a private key that is used to decrypt data. Select the SSH key pair to connect to your VM.
+    content: A combination of a public key that is used to encrypt data and a private key that is used to decrypt data. Select the SSH key pair to connect to your VM.
     width: "400"
 tlsCertificateSecretId:
-    content: |-
-       AutoStopping Proxy supports PEM-encoded certificates. The TLS certificate authenticates the identity of a website or application and enables secure communication over the Internet. 
+    content: "AutoStopping Proxy supports PEM-encoded certificates. The TLS certificate authenticates the identity of a website or application and enables secure communication over the Internet. "
     width: "400"
 tlsPrivateKeySecretId:
-    content: |-
-       An Amazon Resource Name (ARN) with the format 'arn:aws:secretsmanager:[Region]:[AccountId]:secret:SecretName-6RandomCharacters'.
+    content: An Amazon Resource Name (ARN) with the format 'arn:aws:secretsmanager:[Region]:[AccountId]:secret:SecretName-6RandomCharacters'.
     width: "400"
 lbProxyStaticIp:
-    content: |-
-       Enable this field to assign an elastic IP address to make the instance publicly accessible. Update the DNS route to point to the public IP. 
+    content: "Enable this field to assign an elastic IP address to make the instance publicly accessible. Update the DNS route to point to the public IP. "
     width: "400"
 lbProxyFormAzure_resourceGroup:
-    content: |-
-        A resource group is a container that holds related resources for an Azure solution. For example, virtual machines, storage accounts, etc.
+    content: A resource group is a container that holds related resources for an Azure solution. For example, virtual machines, storage accounts, etc.
     width: "400"
 lbProxyFormAzure_virtualNetwork:
-    content: |-
-        Azure Virtual Network (VNet) is a cloud networking service provided by Microsoft Azure. It allows you to create and manage virtual private networks (VPNs) in the Azure cloud. A VNet is a logical representation of your network infrastructure in Azure, enabling you to securely connect and isolate your Azure resources.
+    content: Azure Virtual Network (VNet) is a cloud networking service provided by Microsoft Azure. It allows you to create and manage virtual private networks (VPNs) in the Azure cloud. A VNet is a logical representation of your network infrastructure in Azure, enabling you to securely connect and isolate your Azure resources.
     width: "400"
 lbProxyFormAzure_subnet:
-    content: |-
-        A range of IP addresses that you define within a VNet and is used to logically segment and isolate resources within the network.
+    content: A range of IP addresses that you define within a VNet and is used to logically segment and isolate resources within the network.
     width: "400"
 lbProxyFormGcp_zone:
-    content: |-
-        A concept that represents a specific geographical location where Google Cloud resources are hosted. Each zone is a deployment area within a region and is typically made up of one or more data centers. 
+    content: "A concept that represents a specific geographical location where Google Cloud resources are hosted. Each zone is a deployment area within a region and is typically made up of one or more data centers. "
     width: "400"
 lbProxyFormGcp_vpc:
-    content: |-
-        A virtual network that provides networking functionality for resources deployed in Google Cloud. VPCs provide logical isolation, allowing you to segregate your resources and control network access. 
+    content: "A virtual network that provides networking functionality for resources deployed in Google Cloud. VPCs provide logical isolation, allowing you to segregate your resources and control network access. "
     width: "400"
 lbProxyFormGcp_subnet_name:
-    content: |-
-        Refers to the user-defined name given to a subnet within a Virtual Private Cloud (VPC). A subnet is a subdivision of a VPC network and represents a smaller IP address range within the overall VPC IP range.
+    content: Refers to the user-defined name given to a subnet within a Virtual Private Cloud (VPC). A subnet is a subdivision of a VPC network and represents a smaller IP address range within the overall VPC IP range.
     width: "400"
-
-
-
-
-
-    
-
+chaos_tune_fault_weight:
+    content: Set the relative weight of each fault in the experiment. This is used in calculating the resilience score after running the experiment.
+    width: "400"
+chaos_tune_fault_ramptime:
+    content: Period to wait before and after injecting chaos (in seconds).
+    width: "400"
+chaos_tune_fault_duration:
+    content: Duration through which chaos is injected into the target resource (in seconds).
+    width: "400"
+chaos_tune_fault_workers:
+    content: Number of worker processes to start. Corresponds to the number of CPU cores to consume.
+    width: "400"
+chaos_tune_fault_load:
+    content: Percentage load to be exerted on a single CPU core.
+    width: "400"
+chaos_tune_fault_processids:
+    content: Comma-separated IDs of the target processes.
+    width: "400"
+chaos_tune_fault_processnames:
+    content: Comma-separated target process names.
+    width: "400"
+chaos_tune_fault_processcommand:
+    content: Command used to start the target processes. A substring match is performed to determine the target process.
+    width: "400"
+chaos_tune_fault_forcekill:
+    content: Whether or not to force kill the process for graceful killing (using the SIGKILL signal or SIGTERM signal).
+    width: "400"
+chaos_tune_fault_services:
+    content: Names of the target services.
+    width: "400"
+chaos_tune_fault_selfhealingservices:
+    content: Set to true if the service restarts on its own upon stopping it.
+    width: "400"
+chaos_tune_fault_interval:
+    content: Duration of a single iteration of chaos (in seconds). Should be less than or equal to the input for "Duration".
+    width: "400"
+chaos_tune_fault_offset:
+    content: Time offset to increment or decrement the system time. Should be provided in (+/-)[numeric-hours]h[numeric-minutes]m[numeric-seconds]s format.
+    width: "400"
+chaos_tune_fault_disablentp:
+    content: Set this to disable the NTP server.
+    width: "400"
+chaos_tune_fault_networklatency:
+    content: "Amount of latency to add to connection in milliseconds (ms). For example: 2000"
+    width: "400"
+chaos_tune_fault_networkinterface:
+    content: "The network interface to target. For example: eth0"
+    width: "400"
+chaos_tune_fault_destinationhosts:
+    content: 'List of the target hostnames or keywords. For example: ["google.com","litmuschaos.io"]'
+    width: "400"
+chaos_tune_fault_destinationips:
+    content: 'List of the target IPs. For example: ["1.1.1.1","8.8.8.8"]'
+    width: "400"
+chaos_tune_fault_packetlosspercentage:
+    content: "Percentage of packet loss. For example: 100"
+    width: "400"
+chaos_tune_fault_packetcorruptionpercentage:
+    content: "Percentage of packets to corrupt. For example: 50"
+    width: "400"
+chaos_tune_fault_packetduplicationpercentage:
+    content: Percentage of packet to duplicate. For example 50.
+    width: "400"
+chaos_tune_fault_hostnames:
+    content: "List of the target host names or keywords. For example: '[\"google.com\",\"litmuschaos.io\"]'"
+    width: "400"
+chaos_tune_fault_matchscheme:
+    content: Determines whether the DNS query has to exactly match one of the targets or can have any of the targets as substring. Enter exact or substring.
+    width: "400"
+chaos_tune_fault_dnsport:
+    content: Port of the DNS server.
+    width: "400"
+chaos_tune_fault_upstreamserver:
+    content: URL of the DNS upstream server.
+    width: "400"
+chaos_tune_fault_spoofmap:
+    content: Map of the target host names (for example, {"abc.com":"spoofabc.com"}) where the key is the host name to be spoofed and the value is the host name to redirect to.
+    width: "400"
+chaos_tune_fault_memory:
+    content: Amount of memory to be consumed.
+    width: "400"
+chaos_tune_fault_filesystemutilisation:
+    content: File size consumed during the disk I/O operations.
+    width: "400"
+chaos_tune_fault_volumemountpath:
+    content: Volume mount path used for the disk I/O operations.
+    width: "400"
+chaos_tune_fault_fillpath:
+    content: System path to fill.
+    width: "400"
+chaos_tune_fault_fillstorage:
+    content: Amount of storage to be filled.
+    width: "400"
+chaos_tune_fault_datablocksize:
+    content: Size of each data block used to fill up the disk.
+    width: "400"
