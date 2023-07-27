@@ -2273,25 +2273,25 @@ mapPrometheus_serviceInstance:
     content: Click Service Instance Identifier to retrieve host specific metrics.
     width: "400"
 wizardForm_webhook_name:
-    content: Enter a name for the Trigger. [Learn More](https://docs.harness.io/article/hndnde8usz)
+    content: Enter a name for the trigger. [Learn More](https://docs.harness.io/article/hndnde8usz)
     width: "400"
 webhookTrigger_description:
-    content: Enter a description for the Trigger. [Learn More](https://docs.harness.io/article/hndnde8usz)
+    content: Enter a description for the trigger. [Learn More](https://docs.harness.io/article/hndnde8usz)
     width: "400"
 webhookTrigger_tags:
     content: |-
-        Add tags for the Trigger. 
+        Add tags for the trigger. 
 
         [Learn More about Triggers](https://docs.harness.io/article/hndnde8usz)
 
         [Learn More about Tags](https://docs.harness.io/article/i8t053o0sq)
     width: "400"
 wizardForm_webhook_sourceRepo:
-    content: Select the Git provider used for your resources. The Git provider you select determines what Git events you can select. [Learn More](https://docs.harness.io/article/hndnde8usz)
+    content: The repository provider for your trigger. The selected provider determines which events you can select. [Learn More](https://docs.harness.io/article/hndnde8usz)
     width: "400"
 wizardForm_webhook_event:
     content: |-
-        Select the Git event type for the Webhook.
+        Select the event type for the Webhook.
 
         If the event type you select results in the **Actions** settings appearing, select the actions for the Webhook or select **Any Actions**.
          [Learn More](https://docs.harness.io/article/hndnde8usz)
@@ -2739,7 +2739,7 @@ pipelineInputLabel:
     width: "400"
 triggerConfigurationLabel:
     content: |-
-        You can trigger pipelines in response to Git events automatically.
+        You can trigger pipelines that respond automatically to events.
 
         For example, when a pull request or push event occurs on a Git repo, a CI or CD pipeline can execute. [Learn More](https://docs.harness.io/article/hndnde8usz)
     width: "400"
@@ -2752,10 +2752,10 @@ wizardForm_webhook_identifier:
         This unique Id is generated automatically using the name you entered in **Name**, but you can edit it as needed. [Learn More](https://docs.harness.io/article/li0my8tcz3)
     width: "400"
 listenOnNewWebhook:
-    content: Define the Webhook for this Trigger. The Webhook events you select determine what Git events initiate this Trigger. [Learn More](https://docs.harness.io/article/hndnde8usz)
+    content: Define the webhook for this trigger. The webhook events you select determine the events that initiate this trigger. [Learn More](https://docs.harness.io/article/hndnde8usz)
     width: "400"
 wizardForm_webhook_connectorRef:
-    content: Select or add the Harness Connector to connect Harness with your Git Provider. [Learn More](https://docs.harness.io/article/hndnde8usz)
+    content: Select or add the Harness Connector to your repository provider. [Learn More](https://docs.harness.io/article/hndnde8usz)
     width: "400"
 conditionsOptional:
     content: |
