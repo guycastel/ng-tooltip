@@ -8352,6 +8352,9 @@ lbProxyFormGcp_vpc:
 lbProxyFormGcp_subnet_name:
     content: Refers to the user-defined name given to a subnet within a Virtual Private Cloud (VPC). A subnet is a subdivision of a VPC network and represents a smaller IP address range within the overall VPC IP range.
     width: "400"
+enableCacheIntelligence:
+    content: With Cache Intelligence, Harness automatically caches common dependencies to improve build times. This is only available for Linux and Windows platforms on Harness Cloud. Custom cache paths are required to cache unsupported tools and non-default cache locations. Optionally, you can specify a custom cache key. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/caching-ci-data/cache-intelligence)
+    width: "400"
 chaos_tune_fault_weight:
     content: Set the relative weight of each fault in the experiment. This is used in calculating the resilience score after running the experiment.
     width: "400"
