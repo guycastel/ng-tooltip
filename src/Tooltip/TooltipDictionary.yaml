@@ -233,7 +233,7 @@ gcsBucket:
     content: Enter the source GCS bucket name. [Learn More](https://cloud.google.com/storage/docs/creating-buckets)
     width: "400"
 sourcePath:
-    content: Path to the artifact file/folder to upload. Harness creates the compressed file automatically.
+    content: Path to the artifact file/folder to upload.
     width: "400"
 gcsS3Target:
     content: |-
