@@ -8451,3 +8451,6 @@ chaos_tune_fault_fillstorage:
 chaos_tune_fault_datablocksize:
     content: Size of each data block used to fill up the disk.
     width: "400"
+stepGitlabAuth_apiUrl:
+    content: If necessary, you can override the default URL for API authentication.
+    width: "400"
