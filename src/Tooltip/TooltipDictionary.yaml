@@ -8454,3 +8454,6 @@ chaos_tune_fault_datablocksize:
 stepGitlabAuth_apiUrl:
     content: If necessary, you can override the default URL for API authentication.
     width: "400"
+pipelineInputStage:
+   content: CI Stage can be skipped with New Artifact/Manifest Trigger using selective stage configuration.
+   width: "400"
