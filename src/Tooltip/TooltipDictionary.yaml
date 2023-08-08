@@ -8457,3 +8457,9 @@ stepGitlabAuth_apiUrl:
 pipelineInputStage:
    content: CI Stage can be skipped with New Artifact/Manifest Trigger using selective stage configuration.
    width: "400"
+controlNodeRegexFilterInput:
+   content: RegEx to filter control (baseline) nodes by PodName.
+   width: "400"
+testNodeRegexFilterInput:
+   content: RegEx to filter test (new) nodes by PodName.
+   width: "400"
