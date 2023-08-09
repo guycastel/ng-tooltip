@@ -8455,8 +8455,14 @@ stepGitlabAuth_apiUrl:
     content: If necessary, you can override the default URL for API authentication.
     width: "400"
 pipelineInputStage:
-   content: CI Stage can be skipped with New Artifact/Manifest Trigger using selective stage configuration.
-   width: "400"
+    content: CI Stage can be skipped with New Artifact/Manifest Trigger using selective stage configuration.
+    width: "400"
+ciBuildStage_cacheIntelligencePaths:
+    content: Custom cache paths are required to cache unsupported tools and non-default cache locations. If the path is outside the `/harness` directory, you must also add it to **Shared Paths**. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/caching-ci-data/cache-intelligence)
+    width: "400"
+cacheIntelligenceKey:
+    content: By default, Harness generates a cache key from a hash of the detected build dependencies file. If you don't want to use the default cache key, you can specify a custom cache key here. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/caching-ci-data/cache-intelligence)
+    width: "400"
 controlNodeRegexFilterInput:
    content: RegEx to filter control (baseline) nodes by PodName.
    width: "400"
