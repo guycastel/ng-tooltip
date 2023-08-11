@@ -8469,3 +8469,18 @@ controlNodeRegexFilterInput:
 testNodeRegexFilterInput:
    content: RegEx to filter test (new) nodes by PodName.
    width: "400"
+RiskCategory_Errors:
+   content: Monitor the frequency of requests encountering errors, including unsuccessful or failed transactions.
+   width: "400"
+RiskCategory_Infrastructure:
+   content: Verify deployment infrastructure condition; excludes deployment node detection but focuses on deployment environment assessments.   
+   width: "400"
+RiskCategory_Performance_Throughput:
+   content: Measure successful data or request delivery rates through a specific channel.
+   width: "400"
+RiskCategory_Performance_Other:
+   content: Monitor the risk other than errors, infrastructure, throughput, and response time.
+   width: "400"
+RiskCategory_Performance_ResponseTime:
+   content: Monitor the amount of time it takes to respond to a request.
+   width: "400"
