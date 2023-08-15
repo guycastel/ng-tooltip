@@ -2755,7 +2755,7 @@ listenOnNewWebhook:
     content: Define the webhook for this trigger. The webhook events you select determine the events that initiate this trigger. [Learn More](https://docs.harness.io/article/hndnde8usz)
     width: "400"
 wizardForm_webhook_connectorRef:
-    content: Select or add the Harness Connector to your repository provider. [Learn More](https://docs.harness.io/article/hndnde8usz)
+    content: Select or add the Harness connector to your repository provider. [Learn More](https://docs.harness.io/article/hndnde8usz)
     width: "400"
 conditionsOptional:
     content: |
