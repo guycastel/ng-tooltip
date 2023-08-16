@@ -3729,10 +3729,10 @@ timeRemaining:
 SLOPerformanceTrend:
     content: "It shows you the SLO and SLI percentages, which helps you understand how often the set threshold has been breached. This enables you to analyze if the reliability of the service during a given period meets the expectations of most of the users. "
     width: "400"
-SLO:
+SLOStatusPercentage:
     content: Shows the SLO status percentage.
     width: "400"
-SLI:
+SLIStatusPercentage:
     content: Shows the SLI status percentage.
     width: "400"
 SLO_form_name:
