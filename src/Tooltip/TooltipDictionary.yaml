@@ -313,16 +313,14 @@ saveCacheS3Connector: AWS connector to use for saving the cache to S3
 stageSpecificationsSharedPaths: By default, all of a stage's steps use the same workspace to share data. If you need to share additional paths between steps, add Shared Paths.
 connectorDetailsStepFormGithub_name: Enter a name for this Connector. You will use this name to select the Connector.
 gitDetailsStepForm_url: |-
-    Enter the URL for your repo or account:
+    Enter the URL for the Git account or repository that you want to connect to.
 
-    - **Repos:** copy the URL provided by the Git provider. For example, see GitHub's [**Code** setting](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository).
-    - **Accounts:** The URL of your Git provider account, such as `https://github.com/mycompany`. In **Test Repository**, enter a repo to test the connection. 
+    - Git Repository URL: Enter the full URL for the repo.
+    - Git Account URL: Enter the URL without the repo name.
 
-    [Learn More](https://docs.harness.io/category/xyexvcc206)
+    [Learn more](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-connector-settings-reference)
 gitDetailsStepForm_validationRepo: |-
-    Enter a repo name to test the credentials. The Connector will connect to the repo to test account credentials. The repo is not linked to the Connector.
-
-    The Connector will still be created at the Account level.
+    Enter the name of a repo in your Git account that Harness can use to test the connector. Harness uses this repo path to validate the connection only.
 connectorDetailsStepFormAws_name: Enter a name for this AWS Connector. You will use the name to select this Connector in pipeline steps and settings. [Learn More](https://docs.harness.io/article/m5vkql35ca)
 stepAwsAuthForm_crossAccountAccess: |-
     Select this option if you want to use one AWS account for the connection, but you want to deploy or build in a different AWS account. 
@@ -1655,17 +1653,12 @@ githubConnectionType:
     width: "400"
 githubDetailsStepForm_url:
     content: |-
-        The GitHub URL is the URL for a Git org or repo. Ensure that it matches the **Connection Type** option you selected.
+        Enter the URL for the GitHub account or repository that you want to connect to.
 
-        - If you selected **Git Repository** in **URL Type**, enter the full URL for the repo. Examples: 
-             - `https://github.com/org-name/repo-name` (HTTP)
-             - `git@github.com:org-name/repo-name`(SSH).
+        - GitHub Repository URL: Enter the complete URL to the GitHub repository, such as `https://github.com/YOUR_ACCOUNT_NAME/YOUR_REPO_NAME.git` or `git@github.com:YOUR_ACCOUNT_NAME/YOUR_REPO_NAME.git`.
+        - GitHub Account URL: only the account-identifying portion of the GitHub URL, such as `https://github.com/YOUR_ACCOUNT_NAME/`, `https://github.com`, `git@github.com:YOUR_ACCOUNT_NAME/`, or `git@github.com`. Do not include a repo name.
 
-        - If you selected **Git Account** in **URL Type**, enter the URL without the repo name (you will provide this when you use the Connector). Examples:
-             - `https://github.com/org-name`(HTTP)
-             - `git@github.com:org-name`(SSH)
-
-        [Learn More](https://docs.harness.io/article/v9sigwjlgo)
+        [Learn More](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-hub-connector-settings-reference#details-settings)
     width: "400"
 githubDetailsStepForm_validationRepo: Enter a repo name in your GitHub account.
 githubAuthentication: |-
@@ -1752,12 +1745,12 @@ bitbucketConnectionType: |-
     If you use 2FA for your Git repo, you connect over HTTPS or SSH. HTTPS requires a personal access token.
     [Learn More](https://docs.harness.io/article/iz5tucdwyu)
 bitbucketDetailsStepForm_url: |-
-    The URL for your Git repo. Make sure that it matches the **Connection Type** option you selected.
+    Enter the URL for the Bitbucket account or repository.
 
-    - If you selected **Repository** in **URL Type**, enter the full URL for the repo.
-    - If you selected **Account** in **URL Type**, enter the URL without the repo name. When you use this Connector in a Harness setting you will be prompted to provide a repo name.
+    - Bitbucket Repository URL: Enter the complete URL to the Bitbucket repository.
+    - Bitbucket Account URL: Enter only the account-identifying portion of the Bitbucket URL, such as `https://bitbucket.org/my-bitbucket/` or `https://bitbucket.org`. Do not include any repo name or project name.
 
-    [Learn More](https://docs.harness.io/article/iz5tucdwyu)
+    [Learn more](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/bitbucket-connector-settings-reference#details-settings)
 bitbucketDetailsStepForm_validationRepo: Enter a repo in the account for the URL you provided. Harness will use this repo to test the connection. [Learn More](https://docs.harness.io/article/iz5tucdwyu)
 bitbAuthForm_username: The username for the Bitbucket account.
 bitbAuthForm_password: |-
@@ -1804,12 +1797,12 @@ gitlabConnectionType: |-
 
     [Learn More](https://docs.harness.io/article/5abnoghjgo)
 gitlabDetailsStepForm_url: |-
-    The URL for your GitLab repo. Ensure that it matches the **Connection Type** option you selected.
+    Enter the URL for the GitLab account or repository.
 
-    - If you selected **Repository** in **Type**, enter the full URL for the repo.
-    - If you selected **Account** in **Type**, enter the URL without the repo name. When you use this Connector in a Harness setting you will be prompted to provide a repo name.
+    - GitLab Repository URL: Enter the complete URL to the GitLab repository.
+    - GitLab Account URL: Enter only the account-identifying portion of the GitLab URL, such as `https://gitlab.com/YOUR_ACCOUNT_NAME/`. `https://gitlab.com` is also valid. Do not include a repo name.
 
-    [Learn More](https://docs.harness.io/article/5abnoghjgo)
+    [Learn more](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-lab-connector-settings-reference#details-settings)
 gitlabDetailsStepForm_validationRepo: Enter the repo for Harness to use to test the connection.
 stepGitlabAuth_username: |-
     Enter the GitLab account username for Harness to use. 
