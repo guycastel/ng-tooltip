@@ -139,6 +139,7 @@ vaultConfigForm_secretEngineVersion: Enter the engine version. [Learn more](http
 vaultConfigForm_renewalInterv: Enter how often Harness Delegate should reload the Vault access token. [Learn more](https://docs.harness.io/article/s65mzbyags-add-hashicorp-vault)
 vaultConfigForm_readOnly: Select to make secrets within this vault Read-Only. [Learn More](https://docs.harness.io/article/s65mzbyags)
 vaultConfigForm_default: Make this your default secrets manager.
+vaultConfigForm_enableCache: If enabled, token will be cached in Harness Delegate for the duration that is 1% less than the TTL of the token—to prevent generating new token for each request for improved performance.
 stepGithubAuthForm_enableAPIAccess: Select this option if you'll use this GitHub connector for a [trigger](https://developer.harness.io/docs/platform/triggers/triggering-pipelines/), the [Harness Git Experience](https://developer.harness.io/docs/platform/git-experience/git-experience-overview/), or authenticating with a [GitHub App](https://developer.harness.io/docs/platform/connectors/code-repositories/git-hub-app-support/).
 deployService_name: |-
     Enter a name for this Service. 
