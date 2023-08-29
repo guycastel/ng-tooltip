@@ -6836,6 +6836,26 @@ serviceNowDetailsForm_passwordRef:
 
         For an API key, use a [Harness Text Secret](https://developer.harness.io/docs/platform/Security/add-use-text-secrets). 
     width: "400"
+serviceNowDetailsForm_clientIdRef:
+    content: |-
+        Enter the client id associated with the application
+    width: "400"
+serviceNowDetailsForm_clientSecretRef:
+    content: |-
+        Enter the client secret associated with the application
+    width: "400"
+serviceNowDetailsForm_refreshTokenRef:
+    content: |-
+        Enter the refresh token associated with access token refresh
+    width: "400"
+serviceNowDetailsForm_tokenUrl:
+    content: |-
+        Enter the token url of target OIDC authentication server
+    width: "400"
+serviceNowDetailsForm_scope:
+    content: |-
+        Enter the scope of authentication server. Scope is automatically fetched for ServiceNow
+    width: "400"
 Email_stepName_StepConfig:
     content: |-
         The Email step lets you easily send emails to users and teams during a pipeline execution. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-technical-reference/cd-gen-ref-category/email_step)
