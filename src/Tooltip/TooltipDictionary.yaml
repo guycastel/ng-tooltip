@@ -320,8 +320,7 @@ gitDetailsStepForm_url: |-
     - Git Account URL: Enter the URL without the repo name.
 
     [Learn more](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-connector-settings-reference)
-gitDetailsStepForm_validationRepo: |-
-    Enter the name of a repo in your Git account that Harness can use to test the connector. Harness uses this repo path to validate the connection only.
+gitDetailsStepForm_validationRepo: Enter the name of a repository in your Git account that Harness can use to test the connector. Harness uses this repository path to validate the connection only.
 connectorDetailsStepFormAws_name: Enter a name for this AWS Connector. You will use the name to select this Connector in pipeline steps and settings. [Learn More](https://docs.harness.io/article/m5vkql35ca)
 stepAwsAuthForm_crossAccountAccess: |-
     Select this option if you want to use one AWS account for the connection, but you want to deploy or build in a different AWS account. 
@@ -6837,24 +6836,19 @@ serviceNowDetailsForm_passwordRef:
         For an API key, use a [Harness Text Secret](https://developer.harness.io/docs/platform/Security/add-use-text-secrets). 
     width: "400"
 serviceNowDetailsForm_clientIdRef:
-    content: |-
-        Enter the client id associated with the application
+    content: Enter the client id associated with the application
     width: "400"
 serviceNowDetailsForm_clientSecretRef:
-    content: |-
-        Enter the client secret associated with the application
+    content: Enter the client secret associated with the application
     width: "400"
 serviceNowDetailsForm_refreshTokenRef:
-    content: |-
-        Enter the refresh token associated with access token refresh
+    content: Enter the refresh token associated with access token refresh
     width: "400"
 serviceNowDetailsForm_tokenUrl:
-    content: |-
-        Enter the token url of target OIDC authentication server
+    content: Enter the token url of target OIDC authentication server
     width: "400"
 serviceNowDetailsForm_scope:
-    content: |-
-        Enter the scope of authentication server. Scope is automatically fetched for ServiceNow
+    content: Enter the scope of authentication server. Scope is automatically fetched for ServiceNow
     width: "400"
 Email_stepName_StepConfig:
     content: |-
@@ -8478,23 +8472,26 @@ cacheIntelligenceKey:
     content: By default, Harness generates a cache key from a hash of the detected build dependencies file. If you don't want to use the default cache key, you can specify a custom cache key here. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/caching-ci-data/cache-intelligence)
     width: "400"
 controlNodeRegexFilterInput:
-   content: RegEx to filter control (baseline) nodes by PodName.
-   width: "400"
+    content: RegEx to filter control (baseline) nodes by PodName.
+    width: "400"
 testNodeRegexFilterInput:
-   content: RegEx to filter test (new) nodes by PodName.
-   width: "400"
+    content: RegEx to filter test (new) nodes by PodName.
+    width: "400"
 RiskCategory_Errors:
-   content: Monitor the frequency of requests encountering errors, including unsuccessful or failed transactions.
-   width: "400"
+    content: Monitor the frequency of requests encountering errors, including unsuccessful or failed transactions.
+    width: "400"
 RiskCategory_Infrastructure:
-   content: Verify deployment infrastructure condition; excludes deployment node detection but focuses on deployment environment assessments.   
-   width: "400"
+    content: Verify deployment infrastructure condition; excludes deployment node detection but focuses on deployment environment assessments.
+    width: "400"
 RiskCategory_Performance_Throughput:
-   content: Measure successful data or request delivery rates through a specific channel.
-   width: "400"
+    content: Measure successful data or request delivery rates through a specific channel.
+    width: "400"
 RiskCategory_Performance_Other:
-   content: Monitor the risk other than errors, infrastructure, throughput, and response time.
-   width: "400"
+    content: Monitor the risk other than errors, infrastructure, throughput, and response time.
+    width: "400"
 RiskCategory_Performance_ResponseTime:
-   content: Monitor the amount of time it takes to respond to a request.
-   width: "400"
+    content: Monitor the amount of time it takes to respond to a request.
+    width: "400"
+pipeline-InlineRemoteSelect-label:
+    content: Select whether to set up an **Inline** or a **Remote** pipeline. [Learn More](https://developer.harness.io/docs/platform/git-experience/git-experience-overview/)
+    width: "400"
