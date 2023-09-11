@@ -8495,3 +8495,4 @@ RiskCategory_Performance_ResponseTime:
 pipeline-InlineRemoteSelect-label:
     content: Select whether to set up an **Inline** or a **Remote** pipeline. [Learn More](https://developer.harness.io/docs/platform/git-experience/git-experience-overview/)
     width: "400"
+allowPublicResources: Resources marked "public" will be accessible without logging-in. Anyone (not necessarily from your account) will be able to access such resources.
