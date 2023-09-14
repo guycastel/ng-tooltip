@@ -2085,9 +2085,8 @@ userGroupForm_name: |-
 
     Harness User Groups help you manage User access. [Learn More](https://docs.harness.io/article/dfwuvmy33m)
 userGroupForm_userList: |-
-    Select the Users for this User Group. 
-
-    Each User in a User Group inherits the roles assigned to that group. [Learn More](https://docs.harness.io/article/dfwuvmy33m)
+    Add users to this User Group by selecting the users or adding their email address in the field below. 
+    Each user in a User Group inherits the roles assigned to that group. [Learn More](https://docs.harness.io/article/dfwuvmy33m)
 serviceAccountForm_name: Admin Users of an account can create a Service Account with specific Role Bindings. [Learn More](https://docs.harness.io/article/e5p4hdq6bd)
 resourceGroupModalForm_name: A Resource Group is a set of Harness resources that a User or User Group can access. [Learn More](https://docs.harness.io/article/yp4xj36xro)
 createDashboardForm_folderId: Select the dashboard folder for this dashboard. [Learn More](https://docs.harness.io/article/ardf4nbvcy)
