@@ -462,7 +462,7 @@ terraformRollback_spec.provisionerIdentifier: |-
     [Learn More](https://docs.harness.io/article/jgi6d73noy)
 shellScriptForm_name: Enter a name for this step.
 shellScriptForm_spec.shell:
-    content: Select the shell type of you script. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
+    content: Select the shell type of you script. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
     width: "400"
 k8BgSwap_name: Enter a name for this step. [Learn More](https://docs.harness.io/article/mog5tnk5pi)
 k8BG_name: Enter a name for this step.
@@ -598,7 +598,7 @@ shellScriptForm_spec.source.spec.script:
         You must use quotes around the value because environment variables are Strings.
 
         You can use Harness [variable expressions](https://developer.harness.io/docs/platform/variables-and-expressions/harness-variables/) in your script and its comments. Harness will attempt to evaluate and render the variable expressions at runtime. Do not use variable expressions that Harness cannot evaluate at this point in the Execution.
-        [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
+        [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
     width: "400"
 Http_stepName: The HTTP step can run HTTP methods containing URLs, methods, headers, and variables. You can add assertions that use the response from the HTTP method.
 httpWidget_name: Enter a name for this step. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
@@ -1466,7 +1466,7 @@ K8sBGSwapServices_stepName_StepConfig: |-
     The **K8s Blue Green Swap Services** step swaps the primary service to the pod set running the new app and the stage service to the pod set running the previous app version. [Learn More](https://docs.harness.io/article/mog5tnk5pi)
 ShellScript_stepName_StepConfig:
     content: |
-        You can run shell scripts in a CD stage using the **Shell Script** step. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
+        You can run shell scripts in a CD stage using the **Shell Script** step. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
 
         With the **Shell Script** step, you can execute scripts in the shell session of the stage in the following ways:
 
@@ -7943,7 +7943,7 @@ artifactoryArtifact_identifier:
     width: "400"
 shellScriptInputVariable_Bash:
     content: |-
-        In addition to declaring variables in your script, you can use **Input Variables** to identify and manage your script inputs across stages or to template your script by using expressions for variable values. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
+        In addition to declaring variables in your script, you can use **Input Variables** to identify and manage your script inputs across stages or to template your script by using expressions for variable values. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
 
         Declare the variable using **Name** and **Value**. 
 
@@ -7953,7 +7953,7 @@ shellScriptInputVariable_Bash:
     width: "400"
 shellScriptOutputVariable_Bash:
     content: |-
-        The output from variables you declare in your script cannot be used outside the script unless you use **Output Variables**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
+        The output from variables you declare in your script cannot be used outside the script unless you use **Output Variables**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
 
         Use **Output Variables** to export variables from the script to other steps in the stage.
 
@@ -7961,7 +7961,7 @@ shellScriptOutputVariable_Bash:
     width: "400"
 shellScriptOutputVariable_PowerShell:
     content: |-
-        The output from variables you declare in your script cannot be used outside the script unless you use **Output Variables**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
+        The output from variables you declare in your script cannot be used outside the script unless you use **Output Variables**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
 
         Use **Output Variables** to export variables from the script to other steps in the stage.
 
@@ -7969,7 +7969,7 @@ shellScriptOutputVariable_PowerShell:
     width: "400"
 shellScriptInputVariable_PowerShell:
     content: |-
-        In addition to declaring variables in your script, you can use **Input Variables** to identify and manage your script inputs across stages or to template your script by using expressions for variable values. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-shell-scripts/)
+        In addition to declaring variables in your script, you can use **Input Variables** to identify and manage your script inputs across stages or to template your script by using expressions for variable values. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
 
         Declare the variable using **Name** and **Value**. 
 
@@ -8508,4 +8508,35 @@ selectBackOffStrategyType:
         - **Full Jitter**: This strategy uses a [full jitter](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/core/retry/backoff/FullJitterBackoffStrategy.html) strategy for computing the next backoff delay.
 
         These options are part of the AWS [software.amazon.awssdk.core.retry.backoff](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/core/retry/backoff/package-summary.html) package.
+    width: "400"
+deploymentTemplateTooltip:
+    content: |
+        Deployment Templates use shell scripts to connect to target platforms, obtain target host information, and execute deployment steps. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/custom-deployment-tutorial)
+
+        You can use deployment templates with a platform that does not have first class support in Harness, such as OpenStack, WebLogic, WebSphere, etc.
+    width: "400"
+executionTargetTooltip:
+    content: |-
+        You can specify where to run the script on the **Target Host** or **On Delegate**.
+
+        - **On Delegate:** the script is executed on whichever delegate runs the step. You can use **Delegate Selector** in **Advanced** to pick the delegate(s) if needed.
+        - **Target Host:** enter the IP address or hostname of the remote host where you want to execute the script. The target host must be in the **Infrastructure Definition** selected when you defined the stage **Environment**, and the Harness delegate must have network access to the target host.
+          - You can also enter the variable `<+instance.name>` and the script will execute on whichever target host is used during deployment.
+          - You must also enter the credentials for the connection and the working directory for the script to be executed. Keep in mind that the directory path should be present on the host.
+    width: "400"
+pipelineAdvancedSteps_policySets:
+    content: |-
+        Harness provides governance using Open Policy Agent (OPA), Policy Management, and Rego policies. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/advanced/cd-governance/add-a-governance-policy-step-to-a-pipeline/)
+
+        A Policy Set is a set of rules (policies) that are evaluated together.
+
+        Policy Sets are stored to the Harness OPA server for a given entity type and event in Harness.
+
+        Policy Sets are saved at the Harness account, Organization, or Project level, and where they are saved determines the scope of the Policy Set.
+    width: "400"
+shellScriptForm_spec.source.type:
+    content: |-
+        Select **Inline** to enter your script below in **Script**, or select **Harness File Store** and select a script file.
+
+        [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
     width: "400"
