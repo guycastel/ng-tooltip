@@ -2701,6 +2701,9 @@ listenOnNewArtifactManifest:
 
         The expression `<+trigger.manifest.version>` tells Harness to obtain the chart version that initiated this Trigger and use it during deployment. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
     width: "400"
+listenNewArtifact: 
+    content: "**On New Artifact Triggers** listen to the registry where one or more of the artifacts in your pipeline are hosted. Whenever a trigger is created or updated, it takes about five to ten minutes for the polling job to start, and for the trigger to be in a working state. Harness recommends that you wait for five to ten minutes after a trigger is created or updated to push the artifact. [Learn More](https://developer.harness.io/docs/platform/triggers/trigger-on-a-new-artifact/#important-notes)"
+    width: "400"
 artifactManifestConditions:
     content: Enter a condition that must be matched in order for the Trigger to execute. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
     width: "400"
