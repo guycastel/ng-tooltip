@@ -598,7 +598,7 @@ shellScriptForm_spec.source.spec.script:
         You must use quotes around the value because environment variables are Strings.
 
         You can use Harness [variable expressions](https://developer.harness.io/docs/platform/variables-and-expressions/harness-variables/) in your script and its comments. Harness will attempt to evaluate and render the variable expressions at runtime. Do not use variable expressions that Harness cannot evaluate at this point in the Execution.
-        [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
+        [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/#add-your-script)
     width: "400"
 Http_stepName: The HTTP step can run HTTP methods containing URLs, methods, headers, and variables. You can add assertions that use the response from the HTTP method.
 httpWidget_name: Enter a name for this step. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
@@ -7946,7 +7946,7 @@ artifactoryArtifact_identifier:
     width: "400"
 shellScriptInputVariable_Bash:
     content: |-
-        In addition to declaring variables in your script, you can use **Input Variables** to identify and manage your script inputs across stages or to template your script by using expressions for variable values. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
+        In addition to declaring variables in your script, you can use **Input Variables** to identify and manage your script inputs across stages or to template your script by using expressions for variable values. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/#specify-input-variables)
 
         Declare the variable using **Name** and **Value**. 
 
@@ -7956,7 +7956,7 @@ shellScriptInputVariable_Bash:
     width: "400"
 shellScriptOutputVariable_Bash:
     content: |-
-        The output from variables you declare in your script cannot be used outside the script unless you use **Output Variables**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
+        The output from variables you declare in your script cannot be used outside the script unless you use **Output Variables**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/#specify-output-variables)
 
         Use **Output Variables** to export variables from the script to other steps in the stage.
 
@@ -7964,7 +7964,7 @@ shellScriptOutputVariable_Bash:
     width: "400"
 shellScriptOutputVariable_PowerShell:
     content: |-
-        The output from variables you declare in your script cannot be used outside the script unless you use **Output Variables**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
+        The output from variables you declare in your script cannot be used outside the script unless you use **Output Variables**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/#specify-output-variables)
 
         Use **Output Variables** to export variables from the script to other steps in the stage.
 
@@ -7972,7 +7972,7 @@ shellScriptOutputVariable_PowerShell:
     width: "400"
 shellScriptInputVariable_PowerShell:
     content: |-
-        In addition to declaring variables in your script, you can use **Input Variables** to identify and manage your script inputs across stages or to template your script by using expressions for variable values. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
+        In addition to declaring variables in your script, you can use **Input Variables** to identify and manage your script inputs across stages or to template your script by using expressions for variable values. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/#specify-input-variables)
 
         Declare the variable using **Name** and **Value**. 
 
