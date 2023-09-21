@@ -37,7 +37,7 @@ KubernetesDeploymentTypeArtifacts:
 
         ```
         image: <+artifact.image>
-        ``` 
+        ```
 
 
         At runtime, this expression resolves to the full path of the artifact, like `docker.io/bitnami/nginx:1.22.0-debian-11-r0`.
@@ -52,7 +52,7 @@ ciBuildStage_name: Enter a name for the stage. [Learn More](https://docs.harness
 dependencyBase_name: Enter a name for this Service Dependency step. [Learn More](https://docs.harness.io/article/vo4sjbd09g-configure-service-dependency-step-settings)
 ciRunStep_name: The Run step executes one or more commands on a container image. Enter a name for this Run step. [Learn More](https://docs.harness.io/article/1i1ttvftm4-run-step-settings)
 pluginStep_name: |-
-    Enter a unique name for this Plugin step. 
+    Enter a unique name for this Plugin step.
 
     Plugins are Docker containers that perform predefined tasks. Plugins are configured as steps in your stage. Plugins can be used to deploy code, publish artifacts, send notifications, and more. [Learn More](https://docs.harness.io/article/8r5c3yvb8k)
 restoreCacheS3_name: |-
@@ -142,18 +142,18 @@ vaultConfigForm_default: Make this your default secrets manager.
 vaultConfigForm_enableCache: If enabled, token will be cached in Harness Delegate for the duration that is 1% less than the TTL of the token—to prevent generating new token for each request for improved performance.
 stepGithubAuthForm_enableAPIAccess: Select this option if you'll use this GitHub connector for a [trigger](https://developer.harness.io/docs/platform/triggers/triggering-pipelines/), the [Harness Git Experience](https://developer.harness.io/docs/platform/git-experience/git-experience-overview/), or authenticating with a [GitHub App](https://developer.harness.io/docs/platform/connectors/code-repositories/git-hub-app-support/).
 deployService_name: |-
-    Enter a name for this Service. 
+    Enter a name for this Service.
 
     A Service represents your microservices, Serverless functions, and other workloads logically. A Service is a logical entity to be deployed, monitored, or changed independently. [Learn More](https://docs.harness.io/article/hv2758ro4e)
 
-    When a Service is added to the stage in a pipeline, you define its Service Definition. Service Definitions represent the real artifacts, manifests, and variables of a Service. They are the actual files and variable values. 
+    When a Service is added to the stage in a pipeline, you define its Service Definition. Service Definitions represent the real artifacts, manifests, and variables of a Service. They are the actual files and variable values.
 
     You can also propagate and override a Service in subsequent stages by selecting its name in that stage's **Service** settings. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/propagate-and-override-cd-services)
 specifyYourEnvironment:
     content: |-
         Select or create a new Environment. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview/)
 
-        Environments represent your deployment environments (QA, Prod, etc). 
+        Environments represent your deployment environments (QA, Prod, etc).
 
         Environments contain Infrastructure Definitions that list your target clusters, hosts, namespaces, etc.
 
@@ -164,7 +164,7 @@ k8InfraConnector: |-
 
     Here's a [video](https://youtu.be/wUC23lmqfnY) that walks through setting up a Kubernetes Cluster Connector.
 k8InfraNamespace: |-
-    Enter the target namespace in the target cluster. 
+    Enter the target namespace in the target cluster.
 
     The namespace must already exist during deployment. Harness will not create a new namespace using the one you entered here. [Learn More](https://docs.harness.io/article/0ud2ut4vt2)
 k8InfraReleaseName:
@@ -175,9 +175,9 @@ k8InfraReleaseName:
         The **Release name** is used by Harness for tracking releases of app versions and rollback. If you change the **Release name** value between deployments, Harness will see each release as different apps, will not track them as versions of the same app, and will not be able to perform rollback.
 
         ### Release name summary
-        During deployment Harness creates a ConfigMap listing the resources of the release and uses the **Release name** for tracking them. 
+        During deployment Harness creates a ConfigMap listing the resources of the release and uses the **Release name** for tracking them.
 
-        The **Release name** is a combination of `release-` and a unique string created using the Harness expression `<+INFRA_KEY>`. 
+        The **Release name** is a combination of `release-` and a unique string created using the Harness expression `<+INFRA_KEY>`.
 
         For example, in a Kubernetes deployment you can see `harness.io/release-name=release-2f9eadcc06e2c2225265ab3cbb1160bc5eacfd4f`.
 
@@ -304,7 +304,7 @@ runTestsLanguage:
     width: "400"
 runTestsPackages:
     content: |-
-        List of source code package prefixes separated by a comma. For example, `com.company.`, `io.company.migrations`. 
+        List of source code package prefixes separated by a comma. For example, `com.company.`, `io.company.migrations`.
 
         If you do not provide the list and leave it empty, Harness will auto-detect the package.
     width: "400"
@@ -323,7 +323,7 @@ gitDetailsStepForm_url: |-
 gitDetailsStepForm_validationRepo: Enter the name of a repository in your Git account that Harness can use to test the connector. Harness uses this repository path to validate the connection only.
 connectorDetailsStepFormAws_name: Enter a name for this AWS Connector. You will use the name to select this Connector in pipeline steps and settings. [Learn More](https://docs.harness.io/article/m5vkql35ca)
 stepAwsAuthForm_crossAccountAccess: |-
-    Select this option if you want to use one AWS account for the connection, but you want to deploy or build in a different AWS account. 
+    Select this option if you want to use one AWS account for the connection, but you want to deploy or build in a different AWS account.
 
     In this scenario, the AWS account used for AWS access in **Credentials** will assume the IAM role you specify in **Cross-account role ARN** setting.
 
@@ -417,7 +417,7 @@ k8InfraAllowSimultaneousDeployments:
     width: "400"
 infraProvisionerBase_provisionerEnabled:
     content: |-
-        Select this option to use an infrastructure provisioner to dynamically provision the target infrastructure for the deployment. 
+        Select this option to use an infrastructure provisioner to dynamically provision the target infrastructure for the deployment.
 
         - [Terraform](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/terraform-how-tos)
         - [CloudFormation](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/cloudformation-infra/cloud-formation-how-tos)
@@ -470,7 +470,7 @@ k8Apply_name: Enter a name for this step.
 k8DeleteData_name: Enter a name for this step.
 k8DeleteData_spec.deleteResources.type:
     content: |+
-        Select how you want to remove resources. 
+        Select how you want to remove resources.
 
         These can be resources Harness deployed as part of this Stage's **Service Definition**, or any resource in your target infrastructure.
 
@@ -491,7 +491,7 @@ k8RolloutDeploy_name: Enter a name for this step.
 k8CanaryDeploy_name: Enter a name for this step.
 k8Scale_name: Enter a name for this step.
 k8Scale_spec.workload: |-
-    Enter the name of the resource to scale in the format `[namespace/]Kind/Name`, with `namespace` optional. For example: 
+    Enter the name of the resource to scale in the format `[namespace/]Kind/Name`, with `namespace` optional. For example:
 
     ```
     default/Deployment/harness-example
@@ -499,7 +499,7 @@ k8Scale_spec.workload: |-
 
     You can scale a Deployment, DaemonSet, or StatefulSet.
 
-    You can only enter one resource in **Workload**. To scale another resource, add another **K8s Scale** step. 
+    You can only enter one resource in **Workload**. To scale another resource, add another **K8s Scale** step.
 
     [Learn More](https://docs.harness.io/article/jxe5z9domw)
 k8RollingRB_name: Enter a name for this step.
@@ -507,7 +507,7 @@ terraformEdit-TerraformDestroy-EXECUTION_name: Enter a name for this step.
 terraformEdit-TerraformDestroy-EXECUTION_spec.configuration.type: |-
     There are three options:
 
-    - **Inline:** Removes the provisioned resources you identify using **Provisioner Identifier** and other settings. 
+    - **Inline:** Removes the provisioned resources you identify using **Provisioner Identifier** and other settings.
 
     - **Inherit from Plan:** Removes the resources defined in the Harness **Terraform Plan** step that you identify using **Provisioner Identifier**. Similar to `terraform plan -destroy`.
 
@@ -525,7 +525,7 @@ terraformEdit-TerraformApply-EXECUTION_spec.configuration.type: |-
 
     [Learn More](https://docs.harness.io/article/hdclyshiho)
 terraformEdit-TerraformApply-EXECUTION_spec.provisionerIdentifier: |-
-    The **Provisioner Identifier** identifies the provisioning applied in this step. 
+    The **Provisioner Identifier** identifies the provisioning applied in this step.
 
     - If you selected **Inherit from Plan** in **Configuration Type**, enter the Id used by the **Terraform Plan** step for the plan you want to apply.
 
@@ -541,7 +541,7 @@ terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.command: |-
 
     [Learn More](https://docs.harness.io/article/52n3j0ci72)
 terraformPlanEditView-tfPlan-EXECUTION_spec.provisionerIdentifier: |-
-    Enter a unique string to identify the provisioning configured in this step. 
+    Enter a unique string to identify the provisioning configured in this step.
 
     You will use this **Provisioner Identifier** in additional steps to refer to the provisioning set up in this step.
 
@@ -593,7 +593,7 @@ shellScriptForm_spec.source.spec.script:
 
         ```
         export BUILD_NO="345"
-        export LANG="en-us" 
+        export LANG="en-us"
         ```
         You must use quotes around the value because environment variables are Strings.
 
@@ -650,7 +650,7 @@ httpWidget_spec.outputVariables: |-
 JiraApproval_stepName: |-
     You can use Jira issues to approve or reject a pipeline or stage at any point in its execution.
 
-    During deployment, the Jira issue you select is evaluated according to **Approval Criteria** you define in this step. 
+    During deployment, the Jira issue you select is evaluated according to **Approval Criteria** you define in this step.
 
     If the issue meets the criteria the pipeline or stage may proceed. [Learn More](https://docs.harness.io/article/2lhfk506r8)
 jiraApproval_name: Enter a name for this step.
@@ -720,7 +720,7 @@ k8BG_timeout: |-
 
     You can also set timeouts at the pipeline level.
 k8BG_spec.skipDryRun: |-
-    By default, Harness uses the `--dry-run` flag on the `kubectl apply` command, which prints the object that would be sent to the cluster without really sending it. 
+    By default, Harness uses the `--dry-run` flag on the `kubectl apply` command, which prints the object that would be sent to the cluster without really sending it.
 
     If the **Skip Dry Run** option is selected, Harness will not use the `--dry-run` flag.
 k8Apply_timeout: |-
@@ -756,7 +756,7 @@ k8Apply_spec.filePaths:
         [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/kubernetes-executions/deploy-manifests-using-apply-step)
     width: "400"
 k8Apply_spec.skipDryRun: |-
-    By default, Harness uses the `--dry-run` flag on the `kubectl apply` command, which prints the object that would be sent to the cluster without really sending it. 
+    By default, Harness uses the `--dry-run` flag on the `kubectl apply` command, which prints the object that would be sent to the cluster without really sending it.
 
     If the **Skip Dry Run** option is selected, Harness will not use the `--dry-run` flag.
 k8Apply_spec.skipSteadyStateCheck: |-
@@ -808,7 +808,7 @@ k*CanaryDelete_timeout: |-
 
     You can also set timeouts at the pipeline level.
 K8sRollingDeploy_stepName: |-
-    The **K8s Rollout Deploy** step performs a Kubernetes [rolling update strategy](https://developer.harness.io/docs/continuous-delivery/manage-deployments/deployment-concepts-deployment-concepts). 
+    The **K8s Rollout Deploy** step performs a Kubernetes [rolling update strategy](https://developer.harness.io/docs/continuous-delivery/manage-deployments/deployment-concepts-deployment-concepts).
 
     All nodes within a single environment are incrementally added one-by-one with a new service/artifact version. The rolling update uses the number of pods you specified in **Manifests** (number of replicas). [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/cd-k8s-ref/kubernetes-rollout-step)
 k8RolloutDeploy_timeout: |-
@@ -827,7 +827,7 @@ k8RolloutDeploy_timeout: |-
 
     You can also set timeouts at the pipeline level.
 k8RolloutDeploy_spec.skipDryRun: |-
-    By default, Harness uses the `--dry-run` flag on the `kubectl apply` command, which prints the object that would be sent to the cluster without really sending it. 
+    By default, Harness uses the `--dry-run` flag on the `kubectl apply` command, which prints the object that would be sent to the cluster without really sending it.
 
     If the **Skip Dry Run** option is selected, Harness will not use the `--dry-run` flag.
 K8sCanaryDeploy_stepName: The **K8s Canary Deploy** step sets how many pods are created for a Canary deployment of the files in your Service Definition **Manifests** section. [Learn More](https://docs.harness.io/article/i5p4feil89)
@@ -854,7 +854,7 @@ k8CanaryDeploy_spec.instanceSelection: |-
 
     [Learn More](https://docs.harness.io/article/i5p4feil89)
 k8CanaryDeploy_spec.skipDryRun: |-
-    By default, Harness uses the `--dry-run` flag on the `kubectl apply` command, which prints the object that would be sent to the cluster without really sending it. 
+    By default, Harness uses the `--dry-run` flag on the `kubectl apply` command, which prints the object that would be sent to the cluster without really sending it.
 
     If the **Skip Dry Run** option is selected, Harness will not use the `--dry-run` flag.
 K8sScale_stepName: The **K8s Scale** step you can scale the number of running pods up or down by count or percentage. [Learn More](https://docs.harness.io/article/jxe5z9domw)
@@ -1281,7 +1281,7 @@ terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.workspace: |-
 TerraformPlan_stepName_StepConfig: |-
     The **Terraform Plan** step runs a Terraform script as a Terraform plan. [Learn More](https://docs.harness.io/article/52n3j0ci72)
 
-    You can run the **Terraform Plan** step to provision any resource. 
+    You can run the **Terraform Plan** step to provision any resource.
 
     The [Terraform Apply](https://docs.harness.io/article/hdclyshiho) and [Terraform Destroy](https://docs.harness.io/article/j75xc704c8) steps can inherit the plan and perform their apply and destroy operations.
 terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.backendConfig.spec.content: |-
@@ -1442,7 +1442,7 @@ K8sApply_stepName_StepConfig:
         CD stages include an **K8s Apply** step that allows you to deploy any resource you have set up in the **Manifests** section. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/kubernetes-executions/deploy-manifests-using-apply-step)
     width: "400"
 K8sRollingDeploy_stepName_StepConfig: |-
-    The **K8s Rollout Deploy** step performs a rolling update strategy. 
+    The **K8s Rollout Deploy** step performs a rolling update strategy.
 
     It updates Kubernetes deployments with zero downtime by incrementally updating pod instances with new ones. New pods are scheduled on nodes using the available resources. [Learn More](https://docs.harness.io/article/xsla71qg8t)
 K8sCanaryDeploy_stepName_StepConfig: The **K8s Canary Deploy** step defines how many pods are deployed for a Canary test of the configuration files in your Service Definition **Manifests** section. [Learn More](https://docs.harness.io/article/i5p4feil89)
@@ -1617,7 +1617,7 @@ helmRepoAuthForm_username: If the charts are backed by HTTP basic authentication
 helmRepoAuthForm_password: If the charts are backed by HTTP basic authentication, you can also supply the password. See [Share your charts with others](https://helm.sh/docs/topics/chart_repository/#share-your-charts-with-others) from Helm.
 NexusConnectorDetailsTooltip: Connect Harness to your Nexus artifact repo. [Learn More](https://docs.harness.io/article/faor0dc98d)
 NexusConnectorAuthentication: |-
-    Ensure the connected user account has the following permissions in the Nexus Server. 
+    Ensure the connected user account has the following permissions in the Nexus Server.
 
     - Repo: All repositories (Read)
     - Nexus UI: Repository Browser
@@ -1643,7 +1643,7 @@ githubURLType: |-
     [Learn More](https://docs.harness.io/article/v9sigwjlgo)
 githubConnectionType:
     content: |-
-        You can select **HTTP** or **SSH** for the connection. 
+        You can select **HTTP** or **SSH** for the connection.
 
         You will need to provide the protocol-relevant URL in **URL**.
 
@@ -1666,7 +1666,7 @@ githubAuthentication: |-
 
     You can use a password/token for HTTPS credentials.
 
-    If you selected SSH as the connection protocol, you must add the SSH Key for use with the connection. 
+    If you selected SSH as the connection protocol, you must add the SSH Key for use with the connection.
 
     **Note:** Readonly GitHub repos also require username and password/token.
 
@@ -1718,7 +1718,7 @@ ff_ffVariations_heading: |-
     A Feature flag has default variations.  A boolean flag can have false set as its default off variation and true set as its default on variation. A multivariate flag could have variation 1 set as its default off variation and variation 2 set as its default on variation, with variation 3 configured to appear when a user has a certain email address
     [Learn More](https://docs.harness.io/article/8bf3us11kz)
 ff_ffPrerequisites_heading: |-
-    Prerequisites allow you to add a flag as a dependency to enable a feature. You can add any other existing flags from your environment as a prerequisite. 
+    Prerequisites allow you to add a flag as a dependency to enable a feature. You can add any other existing flags from your environment as a prerequisite.
     [Learn More](https://docs.harness.io/article/iijdahygdm)
 ff_ffDefaultRules_heading:
     content: Using default rules, you can specify to serve a specific variation.
@@ -1760,7 +1760,7 @@ bitbAuthForm_password: |-
 bitbAuthForm_enableAPIAccess: This option is required for using Git-based triggers, Webhooks management, and updating Git statuses.
 bitbAuthForm_apiAccessUsername: Enter the username connected to the personal access token.
 bitbAuthForm_accessToken: |-
-    Create or select a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) for the personal access token. 
+    Create or select a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) for the personal access token.
 
     See [Personal Access Tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) from Bitbucket.
 connectorDetailsStepFormGit_name: |-
@@ -1805,7 +1805,7 @@ gitlabDetailsStepForm_url: |-
     [Learn more](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-lab-connector-settings-reference#details-settings)
 gitlabDetailsStepForm_validationRepo: Enter the repo for Harness to use to test the connection.
 stepGitlabAuth_username: |-
-    Enter the GitLab account username for Harness to use. 
+    Enter the GitLab account username for Harness to use.
 
     Often, the username `git` will work. [Learn More](https://docs.harness.io/article/5abnoghjgo)
 stepGitlabAuth_password: |-
@@ -1817,7 +1817,7 @@ stepGitlabAuth_apiAccessToken: Create or select a Harness [Encrypted Text secret
 jiraDetailsForm_jiraUrl: |-
     Enter the base URL by which your users access your Jira applications. For example: `https://mycompany.atlassian.net`.
 
-    In Jira, the base URL is set to the same URL that Web browsers use to view your Jira instance. 
+    In Jira, the base URL is set to the same URL that Web browsers use to view your Jira instance.
 
     For details, see [Configuring the Base URL](https://confluence.atlassian.com/adminjiraserver071/configuring-the-base-url-802593107.html) from Atlassian.
 
@@ -1852,9 +1852,9 @@ awsSMConfigForm_credType: |-
 awsSMConfigForm_accessKey: Create or select a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) using the AWS Access Key Id for the IAM user you want to use for AWS Secrets Manager connections.
 awsSMConfigForm_secretKey: Create or select a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) using the contents of the Secret Key corresponding to the Access Key Id.
 awsSMConfigForm_secretNamePrefix: |-
-    Enter a prefix to be added to all secrets. 
+    Enter a prefix to be added to all secrets.
 
-    For example, `devops` will result in secrets like `devops/mysecret`. The prefix is not a folder name, but a prefix. 
+    For example, `devops` will result in secrets like `devops/mysecret`. The prefix is not a folder name, but a prefix.
 
     AWS Secrets Manager uses is a flat naming method.
 awsSMConfigForm_region: Select the AWS Region for the Secrets Manager.
@@ -1865,7 +1865,7 @@ awsSMConfigForm_externalId: |-
 
     For more information, see [How to Use an External Id When Granting Access to Your AWS Resources to a Third Party](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html) from AWS.
 awsSMConfigForm_assumeStsRoleDuration: |-
-    This is the AssumeRole Session Duration. 
+    This is the AssumeRole Session Duration.
 
     See **Session Duration** in the [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) AWS docs.
 connectorDetailsStepFormAzureKeyVault_name: Enter a name for this Azure Key Vault Connector. [Learn More](https://docs.harness.io/article/53jrd1cv4i)
@@ -1974,17 +1974,17 @@ delegateSetupStepForm_k8sConfigDetails.namespace:
 
         This centralized model is simple and efficient, but does not let you restrict deployments to specific namespaces. Any team member can deploy to any namespace.
 
-        You can instead use a distributed model that installs a delegate in a specific namespace. This technique limits the delegate to deploying into its own namespace. 
+        You can instead use a distributed model that installs a delegate in a specific namespace. This technique limits the delegate to deploying into its own namespace.
 
         When you add a Harness Kubernetes Cluster Connector to the cluster, you can use a service account in that namespace with the Cluster Admin role. [Learn More](https://docs.harness.io/article/1gaud2efd4)
     width: "400"
 orgForm_name: |-
-    Enter a name for this organization. 
+    Enter a name for this organization.
 
     Harness Organizations (Orgs) allow you to group Harness Projects that share the same goal. For example, all Projects for a business unit or division. [Learn More](https://docs.harness.io/article/7fibxie636)
 vaultConfigForm_namespace: Enter the Vault [namespace](https://www.vaultproject.io/docs/enterprise/namespaces) if you use Vault namespaces to support tenant isolation.
 gitSyncRepoForm_name: |-
-    Enter a name for the repo. 
+    Enter a name for the repo.
 
     It doesn't have to be the same as the Git repo name. The name you enter here will appear in Harness only. It'll identify the Project repo. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
@@ -1993,7 +1993,7 @@ gitSyncRepoForm_name: |-
 gitSyncRepoForm_repo: |-
     Once you add a Connector above you should see the repo URL in **Repository Name**.
 
-    Click **Test Connection**. Once Harness verifies the connection, you will see `Connection Successful`. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience) 
+    Click **Test Connection**. Once Harness verifies the connection, you will see `Connection Successful`. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
     New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 gitSyncRepoForm_rootfolder: |-
@@ -2003,7 +2003,7 @@ gitSyncRepoForm_rootfolder: |-
 
     New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 gitSyncRepoForm_branch: |-
-    Select the branch that you want to use, such as **main**. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience) 
+    Select the branch that you want to use, such as **main**. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/manage-a-harness-pipeline-repo-using-git-experience)
 
     New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 gitSyncRepoTab_repo: |-
@@ -2033,7 +2033,7 @@ saveToGitForm_name: |-
 
     New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_repoIdentifier: |-
-    Enter the name of the repo to use. 
+    Enter the name of the repo to use.
 
     New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_rootFolder: |-
@@ -2043,15 +2043,15 @@ saveToGitForm_rootFolder: |-
 
     New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_filePath: |-
-    Enter a name for the YAML file, such as `Example.yaml`. Harness will generate one automatically from the pipeline name, but you can add your own. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities) 
+    Enter a name for the YAML file, such as `Example.yaml`. Harness will generate one automatically from the pipeline name, but you can add your own. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities)
 
     New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_commitMsg: |-
-    Enter a message for the commit that adds this Connector. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities) 
+    Enter a message for the commit that adds this Connector. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities)
 
     New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_createPr: |-
-    You can start a pull request for adding this Connector. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities) 
+    You can start a pull request for adding this Connector. [Learn More](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities)
 
     New to Harness Git Experience? See the [Quickstart](https://developer.harness.io/docs/platform/Git-Experience/configure-git-experience-for-harness-entities).
 saveToGitForm_branch: |-
@@ -2085,7 +2085,7 @@ userGroupForm_name: |-
 
     Harness User Groups help you manage User access. [Learn More](https://docs.harness.io/article/dfwuvmy33m)
 userGroupForm_userList: |-
-    Add users to this User Group by selecting the users or adding their email address in the field below. 
+    Add users to this User Group by selecting the users or adding their email address in the field below.
     Each user in a User Group inherits the roles assigned to that group. [Learn More](https://docs.harness.io/article/dfwuvmy33m)
 serviceAccountForm_name: Admin Users of an account can create a Service Account with specific Role Bindings. [Learn More](https://docs.harness.io/article/e5p4hdq6bd)
 resourceGroupModalForm_name: A Resource Group is a set of Harness resources that a User or User Group can access. [Learn More](https://docs.harness.io/article/yp4xj36xro)
@@ -2158,7 +2158,7 @@ gcpInfraCluster: |-
 
     The GCP service account used for any credentials requires the **Kubernetes Engine Admin (GKE Admin)** role to get the Kubernetes master username and password. Harness also requires **Storage Object Viewer** permissions. [Learn More](https://docs.harness.io/article/yykfduond6)
 gcpInfraNamespace: |-
-    Enter the target namespace in target cluster. 
+    Enter the target namespace in target cluster.
     The namespace must already exist during deployment. Harness will not create a new namespace if you enter one here. [Learn More](https://docs.harness.io/article/0ud2ut4vt2)
 gcpInfraAllowSimultaneousDeployments: By default, Harness queues deployments to the same infrastructure to avoid conflicts. If you want to allow simultaneous deployments to this infrastructure, enable this option.
 cfFlagElem_name: "Enter a name for your boolean flag. When you name a feature flag, Harness automatically generates its identifier. "
@@ -2205,7 +2205,7 @@ overviewSummaryForecastedCost: |
 
     [Learn more](https://docs.harness.io/article/hs7cyi1nix-harness-key-cloud-cost-concepts#forecasted_cost)
 overviewCostEfficiencyScore: |-
-    A measure of how cost-optimized your resource usage is across your clusters. It is derived from the total and idle (and or unallocated) spend of your resources.  
+    A measure of how cost-optimized your resource usage is across your clusters. It is derived from the total and idle (and or unallocated) spend of your resources.
 
     [Learn more](https://docs.harness.io/article/hs7cyi1nix-harness-key-cloud-cost-concepts#cost_efficiency_score)
 ccmPerspectives: Perspectives allow you to group your resources in ways that are more meaningful to your business needs. It provides a unified view of your cloud cost data across the cloud environment. For example, you can group and filter by Account, Environment, Service, Region, Product, Label, Namespace, Workload, etc. and create a perspective for your business, finance, and engineering teams. [Learn more](https://docs.harness.io/article/dvspc6ub0v)
@@ -2223,7 +2223,7 @@ ccmRecommendations: |-
     [Workload Recommendations](https://docs.harness.io/article/o75arkcg8i)
     [Node Pool Recommendations](https://docs.harness.io/article/x75xp0xime)
 gitOps: |
-    Argo CD GitOps, as a tool, keeps all configurations in sync and applies the desired state directly (and only from Git). 
+    Argo CD GitOps, as a tool, keeps all configurations in sync and applies the desired state directly (and only from Git).
     Harness provides GitOps by integrating Argo CD into the Harness Manager. Once integrated, you can perform your Harness deployments and create and manage your Argo CD Application from within the same interface.
 
     [Learn more](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
@@ -2235,7 +2235,7 @@ GitOpsProviderStepFormNameIdDescriptionTags_description: |-
     Give a description for your Adapter.
     Description field contains a summary of the Adapter.
 
-    Information in the description field is automatically and instantly saved so that you can work on the same item at the same time and see the changes you make in real time. 
+    Information in the description field is automatically and instantly saved so that you can work on the same item at the same time and see the changes you make in real time.
 GitOpsProviderStepFormNameIdDescriptionTags_tags:
     content: |
         Enter a tag for your Adapter.
@@ -2272,7 +2272,7 @@ webhookTrigger_description:
     width: "400"
 webhookTrigger_tags:
     content: |-
-        Add tags for the trigger. 
+        Add tags for the trigger.
 
         [Learn More about Triggers](https://docs.harness.io/article/hndnde8usz)
 
@@ -2378,7 +2378,7 @@ wizardForm_webhook_headerConditions.0.key:
     content: |-
         Enter the header attribute for comparison.
 
-        The header expression format is `<+trigger.header['key-name']>`. 
+        The header expression format is `<+trigger.header['key-name']>`.
 
         For example `<+trigger.header['X-GitHub-Event']>`.
 
@@ -2386,9 +2386,9 @@ wizardForm_webhook_headerConditions.0.key:
     width: "650"
 wizardForm_webhook_headerConditions.0.operator:
     content: |-
-        Select the operator for matching the value in **Matches Value**. 
+        Select the operator for matching the value in **Matches Value**.
 
-        If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty. [Learn More](https://docs.harness.io/article/rset0jry8q) 
+        If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty. [Learn More](https://docs.harness.io/article/rset0jry8q)
 
         **Note:** Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
     width: "400"
@@ -2412,9 +2412,9 @@ wizardForm_webhook_payloadConditions.0.key:
     width: "650"
 wizardForm_webhook_payloadConditions.0.operator:
     content: |-
-        Select the operator for matching the value in **Matches Value**. 
+        Select the operator for matching the value in **Matches Value**.
 
-        If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty. [Learn More](https://docs.harness.io/article/rset0jry8q) 
+        If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty. [Learn More](https://docs.harness.io/article/rset0jry8q)
 
         **Note:** Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
     width: "400"
@@ -2429,7 +2429,7 @@ k8sDirectInfraConnector:
     width: "400"
 "wizardForm_webhook_pipeline.stages[0].stage.spec.infrastructure.infrastructureDefinition.spec.namespace":
     content: |-
-        Enter the target namespace in the target cluster. 
+        Enter the target namespace in the target cluster.
 
         The namespace must already exist during deployment. Harness will not create a new namespace using the one you entered here. [Learn More](https://docs.harness.io/article/0ud2ut4vt2)
     width: "400"
@@ -2492,7 +2492,7 @@ wizardForm_webhook_spec.provisionerIdentifier:
     width: "400"
 wizardForm_webhook_spec.workload:
     content: |-
-        Enter the name of the resource to scale in the format `[namespace/]Kind/Name`, with `namespace` optional. For example: 
+        Enter the name of the resource to scale in the format `[namespace/]Kind/Name`, with `namespace` optional. For example:
 
         ```
         default/Deployment/harness-example
@@ -2500,7 +2500,7 @@ wizardForm_webhook_spec.workload:
 
         You can scale a Deployment, DaemonSet, or StatefulSet.
 
-        You can only enter one resource in **Workload**. To scale another resource, add another **K8s Scale** step. 
+        You can only enter one resource in **Workload**. To scale another resource, add another **K8s Scale** step.
 
         [Learn More](https://docs.harness.io/article/jxe5z9domw)
     width: "400"
@@ -2509,7 +2509,7 @@ wizardForm_webhook_spec.workload:
     width: "400"
 "wizardForm_webhook_pipeline.stages[0].stage.spec.execution.steps[2].parallel[2].step.spec.provisionerIdentifier":
     content: |-
-        The **Provisioner Identifier** identifies the provisioning applied in this step. 
+        The **Provisioner Identifier** identifies the provisioning applied in this step.
 
         - If you selected **Inherit from Plan** in **Configuration Type**, enter the Id used by the **Terraform Plan** step for the plan you want to apply.
 
@@ -2528,7 +2528,7 @@ wizardForm_webhook_spec.workload:
     width: "400"
 "wizardForm_webhook_pipeline.stages[0].stage.spec.execution.steps[2].parallel[3].step.spec.provisionerIdentifier":
     content: |-
-        Enter a unique string to identify the provisioning configured in this step. 
+        Enter a unique string to identify the provisioning configured in this step.
 
         You will use this **Provisioner Identifier** in additional steps to refer to the provisioning set up in this step.
 
@@ -2542,15 +2542,15 @@ wizardForm_webhook_spec.workload:
     width: "400"
 pipelineStep.infrastructureDefinition:
     content: |-
-        Infrastructure Definitions represent the physical infrastructure of the Environment. They are the actual clusters, hosts, etc. 
+        Infrastructure Definitions represent the physical infrastructure of the Environment. They are the actual clusters, hosts, etc.
 
         For example, the target Infrastructure Definition for a Kubernetes deployment. [Learn More](https://docs.harness.io/article/0ud2ut4vt2)
     width: "400"
 KubernetesInfrastructureDefinitionMethod:
     content: |-
-        There are different ways to connect to your target infrastructure: 
+        There are different ways to connect to your target infrastructure:
 
-        #### Direct Connection 
+        #### Direct Connection
         A vendor-agnostic connection to the cluster that uses a Harness [Kubernetes Cluster Connector](https://docs.harness.io/article/1gaud2efd4). The Connector uses the cluster master URL and an auth method such as a Kubernetes service account or it inherits credentials from a Harness Delegate running in your infrastructure.
 
         #### Cloud Provider
@@ -2607,7 +2607,7 @@ helmWithHttp_chartName:
     content: |-
         Enter the name of the Helm chart for Harness to pull. Don't include the chart version. You will add that in the **Chart Version** setting. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
-        If you want to provide the chart name later, you have the following options: 
+        If you want to provide the chart name later, you have the following options:
 
         - Configure this setting as a [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) and provide the name at runtime.
         - Configure this setting as a Runtime Input and use [Input Sets](https://docs.harness.io/article/3fqwa8et3d) to provide the chart name.
@@ -2628,7 +2628,7 @@ helmWithHttp_helmVersion:
     width: "450"
 helmWithHttp_skipResourceVersioning:
     content: |-
-        By default, Harness versions ConfigMaps and Secrets deployed into Kubernetes clusters. 
+        By default, Harness versions ConfigMaps and Secrets deployed into Kubernetes clusters.
 
         In some cases, such as when using public manifests or Helm charts, you cannot add the annotation.
 
@@ -2701,7 +2701,7 @@ listenOnNewArtifactManifest:
 
         The expression `<+trigger.manifest.version>` tells Harness to obtain the chart version that initiated this Trigger and use it during deployment. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
     width: "400"
-listenNewArtifact: 
+listenNewArtifact:
     content: "**On New Artifact Triggers** listen to the registry where one or more of the artifacts in your pipeline are hosted. Whenever a trigger is created or updated, it takes about five to ten minutes for the polling job to start, and for the trigger to be in a working state. Harness recommends that you wait for five to ten minutes after a trigger is created or updated to push the artifact. [Learn More](https://developer.harness.io/docs/platform/triggers/trigger-on-a-new-artifact/#important-notes)"
     width: "400"
 artifactManifestConditions:
@@ -2740,7 +2740,7 @@ triggerConfigurationLabel:
     width: "400"
 wizardForm_webhook_identifier:
     content: |-
-        Harness entities and resources use a unique Id (entity identifier) that's immutable once the entity is created. 
+        Harness entities and resources use a unique Id (entity identifier) that's immutable once the entity is created.
 
         Identifiers provide a permanent way to refer to an entity and avoid issues that can arise when a name is changed.
 
@@ -2800,13 +2800,13 @@ changedFiles:
     width: "400"
 headerConditions:
     content: |-
-        Enter the header attribute for comparison. 
+        Enter the header attribute for comparison.
 
-        The header expression format is `<+trigger.header['key-name']>`. 
+        The header expression format is `<+trigger.header['key-name']>`.
 
         For example `<+trigger.header['X-GitHub-Event']>`.
 
-        **Notes:** 
+        **Notes:**
         - When Harness evaluates the header key you enter, the comparison is case insensitive.
         - Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
         - If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty.
@@ -2844,7 +2844,7 @@ expressionBreakdown:
     width: "400"
 schedulePanel:
     content: |-
-        Use the settings to schedule the Trigger. 
+        Use the settings to schedule the Trigger.
 
         You can use the schedule options to define the Cron expression or type in a Cron expression of your own and see how it evaluates. [Learn More](https://docs.harness.io/article/4z9mf24m1b)
     width: "400"
@@ -3009,7 +3009,7 @@ selectPerspective_type:
     width: "400"
 growthRateCheckbox:
     content: |
-        To add growth rate to your budgeted amount, select the checkbox Add growth rate to budget amount. Growth rate refers to the percentage change of the budgeted amount within the specified time period. When you've decided to add growth rate to the budget amount, specify the growth rate percentage. 
+        To add growth rate to your budgeted amount, select the checkbox Add growth rate to budget amount. Growth rate refers to the percentage change of the budgeted amount within the specified time period. When you've decided to add growth rate to the budget amount, specify the growth rate percentage.
 
 
         In Specify Growth rate, enter the percentage of the growth rate to the budget amount. You can view the increased amount of your budget in the graph. The graph displays the amount and budget period.
@@ -3027,7 +3027,7 @@ helmWithGit_identifier:
     width: "400"
 helmWithGit_repoName:
     content: |-
-        If you selected an account in the Git Connector, then you need to specify the repo here. 
+        If you selected an account in the Git Connector, then you need to specify the repo here.
 
         Put the full repo path, such as `https://github.com/myorg/reponame.git` if you selected `HTTP` in the Connector or `git@github.com:myorg/reponame.git` if you selected `SSH` in the Connector. [Learn More](https://docs.harness.io/article/tbm2hw6pr6-git-connector-settings-reference)
     width: "400"
@@ -3039,7 +3039,7 @@ helmWithGit_gitFetchType:
     width: "400"
 helmWithGit_folderPath:
     content: |-
-        Enter the path to the chart folder from the root of the repo. 
+        Enter the path to the chart folder from the root of the repo.
 
         The default forward slash `/` specifies the root of the directory.
     width: "400"
@@ -3055,7 +3055,7 @@ helmWithGit_helmVersion:
     width: "400"
 helmWithGit_skipResourceVersioning:
     content: |-
-        By default, Harness versions ConfigMaps and Secrets deployed into Kubernetes clusters. 
+        By default, Harness versions ConfigMaps and Secrets deployed into Kubernetes clusters.
 
         In some cases, such as when using public manifests or Helm charts, you cannot add the annotation.
 
@@ -3071,7 +3071,7 @@ helmWithGit_commandFlags:
     width: "400"
 "helmWithGit_commandFlags[0].commandType":
     content: |-
-        Harness supports multiple Helm commands. Select the Helm command you want to use. 
+        Harness supports multiple Helm commands. Select the Helm command you want to use.
 
         For example, use **Template** to render the Helm template files.
 
@@ -3081,13 +3081,13 @@ helmWithGit_commandFlags:
     width: "400"
 "helmWithGit_commandFlags[0].flag":
     content: |-
-        Harness supports all the flags (options) of the Helm command selected in **Command Type**. 
+        Harness supports all the flags (options) of the Helm command selected in **Command Type**.
 
         See commands for [Helm 2](https://v2.helm.sh/docs/helm/) and [Helm 3](https://v3.helm.sh/docs/helm/).
     width: "400"
 helmWithGit_branch:
     content: |-
-        Enter the branch or commit Id for the repo. 
+        Enter the branch or commit Id for the repo.
 
         For **Specific Commit Id**, you can also use a [Git commit tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
     width: "400"
@@ -3104,7 +3104,7 @@ helmWithS3_folderPath:
     content: |-
         Enter the path to the chart in the bucket you selected.
 
-        The default forward slash `/` specifies the root of the directory. 
+        The default forward slash `/` specifies the root of the directory.
     width: "400"
 helmWithS3_chartName:
     content: |-
@@ -3450,7 +3450,7 @@ ciRunTests_spec.preCommand:
     width: "400"
 ciRunTests_spec.postCommand:
     content: |-
-        Enter the commands used for cleaning up the environment after running the tests. 
+        Enter the commands used for cleaning up the environment after running the tests.
 
         For example, if you enter `sleep 600` this script suspends the process for 600 seconds.
     width: "400"
@@ -3468,9 +3468,9 @@ ciRunTests_spec.outputVariables:
     width: "400"
 Plugin_stepName_StepConfig:
     content: |-
-        Plugins are Docker containers that perform predefined tasks. 
+        Plugins are Docker containers that perform predefined tasks.
 
-        Plugins are configured as steps in your stage. 
+        Plugins are configured as steps in your stage.
 
         Plugins can be used to deploy code, publish artifacts, send notifications, and more. [Learn More](https://docs.harness.io/article/8r5c3yvb8k)
     width: "400"
@@ -3629,13 +3629,13 @@ configurePagerDutyNotifications_key:
     width: "400"
 k8DeleteData_spec.deleteResources.spec.resourceNames:
     content: |-
-        Enter a resource name in the format `[namespace]/Kind/Name`, with `namespace` being optional. 
+        Enter a resource name in the format `[namespace]/Kind/Name`, with `namespace` being optional.
 
         For example:
 
         ```
         Deployment/harness-example-deployment-canary
-        ``` 
+        ```
 
         [Learn More](https://docs.harness.io/article/eaj0xuegln)
     width: "400"
@@ -3756,7 +3756,7 @@ SLO_form_SLIMissingDataType:
     width: "400"
 SLO_form_periodType:
     content: |+
-        Specifies the period for which the SLO runs its calculation. This helps to measure whether the reliability of a Service during a given duration meets the expectations of most of its users. 
+        Specifies the period for which the SLO runs its calculation. This helps to measure whether the reliability of a Service during a given duration meets the expectations of most of its users.
 
     width: "400"
 SLO_form_periodLength:
@@ -3785,7 +3785,7 @@ stepAuthenticationForm_port:
     width: "400"
 SecretsListViewname:
     content: |-
-        Harness includes a built-in Secrets Management feature that enables you to store encrypted secrets, such as access keys, and use them in your Harness account. 
+        Harness includes a built-in Secrets Management feature that enables you to store encrypted secrets, such as access keys, and use them in your Harness account.
 
         Some key points about Secrets Management:
 
@@ -3804,7 +3804,7 @@ sshVerifyConnectionForm_host:
     width: "400"
 portBindings:
     content: |-
-        Depending on the build infrastructure, some steps might run on VMs while other steps run in containers. The port used to communicate with a service dependency started in a Background step depends on where the step is running: VMs use the **Host Port** and containerized steps use the **Container Port**. 
+        Depending on the build infrastructure, some steps might run on VMs while other steps run in containers. The port used to communicate with a service dependency started in a Background step depends on where the step is running: VMs use the **Host Port** and containerized steps use the **Container Port**.
 
         Containerized steps talk to the background service using `[background-step-id]:container_port`. Whereas steps that run directly on the VM can talk to the background service using `localhost:host_port`.
 
@@ -3812,13 +3812,13 @@ portBindings:
     width: "400"
 dependencyBase_spec.portBindings:
     content: |
-        When a pipeline runs on an AWS build farm, some Steps might run on a bare metal VM and others run in a container. The port used to communicate with the Service Dependency depends on where the Step is running: bare-metal Steps use the Host Port and containerized Steps use the Container Port. 
+        When a pipeline runs on an AWS build farm, some Steps might run on a bare metal VM and others run in a container. The port used to communicate with the Service Dependency depends on where the Step is running: bare-metal Steps use the Host Port and containerized Steps use the Container Port.
 
-        Suppose you create a Service Dependency with the Name and Id **myloginservice**. 
-        - A containerized step talks to the service using **myloginservice:_container_port_**. 
+        Suppose you create a Service Dependency with the Name and Id **myloginservice**.
+        - A containerized step talks to the service using **myloginservice:_container_port_**.
         - A  Run or Run Test step that runs directly on the VM talks to the service using **localhost:_host_port_**.
 
-        The binding of Host and Container Ports is similar to [port mapping in Docker](https://docs.docker.com/config/containers/container-networking/). Usually the ports are the same unless the default Host Port for the service dependency is already in use by another local service. 
+        The binding of Host and Container Ports is similar to [port mapping in Docker](https://docs.docker.com/config/containers/container-networking/). Usually the ports are the same unless the default Host Port for the service dependency is already in use by another local service.
     width: "400"
 depth:
     content: |
@@ -3932,7 +3932,7 @@ ciBuildInfra_hostNames:
     width: "400"
 runAsNonRoot:
     content: |-
-        
+
         Use this setting to run the container as a non-root user.
 
         To specify a default user Id for the container, add it in **Run as User**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
@@ -3952,7 +3952,7 @@ ciBuildInfra_volumes.0.type:
 
         * **Empty Directory:** Mount a new [emptyDir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) volume that gets deleted when the Stage finishes execution.
 
-        * **Host Path:** Mount a file or folder from the host node filesystem. It is good practice to avoid hostPath volumes in most cases. See [hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) in the 
+        * **Host Path:** Mount a file or folder from the host node filesystem. It is good practice to avoid hostPath volumes in most cases. See [hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) in the
         Kubernetes docs.
 
         * **Persistent Volume Claim:** Mount a [Persistent Volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) using a predefined Persistent Volume Claim.
@@ -3963,7 +3963,7 @@ ciBuildInfra_volumes.1.type:
 
         * **Empty Directory:** Mount a new [emptyDir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) volume that gets deleted when the Stage finishes execution.
 
-        * **Host Path:** Mount a file or folder from the host node filesystem. It is good practice to avoid hostPath volumes in most cases. See [hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) in the 
+        * **Host Path:** Mount a file or folder from the host node filesystem. It is good practice to avoid hostPath volumes in most cases. See [hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) in the
         Kubernetes docs.
 
         * **Persistent Volume Claim:** Mount a [Persistent Volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) using a predefined Persistent Volume Claim.
@@ -3974,7 +3974,7 @@ ciBuildInfra_volumes.2.type:
 
         * **Empty Directory:** Mount a new [emptyDir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) volume that gets deleted when the Stage finishes execution.
 
-        * **Host Path:** Mount a file or folder from the host node filesystem. It is good practice to avoid hostPath volumes in most cases. See [hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) in the 
+        * **Host Path:** Mount a file or folder from the host node filesystem. It is good practice to avoid hostPath volumes in most cases. See [hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) in the
         Kubernetes docs.
 
         * **Persistent Volume Claim:** Mount a [Persistent Volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) using a predefined Persistent Volume Claim.
@@ -4074,7 +4074,7 @@ ServerlessAwsLambdaDeploymentTypeManifests:
         Add your serverless.yml file as a manifest. Harness will fetch your serverless.yml file at deployment runtim. [Learn More](https://docs.harness.io/article/5fnx4hgwsa)
 
 
-        **Notes:** 
+        **Notes:**
         - The serverless.yaml file you use with Harness can use Harness [secrets](https://docs.harness.io/article/osfw70e59c) and [built-in and custom expressions](https://docs.harness.io/article/lml71vhsim).
         - Plugins are also supported in your serverless.yml file using the standard format. For example:
 
@@ -4085,7 +4085,7 @@ ServerlessAwsLambdaDeploymentTypeManifests:
     width: "400"
 ServerlessAwsLambdaDeploymentTypeArtifacts:
     content: |-
-        Add the function you want to deploy as an artifact. 
+        Add the function you want to deploy as an artifact.
 
         For example, a function stored in a cloud repo as a ZIP file. [Learn More](https://docs.harness.io/article/5fnx4hgwsa)
 
@@ -4104,7 +4104,7 @@ ServerlessAwsLambdaDeploymentTypeArtifacts:
     width: "400"
 awsInfraConnector:
     content: |-
-        Add or select an AWS Connector to connect Harness with the AWS account and service you are using (ECS, Lambda, etc). 
+        Add or select an AWS Connector to connect Harness with the AWS account and service you are using (ECS, Lambda, etc).
 
         For details on the requirements of each AWS service, go to [AWS Connector Settings Reference](https://docs.harness.io/article/m5vkql35ca)
     width: "450"
@@ -4113,7 +4113,7 @@ awsRegion:
     width: "400"
 awsStage:
     content: |-
-        Enter the name of the stage in your service that you want to deploy to, such as `dev`. 
+        Enter the name of the stage in your service that you want to deploy to, such as `dev`.
 
         This is the same as the `--stage` option in the `serverless deploy` command. [Learn More](https://docs.harness.io/article/5fnx4hgwsa)
     width: "400"
@@ -4198,7 +4198,7 @@ selectPropagatedState:
         You can use the same Service across your pipeline stages.
 
 
-        In many cases, you'll want to use some of the propagated Service's settings, such as manifests, but want to override others, such as values.yaml files, artifacts, or variables. 
+        In many cases, you'll want to use some of the propagated Service's settings, such as manifests, but want to override others, such as values.yaml files, artifacts, or variables.
 
 
         Harness lets you propagate and override. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/propagate-and-override-cd-services)
@@ -4245,7 +4245,7 @@ ServiceNowProvideFromFieldList:
     width: "400"
 ciBuildInfra_harnessImageConnectorRef:
     content: |-
-        By default, Harness pulls certain images from public Docker Hub repos that are needed to run a build. You can override this by using a Connector that downloads these images from the Harness Container Image Registry instead. 
+        By default, Harness pulls certain images from public Docker Hub repos that are needed to run a build. You can override this by using a Connector that downloads these images from the Harness Container Image Registry instead.
 
         This option is useful when your default delegate cannot access the public registry (due to security policies in your organization, for example, or if your infrastructure is running in a private cloud).
 
@@ -4359,7 +4359,7 @@ manifestDetails_valuesPaths:
     width: "400"
 manifestPath_valuesPaths:
     content: |-
-        Enter the path to the Kubernetes or Helm Chart Values YAML file(s), Kustomize Patches, OpenShift Parameters, etc you want to use in the same chart/repo. 
+        Enter the path to the Kubernetes or Helm Chart Values YAML file(s), Kustomize Patches, OpenShift Parameters, etc you want to use in the same chart/repo.
 
         Enter the path from the chart/repo root to the file or folder. [Learn More](https://docs.harness.io/article/q002wjjl4d)
 
@@ -4477,7 +4477,7 @@ ActiveUsersListViewroleBinding:
     content: |-
         See the Role Bindings for each Users' User Group. [Learn More](https://docs.harness.io/article/dfwuvmy33m)
 
-        Users are added to User Groups and bound to Roles using Role Bindings. 
+        Users are added to User Groups and bound to Roles using Role Bindings.
     width: "400"
 ActiveUsersListViewemail:
     content: |-
@@ -4487,7 +4487,7 @@ ActiveUsersListViewemail:
     width: "400"
 templatesPageHeading:
     content: |-
-        Harness enables you to add Templates to create re-usable logic and Harness entities (like steps, stages, and pipelines) in your pipelines. 
+        Harness enables you to add Templates to create re-usable logic and Harness entities (like steps, stages, and pipelines) in your pipelines.
 
         You can link these Templates in your pipelines or share them with your teams for improved efficiency. [Learn More](https://docs.harness.io/article/6tl8zyxeol)
     width: "400"
@@ -4561,7 +4561,7 @@ approvalrejectionCriteria:
     content: |-
         Define criteria for rejecting the approval.
 
-        If you add rejection criteria it is used in addition to the settings in **Approval Criteria**. 
+        If you add rejection criteria it is used in addition to the settings in **Approval Criteria**.
 
         Both **Rejection Criteria** and **Approval Criteria** must evaluate to a Boolean `true` for the step to be successful.
     width: "400"
@@ -4652,7 +4652,7 @@ JenkinsStep_spec.connectorRef:
     width: "400"
 JenkinsStep_spec.jobName:
     content: |-
-        Select the Jenkins job to execute (also called a project). 
+        Select the Jenkins job to execute (also called a project).
 
         The list is automatically populated using the Jenkins Server you set up in **Jenkins Connector**. [Learn More](https://docs.harness.io/article/as4dtppasg)
     width: "400"
@@ -4701,9 +4701,9 @@ ciBackgroundStep_name:
     width: "400"
 ciBackgroundStep_description:
     content: |
-        A description of the service that this step initiates. Include any information that another person using this pipeline might find useful. Note the following: 
+        A description of the service that this step initiates. Include any information that another person using this pipeline might find useful. Note the following:
 
-        - Once you start a service in a background step, it runs for the rest of the stage execution. 
+        - Once you start a service in a background step, it runs for the rest of the stage execution.
 
         - For later steps that use this service, it's good practice to verify that the service has started before sending requests.
     width: "400"
@@ -4883,7 +4883,7 @@ AzureWebAppSwapSlot-EXECUTION_spec.targetSlot:
     width: "550"
 createSecretManagerTemplate_name:
     content: |-
-        Enter a name for the Secret Manager Template. You can also edit the automatically generated Id. 
+        Enter a name for the Secret Manager Template. You can also edit the automatically generated Id.
 
         The Template name can be edited later, but Ids cannot be edited once a Template has been saved.
     width: "400"
@@ -4999,7 +4999,7 @@ azureAuthForm_applicationId:
     content: |-
         This is the Application (Client) Id for the Azure app registration you are using. [Learn More](https://docs.harness.io/article/9epdx5m9ae)
 
-        It is found in the Azure Active Directory (AAD) App registrations or Managed Identity. 
+        It is found in the Azure Active Directory (AAD) App registrations or Managed Identity.
 
         For more information, see [Azure docs](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v1-add-azure-ad-app).
 
@@ -5011,7 +5011,7 @@ azureAuthForm_tenantId:
     content: |-
         The Tenant Id is the Id of the Azure Active Directory (AAD) in which you created your application. [Learn More](https://docs.harness.io/article/9epdx5m9ae)
 
-        This Id is also called the Directory Id. 
+        This Id is also called the Directory Id.
 
         For more information, see [Get tenant ID](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id) and [Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal) from Azure.
     width: "400"
@@ -5149,7 +5149,7 @@ helmDeploy_name:
     width: "400"
 HelmDeploy_stepName_StepConfig:
     content: |-
-        This Helm Deploy step performs a Rolling deployment strategy. 
+        This Helm Deploy step performs a Rolling deployment strategy.
 
         This step deploys your application using the Helm chart or Values YAML file you added to the Service in this stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/native-helm/native-helm-quickstart-native-helm-quickstart)
     width: "400"
@@ -5217,7 +5217,7 @@ imagePath_spec.version:
     content: |
         Enter the version number of the package to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-services/k8s-services/kubernetes-services)
 
-        You can use [fixed values, runtime inputs, and expressions](https://developer.harness.io/docs/platform/references/runtime-inputs/). 
+        You can use [fixed values, runtime inputs, and expressions](https://developer.harness.io/docs/platform/references/runtime-inputs/).
     width: "400"
 imagePath_spec.tags:
     content: Add the tag that is used by your AMI. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
@@ -5316,7 +5316,7 @@ wizardForm_webhook_repoName:
     width: "400"
 pollInterval:
     content: |-
-        By default, Harness Git-based triggers listen to Git events using webhooks. 
+        By default, Harness Git-based triggers listen to Git events using webhooks.
 
         Sometimes webhook events can be missed due to a firewall or a network issue and cannot reach Harness.
 
@@ -5371,7 +5371,7 @@ stepAuthenticationForm_skipCertChecks:
     width: "400"
 PdcInfraDefinitionDetails:
     content: |
-        Specify the target infrastructure for your deployment. Select *Specify hosts* if you want to enter the host names and deploy to those target hosts. If you have a list of target hosts in a file (for example, a JSON file), choose *Select preconfigured hosts from Physical Data Center*. 
+        Specify the target infrastructure for your deployment. Select *Specify hosts* if you want to enter the host names and deploy to those target hosts. If you have a list of target hosts in a file (for example, a JSON file), choose *Select preconfigured hosts from Physical Data Center*.
     width: "400"
 pdcInfra_hosts:
     content: Enter the host names of your target hosts.
@@ -5448,7 +5448,7 @@ ecsBlueGreenCreateServiceStepEdit_name:
     width: "400"
 ecsBlueGreenCreateServiceStepEdit_timeout:
     content: |-
-        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph).
 
         You can use:
 
@@ -5480,7 +5480,7 @@ ecsBlueGreenCreateServiceStepEdit_spec.prodListenerRuleArn:
     content: |-
         If you are using Listener Rules in your target groups, you can select them in **Production Listener Rule ARN** and **Stage Listener Rule ARN**. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
 
-        If you do not select a listener rule, Harness uses the Default rule. 
+        If you do not select a listener rule, Harness uses the Default rule.
 
         You do not need to select the Default rule.
     width: "500"
@@ -5512,7 +5512,7 @@ ecsBlueGreenSwapTargetGroupsStepEdit_name:
     width: "400"
 ecsBlueGreenSwapTargetGroupsStepEdit_timeout:
     content: |-
-        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph).
 
         You can use:
 
@@ -5587,7 +5587,7 @@ gitops-repository-credentials-overview_connectionType:
     width: "400"
 name.gitops.repo:
     content: |-
-        Ensure that the key is not OpenSSH, but rather PEM format. 
+        Ensure that the key is not OpenSSH, but rather PEM format.
 
         To generate an SSHv2 key, use: `ssh-keygen -t rsa -m PEM`.
 
@@ -5597,7 +5597,7 @@ insecure:
     content: |-
         Select this option to have the GitOps Agent skip verification of the URL and credentials. [Learn More](https://docs.harness.io/article/58i67mkxap)
 
-        Verification is only skipped when you create the GitOps Repository. Subsequent uses of the GitOps Repository are verified. 
+        Verification is only skipped when you create the GitOps Repository. Subsequent uses of the GitOps Repository are verified.
     width: "400"
 enableLfs:
     content: Select the option to use [Git Large File Storage](https://github.com/git-lfs/git-lfs/).
@@ -5746,13 +5746,13 @@ ECSDeploymentTypeManifests_serviceDefinition:
     width: "400"
 ECSDeploymentTypeManifests_scalableTarget:
     content: |-
-        The Scalable Target setting in the Harness Service specifies a resource that AWS Application Auto Scaling can scale. 
+        The Scalable Target setting in the Harness Service specifies a resource that AWS Application Auto Scaling can scale.
 
         For more information, see [ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) from AWS.
     width: "400"
 ECSDeploymentTypeManifests_scalingPolicy:
     content: |-
-        The Scaling Policy setting in the Harness Service defines a scaling policy that Application Auto Scaling uses to adjust your application resources. 
+        The Scaling Policy setting in the Harness Service defines a scaling policy that Application Auto Scaling uses to adjust your application resources.
 
         For more information, see [ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html) from AWS.
     width: "400"
@@ -5784,7 +5784,7 @@ ecsCanaryDeleteStepForm_name:
     width: "400"
 ecsCanaryDeleteStepForm_timeout:
     content: |-
-        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph).
 
         You can use:
 
@@ -5801,7 +5801,7 @@ ecsCanaryDeleteStepForm_timeout:
     width: "400"
 ecsBlueGreenRollbackStepForm_timeout:
     content: |-
-        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph).
 
         You can use:
 
@@ -5821,7 +5821,7 @@ ecsBlueGreenRollbackStepForm_name:
     width: "400"
 ecsRollingRollbackStepForm_timeout:
     content: |-
-        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph).
 
         You can use:
 
@@ -5838,7 +5838,7 @@ ecsRollingRollbackStepForm_timeout:
     width: "400"
 ecsCanaryDeployStepForm_timeout:
     content: |-
-        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph).
 
         You can use:
 
@@ -5881,7 +5881,7 @@ cloudFormationCreateStack-EXECUTION_spec.provisionerIdentifier:
     width: "500"
 cloudFormationCreateStack-EXECUTION_spec.configuration.connectorRef:
     content: |-
-        Add or select the Harness [AWS Connector](https://docs.harness.io/article/m5vkql35ca) that will be used for this step. 
+        Add or select the Harness [AWS Connector](https://docs.harness.io/article/m5vkql35ca) that will be used for this step.
                 The AWS Connector will include the credentials needed to perform the provisioning.
                 The credentials required for provisioning depend on what you are provisioning.
     width: "400"
@@ -5927,7 +5927,7 @@ cloudFormationRollbackStack-EXECUTION_timeout:
 cloudFormationRollbackStack-EXECUTION_spec.configuration.provisionerIdentifier:
     content: |-
         Enter a unique value in **Provisioner Identifier**. [Learn More](https://docs.harness.io/article/6jfl7i6a5u)
-                The **Provisioner Identifier** identifies the stack provisioned by this step. 
+                The **Provisioner Identifier** identifies the stack provisioned by this step.
                 You reference the **Provisioner Identifier** in other steps to refer to the provisioning done by this step.
                 The most common use of **Provisioner Identifier** is between the Create Stack, Delete Stack, and Rollback Stack steps.
                 For example, in the case of a Create Stack failure, the Rollback Stack step rolls back the provisioning from the Create Stack step using its **Provisioner Identifier**.
@@ -5954,7 +5954,7 @@ cloudFormationDeleteStack-EXECUTION_spec.configuration.spec.provisionerIdentifie
     width: "400"
 cloudFormationDeleteStack-EXECUTION_spec.configuration.spec.connectorRef:
     content: |-
-        Add or select the Harness AWS Connector for connecting to AWS. 
+        Add or select the Harness AWS Connector for connecting to AWS.
                 Ensure its credentials have the permissions needed to remove the resources. See [AWS Connector](https://docs.harness.io/article/m5vkql35ca).
     width: "400"
 cloudFormationDeleteStack-EXECUTION_spec.configuration.spec.region:
@@ -5983,7 +5983,7 @@ ecsRunTaskStepForm_name:
     width: "400"
 ecsRunTaskStepForm_timeout:
     content: |-
-        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph).
 
         You can use:
 
@@ -6017,7 +6017,7 @@ ecsRunTaskStepForm_spec.skipSteadyStateCheck:
     width: "400"
 awsConnector:
     content: |-
-        Add or select an AWS connector to connect Harness with the AWS account and service you are using. 
+        Add or select an AWS connector to connect Harness with the AWS account and service you are using.
 
         For details on the requirements of each AWS service, go to [AWS Connector Settings Reference](https://developer.harness.io/docs/platform/connectors/cloud-providers/ref-cloud-providers/aws-connector-settings-reference/)
     width: "400"
@@ -6064,7 +6064,7 @@ KubernetesDeploymentTypeVariables:
     content: |-
         Add any variables you want to use in your deployment. [Learn More](https://docs.harness.io/article/lml71vhsim)
 
-        You can reference these variables as expressions in the manifests and other configuration files in this Service. 
+        You can reference these variables as expressions in the manifests and other configuration files in this Service.
 
         When you deploy this Service, the expressions are resolved to the variable values.
 
@@ -6101,7 +6101,7 @@ ECSDeploymentTypeVariables:
     width: "400"
 environmentGlobalOverride:
     content: |-
-        You can override settings in all Harness Service deployed to this Environment. 
+        You can override settings in all Harness Service deployed to this Environment.
 
         Environment Overrides apply to every Service that is used with this Environment. [Learn More](https://docs.harness.io/article/9ryi1ay01f)
     width: "400"
@@ -6243,7 +6243,7 @@ fetchInstanceScriptForm_name:
     width: "400"
 fetchInstanceScriptForm_timeout:
     content: |-
-        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph). 
+        Enter how long you want Harness to try to complete the step before failing and initiating the stage or step [Failure Strategy](https://docs.harness.io/article/0zvnn5s1ph).
 
         You can use:
 
@@ -6265,7 +6265,7 @@ deployServiceStepForm_parallel:
     content: |
         Enable this setting to deploy multiple Services in parallel. [Learn More](https://docs.harness.io/article/tabk4u2e9n)
 
-        With a multi Service stage, every combination of Service and Infrastructure is treated as a separate deployment. 
+        With a multi Service stage, every combination of Service and Infrastructure is treated as a separate deployment.
 
         If you deploy multiple Services in parallel, then the failure of one Service's deployment does **not** impact other Services' deployments.
 
@@ -6281,7 +6281,7 @@ deployEnvironmentEntityWidgetForm_parallel:
     content: |-
         Enable this option to deploy to multiple Infrastructures in parallel. [Learn More](https://docs.harness.io/article/tabk4u2e9n)
 
-        With a multi Infrastructure stage, every combination of Service and Infrastructure is treated as a separate deployment. 
+        With a multi Infrastructure stage, every combination of Service and Infrastructure is treated as a separate deployment.
 
         If you deploy to Infrastructures in parallel, then the failure of one Service's deployment does **not** impact other Services' deployments.
 
@@ -6395,7 +6395,7 @@ imagePath_versionType:
         - With **Regex** selected, the regex `todolist-v\d.\d` will match.
         - If the regex expression does not result in a match, Harness ignores the value.
 
-        Harness supports standard Java regex. 
+        Harness supports standard Java regex.
 
         For example, if **Regex** is enabled and the intent is to match a filename, the wildcard should be `.*` instead of simply a wildcard. If you wanted to match all of the files that end in `-DEV.tgz` you would enter `.*-DEV\.tgz`.
     width: "500"
@@ -6406,7 +6406,7 @@ imagePath_spec.versionRegex:
         - With **Regex** selected, the regex `todolist-v\d.\d` will match.
         - If the regex expression does not result in a match, Harness ignores the value.
 
-        Harness supports standard Java regex. 
+        Harness supports standard Java regex.
 
         For example, if **Regex** is enabled and the intent is to match a filename, the wildcard should be `.*` instead of simply a wildcard. If you wanted to match all of the files that end in `-DEV.tgz` you would enter `.*-DEV\.tgz`.
     width: "500"
@@ -6415,7 +6415,7 @@ k8RolloutDeploy_spec.pruningEnabled:
     width: "400"
 HelmWithOCI_basePath:
     content: |-
-        Enter the path to the chart folder from the root of the repo. 
+        Enter the path to the chart folder from the root of the repo.
 
         The default forward slash `/` specifies the root of the directory.
     width: "400"
@@ -6427,7 +6427,7 @@ HelmWithOCI_chartName:
     width: "400"
 HelmWithOCI_chartVersion:
     content: |-
-        Enter the version of the chart you want to deploy. This is found in the Chart.yaml `version` label in your chart. 
+        Enter the version of the chart you want to deploy. This is found in the Chart.yaml `version` label in your chart.
 
         You can list all available versions of a chart using the `search repo` command with the `--versions` option. See [helm search repo](https://helm.sh/docs/helm/helm_search_repo) from Helm.
 
@@ -6443,7 +6443,7 @@ HelmWithOCI_valuesPaths:
     width: "400"
 HelmWithOCI_skipResourceVersioning:
     content: |-
-        By default, Harness versions ConfigMaps and Secrets deployed into Kubernetes clusters. 
+        By default, Harness versions ConfigMaps and Secrets deployed into Kubernetes clusters.
 
         In some cases, such as when using public manifests or Helm charts, you cannot add the annotation.
 
@@ -6821,7 +6821,7 @@ connectorDetailsStepFormServiceNow_name:
     width: "400"
 serviceNowDetailsForm_serviceNowUrl:
     content: |-
-        Enter the base URL you use to access ServiceNow. 
+        Enter the base URL you use to access ServiceNow.
 
         For example: `https://example.service-now.com`. [Learn More](https://developer.harness.io/docs/platform/Connectors/connect-to-service-now)
     width: "425"
@@ -6835,7 +6835,7 @@ serviceNowDetailsForm_passwordRef:
     content: |-
         Enter your password or API key credentials. [Learn More](https://developer.harness.io/docs/platform/Connectors/connect-to-service-now)
 
-        For an API key, use a [Harness Text Secret](https://developer.harness.io/docs/platform/Security/add-use-text-secrets). 
+        For an API key, use a [Harness Text Secret](https://developer.harness.io/docs/platform/Security/add-use-text-secrets).
     width: "400"
 serviceNowDetailsForm_clientIdRef:
     content: Enter the client id associated with the application
@@ -6905,7 +6905,7 @@ Wait_stepName_StepConfig:
 
         When the Wait step is running, it provides the following options in the pipeline execution page:
 
-        - **Mark as Success**. Ends the wait period and proceeds with the execution. 
+        - **Mark as Success**. Ends the wait period and proceeds with the execution.
         - **Mark as Failed**. Initiates the [failure strategy](https://developer.harness.io/docs/platform/pipelines/define-a-failure-strategy-on-stages-and-steps/) for the step or stage, if any, or simply fails the execution.
 
     width: "400"
@@ -6955,12 +6955,12 @@ serverlessLambdaWithS3_paths:
         #### Notes
         - You can use `serverless.yml|.yaml|.js|.json`.
         - You do not need to enter the filename. You can just enter the path to the folder.
-        - The folder path cannot start with a dot (`.`). To specify the root directory, use `/`.  
+        - The folder path cannot start with a dot (`.`). To specify the root directory, use `/`.
         - You can also use the .Zip format to grab the serverless.yaml and the packaged code that has been bundled in .zip. Harness will extrapolate the serverless.yaml file and use that for deployment.
     width: "400"
 serverlessLambdaWithS3_configOverridePath:
     content: |-
-        Use this setting when your Serverless manifest isn't named `serverless.yml|.yaml|.js|.json`. 
+        Use this setting when your Serverless manifest isn't named `serverless.yml|.yaml|.js|.json`.
 
         This option is the same as the `--config` option in `serverless deploy`. See [AWS - deploy](https://www.serverless.com/framework/docs/providers/aws/cli-reference/deploy) from Serverless.
     width: "450"
@@ -7094,7 +7094,7 @@ serviceNowImportSet_spec.connectorRef:
     width: "500"
 serviceNowImportSet_spec.stagingTableName:
     content: |+
-        This setting specifies the staging table used to import data into ServiceNow. 
+        This setting specifies the staging table used to import data into ServiceNow.
 
         These intermediate table names extend the Import Set Row table in ServiceNow. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-advanced/ticketing-systems-category/servicenow-import-set/)
 
@@ -7144,7 +7144,7 @@ AquatrivyStep_name:
     width: "400"
 securityStepMode:
     content: |-
-        The orchestration mode to use for the scan. The menu shows only the modes that are supported for the specific scanner. 
+        The orchestration mode to use for the scan. The menu shows only the modes that are supported for the specific scanner.
 
         * **Orchestrated** scans are fully orchestrated. A Security step in the Harness pipeline orchestrates a scan and then normalizes and compresses the results. [Learn more](https://developer.harness.io/docs/security-testing-orchestration/use-sto/run-an-orchestrated-scan-in-sto)
 
@@ -7167,7 +7167,7 @@ securityStepTargetVariant:
     width: "400"
 securityStepImageType:
     content: |-
-        The registry type where the image is stored: 
+        The registry type where the image is stored:
 
         * **Docker v2** — A registry that uses the Docker Registry v2 API such as [Docker Hub](https://docs.docker.com/registry/spec/api/), [Google Container Registry](https://cloud.google.com/container-registry), or [Google Artifact Registry](https://cloud.google.com/artifact-registry).
 
@@ -7179,7 +7179,7 @@ securityStepImageType:
     width: "400"
 securityStepImageDomain:
     content: |-
-        The URL of the artifact repository that contains the image to scan. Examples: 
+        The URL of the artifact repository that contains the image to scan. Examples:
         * `docker.io`
         * `app.harness.io/registry`
         * `us-east1-docker.pkg.dev`
@@ -7224,9 +7224,9 @@ AquatrivyStep_spec.settings:
     width: "400"
 securityStepTargetWorkspace:
     content: |-
-        The workspace path on the pod running the Security step. The workspace path is `/harness` by default. 
+        The workspace path on the pod running the Security step. The workspace path is `/harness` by default.
 
-        You can override this if you want to scan only a subset of the workspace. For example, suppose the pipeline publishes artifacts to a specific subfolder. You can specify the workspace path as `/harness/path/to/artifacts/subfolder`.  
+        You can override this if you want to scan only a subset of the workspace. For example, suppose the pipeline publishes artifacts to a specific subfolder. You can specify the workspace path as `/harness/path/to/artifacts/subfolder`.
     width: "400"
 BanditStep_spec.settings:
     content: Specify additional settings for the Bandit scan. [Learn more](https://developer.harness.io/docs/security-testing-orchestration/sto-techref-category/bandit-scanner-reference)
@@ -7266,11 +7266,11 @@ securityStepToolInclude:
     width: "400"
 securityStepToolJavaLibraries:
     content: |
-        A comma-separated list of paths to files with third-party libraries used by your tests. If you’re running a SonarQube scan, for example, this corresponds to the `sonar.java.libraries` parameter.  
+        A comma-separated list of paths to files with third-party libraries used by your tests. If you’re running a SonarQube scan, for example, this corresponds to the `sonar.java.libraries` parameter.
     width: "400"
 securityStepToolJavaBinaries:
     content: |
-        A comma-separated list of paths to the folders with the bytecode files you want to scan.  If you’re running a SonarQube scan, for example, this corresponds to the sonar.java.binaries parameter. 
+        A comma-separated list of paths to the folders with the bytecode files you want to scan.  If you’re running a SonarQube scan, for example, this corresponds to the sonar.java.binaries parameter.
     width: "400"
 securityStepToolProductLookupType:
     content: ""
@@ -7341,9 +7341,9 @@ OciHelmRepoUrl:
     width: "400"
 OciHelmRepoAuthentication:
     content: |-
-        You can select Username and Password and enter the user name and password. For password, you can create a new secret or use an existing one. 
+        You can select Username and Password and enter the user name and password. For password, you can create a new secret or use an existing one.
 
-        You can select Anonymous to authenticate to the registry without any credentials. 
+        You can select Anonymous to authenticate to the registry without any credentials.
     width: "400"
 manifestDetails_enableDeclarativeRollback:
     content: |-
@@ -7363,9 +7363,9 @@ createArtifactSourceTemplate_name:
     width: "400"
 createArtifactSourceTemplate_versionLabel:
     content: |-
-        Enter a version label for this version of the template. 
+        Enter a version label for this version of the template.
 
-        You can update the version each time you change and save a template. 
+        You can update the version each time you change and save a template.
         [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/templates/artifact-source-template/)
     width: "400"
 createArtifactSourceTemplate_iconFile:
@@ -7461,7 +7461,7 @@ imagePath_spec.build:
     width: "400"
 connectorId_Github:
     content: |-
-        You can use Github Packages as artifacts for deployments. 
+        You can use Github Packages as artifacts for deployments.
 
         You connect to Github using a Harness Github Connector, username, and Personal Access Token (PAT). [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources)
     width: "400"
@@ -7779,7 +7779,7 @@ AsgSwapService_spec.downsizeOldAsg:
     width: "400"
 AsgRollingRollback_stepName_StepConfig:
     content: |-
-        If deployment failure occurs, the stage or step failure strategy is initiated. 
+        If deployment failure occurs, the stage or step failure strategy is initiated.
 
         Typically, this runs the **ASG Rolling Rollback** step in the **Rollback** section of **Execution**. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/asg/asg-tutorial)
 
@@ -7817,7 +7817,7 @@ k8Apply_spec.skipRendering:
     width: "400"
 connectorConnectionTestId:
     content: |-
-        Harness will use the connection information and credentials you provided and attempt to connect to the third party tool or platform. 
+        Harness will use the connection information and credentials you provided and attempt to connect to the third party tool or platform.
 
         If you encounter errors, Harness will report the cause of the error.
 
@@ -7948,7 +7948,7 @@ shellScriptInputVariable_Bash:
     content: |-
         In addition to declaring variables in your script, you can use **Input Variables** to identify and manage your script inputs across stages or to template your script by using expressions for variable values. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/#specify-input-variables)
 
-        Declare the variable using **Name** and **Value**. 
+        Declare the variable using **Name** and **Value**.
 
         You can reference the variable in the script just as you would any other variable: `$var_name`.
 
@@ -7974,7 +7974,7 @@ shellScriptInputVariable_PowerShell:
     content: |-
         In addition to declaring variables in your script, you can use **Input Variables** to identify and manage your script inputs across stages or to template your script by using expressions for variable values. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/#specify-input-variables)
 
-        Declare the variable using **Name** and **Value**. 
+        Declare the variable using **Name** and **Value**.
 
         You can reference the variable in the script just as you would any other variable: `${var_name}`.
 
@@ -8121,7 +8121,7 @@ ContainerStepEdit_spec.infrastructure.spec.resources.limits.memory:
     width: "400"
 ContainerStepEdit_spec.infrastructure.spec.resources.limits.cpu:
     content: |-
-        The maximum number of cores that the container can use. CPU limits are measured in cpu units. 
+        The maximum number of cores that the container can use. CPU limits are measured in cpu units.
 
         Fractional requests are allowed: you can specify one hundred millicpu as 0.1 or 100m. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
     width: "400"
@@ -8156,7 +8156,7 @@ ContainerStepEdit_spec.infrastructure.spec.initTimeout:
     width: "400"
 ContainerStepEdit_spec.infrastructure.spec.tolerations:
     content: |-
-        The standard Kubernetes `tolerations`. 
+        The standard Kubernetes `tolerations`.
 
         Use the settings to specify that a pod can tolerate (or ignore) the effects of node taints. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
     width: "400"
@@ -8182,7 +8182,7 @@ ContainerStepEdit_spec.envVariables:
     width: "400"
 ContainerStepEdit_volumes:
     content: |-
-        This setting is the same as Kubernetes `volumes`. 
+        This setting is the same as Kubernetes `volumes`.
 
         Harness supports Host Path (`hostPath`), Empty Directory (`emptyDir`), and Persistent Volume Claim (`persistentVolumeClaim`). [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
     width: "400"
@@ -8275,7 +8275,7 @@ stepDetailsTab:
     width: "400"
 stepInputTab:
     content: |-
-        This tab contains all of the inputs used for the step at execution runtime. 
+        This tab contains all of the inputs used for the step at execution runtime.
 
         Hover over any input name or value to copy a [Harness variable expression](https://developer.harness.io/docs/platform/Variables-and-Expressions/harness-variables) you can use to reference the input name or value in subsequent steps or stages.
 
@@ -8501,7 +8501,7 @@ allowPublicResources: Resources marked "public" will be accessible without loggi
 selectBackOffStrategyType:
     content: |-
         In some Harness CloudFormation and ECS deployments you might get failures with `ThrottlingException` or `Rate exceeded` errors for CloudFormation and ECS API calls.
-          
+
         The AWS Backoff Strategy settings remedy this situation by setting Amazon SDK default backoff strategy params for CloudFormation and ECS. [Learn More](https://developer.harness.io/docs/platform/connectors/cloud-providers/ref-cloud-providers/aws-connector-settings-reference)
 
         The settings are:
@@ -8542,4 +8542,10 @@ shellScriptForm_spec.source.type:
         Select **Inline** to enter your script below in **Script**, or select **Harness File Store** and select a script file.
 
         [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
+    width: "400"
+is-namespaced-agent:
+    content: Namespaced agent doesnt require cluster level access rights.
+    width: "400"
+skip-crds:
+    content: If crds are already installed, check this to avoid collision.
     width: "400"
