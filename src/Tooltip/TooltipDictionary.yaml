@@ -532,6 +532,7 @@ terraformEdit-TerraformApply-EXECUTION_spec.provisionerIdentifier: |-
     - If you selected **Inline** in **Configuration Type**, create a new Id.
 
     [Learn More](https://docs.harness.io/article/hdclyshiho)
+terraformEdit-TerraformApply-EXECUTION_spec.configuration.encryptOutput.outputSecretManagerRef: The **Encrypt json output** setting encrypts the Terraform JSON output as a Harness Secret using the secret manager you select.
 terraformPlanEditView-tfPlan-EXECUTION_name: Enter a name for this step.
 terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.command: |-
     Select how you want this plan used later in the stage:
