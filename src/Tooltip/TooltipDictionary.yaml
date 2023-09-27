@@ -2262,7 +2262,7 @@ mapSplunk_metricName: Enter a name for the query.
 mapSplunk_savedSearchQuery: Select a query from the list which is an optional step.
 mapSplunk_serviceInstance: Once the records are fetched, click the plus icon in Identify Service Instance to select the path for service instance.
 mapPrometheus_serviceInstance:
-    content: Click Service Instance Identifier to retrieve host specific metrics.
+    content: Click Service Instance Identifier to retrieve host specific metrics. For more information, go to [Service Instance Identifier (SII)](https://developer.harness.io/docs/continuous-delivery/verify/cv-concepts/cvfg-cvng/#service-instance-identifier-sii)
     width: "400"
 wizardForm_webhook_name:
     content: Enter a name for the trigger. [Learn More](https://docs.harness.io/article/hndnde8usz)
