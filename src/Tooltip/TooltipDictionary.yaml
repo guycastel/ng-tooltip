@@ -5596,9 +5596,7 @@ name.gitops.repo:
     width: "400"
 insecure:
     content: |-
-        Select this option to have the GitOps Agent skip verification of the URL and credentials. [Learn More](https://docs.harness.io/article/58i67mkxap)
-
-        Verification is only skipped when you create the GitOps Repository. Subsequent uses of the GitOps Repository are verified.
+        Select this option to disable server certificate and host key checks. [Learn More](https://docs.harness.io/article/58i67mkxap)
     width: "400"
 enableLfs:
     content: Select the option to use [Git Large File Storage](https://github.com/git-lfs/git-lfs/).
