@@ -294,7 +294,7 @@ gcrRemoteCache: The name of the remote cache image, such as `gcr.io/project-id/<
 jFrogArtifactoryTarget: Repository name relative to the server URL in the connector. If pom.xml is not present then target should be full path to artifacts folder (groupId/artifactId/version)
 pluginImage: The name of the Plugin Docker image. The image name should include the tag and will default to the latest tag if unspecified. You can use any docker image from any docker registry, including docker images from private registries
 runTestsArgs:
-    content: The runtime arguments for the test. This field is required. The correct format depends on the selected language and build tool. [Learn more](https://docs.harness.io/article/axzckflbt2)
+    content: The runtime arguments for the test. This field is required. The correct format depends on the selected language and build tool. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/run-tests/set-up-test-intelligence)
     width: "400"
 runTestsBuildTool:
     content: "Select the build automation tool for the test. "
@@ -1887,8 +1887,8 @@ ciRunTests_name:
     content: Enter a unique step name.
     width: "400"
 ciRunTests_description: Description for the step.
-RunTests_stepName_StepConfig: The Run Tests step can be used to run tests in your CI stages. When you use Run Tests, you can [enable Test Intelligence](https://developer.harness.io/docs/continuous-integration/use-ci/set-up-test-intelligence/).
-ciRunTests_spec.runOnlySelectedTests: This option enables Test Intelligence. If this option is unchecked and set to False, then the Test Intelligence will be disabled and all tests will run. [Learn More](https://docs.harness.io/article/vtu9k1dsfa)
+RunTests_stepName_StepConfig: The Run Tests step can be used to run tests in your CI stages. When you use Run Tests, you can [enable Test Intelligence](https://developer.harness.io/docs/continuous-integration/use-ci/run-tests/set-up-test-intelligence).
+ciRunTests_spec.runOnlySelectedTests: This option enables Test Intelligence. If this option is unchecked and set to False, then the Test Intelligence will be disabled and all tests will run. [Learn More](https://developer.harness.io/docs/continuous-integration/use-ci/run-tests/set-up-test-intelligence)
 ciBuildInfra_connectorRef: Select a Harness Connector for a Kubernetes cluster. A Kubernetes cluster is used as a build farm. [Learn More](https://docs.harness.io/article/ia5dwx5ya8)
 notificationsOverview_name: Enter a name for your Notification Rule. Notification Rules are used to create a notification strategy for your pipeline. [Learn More](https://docs.harness.io/article/4bor7kyimj)
 pipelineEvents_types.AllEvents:
