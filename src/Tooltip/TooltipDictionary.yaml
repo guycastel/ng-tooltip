@@ -8548,3 +8548,9 @@ is-namespaced-agent:
 skip-crds:
     content: If crds are already installed, check this to avoid collision.
     width: "400"
+EC2PotentialMonthlySavings:
+    content: Potential Monthly Savings are calculated by taking into account active saving plans and discounts from reserved instances
+    width: "400"
+EC2RecommendationMonthlyCost:
+    content: Potential Monthly Cost are calculated based on On-Demand cost
+    width: "400"
