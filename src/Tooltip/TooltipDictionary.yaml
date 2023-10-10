@@ -309,6 +309,12 @@ runTestsPackages:
         If you do not provide the list and leave it empty, Harness will auto-detect the package.
     width: "400"
 runTestsTestAnnotations: "List of test annotations used in unit testing. They should be separated by comma. Any method annotated with this will be treated as test method. The defaults are: org.junit.Test, org.junit.jupiter.api.Test, org.testng.annotations.Test"
+enableTestSplitting:
+    content: "Use this option to enable parallelism (test splitting) for Test Intelligence. You must also set a parallelism strategy on the stage or step. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/run-tests/set-up-test-intelligence#enable-parallelism-test-splitting-for-test-intelligence)."
+    width: "400"
+testSplitStrategy:
+    content: "Optional. If you enabled test splitting, you can specify the test split strategy. Class timing (the default) uses test times from previous runs to determine how to split the test workload for the current build. Test count uses simple division to split the tests into workloads."
+    width: "400"
 gcpConnector: GCP connector to use for saving the cache to GCS
 saveCacheS3Connector: AWS connector to use for saving the cache to S3
 stageSpecificationsSharedPaths: By default, all of a stage's steps use the same workspace to share data. If you need to share additional paths between steps, add Shared Paths.
