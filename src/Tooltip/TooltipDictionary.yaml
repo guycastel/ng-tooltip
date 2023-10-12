@@ -310,10 +310,10 @@ runTestsPackages:
     width: "400"
 runTestsTestAnnotations: "List of test annotations used in unit testing. They should be separated by comma. Any method annotated with this will be treated as test method. The defaults are: org.junit.Test, org.junit.jupiter.api.Test, org.testng.annotations.Test"
 enableTestSplitting:
-    content: "Use this option to enable parallelism (test splitting) for Test Intelligence. You must also set a parallelism strategy on the stage or step. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/run-tests/set-up-test-intelligence#enable-parallelism-test-splitting-for-test-intelligence)."
+    content: Use this option to enable parallelism (test splitting) for Test Intelligence. You must also set a parallelism strategy on the stage or step. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/run-tests/set-up-test-intelligence#enable-parallelism-test-splitting-for-test-intelligence).
     width: "400"
 testSplitStrategy:
-    content: "Optional. If you enabled test splitting, you can specify the test split strategy. Class timing (the default) uses test times from previous runs to determine how to split the test workload for the current build. Test count uses simple division to split the tests into workloads."
+    content: Optional. If you enabled test splitting, you can specify the test split strategy. Class timing (the default) uses test times from previous runs to determine how to split the test workload for the current build. Test count uses simple division to split the tests into workloads.
     width: "400"
 gcpConnector: GCP connector to use for saving the cache to GCS
 saveCacheS3Connector: AWS connector to use for saving the cache to S3
@@ -3939,7 +3939,7 @@ ciBuildInfra_hostNames:
     width: "400"
 runAsNonRoot:
     content: |-
-
+        
         Use this setting to run the container as a non-root user.
 
         To specify a default user Id for the container, add it in **Run as User**. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/container-step)
@@ -5444,14 +5444,14 @@ genericExecutionStepForm_timeout:
     width: "400"
 EcsBlueGreenCreateService_stepName_StepConfig:
     content: |-
-        This step begins an ECS Blue Green deployment. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
+        This step begins an ECS Blue Green deployment. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/ecs/ecs-deployment-tutorial)
 
         In this step, Harness deploys the new service version to the target group for the Stage Listener you select here.
 
         Next, you add an ECS Blue Green Swap Target step to perform the Blue/Green route swap to the Prod Listener you select here.
     width: "400"
 ecsBlueGreenCreateServiceStepEdit_name:
-    content: Enter a name for this ECS Blue Green Create Service step.
+    content: Enter a name for this ECS Blue Green Create Service step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/ecs/ecs-deployment-tutorial)
     width: "400"
 ecsBlueGreenCreateServiceStepEdit_timeout:
     content: |-
@@ -5478,25 +5478,25 @@ ecsBlueGreenCreateServiceStepEdit_spec.loadBalancer:
 
         If you do not see your load balancer, ensure that the delegate can connect to ECS.
 
-        Once the load balancer is selected, Harness will populate the Prod and Stage Listener drop-downs. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
+        Once the load balancer is selected, Harness will populate the Prod and Stage Listener drop-downs. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/ecs/ecs-deployment-tutorial)
     width: "400"
 ecsBlueGreenCreateServiceStepEdit_spec.prodListener:
-    content: Select the ELB listener that you want to use as the Prod Listener. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
+    content: Select the ELB listener that you want to use as the Prod Listener. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/ecs/ecs-deployment-tutorial)
     width: "400"
 ecsBlueGreenCreateServiceStepEdit_spec.prodListenerRuleArn:
     content: |-
-        If you are using Listener Rules in your target groups, you can select them in **Production Listener Rule ARN** and **Stage Listener Rule ARN**. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
+        If you are using Listener Rules in your target groups, you can select them in **Production Listener Rule ARN** and **Stage Listener Rule ARN**. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/ecs/ecs-deployment-tutorial)
 
         If you do not select a listener rule, Harness uses the Default rule.
 
         You do not need to select the Default rule.
     width: "500"
 ecsBlueGreenCreateServiceStepEdit_spec.stageListener:
-    content: Select the ELB listener that you want to use as the Stage Listener. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
+    content: Select the ELB listener that you want to use as the Stage Listener. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/ecs/ecs-deployment-tutorial)
     width: "400"
 ecsBlueGreenCreateServiceStepEdit_spec.stageListenerRuleArn:
     content: |-
-        If you are using Listener Rules in your target groups, you can select them in **Production Listener Rule ARN** and **Stage Listener Rule ARN**. [Learn More](https://docs.harness.io/article/vytf6s0kwc)
+        If you are using Listener Rules in your target groups, you can select them in **Production Listener Rule ARN** and **Stage Listener Rule ARN**. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/ecs/ecs-deployment-tutorial)
 
         If you do not select a listener rule, Harness uses the Default rule. You do not need to select the Default rule.
     width: "500"
@@ -5601,8 +5601,7 @@ name.gitops.repo:
         The `rsa` and `-m PEM` ensure the algorithm and that the key is PEM. Next, follow the prompts to create the PEM key. For more information, see the [ssh-keygen man page](https://linux.die.net/man/1/ssh-keygen).
     width: "400"
 insecure:
-    content: |-
-        Select this option to disable server certificate and host key checks. [Learn More](https://docs.harness.io/article/58i67mkxap)
+    content: Select this option to disable server certificate and host key checks. [Learn More](https://docs.harness.io/article/58i67mkxap)
     width: "400"
 enableLfs:
     content: Select the option to use [Git Large File Storage](https://github.com/git-lfs/git-lfs/).
@@ -8559,4 +8558,18 @@ EC2PotentialMonthlySavings:
     width: "400"
 EC2RecommendationMonthlyCost:
     content: Potential Monthly Cost are calculated based on On-Demand cost
+    width: "400"
+ecsBlueGreenCreateServiceStepEdit_spec.sameAsAlreadyRunningInstances:
+    content: |-
+        This setting sets the number of desired ECS service instances for this stage to the same number as the already running instances. 
+
+        Essentially, it ignores the desired count in the Service Definition of the new deployment. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/ecs/ecs-deployment-tutorial)
+    width: "400"
+ecsBlueGreenCreateServiceStepEdit_spec.enableAutoScalingInSwapStep:
+    content: |-
+        If you select **Enable Auto Scaling In Swap Step** in the **ECS Blue Green Create Service** step, then Harness will attach auto scaling policies to the new service it deploys in the **Configure Swap Target Groups** step.  [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/ecs/ecs-deployment-tutorial)
+
+        The policies are taken from the Scalable Target and Scaling Policy settings in the Harness service.
+
+        If you do **not** select **Enable Auto Scaling In Swap Step**, then Harness will attach auto scaling policies to the new service deployed in the **Configure Blue Green Deployment** step.
     width: "400"
