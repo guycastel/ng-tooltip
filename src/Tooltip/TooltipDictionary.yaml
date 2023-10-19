@@ -8573,3 +8573,119 @@ ecsBlueGreenCreateServiceStepEdit_spec.enableAutoScalingInSwapStep:
 
         If you do **not** select **Enable Auto Scaling In Swap Step**, then Harness will attach auto scaling policies to the new service deployed in the **Configure Blue Green Deployment** step.
     width: "400"
+defaultSettingsForm_disable_harness_built_in_secret_manager:
+    content: |-
+        If you want to disable the built-in Harness Secret Manager, enable this setting. [Learn More](https://developer.harness.io/docs/platform/secrets/secrets-management/harness-secret-manager-overview)
+
+        Google Cloud Key Management Service is the default Secret Manager in Harness and is named Harness Secret Manager Google KMS.
+    width: "400"
+defaultSettingsForm_email_to_non_harness_users:
+    content: |-
+        By default, the Email step can only send emails to Harness users.
+
+        To send emails to non-Harness users, you must configure your own SMTP server and enable this **Enable Emails to be sent to non-Harness Users** setting. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/email_step)
+
+        Enable **Allow Overrides** to allow a project to override the setting of its org, or an org to override its account setting.
+    width: "400"
+defaultSettingsForm_default_connector_for_git_experience:
+    content: |-
+        To stop Harness from selecting the same Harness Git connector automatically, you can enable this setting. 
+
+        When this setting is enabled, the default connector is preselected during pipeline or template creation. You can, however, use any other connector if necessary. [Learn More](https://developer.harness.io/docs/platform/git-experience/git-settings)
+    width: "400"
+defaultSettingsForm_allow_different_repo_for_pipeline_and_input_sets:
+    content: Enable this setting to link inputsets and pipelines from different repositories. [Learn More](https://developer.harness.io/docs/platform/git-experience/git-settings)
+    width: "400"
+defaultSettingsForm_enforce_git_experience:
+    content: |
+        Enable this setting to ensure that your resource configurations are saved only in Git repositories. [Learn More](https://developer.harness.io/docs/platform/git-experience/git-settings)
+    width: "400"
+defaultSettingsForm_default_store_type_for_entities:
+    content: |-
+        Use this setting to set the default storage type for entities. [Learn More](https://developer.harness.io/docs/platform/git-experience/git-settings)
+
+        This setting applies to the following resources:
+
+        - Pipelines
+        - Input sets
+        - Templates
+    width: "400"
+defaultSettingsForm_default_repo_for_git_experience:
+    content: |-
+        Use this setting to set the default repository for entities. [Learn More](https://developer.harness.io/docs/platform/git-experience/git-settings)
+
+        This setting applies to the following resources:
+
+        - Pipelines
+        - Input sets
+        - Templates
+    width: "400"
+defaultSettingsForm_git_experience_repo_allowlist:
+    content: Enable this setting to set the allowed repositories for Git Experience entities. [Learn More](https://developer.harness.io/docs/platform/git-experience/git-settings)
+    width: "400"
+defaultSettingsForm_enable_bi_directional_sync:
+    content: By default, Harness Git Experience syncs unidirectionally. Enable this setting to have Git Experience sync two-way (bidirectionally) between Harness and your Git repo.
+    width: "400"
+defaultSettingsForm_mandate_custom_webhook_authorization:
+    content: |
+        Enable this setting to require that all custom triggers in this Harness account use API key tokens. [Learn More](https://developer.harness.io/docs/platform/triggers/trigger-deployments-using-custom-triggers)
+    width: "400"
+defaultSettingsForm_enable_node_execution_audit_events:
+    content: |-
+        By default, the pipeline execution audit events such as Pipeline Start, Pipeline End, Stage Start, and Stage End are not displayed in Audit Trail. 
+
+        Enable this setting to display these events. [Learn More](https://developer.harness.io/docs/platform/governance/audit-trail)
+    width: "400"
+defaultSettingsForm_allow_user_to_mark_step_as_failed_explicitly:
+    content: Enable this setting to allow users to fail a running step.
+    width: "400"
+defaultSettingsForm_export_service_variables_as_env_variables:
+    content: |-
+        Enable this setting to export service variables as environment variables in Shell Script steps. This setting is available at account, organization, and project levels. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/export-ser-var-as-env-var)
+
+        Once you enable this setting, a service's variables are available as Bash variables in any Shell Script step in a stage that deploys that service. 
+
+        You can access the service variables like you access any Bash variables. For example, the service variable, `var1` is available for use in a Shell Script step as `$var1`.
+    width: "400"
+defaultSettingsForm_enable_matrix_label_by_name:
+    content: |-
+        Enable this setting to use the names of the matrix indices as labels. [Learn More](https://developer.harness.io/docs/platform/pipelines/looping-strategies/looping-strategies-matrix-repeat-and-parallelism)
+
+        By default, Harness uses indices for the matrix naming strategy (stages are named with indices like `_2_2`, `_1_3`, and so on). If you prefer, you can customize this naming convention for better readability.
+    width: "400"
+defaultSettingsForm_enable_expression_engine_v2:
+    content: Enable this setting to write expressions using any JSON parser tool. [Learn More](https://developer.harness.io/docs/platform/variables-and-expressions/expression-v2)
+    width: "400"
+defaultSettingsForm_mandate_webhook_secrets_for_github_triggers:
+    content: |-
+        Enable this setting to force secrets for Webhook triggers for authenticating the webhook call. [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference)
+
+        For the secret to work with your webhook, you need to configure the repository webhook with the same secret after creating the trigger in Harness.
+    width: "400"
+defaultSettingsForm_trigger_for_all_artifacts_or_manifests:
+    content: Enable this setting to allow all artifacts or manifests collected during the polling interval to trigger a deployment, with one deployment triggered for each artifact/manifest collected. [Learn More](https://developer.harness.io/docs/platform/triggers/trigger-on-a-new-artifact)
+    width: "400"
+defaultSettingsForm_pipeline_timeout:
+    content: Set the default timeout for a running pipeline. Once the timeout is reached, the failure strategy is executed. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/step-and-stage-failure-strategy)
+    width: "400"
+defaultSettingsForm_stage_timeout:
+    content: Set the default timeout for a running stage. Once the timeout is reached, the failure strategy is executed. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/step-and-stage-failure-strategy)
+    width: "400"
+defaultSettingsForm_step_timeout:
+    content: Set the default timeout for a running step. Once the timeout is reached, the failure strategy is executed. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/step-and-stage-failure-strategy)
+    width: "400"
+defaultSettingsForm_concurrent_active_pipeline_executions:
+    content: |-
+        Enter the number of concurrent pipeline executions per execution API request. [Learn More](https://developer.harness.io/docs/platform/pipelines/w_pipeline-steps-reference/pipeline-settings)
+
+        The setting considers only those executions that are in progress (including those that are paused temporarily in steps such as the wait step or approval step), not those that have executed to completion. Any executions that users trigger when the limit is reached are added to the execution queue.
+    width: "400"
+defaultSettingsForm_email_notification_domain_allowlist:
+    content: |-
+        Enable this setting to add a domain filter to a notification channel. [Learn More](https://developer.harness.io/docs/platform/notifications/notification-settings)
+
+        With notification settings, you can add domain allowlists for notification channels at the account level. This feature enables you to specify fixed URL domains to which notifications can be sent. Expression URLs are not yet supported.
+    width: "400"
+defaultSettingsForm_aida:
+    content: Enable this setting to use Harness AI Development Assistant (AIDA). [Learn More](https://developer.harness.io/docs/platform/Harness-AIDA/aida-overview)
+    width: "400"
