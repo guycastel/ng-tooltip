@@ -4350,6 +4350,22 @@ StepGroup_stepName_StepConfig:
 
 
         [Watch a video](https://www.youtube.com/watch?v=J5eHYSbE8cg)
+
+        ## Containerized step groups
+
+        To provide greater control over the resources used for CD steps, Harness also lets you use your own Kubernetes cluster as the runtime infrastructure for CD steps.
+         
+
+        You can use a CD step group that points to your cluster as the runtime infrastructure. Next, in the step group, you can add the steps supported by containerized step groups.
+         
+
+        In this architecture, no tooling is installed on delegates. Delegates simply act as orchestrators. Any tooling is installed and removed on demand in the ephemeral step containers.
+         
+
+        When you use deployment types that support containerized step groups (for example, AWS SAM), containerized steps are automatically generated when you add the execution strategy for the stage.
+         
+
+        When you manually add a step group, you can enable containerized step groups by selecting the **Enable container based execution** option. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/containerized-steps/containerized-step-groups)
     width: "500"
 stepGroup_name:
     content: Enter a name for this step group. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/step-groups)
@@ -8689,3 +8705,426 @@ defaultSettingsForm_email_notification_domain_allowlist:
 defaultSettingsForm_aida:
     content: Enable this setting to use Harness AI Development Assistant (AIDA). [Learn More](https://developer.harness.io/docs/platform/Harness-AIDA/aida-overview)
     width: "400"
+defaultSettingsForm_default_image_pull_policy_for_add_on_container:
+    content: |-
+        Use this setting to set the image pull policy for the internal Harness images that run inside a pod along with your containers.
+
+        For example, you can pull all images using a pull policy of **Always** (the default setting), or you can select **Never** because you expect the image to be present in the cluster already.
+    width: "400"
+AwsLambdaInfraDefinitionDetails:
+    content: Enter the required settings to connect Harness to the AWS region where you are deploying your Lambda function. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/aws/aws-lambda-deployments)
+    width: "400"
+AwsLambdaInfraSpecEditable_region:
+    content: Enter the AWS region for your function.
+    width: "400"
+GitClone_stepName_ProvisionerStepConfig:
+    content: Use this step to clone a repository and gain access to any necessary code, scripts, or configurations. This step enables you to perform various actions and ensure a reliable and controlled deployment. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/containerized-steps/git-clone-step/)
+    width: "400"
+buildType:
+    content: |-
+        - Select **Git Branch** if you want the step to clone code from a specific branch within the repository. 
+        - Select **Git Tag** if you want the step to clone code from a specific commit tag. 
+
+        Based on your selection, specify a **Branch Name** or **Tag Name**. [Learn More](https://docs.harness.io/article/v9sigwjlgo)
+    width: "400"
+cloneDirectory:
+    content: Enter an optional target path in the stage workspace where you want to clone the repo. [Learn More](https://docs.harness.io/article/v9sigwjlgo)
+    width: "400"
+AwsCdkDiff_stepName_ProvisionerStepConfig:
+    content: |
+        This step runs the `cdk diff` command to compare the specified stack and its dependencies with the deployed stacks. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDiffStepEdit_timeout:
+    content: ""
+    width: "400"
+AwsCDKDiffStepEdit_spec.connectorRef:
+    content: Select or create A Harness Docker registry connector for the registry hosting the image that you want Harness to run commands on, such as Docker Hub. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDiffStepEdit_spec.image:
+    content: The image to use for this step. For example, `harness/aws-cdk-plugin:1.0.0-java`. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDiffStepEdit_spec.appPath:
+    content: The path to the CDK app. The Git Clone step listed the app repository in its **Repository Name** setting. **App Path** must include the path to the app folder in that directory. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDiffStepEdit_spec.commandOptions:
+    content: You can add any CDK parameters you can see in the `cdk diff --help` command, just like you would in the `cdk` command-line tool. For example, `--verbose`. For more information, go to [Parameters](https://docs.aws.amazon.com/cdk/v2/guide/parameters.html) from AWS. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDiffStepEdit_spec.stackNames:
+    content: If you are using a multi-stack app, enter the names of each stack you want to passed to `cdk` command. For example, if your stack names are `cdkTest1Stack1` and `cdkTest1Stack2`, you would select **Add** and enter two stack names, one for each stack. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDiffStepEdit_spec.privileged:
+    content: Enable this option to run the container with escalated privileges. This is equivalent to running a container with the Docker `--privileged` flag. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDiffStepEdit_spec.imagePullPolicy:
+    content: |-
+        Select an option to set the pull policy for the image. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+
+        - **Always**: The kubelet queries the container image registry to resolve the name to an image digest every time the kubelet launches a container. If the kubelet encounters an exact digest cached locally, it uses its cached image; otherwise, the kubelet downloads (pulls) the image with the resolved digest, and uses that image to launch the container.
+        - **If Not Present**: The image is pulled only if it is not already present locally.
+        - **Never**: The image is assumed to exist locally. No attempt is made to pull the image.
+    width: "400"
+AwsCDKDiffStepEdit_spec.runAsUser:
+    content: |-
+        The standard `runAsUser` setting for the `securityContext` property.
+
+        Specify the user ID (UID) under which the container should run. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDiffStepEdit_spec.resources.limits.memory:
+    content: Maximum memory that the container can use. You can express memory as a plain integer or as a fixed-point number with the suffixes G or M. You can also use the power-of-two equivalents, Gi or Mi. Do not include spaces when entering a fixed value. The default is 500Mi. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDiffStepEdit_spec.resources.limits.cpu:
+    content: The maximum number of cores that the container can use. CPU limits are measured in CPU units. Fractional requests are allowed. For example, you can specify one hundred millicpu as 0.1 or 100m. The default is 400m. For more information, go to Resource units in Kubernetes. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDiffStepEdit_spec.envVariables:
+    content: |-
+        You can change or add environment variables used in the container. You must input a Key and Value for each variable.
+         
+
+        Variable values can be [Fixed Values, Runtime Inputs, and Expressions](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs). For example, if the value type is expression, you can input a value that references the value of some other setting in the stage or pipeline. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCdkSynth_stepName_ProvisionerStepConfig:
+    content: |-
+        This step runs the `cdk synthesize` command. It synthesizes and prints the CloudFormation template for one or more stacks specified in the step. 
+         
+        In the log for the executed step you will see the JSON file exported, for example, Exporting template file: `hello-cdk/cdk.out/cdkTest1stack1.template.json`. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKSynthStepEdit_spec.connectorRef:
+    content: Select or create A Harness Docker registry connector for the registry hosting the image that you want Harness to run commands on, such as Docker Hub. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKSynthStepEdit_spec.image:
+    content: The image to use for this step. For example, `harness/aws-cdk-plugin:1.0.0-java`. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKSynthStepEdit_spec.appPath:
+    content: The path to the CDK app. The Git Clone step listed the app repository in its **Repository Name** setting. **App Path** must include the path to the app folder in that directory. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKSynthStepEdit_spec.commandOptions:
+    content: |-
+        You can add any CDK parameters you can see in the `cdk synthesize --help` command, just like you would in the `cdk` command-line tool. For example, `--verbose`. 
+         
+        For more information, go to [Parameters](https://docs.aws.amazon.com/cdk/v2/guide/parameters.html) from AWS. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKSynthStepEdit_spec.stackNames:
+    content: If you are using a multi-stack app, enter the names of each stack you want to passed to `cdk` command. For example, if your stack names are `cdkTest1Stack1` and `cdkTest1Stack2`, you would select **Add** and enter two stack names, one for each stack. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKSynthStepEdit_spec.imagePullPolicy:
+    content: |-
+        Select an option to set the pull policy for the image. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+
+        - **Always**: The kubelet queries the container image registry to resolve the name to an image digest every time the kubelet launches a container. If the kubelet encounters an exact digest cached locally, it uses its cached image; otherwise, the kubelet downloads (pulls) the image with the resolved digest, and uses that image to launch the container.
+        - **If Not Present**: The image is pulled only if it is not already present locally.
+        - **Never**: The image is assumed to exist locally. No attempt is made to pull the image.
+    width: "400"
+AwsCDKSynthStepEdit_spec.runAsUser:
+    content: |-
+        The standard `runAsUser` setting for the `securityContext` property.
+
+        Specify the user ID (UID) under which the container should run. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKSynthStepEdit_spec.resources.limits.memory:
+    content: Maximum memory that the container can use. You can express memory as a plain integer or as a fixed-point number with the suffixes G or M. You can also use the power-of-two equivalents, Gi or Mi. Do not include spaces when entering a fixed value. The default is 500Mi. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKSynthStepEdit_spec.resources.limits.cpu:
+    content: The maximum number of cores that the container can use. CPU limits are measured in CPU units. Fractional requests are allowed. For example, you can specify one hundred millicpu as 0.1 or 100m. The default is 400m. For more information, go to Resource units in Kubernetes. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKSynthStepEdit_spec.envVariables:
+    content: |-
+        You can change or add environment variables used in the container. You must input a Key and Value for each variable.
+         
+
+        Variable values can be [Fixed Values, Runtime Inputs, and Expressions](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs). For example, if the value type is expression, you can input a value that references the value of some other setting in the stage or pipeline. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKSynthStepEdit_spec.privileged:
+    content: Enable this option to run the container with escalated privileges. This is equivalent to running a container with the Docker `--privileged` flag. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKSynthStepEdit_spec.exportTemplate:
+    content: Exports the JSON template(s) for the stacks entered in **Stack Names**. If no stacks are listed in **Stack Names**, and **Export Template** is enabled, Harness export templates for all stacks in the app. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCdkDeploy_stepName_ProvisionerStepConfig:
+    content: Runs the cdk deploy command to deploy the infrastructure defined in your CDK application to your AWS account. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDeployStepEdit_spec.connectorRef:
+    content: Select or create A Harness Docker registry connector for the registry hosting the image that you want Harness to run commands on, such as Docker Hub. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDeployStepEdit_spec.image:
+    content: The image to use for this step. For example, `harness/aws-cdk-plugin:1.0.0-java`. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDeployStepEdit_spec.provisionerIdentifier:
+    content: |-
+        The CDK Deploy step includes a **Provisioner Identifier** setting to track the provisioning it performs.
+
+        The **Provisioner Identifier** is used by the AWS CDK Rollback step to ensure that the step uses same parameters and inputs that were used by the last successful cdk deploy with the corresponding **Provisioner Identifier** (in the CDK Deploy step).
+
+        The **Provisioner Identifier** must be unique per provisioned infrastructure at the Harness project level. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDeployStepEdit_spec.appPath:
+    content: The path to the CDK app. The Git Clone step listed the app repository in its **Repository Name** setting. **App Path** must include the path to the app folder in that directory. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDeployStepEdit_spec.commandOptions:
+    content: You can add any CDK parameters you can see in the `cdk [command] --help` command, just like you would in the `cdk` command-line tool. For example, `--verbose`. For more information, go to [Parameters](https://docs.aws.amazon.com/cdk/v2/guide/parameters.html) from AWS. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDeployStepEdit_spec.stackNames:
+    content: If you are using a multi-stack app, enter the names of each stack you want to passed to `cdk` command. For example, if your stack names are `cdkTest1Stack1` and `cdkTest1Stack2`, you would select **Add** and enter two stack names, one for each stack. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDeployStepEdit_spec.privileged:
+    content: Enable this option to run the container with escalated privileges. This is equivalent to running a container with the Docker `--privileged` flag. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDeployStepEdit_spec.imagePullPolicy:
+    content: |-
+        Select an option to set the pull policy for the image. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+
+        - **Always**: The kubelet queries the container image registry to resolve the name to an image digest every time the kubelet launches a container. If the kubelet encounters an exact digest cached locally, it uses its cached image; otherwise, the kubelet downloads (pulls) the image with the resolved digest, and uses that image to launch the container.
+        - **If Not Present**: The image is pulled only if it is not already present locally.
+        - **Never**: The image is assumed to exist locally. No attempt is made to pull the image.
+    width: "400"
+AwsCDKDeployStepEdit_spec.runAsUser:
+    content: |-
+        The standard `runAsUser` setting for the `securityContext` property.
+
+        Specify the user ID (UID) under which the container should run. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDeployStepEdit_spec.resources.limits.memory:
+    content: Maximum memory that the container can use. You can express memory as a plain integer or as a fixed-point number with the suffixes G or M. You can also use the power-of-two equivalents, Gi or Mi. Do not include spaces when entering a fixed value. The default is 500Mi. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDeployStepEdit_spec.resources.limits.cpu:
+    content: The maximum number of cores that the container can use. CPU limits are measured in CPU units. Fractional requests are allowed. For example, you can specify one hundred millicpu as 0.1 or 100m. The default is 400m. For more information, go to Resource units in Kubernetes. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDeployStepEdit_spec.envVariables:
+    content: |-
+        You can change or add environment variables used in the container. You must input a Key and Value for each variable.
+         
+
+        Variable values can be [Fixed Values, Runtime Inputs, and Expressions](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs). For example, if the value type is expression, you can input a value that references the value of some other setting in the stage or pipeline. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDeployStepEdit_spec.parameters:
+    content: |-
+        This setting is the same as the `--parameters` option for `cdk deploy` (for example, `cdk deploy MyStack --parameters uploadBucketName=UploadBucket`).
+
+        For more information, go to [Specifying AWS CloudFormation parameters](https://docs.aws.amazon.com/cdk/v2/guide/cli.html#cli-deploy) from AWS. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCdkBootstrap_stepName_ProvisionerStepConfig:
+    content: |-
+        This step runs the `cdk bootstrap` command. For details on bootstrapping, go to [Bootstrapping your AWS environment](https://docs.aws.amazon.com/cdk/v2/guide/cli.html#cli-bootstrap) from AWS.
+
+        This step sets up the necessary AWS resources and environment required for deploying CDK applications in a specific AWS region and AWS account. This command is typically run once per AWS account and region to prepare the environment for CDK deployments.
+
+        If the AWS environment is already bootstrapped and has the necessary AWS resources required for deploying CDK applications, you can omit this step.
+    width: "400"
+AwsCDKBootstrapStepEdit_spec.connectorRef:
+    content: |
+        Select or create A Harness Docker registry connector for the registry hosting the image that you want Harness to run commands on, such as Docker Hub. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKBootstrapStepEdit_spec.image:
+    content: The image to use for this step. For example, `harness/aws-cdk-plugin:1.0.0-java`. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKBootstrapStepEdit_spec.appPath:
+    content: The path to the CDK app. The Git Clone step listed the app repository in its **Repository Name** setting. **App Path** must include the path to the app folder in that directory. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKBootstrapStepEdit_spec.commandOptions:
+    content: |
+        You can add any CDK parameters you can see in the `cdk bootstrap --help` command, just like you would in the `cdk` command-line tool. For example, `--verbose`. For more information, go to [Parameters](https://docs.aws.amazon.com/cdk/v2/guide/parameters.html) from AWS. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKBootstrapStepEdit_spec.privileged:
+    content: Enable this option to run the container with escalated privileges. This is equivalent to running a container with the Docker `--privileged` flag. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKBootstrapStepEdit_spec.imagePullPolicy:
+    content: |-
+        Select an option to set the pull policy for the image. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+
+        - **Always**: The kubelet queries the container image registry to resolve the name to an image digest every time the kubelet launches a container. If the kubelet encounters an exact digest cached locally, it uses its cached image; otherwise, the kubelet downloads (pulls) the image with the resolved digest, and uses that image to launch the container.
+        - **If Not Present**: The image is pulled only if it is not already present locally.
+        - **Never**: The image is assumed to exist locally. No attempt is made to pull the image.
+    width: "400"
+AwsCDKBootstrapStepEdit_spec.runAsUser:
+    content: |-
+        The standard `runAsUser` setting for the `securityContext` property.
+
+        Specify the user ID (UID) under which the container should run. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKBootstrapStepEdit_spec.resources.limits.memory:
+    content: Maximum memory that the container can use. You can express memory as a plain integer or as a fixed-point number with the suffixes G or M. You can also use the power-of-two equivalents, Gi or Mi. Do not include spaces when entering a fixed value. The default is 500Mi. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKBootstrapStepEdit_spec.resources.limits.cpu:
+    content: The maximum number of cores that the container can use. CPU limits are measured in CPU units. Fractional requests are allowed. For example, you can specify one hundred millicpu as 0.1 or 100m. The default is 400m. For more information, go to Resource units in Kubernetes. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKBootstrapStepEdit_spec.envVariables:
+    content: |-
+        You can change or add environment variables used in the container. You must input a Key and Value for each variable.
+         
+
+        Variable values can be [Fixed Values, Runtime Inputs, and Expressions](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs). For example, if the value type is expression, you can input a value that references the value of some other setting in the stage or pipeline. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCdkRollback_stepName_ProvisionerStepConfig:
+    content: The CDK Rollback step rolls back the provisioned resources deployed by the CDK Deploy step to the last successful version. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKRollBackStepEdit_spec.provisionerIdentifier:
+    content: |-
+        This **Provisioner Identifier** setting is used to link CDK Deploy and CDK Rollback steps.  [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/) 
+         
+
+        In the CDK Rollback step, use the identical **Provisioner Identifier** as the CDK Deploy step to ensure that it rolls back the resources deployed by the failed CDK Deploy step. 
+         
+
+        By using the same **Provisioner Identifier** in both the CDK Deploy and CDK Rollback steps, you ensure that CDK Rollback will uses the data from corresponding cdk deploy. 
+         
+
+        After each successful cdk deploy, Harness stores the details using the Provisioner Identifier so they can be used for rollback.
+    width: "400"
+AwsCDKRollBackStepEdit_spec.envVariables:
+    content: |-
+        You can change or add environment variables used in the container. You must input a Key and Value for each variable.
+         
+
+        Variable values can be [Fixed Values, Runtime Inputs, and Expressions](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs). For example, if the value type is expression, you can input a value that references the value of some other setting in the stage or pipeline. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCdkDestroy_stepName_ProvisionerStepConfig:
+    content: |-
+        This step runs the `cdk destroy` command to destroy one or more specified stacks. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+
+        You can use this step to destroy one or more stacks defined in the CDK application.
+    width: "400"
+AwsCDKDestroyStepEdit_spec.connectorRef:
+    content: |
+        Select or create A Harness Docker registry connector for the registry hosting the image that you want Harness to run commands on, such as Docker Hub. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDestroyStepEdit_spec.image:
+    content: |
+        The image to use for this step. For example, `harness/aws-cdk-plugin:1.0.0-java`. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDestroyStepEdit_spec.appPath:
+    content: |
+        The path to the CDK app. The Git Clone step listed the app repository in its **Repository Name** setting. **App Path** must include the path to the app folder in that directory. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDestroyStepEdit_spec.commandOptions:
+    content: You can add any CDK parameters you can see in the `cdk destroy --help` command, just like you would in the `cdk` command-line tool. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDestroyStepEdit_spec.stackNames:
+    content: If you are using a multi-stack app, enter the names of each stack you want to destroy here. For example, if your stack names are `cdkTest1Stack1` and `cdkTest1Stack2`, you would select **Add** and enter two stack names, one for each stack. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDestroyStepEdit_spec.privileged:
+    content: |
+        Enable this option to run the container with escalated privileges. This is equivalent to running a container with the Docker `--privileged` flag. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDestroyStepEdit_spec.imagePullPolicy:
+    content: |
+        Select an option to set the pull policy for the image. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+
+        - **Always**: The kubelet queries the container image registry to resolve the name to an image digest every time the kubelet launches a container. If the kubelet encounters an exact digest cached locally, it uses its cached image; otherwise, the kubelet downloads (pulls) the image with the resolved digest, and uses that image to launch the container.
+        - **If Not Present**: The image is pulled only if it is not already present locally.
+        - **Never**: The image is assumed to exist locally. No attempt is made to pull the image.
+    width: "400"
+AwsCDKDestroyStepEdit_spec.runAsUser:
+    content: |-
+        The standard `runAsUser` setting for the `securityContext` property.
+
+        Specify the user ID (UID) under which the container should run. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDestroyStepEdit_spec.resources.limits.memory:
+    content: |
+        Maximum memory that the container can use. You can express memory as a plain integer or as a fixed-point number with the suffixes G or M. You can also use the power-of-two equivalents, Gi or Mi. Do not include spaces when entering a fixed value. The default is 500Mi. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDestroyStepEdit_spec.resources.limits.cpu:
+    content: |
+        The maximum number of cores that the container can use. CPU limits are measured in CPU units. Fractional requests are allowed. For example, you can specify one hundred millicpu as 0.1 or 100m. The default is 400m. For more information, go to Resource units in Kubernetes. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+AwsCDKDestroyStepEdit_spec.envVariables:
+    content: |-
+        You can change or add environment variables used in the container. You must input a Key and Value for each variable.
+         
+
+        Variable values can be [Fixed Values, Runtime Inputs, and Expressions](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs). For example, if the value type is expression, you can input a value that references the value of some other setting in the stage or pipeline. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/aws-cdk/)
+    width: "400"
+stepGroup_connectorRef:
+    content: Select or add a Harness Kubernetes Cluster connector to connect to the cluster where the containers will run. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/step-groups)
+    width: "400"
+stepGroup_namespace:
+    content: Enter an existing namespace in the cluster. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/step-groups)
+    width: "400"
+stepGroup_sharedPaths:
+    content: |-
+        This setting is the same as Kubernetes `mountPath`. The name for the `volumeMounts` is added internally.
+
+        Enter shared directories or specific paths within the filesystem to have them shared between containers running within the same pod.
+    width: "400"
+stepGroup_volumes:
+    content: This setting is the same as Kubernetes `volumes`. Harness supports Host Path (`hostPath`), Empty Directory (`emptyDir`), and Persistent Volume Claim (`persistentVolumeClaim`).
+    width: "400"
+stepGroup_serviceAccountName:
+    content: Specify a Kubernetes service account for step containers to use when communicating with the Kubernetes API server. Leave blank to use the namespace's default service account.
+    width: "400"
+stepGroup_automountServiceAccountToken:
+    content: |-
+        An application running inside a pod can access the Kubernetes API using automatically mounted service account credentials. See [Accessing the Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/) to learn more.
+
+        To use a different service account, enter its name here.
+    width: "400"
+stepGroup_labels:
+    content: Enter any labels to apply to the pods.
+    width: "400"
+stepGroup_annotations:
+    content: Enter any annotations to apply to the pods.
+    width: "400"
+stepGroup_privileged:
+    content: The standard `privileged` property for Kubernetes `securityContext`.
+    width: "400"
+stepGroup_allowPrivilegeEscalation:
+    content: The standard `allowPrivilegeEscalation` property for Kubernetes `securityContext`.
+    width: "400"
+stepGroup_addCapabilities:
+    content: |-
+        The standard add setting for the capabilities property in the Kubernetes `securityContext`.
+
+        Simply add the name of the capability, like `NET_ADMIN`.
+    width: "400"
+stepGroup_dropCapabilities:
+    content: |-
+        The standard `drop` setting for the `capabilities` property in the Kubernetes `securityContext`.
+
+        Simply add the name of the capability, like `CHOWN`.
+    width: "400"
+stepGroup_runAsNonRoot:
+    content: Enable this setting to run the container as a non-root user.
+    width: "400"
+stepGroup_readOnlyRootFilesystem:
+    content: |-
+        The standard `readOnlyRootFilesystem` setting for the `securityContext` property.
+
+        Enable this setting to ensure that the root filesystem of the container is mounted as read-only.
+    width: "400"
+stepGroup_runAsUser:
+    content: |-
+        The standard `runAsUser` setting for the `securityContext` property.
+
+        Specify the user ID (UID) under which the container should run.
+    width: "400"
+stepGroup_priorityClassName:
+    content: |-
+        The standard Kubernetes `PriorityClass`.
+
+        Enter a standard `priorityClassName` like `system-node-critical`.
+    width: "400"
+stepGroup_nodeSelector:
+    content: |-
+        The standard Kubernetes `nodeSelector`.
+
+        Enter a key like `disktype` and and value like `ssd`.
+    width: "400"
+stepGroup_tolerations:
+    content: The standard Kubernetes `tolerations`. Use the settings to specify that a pod can tolerate (or ignore) the effects of node taints.
+    width: "400"
+stepGroup_initTimeout:
+    content: The standard Kubernetes `timeoutSeconds` for `initContainers`.
+    width: "400"
+stepGroup_harnessImageConnectorRef:
+    content: |-
+        By default, at pipeline runtime, Harness pulls certain images from public Docker Hub repos. These images are only used for backend processes. At runtime, the Harness Delegate makes an outbound connection to the public repo and pulls the images.
+
+        The Harness Container Image Registry is dedicated exclusively to Harness-supported images.
+
+        You might want to override the default behavior and download your build images from this repo instead. To view the list of images in this registry, enter the following command.
+
+        ```
+        curl -X  GET https://app.harness.io/registry/_catalog
+        ```
+
+        Add or select a connector to use instead of the default connector used for the Harness Container Image Registry. [Learn More](https://developer.harness.io/docs/platform/connectors/artifact-repositories/connect-to-harness-container-image-registry-using-docker-connector)
+    width: "425"
