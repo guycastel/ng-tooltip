@@ -529,7 +529,7 @@ terraformEdit-TerraformApply-EXECUTION_spec.configuration.type: |-
 
     - If you select **Inline**, you'll configure this **Terraform Apply** step to use a Terraform script without any **Terraform Plan** step.
 
-    [Learn More](https://docs.harness.io/article/hdclyshiho)
+    [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
 terraformEdit-TerraformApply-EXECUTION_spec.provisionerIdentifier: |-
     The **Provisioner Identifier** identifies the provisioning applied in this step.
 
@@ -537,7 +537,7 @@ terraformEdit-TerraformApply-EXECUTION_spec.provisionerIdentifier: |-
 
     - If you selected **Inline** in **Configuration Type**, create a new Id.
 
-    [Learn More](https://docs.harness.io/article/hdclyshiho)
+    [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
 terraformEdit-TerraformApply-EXECUTION_spec.configuration.encryptOutput.outputSecretManagerRef: The **Encrypt json output** setting encrypts the Terraform JSON output as a Harness Secret using the secret manager you select.
 terraformPlanEditView-tfPlan-EXECUTION_name: Enter a name for this step.
 terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.command: |-
@@ -546,13 +546,13 @@ terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.command: |-
     - **Apply:** The plan will be applied by a **Terraform Apply** step later in your stage.
     - **Destroy:** The plan will be applied by a **Terraform Destroy** step later in your stage.
 
-    [Learn More](https://docs.harness.io/article/52n3j0ci72)
+    [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
 terraformPlanEditView-tfPlan-EXECUTION_spec.provisionerIdentifier: |-
     Enter a unique string to identify the provisioning configured in this step.
 
     You will use this **Provisioner Identifier** in additional steps to refer to the provisioning set up in this step.
 
-    The most common use of **Provisioner Identifier** is between the **Terraform Plan** and **Terraform Apply** steps. [Learn More](https://docs.harness.io/article/52n3j0ci72)
+    The most common use of **Provisioner Identifier** is between the **Terraform Plan** and **Terraform Apply** steps. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
 barrierStep_name: Enter a name for this step.
 barrierStep_spec.barrierRef: |-
     Select a Barrier name for the new barrier. [Learn More](https://docs.harness.io/article/dmlf8w2aeh)
@@ -963,16 +963,16 @@ terraformEdit-TerraformApply-EXECUTION_timeout: |-
 
     You can also set timeouts at the pipeline level.
 TerraformApply_stepName: |-
-    You can apply a Terraform plan or script using the **Terraform Apply** step. [Learn More](https://docs.harness.io/article/hdclyshiho)
+    You can apply a Terraform plan or script using the **Terraform Apply** step. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
 
     Typically the **Terraform Apply** step is used with the **Terraform Plan** step to apply a plan.
 
-    For steps on using the Terraform Plan step, see [Plan Terraform Provisioning with the Terraform Plan Step](https://docs.harness.io/article/52n3j0ci72).
+    For steps on using the Terraform Plan step, see [Plan Terraform Provisioning with the Terraform Plan Step](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/).
 tfConfigurationFile: |-
     The **Configuration File Repository** is where the Terraform script and files you want to use are located.
 
-    Here, you'll add a connection to the Terraform script repo. [Learn More](https://docs.harness.io/article/hdclyshiho)
-configForm_spec.configuration.spec.configFiles.store.spec.connectorRef: Select or create a Connector for your Git repo. [Learn More](https://docs.harness.io/article/hdclyshiho)
+    Here, you'll add a connection to the Terraform script repo. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
+configForm_spec.configuration.spec.configFiles.store.spec.connectorRef: Select or create a Connector for your Git repo. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
 configForm_spec.configuration.spec.configFiles.store.spec.gitFetchType: |-
     Select **Latest from Branch** or **Specific Commit Id**. When you run the pipeline, Harness will fetch the script from the repo.
 
@@ -981,11 +981,11 @@ configForm_spec.configuration.spec.configFiles.store.spec.gitFetchType: |-
     For example, if you are going to be fetching the script multiple times in your pipeline, Harness will fetch the script each time. If you select **Latest from Branch** and the branch changes between fetches, different scripts are run.
 configForm_spec.configuration.spec.configFiles.store.spec.commitId: Enter the Commit Id to use.
 configForm_spec.configuration.spec.configFiles.store.spec.branch: Enter the name of the branch to use.
-configForm_spec.configuration.spec.configFiles.store.spec.folderPath: Enter the path from the root of the repo to the folder containing the script. [Learn More](https://docs.harness.io/article/hdclyshiho)
+configForm_spec.configuration.spec.configFiles.store.spec.folderPath: Enter the path from the root of the repo to the folder containing the script. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
 TerraformPlan_stepName: |-
     The **Terraform Plan** step runs a Terraform script as a Terraform plan.
 
-    You can then add a **Terraform Apply** step later in your stage to apply the plan. [Learn More](https://docs.harness.io/article/52n3j0ci72)
+    You can then add a **Terraform Apply** step later in your stage to apply the plan. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
 terraformPlanEditView-tfPlan-EXECUTION_timeout: |-
     Enter a timeout for this step.
 
@@ -1004,7 +1004,7 @@ terraformPlanEditView-tfPlan-EXECUTION_timeout: |-
 terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.secretManagerRef: |-
     A Terraform plan is a sensitive file that could be misused to alter resources if someone has access to it. Harness avoids this issue by never passing the Terraform plan file as plain text.
 
-    Select a [Secrets Manager](https://docs.harness.io/article/hngrlb7rd6) to use for encrypting/decrypting and saving the Terraform plan file. [Learn More](https://docs.harness.io/article/52n3j0ci72)
+    Select a [Secrets Manager](https://docs.harness.io/article/hngrlb7rd6) to use for encrypting/decrypting and saving the Terraform plan file. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
 HarnessApproval_stepName: The Manual Approval step lets you specify Harness User Group(s) to approve or reject a pipeline at any point in its execution. [Learn More](https://docs.harness.io/article/fkvso46bok)
 harnessApproval_timeout: |-
     Enter a timeout for this step.
@@ -1169,7 +1169,7 @@ terraformPlanEditView-tfPlan-INFRASTRUCTURE_spec.configuration.backendConfig.spe
 
     In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://www.terraform.io/docs/language/settings/backends/gcs.html#configuration-variables) doc.
 
-    You can use [Harness secrets](https://docs.harness.io/article/osfw70e59c) for credentials.
+    You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for credentials.
 terraformPlanEditView-tfPlan-INFRASTRUCTURE_spec.configuration.targets: |-
     You can use the **Targets** setting to target one or more specific modules in your Terraform script, just like using the `terraform plan -target` command. [Learn More](https://docs.harness.io/article/uznls2lvod)
 
@@ -1188,7 +1188,7 @@ terraformPlanEditView-tfPlan-INFRASTRUCTURE_spec.configuration.environmentVariab
     TF_VAR_alist='[1,2,3]'
     ```
 
-    You can use [Harness secrets](https://docs.harness.io/article/osfw70e59c) for values.
+    You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for values.
 terraformEdit-TerraformApply-INFRASTRUCTURE_spec.configuration.spec.workspace: |-
     Harness supports Terraform [workspaces](https://www.terraform.io/docs/state/workspaces.html). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
 
@@ -1217,7 +1217,7 @@ terraformEdit-TerraformApply-INFRASTRUCTURE_spec.configuration.spec.backendConfi
 
     In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://www.terraform.io/docs/language/settings/backends/gcs.html#configuration-variables) doc.
 
-    You can use [Harness secrets](https://docs.harness.io/article/osfw70e59c) for credentials.
+    You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for credentials.
 terraformEdit-TerraformApply-INFRASTRUCTURE_spec.configuration.spec.targets: |-
     You can use the **Targets** setting to target one or more specific modules in your Terraform script, just like using the `terraform plan -target` command. [Learn More](https://docs.harness.io/article/uznls2lvod)
 
@@ -1236,7 +1236,7 @@ terraformEdit-TerraformApply-INFRASTRUCTURE_spec.configuration.spec.environmentV
     TF_VAR_alist='[1,2,3]'
     ```
 
-    You can use [Harness secrets](https://docs.harness.io/article/osfw70e59c) for values.
+    You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for values.
 TerraformDestroy_stepName_ProvisionerStepConfig: When provisioning target infrastructure, the **Terraform Delete** step deletes the infrastructure provisioned by the **Terraform Apply** step. [Learn More](https://docs.harness.io/article/uznls2lvod)
 terraformEdit-TerraformDestroy-INFRASTRUCTURE_spec.configuration.spec.workspace: |-
     Harness supports Terraform [workspaces](https://www.terraform.io/docs/state/workspaces.html). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
@@ -1260,7 +1260,7 @@ terraformEdit-TerraformDestroy-INFRASTRUCTURE_spec.configuration.spec.backendCon
 
     In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://www.terraform.io/docs/language/settings/backends/gcs.html#configuration-variables) doc.
 
-    You can use [Harness secrets](https://docs.harness.io/article/osfw70e59c) for credentials.
+    You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for credentials.
 terraformEdit-TerraformDestroy-INFRASTRUCTURE_spec.configuration.spec.targets: |-
     You can use the **Targets** setting to target one or more specific modules in your Terraform script, just like using the `terraform plan -target` command. [Learn More](https://docs.harness.io/article/uznls2lvod)
 
@@ -1279,20 +1279,20 @@ terraformEdit-TerraformDestroy-INFRASTRUCTURE_spec.configuration.spec.environmen
     TF_VAR_alist='[1,2,3]'
     ```
 
-    You can use [Harness secrets](https://docs.harness.io/article/osfw70e59c) for values.
+    You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for values.
 TerraformRollback_stepName_ProvisionerStepConfig: The **Terraform Rollback** step rolls back your provisioned infrastructure and resources and returns your environment to its pre-deployment state. [Learn More](https://docs.harness.io/article/jgi6d73noy)
 terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.workspace: |-
     Harness supports Terraform [workspaces](https://www.terraform.io/docs/state/workspaces.html). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
 
-    In the **Workspace** setting, you can simply enter the name of the workspace to use. [Learn More](https://docs.harness.io/article/52n3j0ci72)
+    In the **Workspace** setting, you can simply enter the name of the workspace to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
 TerraformPlan_stepName_StepConfig: |-
-    The **Terraform Plan** step runs a Terraform script as a Terraform plan. [Learn More](https://docs.harness.io/article/52n3j0ci72)
+    The **Terraform Plan** step runs a Terraform script as a Terraform plan. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
 
     You can run the **Terraform Plan** step to provision any resource.
 
-    The [Terraform Apply](https://docs.harness.io/article/hdclyshiho) and [Terraform Destroy](https://docs.harness.io/article/j75xc704c8) steps can inherit the plan and perform their apply and destroy operations.
+    The [Terraform Apply](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/) and [Terraform Destroy](https://docs.harness.io/article/j75xc704c8) steps can inherit the plan and perform their apply and destroy operations.
 terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.backendConfig.spec.content: |-
-    The **Backend Configuration** section contains the [remote state](https://www.terraform.io/docs/language/state/remote.html) values. [Learn More](https://docs.harness.io/article/52n3j0ci72)
+    The **Backend Configuration** section contains the [remote state](https://www.terraform.io/docs/language/state/remote.html) values. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
 
     Enter values for each backend config (remote state variable).
 
@@ -1309,9 +1309,9 @@ terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.backendConfig.spec.con
 
     In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://www.terraform.io/docs/language/settings/backends/gcs.html#configuration-variables) doc.
 
-    You can use [Harness secrets](https://docs.harness.io/article/osfw70e59c) for credentials.
+    You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for credentials.
 terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.targets: |-
-    You can use the **Targets** setting to target one or more specific modules in your Terraform script, just like using the `terraform plan -target` command. [Learn More](https://docs.harness.io/article/52n3j0ci72)
+    You can use the **Targets** setting to target one or more specific modules in your Terraform script, just like using the `terraform plan -target` command. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
 
     You simply identify the module using the standard format `module.name`, like you would using `terraform plan -target="module.s3_bucket"`.
 
@@ -1328,17 +1328,17 @@ terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.environmentVariables: 
     TF_VAR_alist='[1,2,3]'
     ```
 
-    You can use [Harness secrets](https://docs.harness.io/article/osfw70e59c) for values.
+    You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for values.
 TerraformApply_stepName_StepConfig: |-
-    The **Terraform Apply** step can apply a Terraform script and provision any infrastructure. [Learn More](https://docs.harness.io/article/hdclyshiho)
+    The **Terraform Apply** step can apply a Terraform script and provision any infrastructure. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
 
-    Typically the **Terraform Apply** step is used with the **Terraform Plan** step to apply a plan. [Learn More](https://docs.harness.io/article/52n3j0ci72).
+    Typically the **Terraform Apply** step is used with the **Terraform Plan** step to apply a plan. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/).
 terraformEdit-TerraformApply-EXECUTION_spec.configuration.spec.workspace: |-
     Harness supports Terraform [workspaces](https://www.terraform.io/docs/state/workspaces.html). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
 
-    In the **Workspace** setting, you can simply enter the name of the workspace to use. [Learn More](https://docs.harness.io/article/hdclyshiho)
+    In the **Workspace** setting, you can simply enter the name of the workspace to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
 terraformEdit-TerraformApply-EXECUTION_spec.configuration.spec.backendConfig.spec.content: |-
-    The **Backend Configuration** section contains the [remote state](https://www.terraform.io/docs/language/state/remote.html) values. [Learn More](https://docs.harness.io/article/hdclyshiho)
+    The **Backend Configuration** section contains the [remote state](https://www.terraform.io/docs/language/state/remote.html) values. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
 
     Enter values for each backend config (remote state variable).
 
@@ -1355,9 +1355,9 @@ terraformEdit-TerraformApply-EXECUTION_spec.configuration.spec.backendConfig.spe
 
     In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://www.terraform.io/docs/language/settings/backends/gcs.html#configuration-variables) doc.
 
-    You can use [Harness secrets](https://docs.harness.io/article/osfw70e59c) for credentials.
+    You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for credentials.
 terraformEdit-TerraformApply-EXECUTION_spec.configuration.spec.targets: |-
-    You can use the **Targets** setting to target one or more specific modules in your Terraform script, just like using the `terraform plan -target` command. [Learn More](https://docs.harness.io/article/hdclyshiho)
+    You can use the **Targets** setting to target one or more specific modules in your Terraform script, just like using the `terraform plan -target` command. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
 
     You simply identify the module using the standard format `module.name`, like you would using `terraform plan -target="module.s3_bucket"`.
 
@@ -1374,15 +1374,15 @@ terraformEdit-TerraformApply-EXECUTION_spec.configuration.spec.environmentVariab
     TF_VAR_alist='[1,2,3]'
     ```
 
-    You can use [Harness secrets](https://docs.harness.io/article/osfw70e59c) for values.
+    You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for values.
 TerraformRollback_stepName_StepConfig: The **Terraform Rollback** step rolls back your provisioned infrastructure and resources and returns your environment to its pre-deployment state. [Learn More](https://docs.harness.io/article/jgi6d73noy)
 TerraformDestroy_stepName_StepConfig: The **Terraform Destroy** step removes any provisioned infrastructure, just like running the `terraform destroy` command. See [destroy](https://www.terraform.io/docs/commands/destroy.html) from Terraform. [Learn More](https://docs.harness.io/article/j75xc704c8)
 terraformEdit-TerraformDestroy-EXECUTION_spec.configuration.spec.workspace: |-
     Harness supports Terraform [workspaces](https://www.terraform.io/docs/state/workspaces.html). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
 
-    In the **Workspace** setting, you can simply enter the name of the workspace to use. See the same Workspace setting in [Terraform Plan](https://docs.harness.io/article/52n3j0ci72) for details.
+    In the **Workspace** setting, you can simply enter the name of the workspace to use. See the same Workspace setting in [Terraform Plan](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/) for details.
 terraformEdit-TerraformDestroy-EXECUTION_spec.configuration.spec.backendConfig.spec.content: |-
-    The **Backend Configuration** section contains the [remote state](https://www.terraform.io/docs/language/state/remote.html) values. See the same **Backend Configuration** setting in [Terraform Plan](https://docs.harness.io/article/52n3j0ci72) for details.
+    The **Backend Configuration** section contains the [remote state](https://www.terraform.io/docs/language/state/remote.html) values. See the same **Backend Configuration** setting in [Terraform Plan](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/) for details.
 
     Enter values for each backend config (remote state variable).
 
@@ -1399,9 +1399,9 @@ terraformEdit-TerraformDestroy-EXECUTION_spec.configuration.spec.backendConfig.s
 
     In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://www.terraform.io/docs/language/settings/backends/gcs.html#configuration-variables) doc.
 
-    You can use [Harness secrets](https://docs.harness.io/article/osfw70e59c) for credentials.
+    You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for credentials.
 terraformEdit-TerraformDestroy-EXECUTION_spec.configuration.spec.targets: |-
-    You can use the **Targets** setting to target one or more specific modules in your Terraform script, just like using the `terraform plan -target` command. See the same **Targets** setting in [Terraform Plan](https://docs.harness.io/article/52n3j0ci72) for details.
+    You can use the **Targets** setting to target one or more specific modules in your Terraform script, just like using the `terraform plan -target` command. See the same **Targets** setting in [Terraform Plan](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/) for details.
 
     You simply identify the module using the standard format `module.name`, like you would using `terraform plan -target="module.s3_bucket"`.
 
@@ -1418,9 +1418,9 @@ terraformEdit-TerraformDestroy-EXECUTION_spec.configuration.spec.environmentVari
     TF_VAR_alist='[1,2,3]'
     ```
 
-    You can use [Harness secrets](https://docs.harness.io/article/osfw70e59c) for values.
+    You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for values.
 inlineVarFileForm_varFile.identifier: |-
-    You can add inline variables just like you would in a tfvar file. See the same **Targets** setting in [Terraform Plan](https://docs.harness.io/article/52n3j0ci72) for details.
+    You can add inline variables just like you would in a tfvar file. See the same **Targets** setting in [Terraform Plan](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/) for details.
 
     In **Identifier**, enter an identifier so you can refer to variables using expressions if needed.
 inlineVarFileForm_varFile.spec.content: |-
@@ -1529,11 +1529,11 @@ cvData_spec.spec.deploymentTag: |-
     The expression `<+serviceConfig.artifacts.primary.tag>` references the primary artifact.
 awsAuthentication: Provide the credentials Harness will use to connect to AWS. [Learn More](https://docs.harness.io/article/m5vkql35ca)
 stepAwsAuthForm_accessKey: |-
-    Enter the Access Key. You can either the key in plaintext or use an Encrypted [Harness Secret](https://docs.harness.io/article/osfw70e59c).
+    Enter the Access Key. You can either the key in plaintext or use an Encrypted [Harness Secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/).
 
     See [Access Keys and Secret Keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys) from AWS.
 stepAwsAuthForm_secretKeyRef: |-
-    Enter the Secret Key. You can either create a new Encrypted [Harness Secret](https://docs.harness.io/article/osfw70e59c) or select an existing one.
+    Enter the Secret Key. You can either create a new Encrypted [Harness Secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) or select an existing one.
 
     See [Access Keys and Secret Keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys) from AWS.
 Connectviaanyavailabledelegate: If you do not select specific delegates, Harness uses any available delegate to perform this connector's tasks. [Learn More](https://docs.harness.io/article/2k7lnc7lvl)
@@ -1603,7 +1603,7 @@ artifactRepositoryAuthentication:
     width: "400"
 artifactRepositoryDetails: Harness supports both cloud and on-prem versions of Artifactory. [Learn More](https://docs.harness.io/article/euueiiai4m)
 stepArtifactoryAuthForm_username: Username for the Artifactory account user.
-stepArtifactoryAuthForm_password: Select or create a new Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c`).
+stepArtifactoryAuthForm_password: Select or create a new Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/`).
 dockerConnectorProviderType: Select the Docker registry platform that you want to connect with Harness. [Learn More](https://docs.harness.io/article/u9bsd77g5a)
 dockerConnectorAuthentication: |-
     Make sure the connected user account has the following permissions:
@@ -1619,7 +1619,7 @@ dockerConnectorAuthentication: |-
 
     **Note:** If you are using anonymous access to a Docker registry for a Kubernetes deployment, then `imagePullSecrets` should be removed from the container specification. This is standard Kubernetes behavior and not related to Harness specifically.
 dockerAuthForm_username: The username for the Docker registry account.
-dockerAuthForm_password: The password uses a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c).
+dockerAuthForm_password: The password uses a Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/).
 helmRepoAuthForm_username: If the charts are backed by HTTP basic authentication, you can also supply the username. See [Share your charts with others](https://helm.sh/docs/topics/chart_repository/#share-your-charts-with-others) from Helm.
 helmRepoAuthForm_password: If the charts are backed by HTTP basic authentication, you can also supply the password. See [Share your charts with others](https://helm.sh/docs/topics/chart_repository/#share-your-charts-with-others) from Helm.
 NexusConnectorDetailsTooltip: Connect Harness to your Nexus artifact repo. [Learn More](https://docs.harness.io/article/faor0dc98d)
@@ -1636,10 +1636,10 @@ NexusConnectorAuthentication: |-
 
     See [Nexus Managing Security](https://help.sonatype.com/display/NXRM2/Managing+Security).
 nexusAuth_username: The username for the Nexus account.
-nexusAuth_password: The password uses a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c).
+nexusAuth_password: The password uses a Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/).
 awsCCDetailsTooltip: Connect Harness to AWS CodeCommit to fetch code or sync Projects. [Learn More](https://developer.harness.io/docs/platform/Connectors/connect-to-code-repo)
 awsCcAuthForm_accessKey: Enter the AWS Access for the account you want to use.
-awsCcAuthForm_secretKey: Enter the AWS Secret Key using a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c).
+awsCcAuthForm_secretKey: Enter the AWS Secret Key using a Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/).
 githubURLType: |-
     You can select **Git Account** (which is a GitHub **organization**) or **Git Repository**.
 
@@ -1680,7 +1680,7 @@ githubAuthentication: |-
     [Learn More](https://docs.harness.io/article/v9sigwjlgo)
 stepGithubAuthForm_username: Your personal GitHub account username.
 stepGithubAuthForm_password: |-
-    A Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) for the credentials of your GitHub user account.
+    A Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for the credentials of your GitHub user account.
 
     If your GitHub authentication uses 2FA, you must use a Personal Access Token (select **Username and Token** in **Authentication**).
 gitHubPersonalAccessTooltip: A Harness encrypted text secret for a Personal Access Token (PAT) for your GitHub account. A PAT is required if your GitHub authentication uses 2FA. [Learn more](https://developer.harness.io/docs/platform/Connectors/Code-Repositories/ref-source-repo-provider/git-hub-connector-settings-reference#personal-access-token)
@@ -1690,8 +1690,8 @@ githubApiAuthentication: You can use a [Personal Access Token](https://developer
 stepGithubAuthForm_installationId: Enter the Installation Id located in the URL of the installed GitHub App.
 stepGithubAuthForm_applicationId: Enter the **GitHub App Id** from the GitHub App **General** tab.
 createUpdateSecretForm_secretManagerIdentifier: Harness includes a built-in Secrets Management feature that enables you to store encrypted secrets, such as access keys, and use them in your Harness connectors and pipelines. [Learn More](https://docs.harness.io/article/bo4qbrcggv)
-createUpdateSecretForm_name: Enter a name for the encrypted text. This is the name you will use to reference the text elsewhere in your resources. [Learn More](https://docs.harness.io/article/osfw70e59c)
-createUpdateSecretForm_value: Enter a value for the encrypted text. [Learn More](https://docs.harness.io/article/osfw70e59c)
+createUpdateSecretForm_name: Enter a name for the encrypted text. This is the name you will use to reference the text elsewhere in your resources. [Learn More](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/)
+createUpdateSecretForm_value: Enter a value for the encrypted text. [Learn More](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/)
 createUpdateSecretForm_reference: Enter a value for the reference secret.
 createUpdateSecretForm_description: Enter a description for the secret. A description can be very helpful when your team uses a lot of secrets for the same resource.
 createUpdateSecretForm_tags: Use tags to help you sort secrets.
@@ -1761,13 +1761,13 @@ bitbucketDetailsStepForm_url: |-
 bitbucketDetailsStepForm_validationRepo: Enter a repo in the account for the URL you provided. Harness will use this repo to test the connection. [Learn More](https://docs.harness.io/article/iz5tucdwyu)
 bitbAuthForm_username: The username for the Bitbucket account.
 bitbAuthForm_password: |-
-    Create or select a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) for the credentials of your Bitbucket user account.
+    Create or select a Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for the credentials of your Bitbucket user account.
 
     **Note:** If you have set up 2FA in your Bitbucket account, then you need to generate a personal access token in your account and enter that token in **Password**.
 bitbAuthForm_enableAPIAccess: This option is required for using Git-based triggers, Webhooks management, and updating Git statuses.
 bitbAuthForm_apiAccessUsername: Enter the username connected to the personal access token.
 bitbAuthForm_accessToken: |-
-    Create or select a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) for the personal access token.
+    Create or select a Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for the personal access token.
 
     See [Personal Access Tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) from Bitbucket.
 connectorDetailsStepFormGit_name: |-
@@ -1786,8 +1786,8 @@ gitConnectionType: |-
     Add the protocol-relevant URL in **Git Account URL**.
 
     If you use 2FA for your Git repo, you connect over HTTPS or SSH. HTTPS requires a personal access token. [Learn More](https://docs.harness.io/article/tbm2hw6pr6)
-stepGitAuthForm_username: The username for the Git account to use in the Connector. You can use a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c).
-stepGitAuthForm_password: Create or select a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) for the password.
+stepGitAuthForm_username: The username for the Git account to use in the Connector. You can use a Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/).
+stepGitAuthForm_password: Create or select a Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for the password.
 connectorDetailsStepFormGitlab_name: Enter a name for this GitLab Connector. [Learn More](https://docs.harness.io/article/5abnoghjgo)
 gitlabURLType: |-
     You can select Account or Repository.
@@ -1816,11 +1816,11 @@ stepGitlabAuth_username: |-
 
     Often, the username `git` will work. [Learn More](https://docs.harness.io/article/5abnoghjgo)
 stepGitlabAuth_password: |-
-    Create or select a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) for the credentials of your GitLab user account.
+    Create or select a Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for the credentials of your GitLab user account.
 
      [Learn More](https://docs.harness.io/article/5abnoghjgo)
 stepGitlabAuth_enableAPIAccess: This option is required for using Git-based triggers, Webhooks management, and updating Git statuses. [Learn More](https://docs.harness.io/article/5abnoghjgo)
-stepGitlabAuth_apiAccessToken: Create or select a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) for the personal access token.
+stepGitlabAuth_apiAccessToken: Create or select a Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for the personal access token.
 jiraDetailsForm_jiraUrl: |-
     Enter the base URL by which your users access your Jira applications. For example: `https://mycompany.atlassian.net`.
 
@@ -1831,7 +1831,7 @@ jiraDetailsForm_jiraUrl: |-
     If you are using the on-premises Jira server with HTTPS redirects enabled, use the HTTPS URL to ensure the [JIRA client follows redirects](https://confluence.atlassian.com/adminjiraserver/running-jira-applications-over-ssl-or-https-938847764.html).
 jiraDetailsForm_username: The Jira account username. Use the full email address you use to log into Jira.
 jiraDetailsForm_passwordRef: |-
-    Create or select a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) for the API key.
+    Create or select a Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for the API key.
 
     See [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) from Atlassian.
 connectorDetailsStepFormAwsKms_name: Enter a name for this AWS KMS Connector. [Learn More](https://docs.harness.io/article/pt52h8sb6z)
@@ -1856,8 +1856,8 @@ awsSMConfigForm_credType: |-
     - AWS Access Key
     - Assume IAM Role on Delegate
     - Assume Role Using STS on Delegate
-awsSMConfigForm_accessKey: Create or select a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) using the AWS Access Key Id for the IAM user you want to use for AWS Secrets Manager connections.
-awsSMConfigForm_secretKey: Create or select a Harness [Encrypted Text secret](https://docs.harness.io/article/osfw70e59c) using the contents of the Secret Key corresponding to the Access Key Id.
+awsSMConfigForm_accessKey: Create or select a Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) using the AWS Access Key Id for the IAM user you want to use for AWS Secrets Manager connections.
+awsSMConfigForm_secretKey: Create or select a Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) using the contents of the Secret Key corresponding to the Access Key Id.
 awsSMConfigForm_secretNamePrefix: |-
     Enter a prefix to be added to all secrets.
 
@@ -1970,7 +1970,7 @@ addEditCustomVariableForm_name: |-
     Enter a name for this stage variable. You reference stage variables within their stage using the expression `<+stage.variables.[name]>`
 
     You reference stage variables **outside their stage** using the expression `<+pipeline.stages.[stage name].variables.[variable name]>`.  [Learn More](https://docs.harness.io/article/2chyf1acil)
-addEditCustomVariableForm_type: Select the variable type. If you select **Secret**, click **Save** and then create or select a Harness secret for the **Value**. [Learn More](https://docs.harness.io/article/osfw70e59c)
+addEditCustomVariableForm_type: Select the variable type. If you select **Secret**, click **Save** and then create or select a Harness secret for the **Value**. [Learn More](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/)
 delegateSetupStepForm_name:
     content: Enter a name for the delegate. The names of Kubernetes delegates are included in **StatefulSet** metadata. [Learn More](https://docs.harness.io/article/2132l9r4gt)
     width: "400"
@@ -2522,16 +2522,16 @@ wizardForm_webhook_spec.workload:
 
         - If you selected **Inline** in **Configuration Type**, create a new Id.
 
-        [Learn More](https://docs.harness.io/article/hdclyshiho)
+        [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
     width: "400"
 "wizardForm_webhook_pipeline.stages[0].stage.spec.execution.steps[2].parallel[2].step.spec.configuration.spec.configFiles.store.spec.connectorRef":
-    content: Select or create a Connector for your Git repo. [Learn More](https://docs.harness.io/article/hdclyshiho)
+    content: Select or create a Connector for your Git repo. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
     width: "400"
 "wizardForm_webhook_pipeline.stages[0].stage.spec.execution.steps[2].parallel[2].step.spec.configuration.spec.configFiles.store.spec.branch":
     content: Enter the name of the branch to use.
     width: "400"
 "wizardForm_webhook_pipeline.stages[0].stage.spec.execution.steps[2].parallel[2].step.spec.configuration.spec.configFiles.store.spec.folderPath":
-    content: Enter the path from the root of the repo to the folder containing the script. [Learn More](https://docs.harness.io/article/hdclyshiho)
+    content: Enter the path from the root of the repo to the folder containing the script. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
     width: "400"
 "wizardForm_webhook_pipeline.stages[0].stage.spec.execution.steps[2].parallel[3].step.spec.provisionerIdentifier":
     content: |-
@@ -2539,13 +2539,13 @@ wizardForm_webhook_spec.workload:
 
         You will use this **Provisioner Identifier** in additional steps to refer to the provisioning set up in this step.
 
-        The most common use of **Provisioner Identifier** is between the **Terraform Plan** and **Terraform Apply** steps. [Learn More](https://docs.harness.io/article/52n3j0ci72)
+        The most common use of **Provisioner Identifier** is between the **Terraform Plan** and **Terraform Apply** steps. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
     width: "400"
 "wizardForm_webhook_pipeline.stages[0].stage.spec.execution.steps[2].parallel[3].step.spec.configuration.secretManagerRef":
     content: |-
         A Terraform plan is a sensitive file that could be misused to alter resources if someone has access to it. Harness avoids this issue by never passing the Terraform plan file as plain text.
 
-        Select a [Secrets Manager](https://docs.harness.io/article/hngrlb7rd6) to use for encrypting/decrypting and saving the Terraform plan file. [Learn More](https://docs.harness.io/article/52n3j0ci72)
+        Select a [Secrets Manager](https://docs.harness.io/article/hngrlb7rd6) to use for encrypting/decrypting and saving the Terraform plan file. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
     width: "400"
 pipelineStep.infrastructureDefinition:
     content: |-
@@ -3782,7 +3782,7 @@ stepAuthenticationForm_userName:
     content: Enter the username for the user account on the remote server. [Learn more](https://docs.harness.io/article/xmp9j0dk8b-add-use-ssh-secrets#add_ssh_credential)
     width: "400"
 stepAuthenticationForm_key:
-    content: Enter the Secret Key. You can either create a new Encrypted [File Secret](https://docs.harness.io/article/77tfo7vtea-add-file-secrets#step_1_add_encrypted_file) or Encrypted [Text Secret](https://docs.harness.io/article/osfw70e59c-add-use-text-secrets) or select an existing one.
+    content: Enter the Secret Key. You can either create a new Encrypted [File Secret](https://docs.harness.io/article/77tfo7vtea-add-file-secrets#step_1_add_encrypted_file) or Encrypted [Text Secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/-add-use-text-secrets) or select an existing one.
     width: "400"
 stepAuthenticationForm_encryptedPassphrase:
     content: Enter the SSH key [passphrase](https://www.ssh.com/academy/ssh/passphrase).
@@ -3802,7 +3802,7 @@ SecretsListViewname:
 
         Learn More:
         - [Secrets Management](https://docs.harness.io/article/hngrlb7rd6)
-        - [Text Secrets](https://docs.harness.io/article/osfw70e59c)
+        - [Text Secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/)
         - [File Secrets](https://docs.harness.io/article/77tfo7vtea)
         - [SSH Credentials](https://docs.harness.io/article/xmp9j0dk8b)
     width: "400"
@@ -4082,7 +4082,7 @@ ServerlessAwsLambdaDeploymentTypeManifests:
 
 
         **Notes:**
-        - The serverless.yaml file you use with Harness can use Harness [secrets](https://docs.harness.io/article/osfw70e59c) and [built-in and custom expressions](https://docs.harness.io/article/lml71vhsim).
+        - The serverless.yaml file you use with Harness can use Harness [secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) and [built-in and custom expressions](https://docs.harness.io/article/lml71vhsim).
         - Plugins are also supported in your serverless.yml file using the standard format. For example:
 
         ```
@@ -5048,7 +5048,7 @@ azureAuthForm_secretType:
     width: "400"
 azureAuthForm_secretText:
     content: |-
-        Create or use an existing [Harness Text Secret](https://docs.harness.io/article/osfw70e59c).
+        Create or use an existing [Harness Text Secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/).
 
         **Note:** Harness supports PEM files only. Currently, Harness does not support PFX files.
     width: "400"
@@ -9128,3 +9128,107 @@ stepGroup_harnessImageConnectorRef:
 
         Add or select a connector to use instead of the default connector used for the Harness Container Image Registry. [Learn More](https://developer.harness.io/docs/platform/connectors/artifact-repositories/connect-to-harness-container-image-registry-using-docker-connector)
     width: "425"
+terraformPlanEditView-tfPlan-EXECUTION_:
+    content: |-
+        The **Terraform Var Files** section is for entering and/or linking to Terraform script Input variables. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
+
+        You can use inline or remote var files.
+
+        Harness supports all [Terraform input types and values](https://www.terraform.io/docs/language/expressions/types.html).
+    width: "400"
+terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.exportTerraformPlanJson:
+    content: |-
+        Enable this setting to use a JSON representation of the Terraform plan that is implemented in a Terraform Plan step. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
+
+        In subsequent **Execution** steps, such as a Shell Script step, you can reference the Terraform plan using this expression format:
+
+        `<+execution.steps.[Terraform Plan step Id].plan.jsonFilePath>`
+    width: "475"
+terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.exportTerraformHumanReadablePlan:
+    content: |-
+        Enable this option to view the Terraform plan file path and contents as human-readable JSON is subsequent steps, such as a Shell Script step. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
+
+        Once you enable this option and run a CD stage with the Terraform Plan step, you can click in the Terraform Plan step's **Output** tab and copy the **Output Value** for the **humanReadableFilePath** output.
+    width: "400"
+terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.skipStateStorage:
+    content: |-
+        While running Terraform commands on the delegate, Harness by default will try to detect if there is a local state file in the Terraform working directory and, if a local state file is identified, at the end of the execution it is saved on Harness storage with a key based on the provisioner identifier and  downloaded in the Terraform working directory for subsequent executions, and the updated state is uploaded after execution ends. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
+
+        This method allows the maintaining of the state of the infrastructure even if there is no Terraform backend configured.
+
+        This is more for testing purposes. For production environments, Harness advises you configure a backend in your Terraform config files. For information, go to [Backend Configuration](https://developer.hashicorp.com/terraform/language/settings/backends/configuration) from Terraform.
+
+        With the **Skip state storage** option enabled, Harness allows you to skip the local state upload and download operations mentioned above.
+
+        This option makes is useful only if you do not have a Terraform backed configured in your Terraform config files. If you have a Terraform backed configured, then the Terraform CLI will not create any local state files.
+    width: "400"
+terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.skipRefreshCommand:
+    content: When this setting is selected, the Terraform refresh command is not run. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
+    width: "400"
+terraformEdit-TerraformApply-EXECUTION_:
+    content: |-
+        The **Terraform Var Files** section is for entering and/or linking to Terraform script Input variables. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
+
+        You can use inline or remote var files.
+
+        Harness supports all [Terraform input types and values](https://www.terraform.io/docs/language/expressions/types.html).
+    width: "400"
+terraformEdit-TerraformApply-EXECUTION_spec.cloudCliConfiguration.spec.backendConfig.spec.content:
+    content: |-
+        The **Backend Configuration** section contains the remote state values. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
+
+        You can use an inline or remote state file.
+    width: "400"
+terraformEdit-TerraformApply-EXECUTION_spec.cloudCliConfiguration.spec.targets:
+    content: |-
+        You can use the **Targets** setting to target one or more specific modules in your Terraform script, just like using the `terraform plan -target` command.  [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
+         
+        See [Resource Targeting](https://www.terraform.io/docs/commands/plan.html#resource-targeting) from Terraform.
+         
+        You simply identify the module using the standard format `module.name`, like you would using `terraform plan -target="module.s3_bucket"`.
+
+        If you have multiple modules in your script and you don't select one in **Targets**, all modules are used.
+    width: "400"
+terraformEdit-TerraformApply-EXECUTION_spec.cloudCliConfiguration.spec.environmentVariables:
+    content: |-
+        If your Terraform script uses [environment variables](https://www.terraform.io/docs/cli/config/environment-variables.html), you can provide values for those variables here.
+
+        For example:
+
+        ```
+        TF_LOG_PATH=./terraform.log  
+        TF_VAR_alist='[1,2,3]'
+        ```
+    width: "400"
+terraformEdit-TerraformApply-EXECUTION_spec.cloudCliConfiguration.encryptOutput.outputSecretManagerRef:
+    content: |-
+        The Encrypt json output setting encrypts the Terraform JSON output as a Harness secret using the secret manager you select. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
+
+        The secret is ephemeral and is created and deleted during the pipeline execution. The secret is not added to the **Secrets** list in Harness.
+
+        You can use an expression to retrieve the secret and its Terraform JSON output during pipeline execution.
+    width: "400"
+terraformEdit-TerraformApply-EXECUTION_spec.cloudCliConfiguration.skipStateStorage:
+    content: |-
+        While running Terraform commands on the delegate, Harness by default will try to detect if there is a local state file in the Terraform working directory and, if a local state file is identified, at the end of the execution it is saved on Harness storage with a key based on the provisioner identifier and  downloaded in the Terraform working directory for subsequent executions, and the updated state is uploaded after execution ends. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
+
+        This method allows the maintaining of the state of the infrastructure even if there is no Terraform backend configured.
+
+        This is more for testing purposes. For production environments, Harness advises you configure a backend in your Terraform config files. For information, go to [Backend Configuration](https://developer.hashicorp.com/terraform/language/settings/backends/configuration) from Terraform.
+
+        With the **Skip state storage** option enabled, Harness allows you to skip the local state upload and download operations mentioned above.
+
+        This option makes is useful only if you do not have a Terraform backed configured in your Terraform config files. If you have a Terraform backed configured, then the Terraform CLI will not create any local state files.
+    width: "400"
+"terraformEdit-TerraformApply-EXECUTION_spec.cloudCliConfiguration.commandFlags[0].commandType":
+    content: |-
+        This setting allows you to set the Terraform CLI options for Terraform commands depending on the Terraform step type. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
+
+        For example, you could select **WORKSPACE** in **Command Type** and enter `-lock-timeout=0s` in **Flag**.
+    width: "400"
+"terraformEdit-TerraformApply-EXECUTION_spec.cloudCliConfiguration.commandFlags[0].flag":
+    content: |-
+        This setting allows you to set the Terraform CLI options for Terraform commands depending on the Terraform step type. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
+
+        For example, you could select **WORKSPACE** in **Command Type** and enter `-lock-timeout=0s` in **Flag**.
+    width: "400"
