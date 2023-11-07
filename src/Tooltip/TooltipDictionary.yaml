@@ -1719,7 +1719,7 @@ ff_flagFilters_archivedFlags: |
     This count includes flags that have been archived in the last 30 days. These flags can be restored. Flags archived more than 30 days ago are not included in the count, and cannot be restored.
 ff_env_heading:
     content: |
-        Harness Environments represent your deployment targets (QA, Prod, etc). You can add the same Environment to as many pipelines and stages as you need. [Learn More](https://docs.harness.io/article/cqgeblt4uh)
+        Harness Environments represent your deployment targets (QA, Prod, etc). You can add the same Environment to as many pipelines and stages as you need. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview)
     width: "400"
 ff_ffVariations_heading: |-
     A Feature flag has default variations.  A boolean flag can have false set as its default off variation and true set as its default on variation. A multivariate flag could have variation 1 set as its default off variation and variation 2 set as its default on variation, with variation 3 configured to appear when a user has a certain email address
@@ -4424,7 +4424,7 @@ kustomizeGit_patchesPaths:
     width: "400"
 cdOverViewTitle:
     content: |-
-        Deployments is where you build your CD pipelines. [Learn More](https://docs.harness.io/article/cqgeblt4uh)
+        Deployments is where you build your CD pipelines. [Learn More](https://developer.harness.io/docs/continuous-delivery/get-started/services-and-environments-overview)
 
         Deployments are tracked in the **Overview** dashboard and Services are tracked in the **Services** dashboard. [Learn More](https://developer.harness.io/docs/continuous-delivery/monitor-deployments/monitor-cd-deployments)
 
