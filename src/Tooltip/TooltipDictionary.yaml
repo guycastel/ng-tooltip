@@ -3347,6 +3347,9 @@ ciGcrStep_timeout:
 BuildAndPushGCR_stepName_StepConfig:
     content: The Build and Push to GCR step creates a Docker image from a Dockerfile and pushes it to a GCR Docker repository. [Learn More](https://docs.harness.io/article/66ykcm0sf0)
     width: "400"
+BuildAndPushGAR_stepName_StepConfig:
+    content: The Build and Push to GAR step creates a Docker image from a Dockerfile and pushes it to a GAR Docker repository. [Learn More](https://developer.harness.io/docs/continuous-integration/use-ci/build-and-upload-artifacts/build-and-push-to-gar)
+    width: "400"
 BuildAndPushDockerRegistry_stepName_StepConfig:
     content: The Build and Push an Image to Docker Registry step creates a Docker image from a Dockerfile and pushes it to a Docker registry. [Learn More](https://docs.harness.io/article/q6fr5bj63w)
     width: "400"
