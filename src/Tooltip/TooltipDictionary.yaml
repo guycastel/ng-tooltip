@@ -5243,7 +5243,7 @@ imagePath_spec.version:
     content: |
         Enter the version number of the package to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-services/k8s-services/kubernetes-services)
 
-        You can use [fixed values, runtime inputs, and expressions](https://developer.harness.io/docs/platform/references/runtime-inputs/).
+        You can use [fixed values, runtime inputs, and expressions](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs/).
     width: "400"
 imagePath_spec.tags:
     content: Add the tag that is used by your AMI. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/services/artifact-sources/)
@@ -6901,7 +6901,7 @@ emailStepForm_spec.to:
         - You can set To as a runtime input.
         - You can pass in the email as a [Harness expression](https://developer.harness.io/docs/platform/variables-and-expressions/harness-variables/), such as `<+pipeline.triggeredBy>`.
 
-        For more information on runtime inputs and expressions, go to [Fixed Values, Runtime Inputs, and Expressions](https://developer.harness.io/docs/platform/references/runtime-inputs/).
+        For more information on runtime inputs and expressions, go to [Fixed Values, Runtime Inputs, and Expressions](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs/).
     width: "400"
 emailStepForm_spec.cc:
     content: |-
@@ -6913,14 +6913,13 @@ emailStepForm_spec.subject:
     content: |
         Enter a subject for the email. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-technical-reference/cd-gen-ref-category/email_step)
 
-        This subject can be a fixed string (for example, `Prod Deployment Notification`), a string with expressions (for example, `<+env.name> Deployment Notification`), or a [runtime input](https://developer.harness.io/docs/platform/references/runtime-inputs/).
+        This subject can be a fixed string (for example, `Prod Deployment Notification`), a string with expressions (for example, `<+env.name> Deployment Notification`), or a [runtime input](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs/).
     width: "400"
 emailStepForm_spec.body:
     content: |-
         **Body** is a string field. You can enter in text and Harness expressions. Harness will resolve the expressions before sending the email.
 
-        For more information on runtime inputs and expressions, go to [Fixed Values, Runtime Inputs, and Expressions](https://developer.harness.io/docs/platform/references/runtime-inputs/).
-        .
+        For more information on runtime inputs and expressions, go to [Fixed Values, Runtime Inputs, and Expressions](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs/).
     width: "400"
 Wait_stepName_StepConfig:
     content: |+
@@ -6948,7 +6947,7 @@ stepStepForm_spec.duration:
 
         The maximum is `53w`.
 
-        You can use [fixed values, runtime inputs, and expressions](https://developer.harness.io/docs/platform/references/runtime-inputs/).
+        You can use [fixed values, runtime inputs, and expressions](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs/).
 
         If you use runtime input, you can enter the wait time when you run the pipeline. You can also set it in a Trigger.
 
@@ -7136,7 +7135,7 @@ serviceNowImportSet_spec.importData.spec.jsonBody:
         {"sys_import_state_comment":"my comment"}
         ```
 
-        You can also use Harness [runtime inputs, variable expressions](https://developer.harness.io/docs/platform/references/runtime-inputs/), and Harness secrets in the JSON of JSON Body.
+        You can also use Harness [runtime inputs, variable expressions](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs/), and Harness secrets in the JSON of JSON Body.
 
         For example, you could create a stage variable named `importset` and then reference it in JSON Body as `{"u_example":"<+stage.variables.importset>"}`.
 
