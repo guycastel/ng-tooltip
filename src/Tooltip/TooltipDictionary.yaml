@@ -294,7 +294,7 @@ gcrRemoteCache: The name of the remote cache image, such as `gcr.io/project-id/<
 jFrogArtifactoryTarget: Repository name relative to the server URL in the connector. If pom.xml is not present then target should be full path to artifacts folder (groupId/artifactId/version)
 pluginImage: The name of the Plugin Docker image. The image name should include the tag and will default to the latest tag if unspecified. You can use any docker image from any docker registry, including docker images from private registries
 runTestsArgs:
-    content: The runtime arguments for the test. This field is required. The correct format depends on the selected language and build tool. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/run-tests/set-up-test-intelligence)
+    content: The runtime arguments for the test. Whether this field is required and the expected format depends on the selected language and build tool. [Learn more](https://developer.harness.io/docs/continuous-integration/use-ci/run-tests/set-up-test-intelligence)
     width: "400"
 runTestsBuildTool:
     content: "Select the build automation tool for the test. "
