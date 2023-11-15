@@ -9234,3 +9234,6 @@ terraformEdit-TerraformApply-EXECUTION_spec.cloudCliConfiguration.skipStateStora
 
         For example, you could select **WORKSPACE** in **Command Type** and enter `-lock-timeout=0s` in **Flag**.
     width: "400"
+env-cluster-drodpwn:
+    content: Please select a cluster from the same gitops agent as your appset that manages your pipeline.
+    width: "400"
