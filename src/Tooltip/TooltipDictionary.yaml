@@ -9237,3 +9237,6 @@ terraformEdit-TerraformApply-EXECUTION_spec.cloudCliConfiguration.skipStateStora
 env-cluster-drodpwn:
     content: Please select a cluster from the same gitops agent as your appset that manages your pipeline.
     width: "400"
+samlProviderForm_files:
+    content: Upload the IdP metadata XML file you downloaded from your SAML provider app. [Learn more](https://developer.harness.io/docs/platform/authentication/single-sign-on-saml/)
+    width: "400"
