@@ -9240,3 +9240,27 @@ env-cluster-drodpwn:
 samlProviderForm_files:
     content: Upload the IdP metadata XML file you downloaded from your SAML provider app. [Learn more](https://developer.harness.io/docs/platform/authentication/single-sign-on-saml/)
     width: "400"
+commandUnit_spec.shell:
+    content: Select the shell type of you script. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/download-and-copy-artifacts-using-the-command-step )
+    width: "400"
+commandUnit_spec.source.spec.script:
+    content: Enter your script here. Type $ to see the Harness variables available for use in your script. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/download-and-copy-artifacts-using-the-command-step  )
+    width: "400"
+filesAndPatterns:
+    content: |-
+        Use these settings to tail files and use the results in your script. For example, check logs and see if a process started successfully and, if so, exit the script. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/download-and-copy-artifacts-using-the-command-step  )
+
+        <br/>You specify the file to tail, such as auth.log, and the pattern to search (grep filter), such as 198.51.100.1 and then in your script you perform an action when the tail output is matched.
+    width: "400"
+fileToTail:
+    content: Enter the name of a file in the Working Directory to tail, such as a log file. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/download-and-copy-artifacts-using-the-command-step  )
+    width: "400"
+patternToSearch:
+    content: Enter the pattern to search for in the file. Harness uses grep on the pattern. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/download-and-copy-artifacts-using-the-command-step  )
+    width: "400"
+commandUnit_spec.source.type:
+    content: Select **Inline** to enter your script below in **Script**, or select **Harness File Store** and select a script file. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/download-and-copy-artifacts-using-the-command-step)
+    width: "400"
+commandUnit_name:
+    content: Enter a name for this step.
+    width: "400"
