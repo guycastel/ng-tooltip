@@ -9264,3 +9264,15 @@ commandUnit_spec.source.type:
 commandUnit_name:
     content: Enter a name for this step.
     width: "400"
+gcpAuthForm_workloadPoolId:
+    content: This identifies the workload pool created in GCP, and it is the `Pool ID` value. To get the **Workload Pool ID**, go to [Manage workload identity pools](https://cloud.google.com/iam/docs/manage-workload-identity-pools-providers#pools) in the GCP documentation.
+    width: "400"
+gcpAuthForm_providerId:
+    content: This identifies the OIDC provider configured in GCP, and it is the `Provider ID` value. To get the **Provider ID**, go to [Manage workload identity pool providers](https://cloud.google.com/iam/docs/manage-workload-identity-pools-providers#manage-providers) in the GCP documentation.
+    width: "400"
+gcpAuthForm_gcpProjectId:
+    content: The project number of the GCP project that is used to create the workload identity federation. To get the **Project ID**, go to [Creating and managing projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects) in the GCP documentation.
+    width: "400"
+gcpAuthForm_serviceAccountEmail:
+    content: This is the service account that was linked to the workload identity pool in the last step.
+    width: "400"
