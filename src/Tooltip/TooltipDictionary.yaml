@@ -2379,7 +2379,7 @@ wizardForm_webhook_jexlCondition:
         - `<+trigger.payload.pull_request.diff_url>.contains("triggerNgDemo")`
         - `<+trigger.payload.pull_request.diff_url>.contains("triggerNgDemo") ||<+trigger.payload.repository.owner.name> == "wings-software"`
 
-        [Learn More](https://docs.harness.io/article/rset0jry8q)
+        [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference/#jexl-conditions)
     width: "650"
 wizardForm_webhook_headerConditions.0.key:
     content: |-
@@ -2761,7 +2761,7 @@ wizardForm_webhook_connectorRef:
     width: "400"
 conditionsOptional:
     content: |
-        Enter conditions that must be matched in order for the Trigger to execute. [Learn More](https://docs.harness.io/article/rset0jry8q)
+        Enter conditions that must be matched in order for the Trigger to execute. [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference/#conditions-settings)
 
         **Note:** Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
     width: "400"
@@ -2777,7 +2777,7 @@ sourceBranch:
 
         <br/>**Multiple values:** `in`, `not in`.
 
-        <br/>The **IN** and **NOT IN** operators can take comma-separated values. You can also use regex as a value. For example, `Not In master,release/.*`. [Learn More](https://docs.harness.io/article/rset0jry8q)
+        <br/>The **IN** and **NOT IN** operators can take comma-separated values. You can also use regex as a value. For example, `Not In master,release/.*`. [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference/#source-branch-target-branch-and-changed-files-conditions)
     width: "400"
 targetBranch:
     content: |-
@@ -2791,7 +2791,7 @@ targetBranch:
 
         <br/>**Multiple values:** `in`, `not in`.
 
-        <br/>The **IN** and **NOT IN** operators can take comma-separated values. You can also use regex as a value. For example, `Not In master,release/.*`. [Learn More](https://docs.harness.io/article/rset0jry8q)
+        <br/>The **IN** and **NOT IN** operators can take comma-separated values. You can also use regex as a value. For example, `Not In master,release/.*`. [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference/#source-branch-target-branch-and-changed-files-conditions)
     width: "400"
 changedFiles:
     content: |
@@ -2803,7 +2803,7 @@ changedFiles:
 
         <br/>**Multiple values:** `in`, `not in`.
 
-        <br/>The **IN** and **NOT IN** operators can take comma-separated values. You can also use regex as a value. For example, `Not In master,release/.*`. [Learn More](https://docs.harness.io/article/rset0jry8q)
+        <br/>The **IN** and **NOT IN** operators can take comma-separated values. You can also use regex as a value. For example, `Not In master,release/.*`. [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference/#source-branch-target-branch-and-changed-files-conditions)
     width: "400"
 headerConditions:
     content: |-
@@ -2818,11 +2818,11 @@ headerConditions:
         - Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
         - If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty.
 
-        [Learn More](https://docs.harness.io/article/rset0jry8q)
+        [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference/#header-conditions)
     width: "600"
 payloadConditions:
     content: |-
-        Payload conditions are based on the values of the JSON payload. [Learn More](https://docs.harness.io/article/rset0jry8q)
+        Payload conditions are based on the values of the JSON payload.
 
         Harness treats the JSON payload as a data model and parses the payload and listens for events on a JSON payload key.
 
@@ -2832,7 +2832,7 @@ payloadConditions:
         - Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
         - If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty.
 
-        [Learn More](https://docs.harness.io/article/rset0jry8q)
+        [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference/#payload-conditions)
     width: "600"
 wizardForm_scheduled_name:
     content: Enter a name for this Trigger. The name will identify the Trigger on the Deployments page and this pipeline's Execution History page so you can see which Trigger executed the pipeline.
