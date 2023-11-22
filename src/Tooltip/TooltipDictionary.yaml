@@ -4965,7 +4965,7 @@ ldapConnectionSettingsForm_host:
     content: Enter the hostname for the LDAP server. Harness uses DNS to resolve the hostname. You can also use the public IP address of the host.
     width: "400"
 ldapConnectionSettingsForm_port:
-    content: Enter 389 for standard LDAP. If you want to connect over Secure LDAP (LDAPS), use port 636, and enable the Use SSL setting.
+    content: Enter 389 for standard LDAP. If you want to connect over Secure LDAP (LDAPS), use port 636, and enable the Use SSL setting. [Learn More](https://developer.harness.io/docs/platform/authentication/single-sign-on-sso-with-ldap/#ports-and-permissions)
     width: "400"
 ldapConnectionSettingsForm_referralsEnabled:
     content: If you have referrals configured for your LDAP authentication, select Enable Referrals and enter the number of referrals.
