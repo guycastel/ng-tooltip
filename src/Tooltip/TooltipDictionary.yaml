@@ -4980,7 +4980,7 @@ ldapConnectionSettingsForm_responseTimeout:
     content: Enter the number of milliseconds to wait for an LDAP response before timing out. For example, 5000 is equal to 5 seconds.
     width: "400"
 ldapConnectionSettingsForm_bindDN:
-    content: Enter the distinguished name of the directory object used for the Bind operation. For example, `cn=Administrator,CN=Users,DC=example,DC=com`.
+    content: Enter the distinguished name of the directory object used for the Bind operation. For example, `cn=Administrator,CN=Users,DC=example,DC=com`. [Learn More](https://developer.harness.io/docs/platform/authentication/single-sign-on-sso-with-ldap/#add-ldap-sso-provider)
     width: "400"
 ldapConnectionSettingsForm_bindPassword:
     content: Enter the password to log into the LDAP host.
