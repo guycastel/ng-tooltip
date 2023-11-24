@@ -127,6 +127,7 @@ azureKeyVaultForm_subscription: Enter your Azure Subscription Id. [Learn More](h
 azureKeyVaultForm_secretKey: Enter Azure authentication key.  [Learn More](https://docs.harness.io/article/53jrd1cv4i)
 azureKeyVaultForm_vaultName: Select the Vault you want to use. [Learn More](https://docs.harness.io/article/53jrd1cv4i)
 azureKeyVaultForm_default: Make this your default secrets manager.  [Learn More](https://docs.harness.io/article/53jrd1cv4i)
+azureKeyVaultForm_enablePurge: This option will permanently delete the specified secret. [Learn More](https://learn.microsoft.com/en-us/rest/api/keyvault/secrets/purge-deleted-secret/purge-deleted-secret?view=rest-keyvault-secrets-7.4&tabs=HTTP)
 vaultConfigForm_vaultUrl: Enter the Vault URL. [Learn More](https://docs.harness.io/article/s65mzbyags)
 vaultConfigForm_basePath: The Base Secret Path is used for writing secrets. When Harness reads secrets it uses the full path. [Learn More](https://docs.harness.io/article/s65mzbyags)
 vaultConfigForm_accessType: Select the Authentication Type. [Learn More](https://docs.harness.io/article/s65mzbyags)
