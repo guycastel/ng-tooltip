@@ -9277,3 +9277,24 @@ gcpAuthForm_gcpProjectId:
 gcpAuthForm_serviceAccountEmail:
     content: This is the service account that was linked to the workload identity pool in the last step.
     width: "400"
+autoRejectPreviousDeploymentsTooltip:
+    content: Enable this option to reject old executions waiting for approval when a latest step is approved. [Learn More](https://developer.harness.io/docs/platform/approvals/adding-harness-approval-stages/#auto-reject-previous-deployments-in-approval)
+    width: "400"
+usergroup-individual:
+    content: Specify individual expressions for each user group that needs to be configured as an approver. [Learn More](https://developer.harness.io/docs/platform/approvals/adding-harness-approval-stages/#user-groups-as-expressions)
+    width: "400"
+usergroup-combined:
+    content: Specify a combined expression for all user groups that need to be configured as approvers. This expression must resolve to a list of strings. [Learn More](https://developer.harness.io/docs/platform/approvals/adding-harness-approval-stages/#user-groups-as-expressions)
+    width: "400"
+scheduleAutoApproval:
+    content: You can set a specific date and time for the approval step to automatically approve. It's important to note that the auto-approve schedule should be greater than 15 minutes past the current time. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/approvals/using-harness-approval-steps-in-cd-stages/#automatic-approvals)
+    width: "400"
+harnessApproval_spec.autoApproval.scheduledDeadline.timeZone:
+    content: Select the timezone for auto approval.
+    width: "400"
+harnessApproval_spec.autoApproval.scheduledDeadline.time:
+    content: Select the date and time when auto approval should occur.
+    width: "400"
+harnessApproval_spec.autoApproval.comments:
+    content: Enter the message that the users in the selected User Groups will see when auto approval occurs.
+    width: "400"
