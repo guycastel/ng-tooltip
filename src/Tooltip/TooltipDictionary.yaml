@@ -8485,7 +8485,7 @@ chaos_tune_fault_datablocksize:
     content: Size of each data block used to fill up the disk.
     width: "400"
 stepGitlabAuth_apiUrl:
-    content: If necessary, you can override the default URL for API authentication.
+    content: Provide your GitLab base URL if you have a GitLab self-managed plan and your base URL is formatted like `https://myloadbalancer/gitlab`. [Learn more](https://developer.harness.io/docs/platform/connectors/code-repositories/ref-source-repo-provider/git-lab-connector-settings-reference#enable-api-access)
     width: "400"
 pipelineInputStage:
     content: CI Stage can be skipped with New Artifact/Manifest Trigger using selective stage configuration.
