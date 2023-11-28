@@ -9298,3 +9298,6 @@ harnessApproval_spec.autoApproval.scheduledDeadline.time:
 harnessApproval_spec.autoApproval.comments:
     content: Enter the message that the users in the selected User Groups will see when auto approval occurs.
     width: "400"
+TasSwapRollback_spec.upsizeInActiveApp:
+    content: When `Existing versions to keep` is 0 in BG App Setup, the `Upsize inactive Service` setting is ignored. When `Existing versions to keep` is 0 the instance count for Inactive service will be previous to the deployment.
+    width: "400"
