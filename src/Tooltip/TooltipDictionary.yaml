@@ -9300,7 +9300,6 @@ harnessApproval_spec.autoApproval.comments:
     width: "400"
 TasSwapRollback_spec.upsizeInActiveApp:
     content: When `Existing versions to keep` is 0 in BG App Setup, the `Upsize inactive Service` setting is ignored. When `Existing versions to keep` is 0 the instance count for Inactive service will be previous to the deployment.
-    width: "400"
 testGlobs:
     content: |-
         You can override the default test globs pattern. For example, the default for RSpec is `spec/**/*_spec.rb`, and you could override this with a pattern like `spec/features/**/*_spec.rb`.
@@ -9310,4 +9309,7 @@ testGlobs:
         - [TI for Ruby - Test Globs](https://developer.harness.io/docs/continuous-integration/use-ci/run-tests/test-intelligence/ti-for-ruby#test-globs)
         - [TI for Python - Test Globs](https://developer.harness.io/docs/continuous-integration/use-ci/run-tests/test-intelligence/ti-for-python#test-globs)
         - [TI for C# - Test Globs](https://developer.harness.io/docs/continuous-integration/use-ci/run-tests/test-intelligence/ti-for-csharp#test-globs)
+    width: "400"
+artifactoryArtifact_artifactFilter:
+    content: Specify an expression that matches the artifacts you want to fetch.
     width: "400"
