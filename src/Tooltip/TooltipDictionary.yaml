@@ -9313,3 +9313,8 @@ testGlobs:
 artifactoryArtifact_artifactFilter:
     content: Specify an expression that matches the artifacts you want to fetch.
     width: "400"
+KubernetesDeploymentTypeServiceHooks:
+    content: |-
+        Add Service Hooks to fetch Helm Chart dependencies.
+        [Learn more](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/deploy-helm-charts/#service-hooks)
+    width: "400"
