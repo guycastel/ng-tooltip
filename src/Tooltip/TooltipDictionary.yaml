@@ -609,7 +609,7 @@ shellScriptForm_spec.source.spec.script:
         [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/#add-your-script)
     width: "400"
 Http_stepName: The HTTP step can run HTTP methods containing URLs, methods, headers, and variables. You can add assertions that use the response from the HTTP method.
-httpWidget_name: Enter a name for this step. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
+httpWidget_name: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/http-step)
 httpWidget_timeout: |-
     Enter a timeout for this step.
 
@@ -625,11 +625,11 @@ httpWidget_timeout: |-
     The maximum is `53w`.
 
     You can also set timeouts at the pipeline level.
-httpWidget_spec.url: Enter the URL for the HTTP call.  [Learn More](https://docs.harness.io/article/64hhfpbgbj)
-httpWidget_spec.method: Select the [HTTP method](https://restfulapi.net/http-methods/). [Learn More](https://docs.harness.io/article/64hhfpbgbj)
-httpWidget_spec.requestBody: Enter the message body (if any) of the HTTP message. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
+httpWidget_spec.url: Enter the URL for the HTTP call.  [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/http-step)
+httpWidget_spec.method: Select the [HTTP method](https://restfulapi.net/http-methods/). [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/http-step)
+httpWidget_spec.requestBody: Enter the message body (if any) of the HTTP message. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/http-step)
 httpWidget_spec.assertion: |-
-    The assertion is used to validate the incoming response. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
+    The assertion is used to validate the incoming response. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/http-step)
 
     For example, if you wanted to check the health of an HTTP connection, you could use the assertion `<+httpResponseCode> == 200`.
 
@@ -642,7 +642,7 @@ httpWidget_spec.assertion: |-
     - `<+httpMethod>`
     - `<+httpResponseBody>`
 httpWidget_spec.headers: |-
-    Enter headers for the message, such as the media type for the message. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
+    Enter headers for the message, such as the media type for the message. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/http-step)
 
     For example, if you are using the GET method, the headers are used to specify the GET response body message type Harness will check for.
 
@@ -654,7 +654,7 @@ httpWidget_spec.headers: |-
 httpWidget_spec.outputVariables: |-
     Create output variables to be used by other steps in the stage. The **Value** setting can contain any HTTP step input, output, or response information.
 
-    You can also use JSON and XML functors in the values for the output variable. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
+    You can also use JSON and XML functors in the values for the output variable. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/http-step)
 JiraApproval_stepName: |-
     You can use Jira issues to approve or reject a pipeline or stage at any point in its execution.
 
@@ -1949,7 +1949,7 @@ manifestDetails_skipResourceVersioning: |-
     If you have enabled **Skip Resource Versioning** for a few deployments and then disable it, Harness will start versioning ConfigMaps and Secrets.
 
     [Learn More](https://docs.harness.io/article/ssbq0xh0hx)
-Http_stepName_StepConfig: You can use the HTTP step to run HTTP methods containing URLs, methods, headers, assertions, and variables. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
+Http_stepName_StepConfig: You can use the HTTP step to run HTTP methods containing URLs, methods, headers, assertions, and variables. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/http-step)
 HarnessApproval_stepName_StepConfig: |-
     You can specify Harness User Group(s) to approve or reject a pipeline at any point in its execution. During deployment, the User Group members use the Harness Manager to approve or reject the pipeline deployment manually. [Learn More](https://docs.harness.io/article/fkvso46bok)
 
@@ -2493,10 +2493,10 @@ wizardForm_webhook_spec.provisionerIdentifier:
         [Learn More](https://docs.harness.io/article/jgi6d73noy)
     width: "400"
 "wizardForm_webhook_pipeline.stages[0].stage.spec.execution.steps[0].parallel[0].step.spec.url":
-    content: Enter the URL for the HTTP call.  [Learn More](https://docs.harness.io/article/64hhfpbgbj)
+    content: Enter the URL for the HTTP call.  [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/http-step)
     width: "400"
 "wizardForm_webhook_pipeline.stages[0].stage.spec.execution.steps[0].parallel[0].step.spec.requestBody":
-    content: Enter the message body (if any) of the HTTP message. [Learn More](https://docs.harness.io/article/64hhfpbgbj)
+    content: Enter the message body (if any) of the HTTP message. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/http-step)
     width: "400"
 wizardForm_webhook_spec.workload:
     content: |-
