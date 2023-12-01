@@ -4492,7 +4492,7 @@ SecretsListViewdetails:
     content: View the different secret types.
     width: "400"
 SecretsListViewactivity:
-    content: See when the secret was last used.
+    content: See when the secret was last edited.
     width: "400"
 ActiveUsersListViewuser:
     content: |-
