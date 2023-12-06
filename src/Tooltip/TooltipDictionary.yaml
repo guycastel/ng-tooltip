@@ -11,7 +11,7 @@ jiraApprovalIssueKey: |-
 ONNtooltipId: Your pipeline name
 specifyYourService:
     content: |-
-        Harness Services represent your microservices/apps logically. You can propagate the same Service to as many stages as you need. [Learn More](https://docs.harness.io/article/hv2758ro4e)
+        Harness Services represent your microservices/apps logically. You can propagate the same Service to as many stages as you need. [Learn More](https://developer.harness.io/docs/get-started/key-concepts)
 
         **Note:** if you configure a service as an expression, the **Visual** pipeline editor cannot show any of its dependent inputs because it does not have a service Id to use. You can still update the pipeline via the **YAML** pipeline editor to provide additional inputs.
     width: "400"
@@ -145,7 +145,7 @@ stepGithubAuthForm_enableAPIAccess: Select this option if you'll use this GitHub
 deployService_name: |-
     Enter a name for this Service.
 
-    A Service represents your microservices, Serverless functions, and other workloads logically. A Service is a logical entity to be deployed, monitored, or changed independently. [Learn More](https://docs.harness.io/article/hv2758ro4e)
+    A Service represents your microservices, Serverless functions, and other workloads logically. A Service is a logical entity to be deployed, monitored, or changed independently. [Learn More](https://developer.harness.io/docs/get-started/key-concepts)
 
     When a Service is added to the stage in a pipeline, you define its Service Definition. Service Definitions represent the real artifacts, manifests, and variables of a Service. They are the actual files and variable values.
 
@@ -395,14 +395,14 @@ connectorDetailsStepFormHttpHelmRepo_name: |+
 
     For Helm charts stored in repos such as Amazon S3 or GCS (Google Cloud Storage), you will need to create a cloud platform Connector for that repo. For more information, see [Cloud Platform Connectors](https://docs.harness.io/category/1ehb4tcksy).
 
-connectorDetailsStepFormNexus_name: Enter a name for this connector. You will use this name to select the connector in pipeline steps and settings. [Learn More](https://docs.harness.io/article/faor0dc98d)
+connectorDetailsStepFormNexus_name: Enter a name for this connector. You will use this name to select the connector in pipeline steps and settings. [Learn More](https://developer.harness.io/docs/platform/connectors/artifact-repositories/nexus-connector-settings-reference/)
 nexusAuth_nexusServerUrl:
-    content: The URL that you use to connect to your Nexus server. For example, `https://nexus3.dev.mycompany.io/repository/your-repo-name`. [Learn More](https://docs.harness.io/article/faor0dc98d)
+    content: The URL that you use to connect to your Nexus server. For example, `https://nexus3.dev.mycompany.io/repository/your-repo-name`. [Learn More](https://developer.harness.io/docs/platform/connectors/artifact-repositories/nexus-connector-settings-reference/)
     width: "400"
 nexusAuth_nexusVersion: |-
     Harness lists the supported Nexus versions, 2.x and 3.x:
 
-    - For Nexus 2.x, Harness supports repository formats Maven, npm, and NuGet. See Sonatype's website at [Supported Formats](https://help.sonatype.com/repomanager3/supported-formats).
+    - For Nexus 2.x, Harness supports repository formats Maven, npm, and NuGet. See Sonatype's website at [Supported Formats](https://help.sonatype.com/repomanager3/nexus-repository-administration/formats).
     - For Nexus 3.x, Harness supports repository formats Docker 3.0 and greater, Maven, npm, NuGet.
 connectorDetailsStepFormCodecommit_name: Enter a name for this connector. You will use this name to select the connector in pipeline steps and settings. [Learn More](https://developer.harness.io/docs/platform/Connectors/connect-to-code-repo)
 awsCCDetailsForm_urlType: |-
@@ -579,7 +579,7 @@ ShellScript_stepName: |-
     - Execute scripts on the host running a Harness Delegate. You can use **Delegate Selector** in **Advanced** to identify which Harness Delegate to use.
     - Execute scripts on a remote target host.
 
-    See **Execution Target** in **Optional Configuration** to select where the script is run. [Learn More](https://docs.harness.io/article/k5lu0u6i1i)
+    See **Execution Target** in **Optional Configuration** to select where the script is run. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/shell-script-step/)
 shellScriptForm_timeout: |-
     Enter a timeout for this step.
 
@@ -816,7 +816,7 @@ k*CanaryDelete_timeout: |-
 
     You can also set timeouts at the pipeline level.
 K8sRollingDeploy_stepName: |-
-    The **K8s Rollout Deploy** step performs a Kubernetes [rolling update strategy](https://developer.harness.io/docs/continuous-delivery/manage-deployments/deployment-concepts-deployment-concepts).
+    The **K8s Rollout Deploy** step performs a Kubernetes [rolling update strategy](https://developer.harness.io/docs/continuous-delivery/manage-deployments/deployment-concepts).
 
     All nodes within a single environment are incrementally added one-by-one with a new service/artifact version. The rolling update uses the number of pods you specified in **Manifests** (number of replicas). [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/cd-k8s-ref/kubernetes-rollout-step)
 k8RolloutDeploy_timeout: |-
@@ -1623,7 +1623,7 @@ dockerAuthForm_username: The username for the Docker registry account.
 dockerAuthForm_password: The password uses a Harness [Encrypted Text secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/).
 helmRepoAuthForm_username: If the charts are backed by HTTP basic authentication, you can also supply the username. See [Share your charts with others](https://helm.sh/docs/topics/chart_repository/#share-your-charts-with-others) from Helm.
 helmRepoAuthForm_password: If the charts are backed by HTTP basic authentication, you can also supply the password. See [Share your charts with others](https://helm.sh/docs/topics/chart_repository/#share-your-charts-with-others) from Helm.
-NexusConnectorDetailsTooltip: Connect Harness to your Nexus artifact repo. [Learn More](https://docs.harness.io/article/faor0dc98d)
+NexusConnectorDetailsTooltip: Connect Harness to your Nexus artifact repo. [Learn More](https://developer.harness.io/docs/platform/connectors/artifact-repositories/nexus-connector-settings-reference/)
 NexusConnectorAuthentication: |-
     Ensure the connected user account has the following permissions in the Nexus Server.
 
@@ -1879,7 +1879,7 @@ awsSMConfigForm_assumeStsRoleDuration: |-
 connectorDetailsStepFormAzureKeyVault_name: Enter a name for this Azure Key Vault Connector. [Learn More](https://docs.harness.io/article/53jrd1cv4i)
 connectorDetailsStepFormVault_name: Enter a name for this HashiCorp Vault Connector. [Learn More](https://docs.harness.io/article/s65mzbyags)
 vaultConfigForm_renewalIntervalMinutes: Enter how often Harness Delegate reloads the Vault access token. [Learn More](https://docs.harness.io/article/s65mzbyags)
-autostoppingRule: AutoStopping Rules make sure that your non-production resources run only when used, and never when idle. It also allows you to run your workloads on fully orchestrated spot instances without any worry of spot interruptions. [Learn More](https://developer.harness.io/docs/cloud-cost-management/use-ccm-cost-optimization/optimize-cloud-costs-with-intelligent-cloud-auto-stopping-rules/add-connectors/auto-stopping-rules)
+autostoppingRule: AutoStopping Rules make sure that your non-production resources run only when used, and never when idle. It also allows you to run your workloads on fully orchestrated spot instances without any worry of spot interruptions. [Learn More](https://developer.harness.io/docs/category/create-connectors-for-autostopping-rules)
 summaryOfRulesHeader: |-
     AutoStopping dashboard allows you to view a summary of all the AutoStopping rules you have created in a simple and intuitive interface. The following are the key features of the AutoStopping Rules dashboard:
 
@@ -1973,7 +1973,7 @@ addEditCustomVariableForm_name: |-
     You reference stage variables **outside their stage** using the expression `<+pipeline.stages.[stage name].variables.[variable name]>`.  [Learn More](https://docs.harness.io/article/2chyf1acil)
 addEditCustomVariableForm_type: Select the variable type. If you select **Secret**, click **Save** and then create or select a Harness secret for the **Value**. [Learn More](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/)
 delegateSetupStepForm_name:
-    content: Enter a name for the delegate. The names of Kubernetes delegates are included in **StatefulSet** metadata. [Learn More](https://docs.harness.io/article/2132l9r4gt)
+    content: Enter a name for the delegate. The names of Kubernetes delegates are included in **StatefulSet** metadata. [Learn More](https://developer.harness.io/docs/platform/delegates/install-delegates/overview/)
     width: "400"
 delegateSetupStepForm_delegateConfigurationId: Delegate Configurations profiles are deprecated, use `INIT_SCRIPT` instead. [Learn More](https://docs.harness.io/article/yte6x6cyhn-run-scripts-on-delegates)
 delegateSetupStepForm_k8sConfigDetails.namespace:
@@ -2234,7 +2234,7 @@ gitOps: |
     Argo CD GitOps, as a tool, keeps all configurations in sync and applies the desired state directly (and only from Git).
     Harness provides GitOps by integrating Argo CD into the Harness Manager. Once integrated, you can perform your Harness deployments and create and manage your Argo CD Application from within the same interface.
 
-    [Learn more](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
+    [Learn more](https://developer.harness.io/docs/category/get-started-with-gitops)
 GitOpsProviderStepFormundefined_name: |
     Enter the name for your Adapter.
     This is a mandatory field. The name you enter must be unique and should not contain any special characters.
@@ -2254,7 +2254,7 @@ GitOpsProviderStepFormundefined_spec.adapterUrl: |-
     Enter the Harness Argo CD Adapter URL. Do not enter any trailing slash in the URL.
     This URL allows customers to interact with the ArgoCD server directly from Harness UI with minimal configuration.
 
-    [Learn more to Create Argo CD Adapter](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
+    [Learn more to Create Argo CD Adapter](https://developer.harness.io/docs/category/get-started-with-gitops)
 ciBuildInfra_initTimeout: Enter the timeout for the initialization phase. During this phase, Harness downloads the build step images and spins up the containers to execute the build steps.
 ciBuildInfra_annotations: Kubernetes Annotation to the pod YAML that will be used to create the pod in which the stage's steps will be executed. [Learn More](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
 ciBuildInfra_labels: Key/Value pair that will be added to the Kubernetes pod YAML, which is used to create the pod in which the stage's steps will be executed. [Learn More](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
@@ -2319,7 +2319,7 @@ wizardForm_webhook_sourceBranchOperator:
 
         If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty.
 
-        [Learn More](https://docs.harness.io/article/rset0jry8q)
+        [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference)
 
         **Note:** Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
     width: "400"
@@ -2331,7 +2331,7 @@ wizardForm_webhook_sourceBranchValue:
 
         You can enter multiple values separated by commas and use wildcards.
 
-        [Learn More](https://docs.harness.io/article/rset0jry8q)
+        [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
     width: "400"
 wizardForm_webhook_targetBranchOperator:
     content: |-
@@ -2339,7 +2339,7 @@ wizardForm_webhook_targetBranchOperator:
 
         If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty.
 
-        [Learn More](https://docs.harness.io/article/rset0jry8q)
+        [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference)
 
         **Note:** Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
     width: "400"
@@ -2351,7 +2351,7 @@ wizardForm_webhook_targetBranchValue:
 
         You can enter multiple values separated by commas and use wildcards.
 
-        [Learn More](https://docs.harness.io/article/rset0jry8q)
+        [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference)
     width: "400"
 wizardForm_webhook_changedFilesOperator:
     content: |-
@@ -2359,7 +2359,7 @@ wizardForm_webhook_changedFilesOperator:
 
         If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty.
 
-        [Learn More](https://docs.harness.io/article/rset0jry8q)
+        [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference)
 
         **Note:** Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
     width: "400"
@@ -2396,7 +2396,7 @@ wizardForm_webhook_headerConditions.0.operator:
     content: |-
         Select the operator for matching the value in **Matches Value**.
 
-        If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty. [Learn More](https://docs.harness.io/article/rset0jry8q)
+        If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty. [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference)
 
         **Note:** Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
     width: "400"
@@ -2406,11 +2406,11 @@ wizardForm_webhook_headerConditions.0.value:
 
         When Harness evaluates the header key you enter, the comparison is case insensitive.
 
-        You can enter multiple values separated by commas and use wildcards. [Learn More](https://docs.harness.io/article/rset0jry8q)
+        You can enter multiple values separated by commas and use wildcards. [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference)
     width: "400"
 wizardForm_webhook_payloadConditions.0.key:
     content: |-
-        Payload conditions are based on the values of the JSON payload. [Learn More](https://docs.harness.io/article/rset0jry8q)
+        Payload conditions are based on the values of the JSON payload. [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference)
 
         Enter the payload attribute for comparison.
 
@@ -2422,12 +2422,12 @@ wizardForm_webhook_payloadConditions.0.operator:
     content: |-
         Select the operator for matching the value in **Matches Value**.
 
-        If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty. [Learn More](https://docs.harness.io/article/rset0jry8q)
+        If you want to use OR, NOT or other operators across the payload, simply use **JEXL Condition** and leave the rest empty. [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference)
 
         **Note:** Conditions are ANDed together (boolean AND operation). All Conditions must match an event payload for it to execute the Trigger.
     width: "400"
 wizardForm_webhook_payloadConditions.0.value:
-    content: Enter a value for the payload condition comparison. [Learn More](https://docs.harness.io/article/rset0jry8q)
+    content: Enter a value for the payload condition comparison. [Learn More](https://developer.harness.io/docs/platform/triggers/triggers-reference)
     width: "650"
 k8sDirectInfraConnector:
     content: |-
@@ -2617,9 +2617,9 @@ helmWithHttp_chartName:
 
         If you want to provide the chart name later, you have the following options:
 
-        - Configure this setting as a [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) and provide the name at runtime.
+        - Configure this setting as a [Runtime Input](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs) and provide the name at runtime.
         - Configure this setting as a Runtime Input and use [Input Sets](https://docs.harness.io/article/3fqwa8et3d) to provide the chart name.
-        - Configure this setting as an [Expression](https://docs.harness.io/article/f6yobn7iq0) and enter a Stage, Service, or custom [variable expression](https://docs.harness.io/article/lml71vhsim). The value for the expression will be added at runtime.
+        - Configure this setting as an [Expression](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs) and enter a Stage, Service, or custom [variable expression](https://docs.harness.io/article/lml71vhsim). The value for the expression will be added at runtime.
     width: "400"
 helmWithHttp_chartVersion:
     content: |-
@@ -2629,7 +2629,7 @@ helmWithHttp_chartVersion:
 
         If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
-        If you are going to use a Harness Trigger to run this pipeline when a new version is added to your chart repo, select the [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
+        If you are going to use a Harness Trigger to run this pipeline when a new version is added to your chart repo, select the [Runtime Input](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
     width: "400"
 helmWithHttp_helmVersion:
     content: Select the version of Helm used in your chart. See [Helm Version Support Policy](https://helm.sh/docs/topics/version_skew/) from Helm.
@@ -2690,7 +2690,7 @@ listenOnNewArtifactManifest:
 
         For example, see [Helm Chart Triggers](https://docs.harness.io/article/54eqk0d1bd).
 
-        **Note:** if this setting is not enabled, it is because the version setting in the **Service Definition** is not a [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) (`<+input>`). For example, for a Helm Chart package in **Service Definition**, the **Chart Version** setting must be `<+input>`.
+        **Note:** if this setting is not enabled, it is because the version setting in the **Service Definition** is not a [Runtime Input](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs) (`<+input>`). For example, for a Helm Chart package in **Service Definition**, the **Chart Version** setting must be `<+input>`.
 
         ---
 
@@ -2732,7 +2732,7 @@ version:
     width: "400"
 pipelineInputLabel:
     content: |-
-        If some of your pipeline settings use [Runtime Inputs](https://docs.harness.io/article/f6yobn7iq0), you can provide the values for those settings here and they will be used when this Trigger executes.
+        If some of your pipeline settings use [Runtime Inputs](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs), you can provide the values for those settings here and they will be used when this Trigger executes.
 
         If your pipeline uses [Input Sets](https://docs.harness.io/article/3fqwa8et3d), you can select the Input Set to use when the Trigger executes the pipeline.
 
@@ -2857,16 +2857,16 @@ schedulePanel:
         You can use the schedule options to define the Cron expression or type in a Cron expression of your own and see how it evaluates. [Learn More](https://docs.harness.io/article/4z9mf24m1b)
     width: "400"
 kustomizeGit_identifier:
-    content: Enter a unique name for the Kustomize manifest. This doesn't have to be the same as the actual file or folder name. Enter a name that tells other Project members what Kustomization this is. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments)
+    content: Enter a unique name for the Kustomize manifest. This doesn't have to be the same as the actual file or folder name. Enter a name that tells other Project members what Kustomization this is. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/use-kustomize-for-kubernetes-deployments)
     width: "400"
 kustomizeGit_gitFetchType:
-    content: Select if you want Harness to fetch the latest file from the branch or a specific Commit Id. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments)
+    content: Select if you want Harness to fetch the latest file from the branch or a specific Commit Id. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/use-kustomize-for-kubernetes-deployments)
     width: "400"
 kustomizeGit_branch:
-    content: Enter the branch name or CommitId, depending on what you selected in **Git Fetch Type**. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments)
+    content: Enter the branch name or CommitId, depending on what you selected in **Git Fetch Type**. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/use-kustomize-for-kubernetes-deployments)
     width: "400"
 kustomizePathHelperText:
-    content: Enter the path from the root of the repo to the Kustomize folder. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments)
+    content: Enter the path from the root of the repo to the Kustomize folder. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/use-kustomize-for-kubernetes-deployments)
     width: "400"
 pluginPathHelperText:
     content: |-
@@ -2874,7 +2874,7 @@ pluginPathHelperText:
 
         Kustomize offers a plugin framework to generate and/or transform a Kubernetes resource as part of a kustomization.
 
-        When Harness deploys, it will apply the plugin you reference just like you would with the `--enable_alpha_plugins` parameter. See [No Security from Kustomize](https://github.com/kubernetes-sigs/kustomize/tree/master/docs/plugins#no-security).
+        When Harness deploys, it will apply the plugin you reference just like you would with the `--enable_alpha_plugins` parameter. See [No Security from Kustomize](https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kustomize/).
     width: "400"
 helmSkipResourceVersion:
     content: |-
@@ -2926,17 +2926,17 @@ samlProviderForm_entityIdentifier:
     content: Enter your custom Entity Id. The default Entity Id is `app.harness.io`. The value you enter here will override the default Entity Id. [Learn more](https://docs.harness.io/article/mlpksc7s6c-single-sign-on-saml)
     width: "400"
 kustomizePath_identifier:
-    content: Enter a name for this kustomize patch so your team members will know what kustomization it performs. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
+    content: Enter a name for this kustomize patch so your team members will know what kustomization it performs. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/use-kustomize-for-kubernetes-deployments-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
     width: "400"
 kustomizePath_gitFetchType:
-    content: Select the branch or Git commit Id to use when fetching the kustomize patch. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
+    content: Select the branch or Git commit Id to use when fetching the kustomize patch. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/use-kustomize-for-kubernetes-deployments-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
     width: "400"
 kustomizePath_branch:
-    content: Enter the name of the branch where the kustomize patch is located. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
+    content: Enter the name of the branch where the kustomize patch is located. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/use-kustomize-for-kubernetes-deployments-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
     width: "400"
 kustomizePath_paths:
     content: |-
-        Enter the path to the patch file(s) from the root of the repo. The files you add should be the same files listed in `patchesStrategicMerge` of the main kustomize file in your Service. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
+        Enter the path to the patch file(s) from the root of the repo. The files you add should be the same files listed in `patchesStrategicMerge` of the main kustomize file in your Service. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/use-kustomize-for-kubernetes-deployments-use-kustomize-for-kubernetes-deployments#option_kustomize_patches)
 
         **Important:** You cannot use Harness [variables](https://docs.harness.io/article/lml71vhsim) in the base manifest or kustomization.yaml. You can only use Harness variables in kustomize patches you add here in Kustomize Patches **Manifest Details**.
     width: "400"
@@ -3120,9 +3120,9 @@ helmWithS3_chartName:
 
         If you want to provide the chart name later, you have the following options:
 
-        - Configure this setting as a [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) and provide the name at runtime.
+        - Configure this setting as a [Runtime Input](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs) and provide the name at runtime.
         - Configure this setting as a Runtime Input and use [Input Sets](https://docs.harness.io/article/3fqwa8et3d) to provide the chart name.
-        - Configure this setting as an [Expression](https://docs.harness.io/article/f6yobn7iq0) and enter a Stage, Service, or custom [variable expression](https://docs.harness.io/article/lml71vhsim). The value for the expression will be added at runtime.
+        - Configure this setting as an [Expression](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs) and enter a Stage, Service, or custom [variable expression](https://docs.harness.io/article/lml71vhsim). The value for the expression will be added at runtime.
     width: "400"
 helmWithS3_chartVersion:
     content: |-
@@ -3132,7 +3132,7 @@ helmWithS3_chartVersion:
 
         If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
-        If you are going to use a Harness Trigger to run this pipeline when a new version is added to your chart repo, select the [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
+        If you are going to use a Harness Trigger to run this pipeline when a new version is added to your chart repo, select the [Runtime Input](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
     width: "400"
 helmWithS3_helmVersion:
     content: Select the version of Helm used in your chart. See [Helm Version Support Policy](https://helm.sh/docs/topics/version_skew/) from Helm.
@@ -3181,9 +3181,9 @@ helmWithGcs_chartName:
 
         If you want to provide the chart name later, you have the following options:
 
-        - Configure this setting as a [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) and provide the name at runtime.
+        - Configure this setting as a [Runtime Input](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs) and provide the name at runtime.
         - Configure this setting as a Runtime Input and use [Input Sets](https://docs.harness.io/article/3fqwa8et3d) to provide the chart name.
-        - Configure this setting as an [Expression](https://docs.harness.io/article/f6yobn7iq0) and enter a Stage, Service, or custom [variable expression](https://docs.harness.io/article/lml71vhsim). The value for the expression will be added at runtime.
+        - Configure this setting as an [Expression](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs) and enter a Stage, Service, or custom [variable expression](https://docs.harness.io/article/lml71vhsim). The value for the expression will be added at runtime.
     width: "400"
 helmWithGcs_chartVersion:
     content: |-
@@ -3193,7 +3193,7 @@ helmWithGcs_chartVersion:
 
         If you leave **Chart Version** empty Harness gets the latest chart. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/cd-helm-category/deploy-helm-charts)
 
-        If you are going to use a Harness Trigger to run this pipeline when a new version is added to your chart repo, select the [Runtime Input](https://docs.harness.io/article/f6yobn7iq0) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
+        If you are going to use a Harness Trigger to run this pipeline when a new version is added to your chart repo, select the [Runtime Input](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs) option. When you set up the Trigger, you will select this chart and Harness will listen on the repo for new versions. [Learn More](https://docs.harness.io/article/54eqk0d1bd)
     width: "400"
 helmWithGcs_helmVersion:
     content: Select the version of Helm used in your chart. See [Helm Version Support Policy](https://helm.sh/docs/topics/version_skew/) from Helm.
@@ -3786,7 +3786,7 @@ stepAuthenticationForm_userName:
     content: Enter the username for the user account on the remote server. [Learn more](https://docs.harness.io/article/xmp9j0dk8b-add-use-ssh-secrets#add_ssh_credential)
     width: "400"
 stepAuthenticationForm_key:
-    content: Enter the Secret Key. You can either create a new Encrypted [File Secret](https://docs.harness.io/article/77tfo7vtea-add-file-secrets#step_1_add_encrypted_file) or Encrypted [Text Secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/-add-use-text-secrets) or select an existing one.
+    content: Enter the Secret Key. You can either create a new Encrypted [File Secret](https://docs.harness.io/article/77tfo7vtea-add-file-secrets#step_1_add_encrypted_file) or Encrypted [Text Secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets) or select an existing one.
     width: "400"
 stepAuthenticationForm_encryptedPassphrase:
     content: Enter the SSH key [passphrase](https://www.ssh.com/academy/ssh/passphrase).
@@ -4418,7 +4418,7 @@ osTemplateWithGit_paramsPaths:
     width: "400"
 kustomizeGit_patchesPaths:
     content: |-
-        Enter the path to the Patches file(s) you want to use in the same repo. Enter the path from the repo root to the file or folder. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/kustomize-howtos/use-kustomize-for-kubernetes-deployments)
+        Enter the path to the Patches file(s) you want to use in the same repo. Enter the path from the repo root to the file or folder. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kustomize/use-kustomize-for-kubernetes-deployments)
 
         If you add multiple Patches files and they have any identical labels, the Patches files override in a reverse order. For example, the third Patches file listed overrides the second and first Patches files.
 
@@ -5172,13 +5172,13 @@ helmDeploy_timeout:
         The maximum is `53w`.
     width: "400"
 helmDeploy_name:
-    content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/native-helm/native-helm-quickstart-native-helm-quickstart)
+    content: Enter a name for this step. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/native-helm-quickstart)
     width: "400"
 HelmDeploy_stepName_StepConfig:
     content: |-
         This Helm Deploy step performs a Rolling deployment strategy.
 
-        This step deploys your application using the Helm chart or Values YAML file you added to the Service in this stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/native-helm/native-helm-quickstart-native-helm-quickstart)
+        This step deploys your application using the Helm chart or Values YAML file you added to the Service in this stage. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/native-helm-quickstart)
     width: "400"
 kustomizeBasePath:
     content: Enter the path where your Kustomize manifests and dependencies are available.
@@ -5601,14 +5601,14 @@ Namespace:
     content: Enter the namespace where you want to install the Harness GitOps Agent. Typically, this is the target namespace for your deployment. [Learn More](https://docs.harness.io/article/52r3l5q67u)
     width: "400"
 gitops-repo-overview_name:
-    content: Enter a name for this setting. [Learn More](https://docs.harness.io/article/pptv7t53i9)
+    content: Enter a name for this setting. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/use-gitops/install-a-harness-git-ops-agent)
     width: "400"
 repo:
-    content: Enter the URL to your repository. For example, `https://github.com/repo.git`. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/add-a-harness-git-ops-repository)
+    content: Enter the URL to your repository. For example, `https://github.com/repo.git`. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/use-gitops/add-a-harness-git-ops-repository)
     width: "400"
 gitops-repository-credentials-overview_connectionType:
     content: |-
-        Select HTTPS, SSH, or GitHub App. [Learn More](https://docs.harness.io/article/58i67mkxap)
+        Select HTTPS, SSH, or GitHub App. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/use-gitops/add-a-harness-git-ops-repository)
 
         If you use Two-Factor Authentication for your Git repo, you connect over HTTPS or SSH.
     width: "400"
@@ -5621,14 +5621,14 @@ name.gitops.repo:
         The `rsa` and `-m PEM` ensure the algorithm and that the key is PEM. Next, follow the prompts to create the PEM key. For more information, see the [ssh-keygen man page](https://linux.die.net/man/1/ssh-keygen).
     width: "400"
 insecure:
-    content: Select this option to disable server certificate and host key checks. [Learn More](https://docs.harness.io/article/58i67mkxap)
+    content: Select this option to disable server certificate and host key checks. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/use-gitops/add-a-harness-git-ops-repository)
     width: "400"
 enableLfs:
     content: Select the option to use [Git Large File Storage](https://github.com/git-lfs/git-lfs/).
     width: "400"
 proxy:
     content: |-
-        A proxy for your repository can be specified in the **Proxy** setting. [Learn More](https://docs.harness.io/article/58i67mkxap)
+        A proxy for your repository can be specified in the **Proxy** setting. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/use-gitops/add-a-harness-git-ops-repository)
 
         Harness uses this proxy to access the repository. Harness looks for the standard proxy environment variables in the repository server if the custom proxy is absent.
     width: "400"
@@ -5644,16 +5644,16 @@ credential-template:
     width: "400"
 clusterMasterURL:
     content: |-
-        Enter the master URL for your cluster. [Learn More](https://docs.harness.io/article/pptv7t53i9)
+        Enter the master URL for your cluster. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/use-gitops/install-a-harness-git-ops-agent)
 
         You can just log into your cluster and run `kubectl cluster-info`. Use the URL listed in the output **Kubernetes master is running at**.
     width: "400"
 clusterAuthentication:
-    content: Select the authentication method for connecting to the cluster. [Learn More](https://docs.harness.io/article/pptv7t53i9)
+    content: Select the authentication method for connecting to the cluster. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/use-gitops/install-a-harness-git-ops-agent)
     width: "400"
 clusterBearerToken:
     content: |-
-        For **Service Account Token**, paste in the Service Account Token for the  namespace you will use. [Learn More](https://docs.harness.io/article/pptv7t53i9)
+        For **Service Account Token**, paste in the Service Account Token for the  namespace you will use. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/use-gitops/install-a-harness-git-ops-agent)
 
         Ensure the token is base64 encoded.
 
@@ -5663,18 +5663,18 @@ gitops-repo-overview_namespaces:
     content: Enter an existing target namespace.
     width: "400"
 applicationName:
-    content: Enter a name for this Harness GitOps Application. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
+    content: Enter a name for this Harness GitOps Application. [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
     width: "400"
 serviceVal:
     content: |+
-        Select or create a Harness Service for this Application. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
+        Select or create a Harness Service for this Application. [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
 
         A Harness Service represents the microservice/app you are deploying.
 
     width: "400"
 environmentVal:
     content: |-
-        Select or create a Harness Environment for this Application. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
+        Select or create a Harness Environment for this Application. [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
 
         A Harness Environment represents the target deployment environment (cluster).
     width: "400"
@@ -5699,8 +5699,8 @@ cdEditStage_gitOpsEnabled:
     content: |-
         Enable this option if you want to integrate Harness GitOps Applications with your CD pipelines. For example, [running a PR pipeline for an ApplicationSet](https://docs.harness.io/article/lf6a27usso).
 
-        - [Harness GitOps Basics](https://docs.harness.io/article/w1vg9l1j7q)
-        - [Harness GitOps Tutorial](https://docs.harness.io/article/pptv7t53i9)
+        - [Harness GitOps Basics](https://developer.harness.io/docs/continuous-delivery/gitops/get-started/harness-git-ops-basics)
+        - [Harness GitOps Tutorial](https://developer.harness.io/docs/continuous-delivery/gitops/use-gitops/install-a-harness-git-ops-agent)
     width: "400"
 updateReleaseRepo_name:
     content: Enter a name for this step. [Learn More](https://docs.harness.io/article/lf6a27usso)
@@ -6176,7 +6176,7 @@ updateInfraVariablesDT:
     content: The properties displayed here are from the Deployment Template you selected. You can override the default settings of these properties. [Learn More](https://docs.harness.io/article/6k9t49p6mn-custom-deployment-tutorial#deployment_template_infrastructure_variables)
     width: "400"
 customDeploymentAllowSimultaneousDeployments:
-    content: Enable this setting to allow multiple pipelines to deploy to the same infrastructure simultaneously. [Learn More](https://docs.harness.io/article/jrzwrdpvm2)
+    content: Enable this setting to allow multiple pipelines to deploy to the same infrastructure simultaneously. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/custom-deployment-tutorial)
     width: "400"
 infraVariablesTitleDT:
     content: |-
@@ -6355,7 +6355,7 @@ pipelineAdvancedOptions_delegateSelectors:
     width: "450"
 runPipelineFormTitle:
     content: |-
-        Enter any required settings to run this pipeline. For example, if you have any [Runtime Inputs](https://docs.harness.io/article/f6yobn7iq0) or [Input Sets](https://docs.harness.io/article/gfk52g74xt) in your pipeline, you can select them here.
+        Enter any required settings to run this pipeline. For example, if you have any [Runtime Inputs](https://developer.harness.io/docs/platform/variables-and-expressions/runtime-inputs) or [Input Sets](https://developer.harness.io/docs/platform/pipelines/input-sets) in your pipeline, you can select them here.
 
         If this pipeline's **Advanced Options** has **Allow selective stage(s) executions?** set to **Yes**, you can select which stage(s) you want to deploy.
     width: "400"
@@ -6435,7 +6435,7 @@ imagePath_spec.versionRegex:
         For example, if **Regex** is enabled and the intent is to match a filename, the wildcard should be `.*` instead of simply a wildcard. If you wanted to match all of the files that end in `-DEV.tgz` you would enter `.*-DEV\.tgz`.
     width: "500"
 k8RolloutDeploy_spec.pruningEnabled:
-    content: Remove any resources that were present in an old manifest, but no longer present in the manifest used for the current deployment. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-advanced/cd-kubernetes-category/prune-kubernetes-resources/)
+    content: Remove any resources that were present in an old manifest, but no longer present in the manifest used for the current deployment. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/kubernetes/cd-kubernetes-category/prune-kubernetes-resources/)
     width: "400"
 HelmWithOCI_basePath:
     content: |-
@@ -6998,7 +6998,7 @@ imagePath_spec.packageType:
     width: "400"
 gitops-application-home-page-overview_agent:
     content: |
-        Select or create the GitOps Agent to use when connecting to the GitOps Repository and GitOps Cluster. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
+        Select or create the GitOps Agent to use when connecting to the GitOps Repository and GitOps Cluster. [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
     width: "400"
 project:
     content: |-
@@ -7008,7 +7008,7 @@ project:
     width: "400"
 gitops-application-home-page-sync_Sync Policy:
     content: |-
-        Applications react to variations in state between the source manifest and the target cluster using a Sync Policy. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
+        Applications react to variations in state between the source manifest and the target cluster using a Sync Policy. [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
 
         - **Manual:** Select this option to manually sync the differences between the desired state in the Application's Repository and the live state in the target Cluster.
 
@@ -7018,7 +7018,7 @@ gitops-application-home-page-sync_Sync Policy:
     width: "500"
 app-details-sync-options:
     content: |+
-        Sync Options to define how the Application syncs state. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-gitops/harness-cd-git-ops-quickstart)
+        Sync Options to define how the Application syncs state. [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
 
     width: "400"
 sync-modal-sync-policy-validate:
@@ -7270,7 +7270,7 @@ securityStepAuthType:
         * API Key
     width: "400"
 securityStepAuthAccessToken:
-    content: The access token to log in to the scanner. In most cases this is a password or an API key. You should create a secret with your encrypted token and reference the secret using the format `<+secrets.getValue(project.container-access-id>`.  [Learn more](https://developer.harness.io/docs/platform/security/add-file-secrets)
+    content: The access token to log in to the scanner. In most cases this is a password or an API key. You should create a secret with your encrypted token and reference the secret using the format `<+secrets.getValue(project.container-access-id>`.  [Learn more](https://developer.harness.io/docs/platform/secrets/add-file-secrets)
     width: "400"
 securityStepToolProjectName:
     content: The name of the scan project as defined in the scanner. This is the also the target name in the Harness UI (Security Tests &gt; Test Targets).
@@ -7299,7 +7299,7 @@ securityStepToolProductLookupType:
     content: ""
     width: "400"
 securityStepToolProductToken:
-    content: The access token used to log in to a specific product in the scanner. This is required for some scans. In most cases this is a password or an API key. You should create a secret with your encrypted ID and reference the secret using the format `<+secrets.getValue(project.product-access-token>`.  [Learn more](https://developer.harness.io/docs/platform/security/add-file-secrets)
+    content: The access token used to log in to a specific product in the scanner. This is required for some scans. In most cases this is a password or an API key. You should create a secret with your encrypted ID and reference the secret using the format `<+secrets.getValue(project.product-access-token>`.  [Learn more](https://developer.harness.io/docs/platform/secrets/add-file-secrets)
     width: "400"
 securityStepToolExclude:
     content: Exclusions to the initial scope for the scan. This should match the format required by the scanner.
@@ -7884,7 +7884,7 @@ pdcHostDetails:
         - When you select this PDC connector in an infrastructure definition, you can select **Filter by host attributes** to select the host(s) for deployment.
     width: "600"
 gitops-application-home-page-overview_Overview:
-    content: A GitOps Application syncs a source manifest with a target cluster using a GitOps Agent. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/harness-cd-git-ops-quickstart)
+    content: A GitOps Application syncs a source manifest with a target cluster using a GitOps Agent. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/get-started/harness-cd-git-ops-quickstart)
     width: "400"
 App-Overview-Form_spec.destination.namespace:
     content: Enter the destination namespace.
@@ -7946,19 +7946,19 @@ clusterClientKeyCertificate:
     content: Enter the client key certificate.
     width: "400"
 gitops-repopage-createrepo-overview_name:
-    content: Enter a name for this repo. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/add-a-harness-git-ops-repository)
+    content: Enter a name for this repo. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/use-gitops/add-a-harness-git-ops-repository)
     width: "400"
 gitops-repopage-createrepo-overview_agent:
     content: |
-        Select or create the Agent you want to use to fetch manifests from this repo. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/add-a-harness-git-ops-repository)
+        Select or create the Agent you want to use to fetch manifests from this repo. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/use-gitops/add-a-harness-git-ops-repository)
     width: "400"
 gitops-repopage-createrepo-overview_header:
     content: |-
-        Harness GitOps Repositories are connections to repos containing the declarative description of a desired state. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/add-a-harness-git-ops-repository)
+        Harness GitOps Repositories are connections to repos containing the declarative description of a desired state. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/use-gitops/add-a-harness-git-ops-repository)
 
         The declarative description can be in Kubernetes manifests, Helm Chart, Kustomize manifests, etc.
 
-        A Harness GitOps Repository is used for Harness GitOps only. For other Harness features like CI, CD pipelines, etc, use a standard [Git Connector](https://developer.harness.io/docs/platform/connectors/code-repositories/add-a-git-hub-connector/).
+        A Harness GitOps Repository is used for Harness GitOps only. For other Harness features like CI, CD pipelines, etc, use a standard [Git Connector](https://developer.harness.io/docs/platform/connectors/code-repositories/ref-source-repo-provider/git-hub-connector-settings-reference/).
     width: "400"
 artifactoryArtifact_identifier:
     content: |-
@@ -8035,7 +8035,7 @@ awsLambdaDeployRollbackStep_timeout:
     width: "400"
 httpStepHeaders:
     content: |-
-        Enter headers for the message, such as the media type for the message. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/executions/cd-general-steps/using-http-requests-in-cd-pipelines/)
+        Enter headers for the message, such as the media type for the message. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/cd-steps/utilities/http-step/)
 
         For example, if you are using the GET method, the headers are used to specify the GET response body message type Harness will check for.
 
