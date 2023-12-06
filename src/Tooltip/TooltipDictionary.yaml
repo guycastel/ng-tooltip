@@ -9318,3 +9318,6 @@ KubernetesDeploymentTypeServiceHooks:
         Add Service Hooks to fetch Helm Chart dependencies.
         [Learn more](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/helm/deploy-helm-charts/#service-hooks)
     width: "400"
+nexus3-maven-tag:
+    content: Select the version for the artifact selected
+    width: "400"
