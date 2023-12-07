@@ -2234,7 +2234,7 @@ gitOps: |
     Argo CD GitOps, as a tool, keeps all configurations in sync and applies the desired state directly (and only from Git).
     Harness provides GitOps by integrating Argo CD into the Harness Manager. Once integrated, you can perform your Harness deployments and create and manage your Argo CD Application from within the same interface.
 
-    [Learn more](https://developer.harness.io/docs/category/get-started-with-gitops)
+    [Learn more](https://developer.harness.io/docs/continuous-delivery/gitops/get-started/harness-cd-git-ops-quickstart/)
 GitOpsProviderStepFormundefined_name: |
     Enter the name for your Adapter.
     This is a mandatory field. The name you enter must be unique and should not contain any special characters.
@@ -2254,7 +2254,7 @@ GitOpsProviderStepFormundefined_spec.adapterUrl: |-
     Enter the Harness Argo CD Adapter URL. Do not enter any trailing slash in the URL.
     This URL allows customers to interact with the ArgoCD server directly from Harness UI with minimal configuration.
 
-    [Learn more to Create Argo CD Adapter](https://developer.harness.io/docs/category/get-started-with-gitops)
+    [Learn more to Create Argo CD Adapter](https://developer.harness.io/docs/continuous-delivery/gitops/get-started/harness-cd-git-ops-quickstart/)
 ciBuildInfra_initTimeout: Enter the timeout for the initialization phase. During this phase, Harness downloads the build step images and spins up the containers to execute the build steps.
 ciBuildInfra_annotations: Kubernetes Annotation to the pod YAML that will be used to create the pod in which the stage's steps will be executed. [Learn More](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
 ciBuildInfra_labels: Key/Value pair that will be added to the Kubernetes pod YAML, which is used to create the pod in which the stage's steps will be executed. [Learn More](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
@@ -2331,7 +2331,7 @@ wizardForm_webhook_sourceBranchValue:
 
         You can enter multiple values separated by commas and use wildcards.
 
-        [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
+        [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/get-started/harness-cd-git-ops-quickstart/)
     width: "400"
 wizardForm_webhook_targetBranchOperator:
     content: |-
@@ -5663,18 +5663,18 @@ gitops-repo-overview_namespaces:
     content: Enter an existing target namespace.
     width: "400"
 applicationName:
-    content: Enter a name for this Harness GitOps Application. [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
+    content: Enter a name for this Harness GitOps Application. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/get-started/harness-cd-git-ops-quickstart/)
     width: "400"
 serviceVal:
     content: |+
-        Select or create a Harness Service for this Application. [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
+        Select or create a Harness Service for this Application. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/get-started/harness-cd-git-ops-quickstart/)
 
         A Harness Service represents the microservice/app you are deploying.
 
     width: "400"
 environmentVal:
     content: |-
-        Select or create a Harness Environment for this Application. [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
+        Select or create a Harness Environment for this Application. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/get-started/harness-cd-git-ops-quickstart/)
 
         A Harness Environment represents the target deployment environment (cluster).
     width: "400"
@@ -6998,7 +6998,7 @@ imagePath_spec.packageType:
     width: "400"
 gitops-application-home-page-overview_agent:
     content: |
-        Select or create the GitOps Agent to use when connecting to the GitOps Repository and GitOps Cluster. [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
+        Select or create the GitOps Agent to use when connecting to the GitOps Repository and GitOps Cluster. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/get-started/harness-cd-git-ops-quickstart/)
     width: "400"
 project:
     content: |-
@@ -7008,7 +7008,7 @@ project:
     width: "400"
 gitops-application-home-page-sync_Sync Policy:
     content: |-
-        Applications react to variations in state between the source manifest and the target cluster using a Sync Policy. [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
+        Applications react to variations in state between the source manifest and the target cluster using a Sync Policy. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/get-started/harness-cd-git-ops-quickstart/)
 
         - **Manual:** Select this option to manually sync the differences between the desired state in the Application's Repository and the live state in the target Cluster.
 
@@ -7018,7 +7018,7 @@ gitops-application-home-page-sync_Sync Policy:
     width: "500"
 app-details-sync-options:
     content: |+
-        Sync Options to define how the Application syncs state. [Learn More](https://developer.harness.io/docs/category/get-started-with-gitops)
+        Sync Options to define how the Application syncs state. [Learn More](https://developer.harness.io/docs/continuous-delivery/gitops/get-started/harness-cd-git-ops-quickstart/)
 
     width: "400"
 sync-modal-sync-policy-validate:
