@@ -1149,11 +1149,11 @@ TerraformPlan_stepName_ProvisionerStepConfig: |-
     Later, you will use the **Terraform Apply** step to apply the plan and provision the target infrastructure for the deployment.
 TerraformApply_stepName_ProvisionerStepConfig: When used in **Dynamic Provisioning**, the **Terraform Apply** step simply inherits its configuration from the **Terraform Plan** step you already configured. [Learn More](https://docs.harness.io/article/uznls2lvod)
 terraformPlanEditView-tfPlan-INFRASTRUCTURE_spec.configuration.workspace: |-
-    Harness supports Terraform [workspaces](https://www.terraform.io/docs/state/workspaces.html). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
+    Harness supports Terraform [workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
 
     In the Workspace setting, you can simply enter the name of the workspace to use. [Learn More](https://docs.harness.io/article/uznls2lvod)
 terraformPlanEditView-tfPlan-INFRASTRUCTURE_spec.configuration.backendConfig.spec.content: |-
-    The **Backend Configuration** section contains the [remote state](https://www.terraform.io/docs/language/state/remote.html) values. [Learn More](https://docs.harness.io/article/uznls2lvod)
+    The **Backend Configuration** section contains the [remote state](https://developer.hashicorp.com/terraform/language/state/remote) values. [Learn More](https://docs.harness.io/article/uznls2lvod)
 
     Enter values for each backend config (remote state variable).
 
@@ -1168,7 +1168,7 @@ terraformPlanEditView-tfPlan-INFRASTRUCTURE_spec.configuration.backendConfig.spe
     }
     ```
 
-    In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://www.terraform.io/docs/language/settings/backends/gcs.html#configuration-variables) doc.
+    In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://developer.hashicorp.com/terraform/language/settings/backends/gcs#configuration-variables) doc.
 
     You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for credentials.
 terraformPlanEditView-tfPlan-INFRASTRUCTURE_spec.configuration.targets: |-
@@ -1178,7 +1178,7 @@ terraformPlanEditView-tfPlan-INFRASTRUCTURE_spec.configuration.targets: |-
 
     If you have multiple modules in your script and you don't select one in Targets, all modules are used.
 
-    See [Resource Targeting](https://www.terraform.io/docs/commands/plan.html#resource-targeting) from Terraform.
+    See [Resource Targeting](https://developer.hashicorp.com/terraform/cli/commands/plan#resource-targeting) from Terraform.
 terraformPlanEditView-tfPlan-INFRASTRUCTURE_spec.configuration.environmentVariables: |-
     If your Terraform script uses environment variables, you can provide values for those variables here.
 
@@ -1191,7 +1191,7 @@ terraformPlanEditView-tfPlan-INFRASTRUCTURE_spec.configuration.environmentVariab
 
     You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for values.
 terraformEdit-TerraformApply-INFRASTRUCTURE_spec.configuration.spec.workspace: |-
-    Harness supports Terraform [workspaces](https://www.terraform.io/docs/state/workspaces.html). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
+    Harness supports Terraform [workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
 
     In the **Workspace** setting, you can simply enter the name of the workspace to use. [Learn More](https://docs.harness.io/article/uznls2lvod)
 terraformEdit-TerraformApply-INFRASTRUCTURE_: |-
@@ -1199,9 +1199,9 @@ terraformEdit-TerraformApply-INFRASTRUCTURE_: |-
 
     You can use inline or remote var files.
 
-    Harness supports all [Terraform input types and values](https://www.terraform.io/docs/language/expressions/types.html).
+    Harness supports all [Terraform input types and values](https://developer.hashicorp.com/terraform/language/expressions/types).
 terraformEdit-TerraformApply-INFRASTRUCTURE_spec.configuration.spec.backendConfig.spec.content: |-
-    The **Backend Configuration** section contains the [remote state](https://www.terraform.io/docs/language/state/remote.html) values. [Learn More](https://docs.harness.io/article/uznls2lvod)
+    The **Backend Configuration** section contains the [remote state](https://developer.hashicorp.com/terraform/language/state/remote) values. [Learn More](https://docs.harness.io/article/uznls2lvod)
 
     Enter values for each backend config (remote state variable).
 
@@ -1216,7 +1216,7 @@ terraformEdit-TerraformApply-INFRASTRUCTURE_spec.configuration.spec.backendConfi
     }
     ```
 
-    In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://www.terraform.io/docs/language/settings/backends/gcs.html#configuration-variables) doc.
+    In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://developer.hashicorp.com/terraform/language/settings/backends/gcs#configuration-variables) doc.
 
     You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for credentials.
 terraformEdit-TerraformApply-INFRASTRUCTURE_spec.configuration.spec.targets: |-
@@ -1226,7 +1226,7 @@ terraformEdit-TerraformApply-INFRASTRUCTURE_spec.configuration.spec.targets: |-
 
     If you have multiple modules in your script and you don't select one in Targets, all modules are used.
 
-    See [Resource Targeting](https://www.terraform.io/docs/commands/plan.html#resource-targeting) from Terraform.
+    See [Resource Targeting](https://developer.hashicorp.com/terraform/cli/commands/plan#resource-targeting) from Terraform.
 terraformEdit-TerraformApply-INFRASTRUCTURE_spec.configuration.spec.environmentVariables: |-
     If your Terraform script uses environment variables, you can provide values for those variables here.
 
@@ -1240,11 +1240,11 @@ terraformEdit-TerraformApply-INFRASTRUCTURE_spec.configuration.spec.environmentV
     You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for values.
 TerraformDestroy_stepName_ProvisionerStepConfig: When provisioning target infrastructure, the **Terraform Delete** step deletes the infrastructure provisioned by the **Terraform Apply** step. [Learn More](https://docs.harness.io/article/uznls2lvod)
 terraformEdit-TerraformDestroy-INFRASTRUCTURE_spec.configuration.spec.workspace: |-
-    Harness supports Terraform [workspaces](https://www.terraform.io/docs/state/workspaces.html). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
+    Harness supports Terraform [workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
 
     In the **Workspace** setting, you can simply enter the name of the workspace to use. [Learn More](https://docs.harness.io/article/uznls2lvod)
 terraformEdit-TerraformDestroy-INFRASTRUCTURE_spec.configuration.spec.backendConfig.spec.content: |-
-    The **Backend Configuration** section contains the [remote state](https://www.terraform.io/docs/language/state/remote.html) values. [Learn More](https://docs.harness.io/article/uznls2lvod)
+    The **Backend Configuration** section contains the [remote state](https://developer.hashicorp.com/terraform/language/state/remote) values. [Learn More](https://docs.harness.io/article/uznls2lvod)
 
     Enter values for each backend config (remote state variable).
 
@@ -1259,7 +1259,7 @@ terraformEdit-TerraformDestroy-INFRASTRUCTURE_spec.configuration.spec.backendCon
     }
     ```
 
-    In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://www.terraform.io/docs/language/settings/backends/gcs.html#configuration-variables) doc.
+    In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://developer.hashicorp.com/terraform/language/settings/backends/gcs#configuration-variables) doc.
 
     You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for credentials.
 terraformEdit-TerraformDestroy-INFRASTRUCTURE_spec.configuration.spec.targets: |-
@@ -1269,7 +1269,7 @@ terraformEdit-TerraformDestroy-INFRASTRUCTURE_spec.configuration.spec.targets: |
 
     If you have multiple modules in your script and you don't select one in Targets, all modules are used.
 
-    See [Resource Targeting](https://www.terraform.io/docs/commands/plan.html#resource-targeting) from Terraform.
+    See [Resource Targeting](https://developer.hashicorp.com/terraform/cli/commands/plan#resource-targeting) from Terraform.
 terraformEdit-TerraformDestroy-INFRASTRUCTURE_spec.configuration.spec.environmentVariables: |-
     If your Terraform script uses environment variables, you can provide values for those variables here.
 
@@ -1283,7 +1283,7 @@ terraformEdit-TerraformDestroy-INFRASTRUCTURE_spec.configuration.spec.environmen
     You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for values.
 TerraformRollback_stepName_ProvisionerStepConfig: The **Terraform Rollback** step rolls back your provisioned infrastructure and resources and returns your environment to its pre-deployment state. [Learn More](https://docs.harness.io/article/jgi6d73noy)
 terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.workspace: |-
-    Harness supports Terraform [workspaces](https://www.terraform.io/docs/state/workspaces.html). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
+    Harness supports Terraform [workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
 
     In the **Workspace** setting, you can simply enter the name of the workspace to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
 TerraformPlan_stepName_StepConfig: |-
@@ -1293,7 +1293,7 @@ TerraformPlan_stepName_StepConfig: |-
 
     The [Terraform Apply](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/) and [Terraform Destroy](https://docs.harness.io/article/j75xc704c8) steps can inherit the plan and perform their apply and destroy operations.
 terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.backendConfig.spec.content: |-
-    The **Backend Configuration** section contains the [remote state](https://www.terraform.io/docs/language/state/remote.html) values. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
+    The **Backend Configuration** section contains the [remote state](https://developer.hashicorp.com/terraform/language/state/remote) values. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/)
 
     Enter values for each backend config (remote state variable).
 
@@ -1308,7 +1308,7 @@ terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.backendConfig.spec.con
     }
     ```
 
-    In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://www.terraform.io/docs/language/settings/backends/gcs.html#configuration-variables) doc.
+    In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://developer.hashicorp.com/terraform/language/settings/backends/gcs#configuration-variables) doc.
 
     You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for credentials.
 terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.targets: |-
@@ -1318,7 +1318,7 @@ terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.targets: |-
 
     If you have multiple modules in your script and you don't select one in Targets, all modules are used.
 
-    See [Resource Targeting](https://www.terraform.io/docs/commands/plan.html#resource-targeting) from Terraform.
+    See [Resource Targeting](https://developer.hashicorp.com/terraform/cli/commands/plan#resource-targeting) from Terraform.
 terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.environmentVariables: |-
     If your Terraform script uses environment variables, you can provide values for those variables here.
 
@@ -1335,11 +1335,11 @@ TerraformApply_stepName_StepConfig: |-
 
     Typically the **Terraform Apply** step is used with the **Terraform Plan** step to apply a plan. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/).
 terraformEdit-TerraformApply-EXECUTION_spec.configuration.spec.workspace: |-
-    Harness supports Terraform [workspaces](https://www.terraform.io/docs/state/workspaces.html). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
+    Harness supports Terraform [workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
 
     In the **Workspace** setting, you can simply enter the name of the workspace to use. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
 terraformEdit-TerraformApply-EXECUTION_spec.configuration.spec.backendConfig.spec.content: |-
-    The **Backend Configuration** section contains the [remote state](https://www.terraform.io/docs/language/state/remote.html) values. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
+    The **Backend Configuration** section contains the [remote state](https://developer.hashicorp.com/terraform/language/state/remote) values. [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
 
     Enter values for each backend config (remote state variable).
 
@@ -1354,7 +1354,7 @@ terraformEdit-TerraformApply-EXECUTION_spec.configuration.spec.backendConfig.spe
     }
     ```
 
-    In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://www.terraform.io/docs/language/settings/backends/gcs.html#configuration-variables) doc.
+    In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://developer.hashicorp.com/terraform/language/settings/backends/gcs#configuration-variables) doc.
 
     You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for credentials.
 terraformEdit-TerraformApply-EXECUTION_spec.configuration.spec.targets: |-
@@ -1364,7 +1364,7 @@ terraformEdit-TerraformApply-EXECUTION_spec.configuration.spec.targets: |-
 
     If you have multiple modules in your script and you don't select one in Targets, all modules are used.
 
-    See [Resource Targeting](https://www.terraform.io/docs/commands/plan.html#resource-targeting) from Terraform.
+    See [Resource Targeting](https://developer.hashicorp.com/terraform/cli/commands/plan#resource-targeting) from Terraform.
 terraformEdit-TerraformApply-EXECUTION_spec.configuration.spec.environmentVariables: |-
     If your Terraform script uses environment variables, you can provide values for those variables here.
 
@@ -1377,13 +1377,13 @@ terraformEdit-TerraformApply-EXECUTION_spec.configuration.spec.environmentVariab
 
     You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for values.
 TerraformRollback_stepName_StepConfig: The **Terraform Rollback** step rolls back your provisioned infrastructure and resources and returns your environment to its pre-deployment state. [Learn More](https://docs.harness.io/article/jgi6d73noy)
-TerraformDestroy_stepName_StepConfig: The **Terraform Destroy** step removes any provisioned infrastructure, just like running the `terraform destroy` command. See [destroy](https://www.terraform.io/docs/commands/destroy.html) from Terraform. [Learn More](https://docs.harness.io/article/j75xc704c8)
+TerraformDestroy_stepName_StepConfig: The **Terraform Destroy** step removes any provisioned infrastructure, just like running the `terraform destroy` command. See [destroy](https://developer.hashicorp.com/terraform/cli/commands/destroy) from Terraform. [Learn More](https://docs.harness.io/article/j75xc704c8)
 terraformEdit-TerraformDestroy-EXECUTION_spec.configuration.spec.workspace: |-
-    Harness supports Terraform [workspaces](https://www.terraform.io/docs/state/workspaces.html). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
+    Harness supports Terraform [workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces). A Terraform workspace is a logical representation of one your infrastructures, such as Dev, QA, Stage, Production.
 
     In the **Workspace** setting, you can simply enter the name of the workspace to use. See the same Workspace setting in [Terraform Plan](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/) for details.
 terraformEdit-TerraformDestroy-EXECUTION_spec.configuration.spec.backendConfig.spec.content: |-
-    The **Backend Configuration** section contains the [remote state](https://www.terraform.io/docs/language/state/remote.html) values. See the same **Backend Configuration** setting in [Terraform Plan](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/) for details.
+    The **Backend Configuration** section contains the [remote state](https://developer.hashicorp.com/terraform/language/state/remote) values. See the same **Backend Configuration** setting in [Terraform Plan](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-plan-step/) for details.
 
     Enter values for each backend config (remote state variable).
 
@@ -1398,7 +1398,7 @@ terraformEdit-TerraformDestroy-EXECUTION_spec.configuration.spec.backendConfig.s
     }
     ```
 
-    In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://www.terraform.io/docs/language/settings/backends/gcs.html#configuration-variables) doc.
+    In **Backend Configuration**, you provide the required configuration variables for that backend type. See **Configuration variables** in Terraform's [gcs Standard Backend](https://developer.hashicorp.com/terraform/language/settings/backends/gcs#configuration-variables) doc.
 
     You can use [Harness secrets](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) for credentials.
 terraformEdit-TerraformDestroy-EXECUTION_spec.configuration.spec.targets: |-
@@ -1408,7 +1408,7 @@ terraformEdit-TerraformDestroy-EXECUTION_spec.configuration.spec.targets: |-
 
     If you have multiple modules in your script and you don't select one in Targets, all modules are used.
 
-    See [Resource Targeting](https://www.terraform.io/docs/commands/plan.html#resource-targeting) from Terraform.
+    See [Resource Targeting](https://developer.hashicorp.com/terraform/cli/commands/plan#resource-targeting) from Terraform.
 terraformEdit-TerraformDestroy-EXECUTION_spec.configuration.spec.environmentVariables: |-
     If your Terraform script uses environment variables, you can provide values for those variables here.
 
@@ -1990,7 +1990,7 @@ orgForm_name: |-
     Enter a name for this organization.
 
     Harness Organizations (Orgs) allow you to group Harness Projects that share the same goal. For example, all Projects for a business unit or division. [Learn More](https://docs.harness.io/article/7fibxie636)
-vaultConfigForm_namespace: Enter the Vault [namespace](https://www.vaultproject.io/docs/enterprise/namespaces) if you use Vault namespaces to support tenant isolation.
+vaultConfigForm_namespace: Enter the Vault [namespace](https://developer.hashicorp.com/vault/docs/enterprise/namespaces) if you use Vault namespaces to support tenant isolation.
 gitSyncRepoForm_name: |-
     Enter a name for the repo.
 
@@ -9137,7 +9137,7 @@ terraformPlanEditView-tfPlan-EXECUTION_:
 
         You can use inline or remote var files.
 
-        Harness supports all [Terraform input types and values](https://www.terraform.io/docs/language/expressions/types.html).
+        Harness supports all [Terraform input types and values](https://developer.hashicorp.com/terraform/language/expressions/types).
     width: "400"
 terraformPlanEditView-tfPlan-EXECUTION_spec.configuration.exportTerraformPlanJson:
     content: |-
@@ -9174,7 +9174,7 @@ terraformEdit-TerraformApply-EXECUTION_:
 
         You can use inline or remote var files.
 
-        Harness supports all [Terraform input types and values](https://www.terraform.io/docs/language/expressions/types.html).
+        Harness supports all [Terraform input types and values](https://developer.hashicorp.com/terraform/language/expressions/types).
     width: "400"
 terraformEdit-TerraformApply-EXECUTION_spec.cloudCliConfiguration.spec.backendConfig.spec.content:
     content: |-
@@ -9186,7 +9186,7 @@ terraformEdit-TerraformApply-EXECUTION_spec.cloudCliConfiguration.spec.targets:
     content: |-
         You can use the **Targets** setting to target one or more specific modules in your Terraform script, just like using the `terraform plan -target` command.  [Learn More](https://developer.harness.io/docs/continuous-delivery/cd-infrastructure/terraform-infra/run-a-terraform-plan-with-the-terraform-apply-step/)
          
-        See [Resource Targeting](https://www.terraform.io/docs/commands/plan.html#resource-targeting) from Terraform.
+        See [Resource Targeting](https://developer.hashicorp.com/terraform/cli/commands/plan#resource-targeting) from Terraform.
          
         You simply identify the module using the standard format `module.name`, like you would using `terraform plan -target="module.s3_bucket"`.
 
@@ -9194,7 +9194,7 @@ terraformEdit-TerraformApply-EXECUTION_spec.cloudCliConfiguration.spec.targets:
     width: "400"
 terraformEdit-TerraformApply-EXECUTION_spec.cloudCliConfiguration.spec.environmentVariables:
     content: |-
-        If your Terraform script uses [environment variables](https://www.terraform.io/docs/cli/config/environment-variables.html), you can provide values for those variables here.
+        If your Terraform script uses [environment variables](https://developer.hashicorp.com/terraform/cli/config/environment-variables), you can provide values for those variables here.
 
         For example:
 
