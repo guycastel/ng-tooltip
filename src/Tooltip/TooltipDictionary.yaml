@@ -3954,9 +3954,6 @@ readOnlyRootFilesystem:
 ciBuildInfra_volumes:
     content: A list of the volumes you want to mount onto the pod running the Stage.
     width: "400"
-ciBuildInfra_volumes.0.mountPath:
-    content: The volume path for Step containers.
-    width: "400"
 ciBuildInfra_volumes.0.type:
     content: |-
         The type of volume you want to mount. Select one of the following:
@@ -3999,9 +3996,6 @@ ciBuildInfra_volumes.0.spec.size:
 
 
         If not specified, the volume can use up to 50% of available memory on the host node.
-    width: "400"
-ciBuildInfra_volumes.1.mountPath:
-    content: The volume path for Step containers.
     width: "400"
 ciBuildInfra_volumes.1.spec.path:
     content: The volume path on the host node.
