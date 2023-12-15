@@ -3954,6 +3954,9 @@ readOnlyRootFilesystem:
 ciBuildInfra_volumes:
     content: A list of the volumes you want to mount onto the pod running the Stage.
     width: "400"
+ciBuildInfra_volumes.0.mountPath:
+    content: The volume path for Step containers.
+    width: "400"
 ciBuildInfra_volumes.0.type:
     content: |-
         The type of volume you want to mount. Select one of the following:
@@ -3996,6 +3999,9 @@ ciBuildInfra_volumes.0.spec.size:
 
 
         If not specified, the volume can use up to 50% of available memory on the host node.
+    width: "400"
+ciBuildInfra_volumes.1.mountPath:
+    content: The volume path for Step containers.
     width: "400"
 ciBuildInfra_volumes.1.spec.path:
     content: The volume path on the host node.
@@ -8643,12 +8649,6 @@ defaultSettingsForm_mandate_custom_webhook_authorization:
     content: |
         Enable this setting to require that all custom triggers in this Harness account use API key tokens. [Learn More](https://developer.harness.io/docs/platform/triggers/trigger-deployments-using-custom-triggers)
     width: "400"
-defaultSettingsForm_run_rbac_validation_before_executing_inline_pipelines:
-    content: |-
-        Check RBAC access permissions for all of the resources accessed by the pipeline before it begins executing. This check allows the pipeline to fail fast in case there are permission errors in later stages of the pipeline. If turned off, the execution might begin normally but fail midway.
-
-        This check is only run for inline pipelines stored in Harness, and not for remote pipelines stored in Git.
-    width: "400"    
 defaultSettingsForm_enable_node_execution_audit_events:
     content: |-
         By default, the pipeline execution audit events such as Pipeline Start, Pipeline End, Stage Start, and Stage End are not displayed in Audit Trail. 
@@ -9320,4 +9320,26 @@ KubernetesDeploymentTypeServiceHooks:
     width: "400"
 nexus3-maven-tag:
     content: Select the version for the artifact selected
+    width: "400"
+tasManifestDetails_identifier:
+    content: Enter a name for the manifest you are adding. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/tanzu/tanzu-app-services-quickstart)
+    width: "400"
+tasManifestDetails_cfCliVersion:
+    content: Select the TAS (PCF) CLI version you want Harness to use. The version you select depends on what TAS features you are using in your manifest. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/tanzu/tanzu-app-services-quickstart)
+    width: "400"
+tasManifestDetails_artifactBundleType:
+    content: Select the type of compressed file. Currently,  Zip, Tar, and Tar.gz are supported. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/tanzu/tanzu-app-services-quickstart)
+    width: "400"
+tasManifestDetails_deployableUnitPath:
+    content: The relative path to the artifact from the artifact bundle root after extraction. The artifact bundle must contain and artifact and manifest.
+ [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/tanzu/tanzu-app-services-quickstart)
+    width: "400"
+tasManifestDetails_manifestPath:
+    content: The relative path to the manifest from the artifact bundle root after extraction. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/tanzu/tanzu-app-services-quickstart)
+    width: "400"
+tasManifestDetails_varsPaths:
+    content: The relative path to the vars.yaml file from the artifact bundle root after extraction. You can add multiple files. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/tanzu/tanzu-app-services-quickstart)
+    width: "400"
+tasManifestDetails_autoScalerPath:
+    content: The relative path to the autoscaler.yaml file from the artifact bundle root after extraction. You can add multiple files. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/tanzu/tanzu-app-services-quickstart)
     width: "400"
