@@ -8645,9 +8645,9 @@ defaultSettingsForm_mandate_custom_webhook_authorization:
     width: "400"
 defaultSettingsForm_run_rbac_validation_before_executing_inline_pipelines:
     content: |-
-        Check RBAC Access permissions for all the resources accessed by the Pipeline, before it begins executing. This check allows the pipeline to fail fast in case there are permission errors in later stages of the Pipeline. If turned off, the execution may begin normally but fail midway.
+        Check RBAC access permissions for all of the resources accessed by the pipeline before it begins executing. This check allows the pipeline to fail fast in case there are permission errors in later stages of the pipeline. If turned off, the execution might begin normally but fail midway.
 
-        This check is only run for Inline Pipelines, and not for Pipelines stored in Git.
+        This check is only run for inline pipelines stored in Harness, and not for remote pipelines stored in Git.
     width: "400"    
 defaultSettingsForm_enable_node_execution_audit_events:
     content: |-
