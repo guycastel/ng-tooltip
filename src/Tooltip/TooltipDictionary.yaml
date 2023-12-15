@@ -9331,8 +9331,7 @@ tasManifestDetails_artifactBundleType:
     content: Select the type of compressed file. Currently,  Zip, Tar, and Tar.gz are supported. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/tanzu/tanzu-app-services-quickstart)
     width: "400"
 tasManifestDetails_deployableUnitPath:
-    content: The relative path to the artifact from the artifact bundle root after extraction. The artifact bundle must contain and artifact and manifest.
- [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/tanzu/tanzu-app-services-quickstart)
+    content: The relative path to the artifact from the artifact bundle root after extraction. The artifact bundle must contain and artifact and manifest. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/tanzu/tanzu-app-services-quickstart)
     width: "400"
 tasManifestDetails_manifestPath:
     content: The relative path to the manifest from the artifact bundle root after extraction. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/tanzu/tanzu-app-services-quickstart)
