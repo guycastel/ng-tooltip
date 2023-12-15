@@ -8643,6 +8643,12 @@ defaultSettingsForm_mandate_custom_webhook_authorization:
     content: |
         Enable this setting to require that all custom triggers in this Harness account use API key tokens. [Learn More](https://developer.harness.io/docs/platform/triggers/trigger-deployments-using-custom-triggers)
     width: "400"
+defaultSettingsForm_run_rbac_validation_before_executing_inline_pipelines:
+    content: |
+        Check RBAC Access permissions for all the resources accessed by the Pipeline, before it begins executing. This check allows the pipeline to fail fast in case there are permission errors in later stages of the Pipeline. If turned off, the execution may begin normally but fail midway.
+
+        This check is only run for Inline Pipelines, and not for Pipelines stored in Git.
+    width: "400"    
 defaultSettingsForm_enable_node_execution_audit_events:
     content: |-
         By default, the pipeline execution audit events such as Pipeline Start, Pipeline End, Stage Start, and Stage End are not displayed in Audit Trail. 
