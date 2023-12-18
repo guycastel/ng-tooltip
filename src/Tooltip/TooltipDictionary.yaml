@@ -4947,6 +4947,9 @@ connectorDetailsStepFormCustomSecretManager_name:
 customSMForm_template:
     content: Select a Secret Manager Template from the Template Library. [Learn more](https://docs.harness.io/article/mg09uspsx1-custom-secret-manager#step_2_add_a_custom_secret_manager)
     width: "400"
+customSMForm_timeout:
+    content: Timeout (in seconds) to fetch secrets from custom provider. In case it takes longer than the given timeout to fetch the secret, the process interrupts and fails. Default value is 20 seconds.
+    width: "400"
 customSMForm_onDelegate:
     content: Select to execute the script on Harness Delegate. To run the shell script on a target host, uncheck this option. To run the script on a target host, make sure you have created the required connection attributes.
     width: "400"
