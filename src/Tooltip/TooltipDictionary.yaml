@@ -9351,6 +9351,12 @@ tasManifestDetails_varsPaths:
 tasManifestDetails_autoScalerPath:
     content: The relative path to the autoscaler.yaml file from the artifact bundle root after extraction. You can add multiple files. [Learn More](https://developer.harness.io/docs/continuous-delivery/deploy-srv-diff-platforms/tanzu/tanzu-app-services-quickstart)
     width: "400"
-delegateInstanceStatus:
-    content: Instance Status displays when the delegate expires. It is used to determine when a delegate needs to be updated or replaced. [Learn More](https://developer.harness.io/docs/platform/delegates/install-delegates/delegate-upgrades-and-expiration/)
+scopedServicesForm_scopeToSpecificServices:
+    content: |
+        Use this option to limit an infrastructure to specific service(s). [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/environments/scope-infra-to-services)
+
+        The services can still be deployed to other infrastructures, but when you use **Scope to Specific Services**, the infrastructure may only accept the services you select in this option.
+    width: "450"
+scopedServicesForm_scopedServices:
+    content: Select the services that will limit this infrastructure. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/environments/scope-infra-to-services)
     width: "400"
