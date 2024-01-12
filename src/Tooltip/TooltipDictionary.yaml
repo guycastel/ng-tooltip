@@ -9360,3 +9360,12 @@ scopedServicesForm_scopeToSpecificServices:
 scopedServicesForm_scopedServices:
     content: Select the services that will limit this infrastructure. [Learn More](https://developer.harness.io/docs/continuous-delivery/x-platform-cd-features/environments/scope-infra-to-services)
     width: "400"
+delegateInstanceStatus:
+    content: Instance Status displays when the delegate expires. It is used to determine when a delegate needs to be updated or replaced. [Learn More](https://developer.harness.io/docs/platform/delegates/install-delegates/delegate-upgrades-and-expiration/)
+    width: "400"
+sessionInactivityTimeout:
+    content: Configure Session Inactivity Timeout (in minutes) to log-out a user from their account if there has been no activity for this time interval. [Learn More](https://developer.harness.io/docs/platform/authentication/authentication-overview/#set-inactive-session-timeout)
+    width: "400"
+absoluteSessionTimeout:
+    content: Configure Absolute Session Timeout (in minutes) to log-out a user from their account after the configured timeout, regardless of any activity. This is optional. The default value is 0, which means that it is not set. [Learn More](https://developer.harness.io/docs/platform/authentication/authentication-overview/)
+    width: "400"
